@@ -4,19555 +4,28609 @@ const LEVELS = [
     "code": "A1",
     "name": "入門",
     "img": "assets/A1_入門.png",
-    "color": "#2bb6a3",
-    "count": 610
+    "color": "#3fae9f",
+    "count": 620
   },
   {
     "code": "A2",
     "name": "基礎",
     "img": "assets/A2_基礎.png",
-    "color": "#f6a623",
-    "count": 585
+    "color": "#e0a23c",
+    "count": 604
   },
   {
     "code": "B1",
     "name": "中級",
     "img": "assets/B1_中級.png",
-    "color": "#e8703a",
-    "count": 607
+    "color": "#e07b46",
+    "count": 614
   },
   {
     "code": "B2",
     "name": "中高級",
     "img": "assets/B2_中高級.png",
-    "color": "#d64541",
-    "count": 896
+    "color": "#d9574f",
+    "count": 935
   },
   {
     "code": "C1",
     "name": "高級",
     "img": "assets/C1_高級.png",
-    "color": "#7b5ea7",
-    "count": 593
+    "color": "#8a6fb0",
+    "count": 616
   },
   {
     "code": "C2",
     "name": "精通",
     "img": "assets/C2_精通.png",
-    "color": "#3a6ea5",
-    "count": 611
+    "color": "#4f86c6",
+    "count": 644
+  }
+];
+
+const GROUPS = [
+  {
+    "name": "A1_001-010",
+    "level": "A1",
+    "count": 61
+  },
+  {
+    "name": "A1_011-020",
+    "level": "A1",
+    "count": 57
+  },
+  {
+    "name": "A1_021-030",
+    "level": "A1",
+    "count": 56
+  },
+  {
+    "name": "A1_031-040",
+    "level": "A1",
+    "count": 67
+  },
+  {
+    "name": "A1_041-050",
+    "level": "A1",
+    "count": 70
+  },
+  {
+    "name": "A1_051-060",
+    "level": "A1",
+    "count": 63
+  },
+  {
+    "name": "A1_061-070",
+    "level": "A1",
+    "count": 58
+  },
+  {
+    "name": "A1_071-080",
+    "level": "A1",
+    "count": 58
+  },
+  {
+    "name": "A1_081-090",
+    "level": "A1",
+    "count": 53
+  },
+  {
+    "name": "A1_091-100",
+    "level": "A1",
+    "count": 77
+  },
+  {
+    "name": "A2_001-010",
+    "level": "A2",
+    "count": 62
+  },
+  {
+    "name": "A2_011-020",
+    "level": "A2",
+    "count": 60
+  },
+  {
+    "name": "A2_021-030",
+    "level": "A2",
+    "count": 68
+  },
+  {
+    "name": "A2_031-040",
+    "level": "A2",
+    "count": 56
+  },
+  {
+    "name": "A2_041-050",
+    "level": "A2",
+    "count": 59
+  },
+  {
+    "name": "A2_051-060",
+    "level": "A2",
+    "count": 54
+  },
+  {
+    "name": "A2_061-070",
+    "level": "A2",
+    "count": 57
+  },
+  {
+    "name": "A2_071-080",
+    "level": "A2",
+    "count": 56
+  },
+  {
+    "name": "A2_081-090",
+    "level": "A2",
+    "count": 60
+  },
+  {
+    "name": "A2_091-100",
+    "level": "A2",
+    "count": 72
+  },
+  {
+    "name": "B1_001-010",
+    "level": "B1",
+    "count": 64
+  },
+  {
+    "name": "B1_011-020",
+    "level": "B1",
+    "count": 54
+  },
+  {
+    "name": "B1_021-030",
+    "level": "B1",
+    "count": 56
+  },
+  {
+    "name": "B1_031-040",
+    "level": "B1",
+    "count": 51
+  },
+  {
+    "name": "B1_041-050",
+    "level": "B1",
+    "count": 62
+  },
+  {
+    "name": "B1_051-060",
+    "level": "B1",
+    "count": 69
+  },
+  {
+    "name": "B1_061-070",
+    "level": "B1",
+    "count": 57
+  },
+  {
+    "name": "B1_071-080",
+    "level": "B1",
+    "count": 57
+  },
+  {
+    "name": "B1_081-090",
+    "level": "B1",
+    "count": 59
+  },
+  {
+    "name": "B1_091-100",
+    "level": "B1",
+    "count": 60
+  },
+  {
+    "name": "B1_101-104",
+    "level": "B1",
+    "count": 25
+  },
+  {
+    "name": "B2_001-010",
+    "level": "B2",
+    "count": 63
+  },
+  {
+    "name": "B2_011-020",
+    "level": "B2",
+    "count": 63
+  },
+  {
+    "name": "B2_021-030",
+    "level": "B2",
+    "count": 59
+  },
+  {
+    "name": "B2_031-040",
+    "level": "B2",
+    "count": 57
+  },
+  {
+    "name": "B2_041-050",
+    "level": "B2",
+    "count": 60
+  },
+  {
+    "name": "B2_051-060",
+    "level": "B2",
+    "count": 63
+  },
+  {
+    "name": "B2_061-070",
+    "level": "B2",
+    "count": 59
+  },
+  {
+    "name": "B2_071-080",
+    "level": "B2",
+    "count": 59
+  },
+  {
+    "name": "B2_081-090",
+    "level": "B2",
+    "count": 56
+  },
+  {
+    "name": "B2_091-100",
+    "level": "B2",
+    "count": 62
+  },
+  {
+    "name": "B2_101-110",
+    "level": "B2",
+    "count": 67
+  },
+  {
+    "name": "B2_111-120",
+    "level": "B2",
+    "count": 75
+  },
+  {
+    "name": "B2_121-130",
+    "level": "B2",
+    "count": 73
+  },
+  {
+    "name": "B2_131-140",
+    "level": "B2",
+    "count": 54
+  },
+  {
+    "name": "B2_141-150",
+    "level": "B2",
+    "count": 65
+  },
+  {
+    "name": "C1_001-010",
+    "level": "C1",
+    "count": 65
+  },
+  {
+    "name": "C1_011-020",
+    "level": "C1",
+    "count": 56
+  },
+  {
+    "name": "C1_021-030",
+    "level": "C1",
+    "count": 62
+  },
+  {
+    "name": "C1_031-040",
+    "level": "C1",
+    "count": 59
+  },
+  {
+    "name": "C1_041-050",
+    "level": "C1",
+    "count": 63
+  },
+  {
+    "name": "C1_051-060",
+    "level": "C1",
+    "count": 55
+  },
+  {
+    "name": "C1_061-070",
+    "level": "C1",
+    "count": 54
+  },
+  {
+    "name": "C1_071-080",
+    "level": "C1",
+    "count": 76
+  },
+  {
+    "name": "C1_081-090",
+    "level": "C1",
+    "count": 63
+  },
+  {
+    "name": "C1_091-100",
+    "level": "C1",
+    "count": 63
+  },
+  {
+    "name": "C2_001-010",
+    "level": "C2",
+    "count": 63
+  },
+  {
+    "name": "C2_011-020",
+    "level": "C2",
+    "count": 58
+  },
+  {
+    "name": "C2_021-030",
+    "level": "C2",
+    "count": 69
+  },
+  {
+    "name": "C2_031-040",
+    "level": "C2",
+    "count": 61
+  },
+  {
+    "name": "C2_041-050",
+    "level": "C2",
+    "count": 65
+  },
+  {
+    "name": "C2_051-060",
+    "level": "C2",
+    "count": 66
+  },
+  {
+    "name": "C2_061-070",
+    "level": "C2",
+    "count": 65
+  },
+  {
+    "name": "C2_071-080",
+    "level": "C2",
+    "count": 68
+  },
+  {
+    "name": "C2_081-090",
+    "level": "C2",
+    "count": 66
+  },
+  {
+    "name": "C2_091-100",
+    "level": "C2",
+    "count": 63
   }
 ];
 
 const SENTENCES = [
 {
-"id": "A1-1",
+"id": "A1_001-010-1",
+"group": "A1_001-010",
 "level": "A1",
+"num": 1,
 "text": "I'm Lisa"
 },
 {
-"id": "A1-2",
+"id": "A1_001-010-2",
+"group": "A1_001-010",
 "level": "A1",
+"num": 2,
 "text": "I'm David, your new classmate"
 },
 {
-"id": "A1-3",
+"id": "A1_001-010-3",
+"group": "A1_001-010",
 "level": "A1",
+"num": 3,
 "text": "I'm Tom, nice to meet you"
 },
 {
-"id": "A1-4",
+"id": "A1_001-010-4",
+"group": "A1_001-010",
 "level": "A1",
+"num": 4,
 "text": "I'm your teacher"
 },
 {
-"id": "A1-5",
+"id": "A1_001-010-5",
+"group": "A1_001-010",
 "level": "A1",
+"num": 5,
 "text": "I'm happy today"
 },
 {
-"id": "A1-6",
+"id": "A1_001-010-6",
+"group": "A1_001-010",
 "level": "A1",
+"num": 6,
 "text": "I'm excited about the trip"
 },
 {
-"id": "A1-7",
+"id": "A1_001-010-7",
+"group": "A1_001-010",
 "level": "A1",
+"num": 7,
 "text": "I'm tired after work"
 },
 {
-"id": "A1-8",
+"id": "A1_001-010-8",
+"group": "A1_001-010",
 "level": "A1",
+"num": 8,
 "text": "I'm busy right now"
 },
 {
-"id": "A1-9",
+"id": "A1_001-010-9",
+"group": "A1_001-010",
 "level": "A1",
+"num": 9,
 "text": "She's sad today"
 },
 {
-"id": "A1-10",
+"id": "A1_001-010-10",
+"group": "A1_001-010",
 "level": "A1",
+"num": 10,
 "text": "I'm from Taiwan"
 },
 {
-"id": "A1-11",
+"id": "A1_001-010-11",
+"group": "A1_001-010",
 "level": "A1",
+"num": 11,
 "text": "She's from Japan and she loves it there"
 },
 {
-"id": "A1-12",
+"id": "A1_001-010-12",
+"group": "A1_001-010",
 "level": "A1",
+"num": 12,
 "text": "He's from Korea"
 },
 {
-"id": "A1-13",
+"id": "A1_001-010-13",
+"group": "A1_001-010",
 "level": "A1",
+"num": 13,
 "text": "We're from Canada"
 },
 {
-"id": "A1-14",
+"id": "A1_001-010-14",
+"group": "A1_001-010",
 "level": "A1",
+"num": 14,
 "text": "I'm from a small town"
 },
 {
-"id": "A1-15",
+"id": "A1_001-010-15",
+"group": "A1_001-010",
 "level": "A1",
+"num": 15,
 "text": "I'm eight years old"
 },
 {
-"id": "A1-16",
+"id": "A1_001-010-16",
+"group": "A1_001-010",
 "level": "A1",
+"num": 16,
 "text": "My sister is twelve years old"
 },
 {
-"id": "A1-17",
+"id": "A1_001-010-17",
+"group": "A1_001-010",
 "level": "A1",
+"num": 17,
 "text": "My sister is 12 years old"
 },
 {
-"id": "A1-18",
+"id": "A1_001-010-18",
+"group": "A1_001-010",
 "level": "A1",
+"num": 18,
 "text": "He is 10 years old"
 },
 {
-"id": "A1-19",
+"id": "A1_001-010-19",
+"group": "A1_001-010",
 "level": "A1",
+"num": 19,
 "text": "My brother is five years old"
 },
 {
-"id": "A1-20",
+"id": "A1_001-010-20",
+"group": "A1_001-010",
 "level": "A1",
+"num": 20,
 "text": "I am twenty years old"
 },
 {
-"id": "A1-21",
+"id": "A1_001-010-21",
+"group": "A1_001-010",
 "level": "A1",
+"num": 21,
 "text": "Nice to meet you"
 },
 {
-"id": "A1-22",
+"id": "A1_001-010-22",
+"group": "A1_001-010",
 "level": "A1",
+"num": 22,
 "text": "I'm Amy, your new neighbor"
 },
 {
-"id": "A1-23",
+"id": "A1_001-010-23",
+"group": "A1_001-010",
 "level": "A1",
+"num": 23,
 "text": "Nice to meet you too"
 },
 {
-"id": "A1-24",
+"id": "A1_001-010-24",
+"group": "A1_001-010",
 "level": "A1",
+"num": 24,
 "text": "Welcome to our class"
 },
 {
-"id": "A1-25",
+"id": "A1_001-010-25",
+"group": "A1_001-010",
 "level": "A1",
+"num": 25,
 "text": "I am a teacher"
 },
 {
-"id": "A1-26",
+"id": "A1_001-010-26",
+"group": "A1_001-010",
 "level": "A1",
+"num": 26,
 "text": "I have a dog"
 },
 {
-"id": "A1-27",
+"id": "A1_001-010-27",
+"group": "A1_001-010",
 "level": "A1",
+"num": 27,
 "text": "He is a doctor"
 },
 {
-"id": "A1-28",
+"id": "A1_001-010-28",
+"group": "A1_001-010",
 "level": "A1",
+"num": 28,
 "text": "She has a beautiful cat"
 },
 {
-"id": "A1-29",
+"id": "A1_001-010-29",
+"group": "A1_001-010",
 "level": "A1",
+"num": 29,
 "text": "I am a student"
 },
 {
-"id": "A1-30",
+"id": "A1_001-010-30",
+"group": "A1_001-010",
 "level": "A1",
+"num": 30,
 "text": "I have a red bike"
 },
 {
-"id": "A1-31",
+"id": "A1_001-010-31",
+"group": "A1_001-010",
 "level": "A1",
+"num": 31,
 "text": "He is a nurse"
 },
 {
-"id": "A1-32",
+"id": "A1_001-010-32",
+"group": "A1_001-010",
 "level": "A1",
+"num": 32,
 "text": "He has a big house"
 },
 {
-"id": "A1-33",
+"id": "A1_001-010-33",
+"group": "A1_001-010",
 "level": "A1",
+"num": 33,
 "text": "She is a nurse"
 },
 {
-"id": "A1-34",
+"id": "A1_001-010-34",
+"group": "A1_001-010",
 "level": "A1",
+"num": 34,
 "text": "We are friends"
 },
 {
-"id": "A1-35",
+"id": "A1_001-010-35",
+"group": "A1_001-010",
 "level": "A1",
+"num": 35,
 "text": "They have a new car"
 },
 {
-"id": "A1-36",
+"id": "A1_001-010-36",
+"group": "A1_001-010",
 "level": "A1",
+"num": 36,
 "text": "I don't like fish"
 },
 {
-"id": "A1-37",
+"id": "A1_001-010-37",
+"group": "A1_001-010",
 "level": "A1",
+"num": 37,
 "text": "I don't eat meat"
 },
 {
-"id": "A1-38",
+"id": "A1_001-010-38",
+"group": "A1_001-010",
 "level": "A1",
+"num": 38,
 "text": "I don't drink milk"
 },
 {
-"id": "A1-39",
+"id": "A1_001-010-39",
+"group": "A1_001-010",
 "level": "A1",
+"num": 39,
 "text": "I don't watch TV"
 },
 {
-"id": "A1-40",
+"id": "A1_001-010-40",
+"group": "A1_001-010",
 "level": "A1",
+"num": 40,
 "text": "I don't speak German"
 },
 {
-"id": "A1-41",
+"id": "A1_001-010-41",
+"group": "A1_001-010",
 "level": "A1",
+"num": 41,
 "text": "I'm not ready"
 },
 {
-"id": "A1-42",
+"id": "A1_001-010-42",
+"group": "A1_001-010",
 "level": "A1",
+"num": 42,
 "text": "I'm not listening"
 },
 {
-"id": "A1-43",
+"id": "A1_001-010-43",
+"group": "A1_001-010",
 "level": "A1",
+"num": 43,
 "text": "He's not here right now"
 },
 {
-"id": "A1-44",
+"id": "A1_001-010-44",
+"group": "A1_001-010",
 "level": "A1",
+"num": 44,
 "text": "We're not watching TV"
 },
 {
-"id": "A1-45",
+"id": "A1_001-010-45",
+"group": "A1_001-010",
 "level": "A1",
-"text": "He's not sleepingI'm not hungry"
+"num": 45,
+"text": "He's not sleeping"
 },
 {
-"id": "A1-46",
+"id": "A1_001-010-46",
+"group": "A1_001-010",
 "level": "A1",
+"num": 46,
+"text": "I'm not hungry"
+},
+{
+"id": "A1_001-010-47",
+"group": "A1_001-010",
+"level": "A1",
+"num": 47,
 "text": "She's not sleeping"
 },
 {
-"id": "A1-47",
+"id": "A1_001-010-48",
+"group": "A1_001-010",
 "level": "A1",
+"num": 48,
 "text": "We're not late"
 },
 {
-"id": "A1-48",
+"id": "A1_001-010-49",
+"group": "A1_001-010",
 "level": "A1",
+"num": 49,
 "text": "I'm not working"
 },
 {
-"id": "A1-49",
+"id": "A1_001-010-50",
+"group": "A1_001-010",
 "level": "A1",
+"num": 50,
 "text": "He's not angry"
 },
 {
-"id": "A1-50",
+"id": "A1_001-010-51",
+"group": "A1_001-010",
 "level": "A1",
+"num": 51,
 "text": "They're not eating"
 },
 {
-"id": "A1-51",
+"id": "A1_001-010-52",
+"group": "A1_001-010",
 "level": "A1",
+"num": 52,
 "text": "He doesn't eat meat"
 },
 {
-"id": "A1-52",
+"id": "A1_001-010-53",
+"group": "A1_001-010",
 "level": "A1",
+"num": 53,
 "text": "She doesn't speak French"
 },
 {
-"id": "A1-53",
+"id": "A1_001-010-54",
+"group": "A1_001-010",
 "level": "A1",
+"num": 54,
 "text": "It doesn't work"
 },
 {
-"id": "A1-54",
+"id": "A1_001-010-55",
+"group": "A1_001-010",
 "level": "A1",
+"num": 55,
 "text": "She doesn't like coffee"
 },
 {
-"id": "A1-55",
+"id": "A1_001-010-56",
+"group": "A1_001-010",
 "level": "A1",
+"num": 56,
 "text": "He doesn't go to the gym"
 },
 {
-"id": "A1-56",
+"id": "A1_001-010-57",
+"group": "A1_001-010",
 "level": "A1",
+"num": 57,
 "text": "We don't live here"
 },
 {
-"id": "A1-57",
+"id": "A1_001-010-58",
+"group": "A1_001-010",
 "level": "A1",
+"num": 58,
 "text": "They don't go to school on Sundays"
 },
 {
-"id": "A1-58",
+"id": "A1_001-010-59",
+"group": "A1_001-010",
 "level": "A1",
+"num": 59,
 "text": "You don't need this"
 },
 {
-"id": "A1-59",
+"id": "A1_001-010-60",
+"group": "A1_001-010",
 "level": "A1",
+"num": 60,
 "text": "We don't eat breakfast"
 },
 {
-"id": "A1-60",
+"id": "A1_001-010-61",
+"group": "A1_001-010",
 "level": "A1",
+"num": 61,
 "text": "They don't like the movie"
 },
 {
-"id": "A1-61",
+"id": "A1_011-020-1",
+"group": "A1_011-020",
 "level": "A1",
+"num": 1,
 "text": "I wake up at seven every day"
 },
 {
-"id": "A1-62",
+"id": "A1_011-020-2",
+"group": "A1_011-020",
 "level": "A1",
+"num": 2,
 "text": "I brush my teeth every morning"
 },
 {
-"id": "A1-63",
+"id": "A1_011-020-3",
+"group": "A1_011-020",
 "level": "A1",
+"num": 3,
 "text": "I drink water every day"
 },
 {
-"id": "A1-64",
+"id": "A1_011-020-4",
+"group": "A1_011-020",
 "level": "A1",
+"num": 4,
 "text": "I read a book every night"
 },
 {
-"id": "A1-65",
+"id": "A1_011-020-5",
+"group": "A1_011-020",
 "level": "A1",
+"num": 5,
 "text": "I walk my dog every evening"
 },
 {
-"id": "A1-66",
+"id": "A1_011-020-6",
+"group": "A1_011-020",
 "level": "A1",
-"text": "She drinks coffee every morningHe walks to school every afternoon"
+"num": 6,
+"text": "She drinks coffee every morning"
 },
 {
-"id": "A1-67",
+"id": "A1_011-020-7",
+"group": "A1_011-020",
 "level": "A1",
+"num": 7,
+"text": "He walks to school every afternoon"
+},
+{
+"id": "A1_011-020-8",
+"group": "A1_011-020",
+"level": "A1",
+"num": 8,
 "text": "He reads the news every day"
 },
 {
-"id": "A1-68",
+"id": "A1_011-020-9",
+"group": "A1_011-020",
 "level": "A1",
+"num": 9,
 "text": "She cooks dinner every evening"
 },
 {
-"id": "A1-69",
+"id": "A1_011-020-10",
+"group": "A1_011-020",
 "level": "A1",
-"text": "He everyHe washes his car every weekend"
+"num": 10,
+"text": "He every"
 },
 {
-"id": "A1-70",
+"id": "A1_011-020-11",
+"group": "A1_011-020",
 "level": "A1",
+"num": 11,
 "text": "He washes his car every weekend"
 },
 {
-"id": "A1-71",
+"id": "A1_011-020-12",
+"group": "A1_011-020",
 "level": "A1",
+"num": 12,
 "text": "I always take the bus to school"
 },
 {
-"id": "A1-72",
+"id": "A1_011-020-13",
+"group": "A1_011-020",
 "level": "A1",
+"num": 13,
 "text": "I usually eat breakfast at home"
 },
 {
-"id": "A1-73",
+"id": "A1_011-020-14",
+"group": "A1_011-020",
 "level": "A1",
+"num": 14,
 "text": "I sometimes play tennis on Sundays"
 },
 {
-"id": "A1-74",
+"id": "A1_011-020-15",
+"group": "A1_011-020",
 "level": "A1",
+"num": 15,
 "text": "I always drink tea in the morning"
 },
 {
-"id": "A1-75",
+"id": "A1_011-020-16",
+"group": "A1_011-020",
 "level": "A1",
+"num": 16,
 "text": "I usually go to bed early"
 },
 {
-"id": "A1-76",
+"id": "A1_011-020-17",
+"group": "A1_011-020",
 "level": "A1",
+"num": 17,
 "text": "I never eat pizza"
 },
 {
-"id": "A1-77",
+"id": "A1_011-020-18",
+"group": "A1_011-020",
 "level": "A1",
+"num": 18,
 "text": "I never drink coffee"
 },
 {
-"id": "A1-78",
+"id": "A1_011-020-19",
+"group": "A1_011-020",
 "level": "A1",
+"num": 19,
 "text": "I never go to the cinema"
 },
 {
-"id": "A1-79",
+"id": "A1_011-020-20",
+"group": "A1_011-020",
 "level": "A1",
+"num": 20,
 "text": "I never eat breakfast"
 },
 {
-"id": "A1-80",
+"id": "A1_011-020-21",
+"group": "A1_011-020",
 "level": "A1",
+"num": 21,
 "text": "I never forget my keys"
 },
 {
-"id": "A1-81",
+"id": "A1_011-020-22",
+"group": "A1_011-020",
 "level": "A1",
+"num": 22,
 "text": "You do sports?"
 },
 {
-"id": "A1-82",
+"id": "A1_011-020-23",
+"group": "A1_011-020",
 "level": "A1",
+"num": 23,
 "text": "Do you play sports?"
 },
 {
-"id": "A1-83",
+"id": "A1_011-020-24",
+"group": "A1_011-020",
 "level": "A1",
+"num": 24,
 "text": "Do you like music?"
 },
 {
-"id": "A1-84",
+"id": "A1_011-020-25",
+"group": "A1_011-020",
 "level": "A1",
+"num": 25,
 "text": "Do you speak English?"
 },
 {
-"id": "A1-85",
+"id": "A1_011-020-26",
+"group": "A1_011-020",
 "level": "A1",
+"num": 26,
 "text": "Do you live near here?"
 },
 {
-"id": "A1-86",
+"id": "A1_011-020-27",
+"group": "A1_011-020",
 "level": "A1",
+"num": 27,
 "text": "Do you want some coffee?"
 },
 {
-"id": "A1-87",
+"id": "A1_011-020-28",
+"group": "A1_011-020",
 "level": "A1",
+"num": 28,
 "text": "What do you study?"
 },
 {
-"id": "A1-88",
+"id": "A1_011-020-29",
+"group": "A1_011-020",
 "level": "A1",
+"num": 29,
 "text": "What does he do on weekends?"
 },
 {
-"id": "A1-89",
+"id": "A1_011-020-30",
+"group": "A1_011-020",
 "level": "A1",
+"num": 30,
 "text": "What do they eat for lunch?"
 },
 {
-"id": "A1-90",
+"id": "A1_011-020-31",
+"group": "A1_011-020",
 "level": "A1",
-"text": "He wants to buyWhat does she want to buy?"
+"num": 31,
+"text": "He wants to buy"
 },
 {
-"id": "A1-91",
+"id": "A1_011-020-32",
+"group": "A1_011-020",
 "level": "A1",
+"num": 32,
 "text": "What does she want to buy?"
 },
 {
-"id": "A1-92",
+"id": "A1_011-020-33",
+"group": "A1_011-020",
 "level": "A1",
+"num": 33,
 "text": "What do you do in the evening?"
 },
 {
-"id": "A1-93",
+"id": "A1_011-020-34",
+"group": "A1_011-020",
 "level": "A1",
+"num": 34,
 "text": "What is this?"
 },
 {
-"id": "A1-94",
+"id": "A1_011-020-35",
+"group": "A1_011-020",
 "level": "A1",
-"text": "That buildingWhat is that building?"
+"num": 35,
+"text": "That building"
 },
 {
-"id": "A1-95",
+"id": "A1_011-020-36",
+"group": "A1_011-020",
 "level": "A1",
+"num": 36,
+"text": "What is that building?"
+},
+{
+"id": "A1_011-020-37",
+"group": "A1_011-020",
+"level": "A1",
+"num": 37,
 "text": "What is it?"
 },
 {
-"id": "A1-96",
+"id": "A1_011-020-38",
+"group": "A1_011-020",
 "level": "A1",
+"num": 38,
 "text": "That sound is what?"
 },
 {
-"id": "A1-97",
+"id": "A1_011-020-39",
+"group": "A1_011-020",
 "level": "A1",
+"num": 39,
 "text": "What is that noise?"
 },
 {
-"id": "A1-98",
+"id": "A1_011-020-40",
+"group": "A1_011-020",
 "level": "A1",
+"num": 40,
 "text": "What is this word?"
 },
 {
-"id": "A1-99",
+"id": "A1_011-020-41",
+"group": "A1_011-020",
 "level": "A1",
+"num": 41,
 "text": "Where does he work?"
 },
 {
-"id": "A1-100",
+"id": "A1_011-020-42",
+"group": "A1_011-020",
 "level": "A1",
+"num": 42,
 "text": "They live where?"
 },
 {
-"id": "A1-101",
+"id": "A1_011-020-43",
+"group": "A1_011-020",
 "level": "A1",
+"num": 43,
 "text": "Where do they live?"
 },
 {
-"id": "A1-102",
+"id": "A1_011-020-44",
+"group": "A1_011-020",
 "level": "A1",
-"text": "You where do you studyWhere do you study?"
+"num": 44,
+"text": "You where do you study"
 },
 {
-"id": "A1-103",
+"id": "A1_011-020-45",
+"group": "A1_011-020",
 "level": "A1",
+"num": 45,
+"text": "Where do you study?"
+},
+{
+"id": "A1_011-020-46",
+"group": "A1_011-020",
+"level": "A1",
+"num": 46,
 "text": "Where does she buy her clothes?"
 },
 {
-"id": "A1-104",
+"id": "A1_011-020-47",
+"group": "A1_011-020",
 "level": "A1",
+"num": 47,
 "text": "Where do we meet?"
 },
 {
-"id": "A1-105",
+"id": "A1_011-020-48",
+"group": "A1_011-020",
 "level": "A1",
+"num": 48,
 "text": "Where is the bathroom?"
 },
 {
-"id": "A1-106",
+"id": "A1_011-020-49",
+"group": "A1_011-020",
 "level": "A1",
+"num": 49,
 "text": "Where is my phone?"
 },
 {
-"id": "A1-107",
+"id": "A1_011-020-50",
+"group": "A1_011-020",
 "level": "A1",
+"num": 50,
 "text": "Where are my shoes?"
 },
 {
-"id": "A1-108",
+"id": "A1_011-020-51",
+"group": "A1_011-020",
 "level": "A1",
+"num": 51,
 "text": "Where is the library?"
 },
 {
-"id": "A1-109",
+"id": "A1_011-020-52",
+"group": "A1_011-020",
 "level": "A1",
+"num": 52,
 "text": "Where is the bus stop?"
 },
 {
-"id": "A1-110",
+"id": "A1_011-020-53",
+"group": "A1_011-020",
 "level": "A1",
+"num": 53,
 "text": "Who is your teacher?"
 },
 {
-"id": "A1-111",
+"id": "A1_011-020-54",
+"group": "A1_011-020",
 "level": "A1",
+"num": 54,
 "text": "Who is the manager?"
 },
 {
-"id": "A1-112",
+"id": "A1_011-020-55",
+"group": "A1_011-020",
 "level": "A1",
-"text": "Who is that manWho is your best friend?"
+"num": 55,
+"text": "Who is that man"
 },
 {
-"id": "A1-113",
+"id": "A1_011-020-56",
+"group": "A1_011-020",
 "level": "A1",
+"num": 56,
 "text": "Who is your best friend?"
 },
 {
-"id": "A1-114",
+"id": "A1_011-020-57",
+"group": "A1_011-020",
 "level": "A1",
+"num": 57,
 "text": "Who is the driver?"
 },
 {
-"id": "A1-115",
+"id": "A1_021-030-1",
+"group": "A1_021-030",
 "level": "A1",
+"num": 1,
 "text": "What time is it?"
 },
 {
-"id": "A1-116",
+"id": "A1_021-030-2",
+"group": "A1_021-030",
 "level": "A1",
+"num": 2,
 "text": "It's three o'clock"
 },
 {
-"id": "A1-117",
+"id": "A1_021-030-3",
+"group": "A1_021-030",
 "level": "A1",
+"num": 3,
 "text": "It's half past five"
 },
 {
-"id": "A1-118",
+"id": "A1_021-030-4",
+"group": "A1_021-030",
 "level": "A1",
+"num": 4,
 "text": "It's quarter past two"
 },
 {
-"id": "A1-119",
+"id": "A1_021-030-5",
+"group": "A1_021-030",
 "level": "A1",
+"num": 5,
 "text": "It's 10 to 9"
 },
 {
-"id": "A1-120",
+"id": "A1_021-030-6",
+"group": "A1_021-030",
 "level": "A1",
+"num": 6,
 "text": "Now what time is it?"
 },
 {
-"id": "A1-121",
+"id": "A1_021-030-7",
+"group": "A1_021-030",
 "level": "A1",
+"num": 7,
 "text": "It's noon"
 },
 {
-"id": "A1-122",
+"id": "A1_021-030-8",
+"group": "A1_021-030",
 "level": "A1",
+"num": 8,
 "text": "I have two brothers and one sister"
 },
 {
-"id": "A1-123",
+"id": "A1_021-030-9",
+"group": "A1_021-030",
 "level": "A1",
+"num": 9,
 "text": "She has three cats and two dogs"
 },
 {
-"id": "A1-124",
+"id": "A1_021-030-10",
+"group": "A1_021-030",
 "level": "A1",
+"num": 10,
 "text": "I have five apples in my bag"
 },
 {
-"id": "A1-125",
+"id": "A1_021-030-11",
+"group": "A1_021-030",
 "level": "A1",
+"num": 11,
 "text": "He has four books on his desk"
 },
 {
-"id": "A1-126",
+"id": "A1_021-030-12",
+"group": "A1_021-030",
 "level": "A1",
+"num": 12,
 "text": "We have six people in our team"
 },
 {
-"id": "A1-127",
+"id": "A1_021-030-13",
+"group": "A1_021-030",
 "level": "A1",
+"num": 13,
 "text": "This is fifty dollars"
 },
 {
-"id": "A1-128",
+"id": "A1_021-030-14",
+"group": "A1_021-030",
 "level": "A1",
+"num": 14,
 "text": "This shirt is twenty euros"
 },
 {
-"id": "A1-129",
+"id": "A1_021-030-15",
+"group": "A1_021-030",
 "level": "A1",
+"num": 15,
 "text": "It's 20 euros for this shirt"
 },
 {
-"id": "A1-130",
+"id": "A1_021-030-16",
+"group": "A1_021-030",
 "level": "A1",
+"num": 16,
 "text": "One ticket 10 pounds"
 },
 {
-"id": "A1-131",
+"id": "A1_021-030-17",
+"group": "A1_021-030",
 "level": "A1",
+"num": 17,
 "text": "It's 10 pounds for a ticket"
 },
 {
-"id": "A1-132",
+"id": "A1_021-030-18",
+"group": "A1_021-030",
 "level": "A1",
+"num": 18,
 "text": "One coffee 5It's five dollars for a coffee"
 },
 {
-"id": "A1-133",
+"id": "A1_021-030-19",
+"group": "A1_021-030",
 "level": "A1",
+"num": 19,
 "text": "It's five dollars for a coffee"
 },
 {
-"id": "A1-134",
+"id": "A1_021-030-20",
+"group": "A1_021-030",
 "level": "A1",
+"num": 20,
 "text": "It's thirty yuan for the book"
 },
 {
-"id": "A1-135",
+"id": "A1_021-030-21",
+"group": "A1_021-030",
 "level": "A1",
+"num": 21,
 "text": "Today is Monday, September 7th"
 },
 {
-"id": "A1-136",
+"id": "A1_021-030-22",
+"group": "A1_021-030",
 "level": "A1",
+"num": 22,
 "text": "Today is a sunny day"
 },
 {
-"id": "A1-137",
+"id": "A1_021-030-23",
+"group": "A1_021-030",
 "level": "A1",
+"num": 23,
 "text": "Today is my birthday"
 },
 {
-"id": "A1-138",
+"id": "A1_021-030-24",
+"group": "A1_021-030",
 "level": "A1",
+"num": 24,
 "text": "Today is Friday"
 },
 {
-"id": "A1-139",
+"id": "A1_021-030-25",
+"group": "A1_021-030",
 "level": "A1",
+"num": 25,
 "text": "Today is a cold day"
 },
 {
-"id": "A1-140",
+"id": "A1_021-030-26",
+"group": "A1_021-030",
 "level": "A1",
+"num": 26,
 "text": "When does the class start?"
 },
 {
-"id": "A1-141",
+"id": "A1_021-030-27",
+"group": "A1_021-030",
 "level": "A1",
+"num": 27,
 "text": "When do you usually go to bed?"
 },
 {
-"id": "A1-142",
+"id": "A1_021-030-28",
+"group": "A1_021-030",
 "level": "A1",
+"num": 28,
 "text": "When does the train leave?"
 },
 {
-"id": "A1-143",
+"id": "A1_021-030-29",
+"group": "A1_021-030",
 "level": "A1",
+"num": 29,
 "text": "When do they open the shop?"
 },
 {
-"id": "A1-144",
+"id": "A1_021-030-30",
+"group": "A1_021-030",
 "level": "A1",
+"num": 30,
 "text": "When does she come home?"
 },
 {
-"id": "A1-145",
+"id": "A1_021-030-31",
+"group": "A1_021-030",
 "level": "A1",
+"num": 31,
 "text": "This is my room"
 },
 {
-"id": "A1-146",
+"id": "A1_021-030-32",
+"group": "A1_021-030",
 "level": "A1",
-"text": "This is my family,"
-},
-{
-"id": "A1-147",
-"level": "A1",
+"num": 32,
 "text": "This is my family"
 },
 {
-"id": "A1-148",
+"id": "A1_021-030-33",
+"group": "A1_021-030",
 "level": "A1",
+"num": 33,
 "text": "My mom, dad, and sister"
 },
 {
-"id": "A1-149",
+"id": "A1_021-030-34",
+"group": "A1_021-030",
 "level": "A1",
+"num": 34,
 "text": "This is my phone"
 },
 {
-"id": "A1-150",
+"id": "A1_021-030-35",
+"group": "A1_021-030",
 "level": "A1",
+"num": 35,
 "text": "This is my dog, Max"
 },
 {
-"id": "A1-151",
+"id": "A1_021-030-36",
+"group": "A1_021-030",
 "level": "A1",
-"text": "This is my schoolThis is my school"
+"num": 36,
+"text": "This is my school"
 },
 {
-"id": "A1-152",
+"id": "A1_021-030-37",
+"group": "A1_021-030",
 "level": "A1",
+"num": 37,
 "text": "I live with my parents"
 },
 {
-"id": "A1-153",
+"id": "A1_021-030-38",
+"group": "A1_021-030",
 "level": "A1",
+"num": 38,
 "text": "She lives with her grandparents"
 },
 {
-"id": "A1-154",
+"id": "A1_021-030-39",
+"group": "A1_021-030",
 "level": "A1",
+"num": 39,
 "text": "I live with my sister"
 },
 {
-"id": "A1-155",
+"id": "A1_021-030-40",
+"group": "A1_021-030",
 "level": "A1",
+"num": 40,
 "text": "He lives with his uncle"
 },
 {
-"id": "A1-156",
+"id": "A1_021-030-41",
+"group": "A1_021-030",
 "level": "A1",
+"num": 41,
 "text": "We live with our friends"
 },
 {
-"id": "A1-157",
+"id": "A1_021-030-42",
+"group": "A1_021-030",
 "level": "A1",
+"num": 42,
 "text": "There is a TV in the living room"
 },
 {
-"id": "A1-158",
+"id": "A1_021-030-43",
+"group": "A1_021-030",
 "level": "A1",
+"num": 43,
 "text": "There are three books on the table"
 },
 {
-"id": "A1-159",
+"id": "A1_021-030-44",
+"group": "A1_021-030",
 "level": "A1",
+"num": 44,
 "text": "There is a cat on the sofa"
 },
 {
-"id": "A1-160",
+"id": "A1_021-030-45",
+"group": "A1_021-030",
 "level": "A1",
+"num": 45,
 "text": "There are two cars in the garage"
 },
 {
-"id": "A1-161",
+"id": "A1_021-030-46",
+"group": "A1_021-030",
 "level": "A1",
+"num": 46,
 "text": "There is a bank near the station"
 },
 {
-"id": "A1-162",
+"id": "A1_021-030-47",
+"group": "A1_021-030",
 "level": "A1",
+"num": 47,
 "text": "How many people are there in your family?"
 },
 {
-"id": "A1-163",
+"id": "A1_021-030-48",
+"group": "A1_021-030",
 "level": "A1",
+"num": 48,
 "text": "How many chairs are there in the room?"
 },
 {
-"id": "A1-164",
+"id": "A1_021-030-49",
+"group": "A1_021-030",
 "level": "A1",
+"num": 49,
 "text": "How many students are there in the class?"
 },
 {
-"id": "A1-165",
+"id": "A1_021-030-50",
+"group": "A1_021-030",
 "level": "A1",
+"num": 50,
 "text": "How many rooms are there in your house?"
 },
 {
-"id": "A1-166",
+"id": "A1_021-030-51",
+"group": "A1_021-030",
 "level": "A1",
+"num": 51,
 "text": "How many eggs are there in the fridge?"
 },
 {
-"id": "A1-167",
+"id": "A1_021-030-52",
+"group": "A1_021-030",
 "level": "A1",
+"num": 52,
 "text": "I love my mom and dad"
 },
 {
-"id": "A1-168",
+"id": "A1_021-030-53",
+"group": "A1_021-030",
 "level": "A1",
+"num": 53,
 "text": "I love my best friend"
 },
 {
-"id": "A1-169",
+"id": "A1_021-030-54",
+"group": "A1_021-030",
 "level": "A1",
+"num": 54,
 "text": "I love my dog"
 },
 {
-"id": "A1-170",
+"id": "A1_021-030-55",
+"group": "A1_021-030",
 "level": "A1",
+"num": 55,
 "text": "I love my new school"
 },
 {
-"id": "A1-171",
+"id": "A1_021-030-56",
+"group": "A1_021-030",
 "level": "A1",
+"num": 56,
 "text": "I love my little brother"
 },
 {
-"id": "A1-172",
+"id": "A1_031-040-1",
+"group": "A1_031-040",
 "level": "A1",
+"num": 1,
 "text": "I like rice, I dislike cooking"
 },
 {
-"id": "A1-173",
+"id": "A1_031-040-2",
+"group": "A1_031-040",
 "level": "A1",
+"num": 2,
 "text": "I like apples"
 },
 {
-"id": "A1-174",
+"id": "A1_031-040-3",
+"group": "A1_031-040",
 "level": "A1",
+"num": 3,
 "text": "Dot"
 },
 {
-"id": "A1-175",
+"id": "A1_031-040-4",
+"group": "A1_031-040",
 "level": "A1",
+"num": 4,
 "text": "I dislike waiting"
 },
 {
-"id": "A1-176",
+"id": "A1_031-040-5",
+"group": "A1_031-040",
 "level": "A1",
+"num": 5,
 "text": "I like swimming"
 },
 {
-"id": "A1-177",
+"id": "A1_031-040-6",
+"group": "A1_031-040",
 "level": "A1",
+"num": 6,
 "text": "I dislike cleaning"
 },
 {
-"id": "A1-178",
+"id": "A1_031-040-7",
+"group": "A1_031-040",
 "level": "A1",
+"num": 7,
 "text": "I like tea"
 },
 {
-"id": "A1-179",
+"id": "A1_031-040-8",
+"group": "A1_031-040",
 "level": "A1",
+"num": 8,
 "text": "I dislike driving"
 },
 {
-"id": "A1-180",
+"id": "A1_031-040-9",
+"group": "A1_031-040",
 "level": "A1",
+"num": 9,
 "text": "I like dogs"
 },
 {
-"id": "A1-181",
+"id": "A1_031-040-10",
+"group": "A1_031-040",
 "level": "A1",
+"num": 10,
 "text": "I dislike waking up early"
 },
 {
-"id": "A1-182",
+"id": "A1_031-040-11",
+"group": "A1_031-040",
 "level": "A1",
+"num": 11,
 "text": "I want some water, please"
 },
 {
-"id": "A1-183",
+"id": "A1_031-040-12",
+"group": "A1_031-040",
 "level": "A1",
+"num": 12,
 "text": "I want a ticket to Taipei, please"
 },
 {
-"id": "A1-184",
+"id": "A1_031-040-13",
+"group": "A1_031-040",
 "level": "A1",
+"num": 13,
 "text": "I want a hamburger, please"
 },
 {
-"id": "A1-185",
+"id": "A1_031-040-14",
+"group": "A1_031-040",
 "level": "A1",
+"num": 14,
 "text": "I want a new book"
 },
 {
-"id": "A1-186",
+"id": "A1_031-040-15",
+"group": "A1_031-040",
 "level": "A1",
+"num": 15,
 "text": "She wants a glass of milk"
 },
 {
-"id": "A1-187",
+"id": "A1_031-040-16",
+"group": "A1_031-040",
 "level": "A1",
+"num": 16,
 "text": "Can I have the menu, please?"
 },
 {
-"id": "A1-188",
+"id": "A1_031-040-17",
+"group": "A1_031-040",
 "level": "A1",
+"num": 17,
 "text": "Can I have the bill, please?"
 },
 {
-"id": "A1-189",
+"id": "A1_031-040-18",
+"group": "A1_031-040",
 "level": "A1",
+"num": 18,
 "text": "Can I have a glass of water, please?"
 },
 {
-"id": "A1-190",
+"id": "A1_031-040-19",
+"group": "A1_031-040",
 "level": "A1",
+"num": 19,
 "text": "Can I have a seat by the window, please?"
 },
 {
-"id": "A1-191",
+"id": "A1_031-040-20",
+"group": "A1_031-040",
 "level": "A1",
+"num": 20,
 "text": "Can I have a pen, please?"
 },
 {
-"id": "A1-192",
+"id": "A1_031-040-21",
+"group": "A1_031-040",
 "level": "A1",
+"num": 21,
 "text": "I'm really hungry"
 },
 {
-"id": "A1-193",
+"id": "A1_031-040-22",
+"group": "A1_031-040",
 "level": "A1",
+"num": 22,
 "text": "Let's eat"
 },
 {
-"id": "A1-194",
+"id": "A1_031-040-23",
+"group": "A1_031-040",
 "level": "A1",
+"num": 23,
 "text": "I'm thirsty"
 },
 {
-"id": "A1-195",
+"id": "A1_031-040-24",
+"group": "A1_031-040",
 "level": "A1",
+"num": 24,
 "text": "Can I have some juice?"
 },
 {
-"id": "A1-196",
+"id": "A1_031-040-25",
+"group": "A1_031-040",
 "level": "A1",
+"num": 25,
 "text": "I'm so hungry"
 },
 {
-"id": "A1-197",
+"id": "A1_031-040-26",
+"group": "A1_031-040",
 "level": "A1",
+"num": 26,
 "text": "Where's the food?"
 },
 {
-"id": "A1-198",
+"id": "A1_031-040-27",
+"group": "A1_031-040",
 "level": "A1",
+"num": 27,
 "text": "I'm a little thirsty"
 },
 {
-"id": "A1-199",
+"id": "A1_031-040-28",
+"group": "A1_031-040",
 "level": "A1",
+"num": 28,
 "text": "Let's get a drink"
 },
 {
-"id": "A1-200",
+"id": "A1_031-040-29",
+"group": "A1_031-040",
 "level": "A1",
+"num": 29,
 "text": "She's hungry"
 },
 {
-"id": "A1-201",
+"id": "A1_031-040-30",
+"group": "A1_031-040",
 "level": "A1",
+"num": 30,
 "text": "Let's make lunch"
 },
 {
-"id": "A1-202",
+"id": "A1_031-040-31",
+"group": "A1_031-040",
 "level": "A1",
+"num": 31,
 "text": "Let's make|I don't have any money"
 },
 {
-"id": "A1-203",
+"id": "A1_031-040-32",
+"group": "A1_031-040",
 "level": "A1",
+"num": 32,
 "text": "I don't have any money"
 },
 {
-"id": "A1-204",
+"id": "A1_031-040-33",
+"group": "A1_031-040",
 "level": "A1",
+"num": 33,
 "text": "I don't have your phone number"
 },
 {
-"id": "A1-205",
+"id": "A1_031-040-34",
+"group": "A1_031-040",
 "level": "A1",
+"num": 34,
 "text": "I don't have an umbrella"
 },
 {
-"id": "A1-206",
+"id": "A1_031-040-35",
+"group": "A1_031-040",
 "level": "A1",
+"num": 35,
 "text": "I don't have time today"
 },
 {
-"id": "A1-207",
+"id": "A1_031-040-36",
+"group": "A1_031-040",
 "level": "A1",
+"num": 36,
 "text": "I don't have a ticket"
 },
 {
-"id": "A1-208",
+"id": "A1_031-040-37",
+"group": "A1_031-040",
 "level": "A1",
+"num": 37,
 "text": "How much is this shirt?"
 },
 {
-"id": "A1-209",
+"id": "A1_031-040-38",
+"group": "A1_031-040",
 "level": "A1",
+"num": 38,
 "text": "How much are these shoes?"
 },
 {
-"id": "A1-210",
+"id": "A1_031-040-39",
+"group": "A1_031-040",
 "level": "A1",
+"num": 39,
 "text": "How much is that hat?"
 },
 {
-"id": "A1-211",
+"id": "A1_031-040-40",
+"group": "A1_031-040",
 "level": "A1",
+"num": 40,
 "text": "How much are those apples?"
 },
 {
-"id": "A1-212",
+"id": "A1_031-040-41",
+"group": "A1_031-040",
 "level": "A1",
+"num": 41,
 "text": "How much is the ticket?"
 },
 {
-"id": "A1-213",
+"id": "A1_031-040-42",
+"group": "A1_031-040",
 "level": "A1",
+"num": 42,
 "text": "I need a new bag"
 },
 {
-"id": "A1-214",
+"id": "A1_031-040-43",
+"group": "A1_031-040",
 "level": "A1",
+"num": 43,
 "text": "He needs a pen and some paper"
 },
 {
-"id": "A1-215",
+"id": "A1_031-040-44",
+"group": "A1_031-040",
 "level": "A1",
+"num": 44,
 "text": "She needs a pen and some paper"
 },
 {
-"id": "A1-216",
+"id": "A1_031-040-45",
+"group": "A1_031-040",
 "level": "A1",
+"num": 45,
 "text": "I need some help"
 },
 {
-"id": "A1-217",
+"id": "A1_031-040-46",
+"group": "A1_031-040",
 "level": "A1",
+"num": 46,
 "text": "He needs a doctor"
 },
 {
-"id": "A1-218",
+"id": "A1_031-040-47",
+"group": "A1_031-040",
 "level": "A1",
+"num": 47,
 "text": "We need more time"
 },
 {
-"id": "A1-219",
+"id": "A1_031-040-48",
+"group": "A1_031-040",
 "level": "A1",
+"num": 48,
 "text": "This is too expensive"
 },
 {
-"id": "A1-220",
+"id": "A1_031-040-49",
+"group": "A1_031-040",
 "level": "A1",
+"num": 49,
 "text": "This is very cheap"
 },
 {
-"id": "A1-221",
+"id": "A1_031-040-50",
+"group": "A1_031-040",
 "level": "A1",
+"num": 50,
 "text": "It's really cheap, only five dollars"
 },
 {
-"id": "A1-222",
+"id": "A1_031-040-51",
+"group": "A1_031-040",
 "level": "A1",
+"num": 51,
 "text": "This small toy is too expensive"
 },
 {
-"id": "A1-223",
+"id": "A1_031-040-52",
+"group": "A1_031-040",
 "level": "A1",
+"num": 52,
 "text": "It's very expensive for a small toy"
 },
 {
-"id": "A1-224",
+"id": "A1_031-040-53",
+"group": "A1_031-040",
 "level": "A1",
+"num": 53,
 "text": "It's so cheap today"
 },
 {
-"id": "A1-225",
+"id": "A1_031-040-54",
+"group": "A1_031-040",
 "level": "A1",
+"num": 54,
 "text": "It's not cheap at all"
 },
 {
-"id": "A1-226",
+"id": "A1_031-040-55",
+"group": "A1_031-040",
 "level": "A1",
+"num": 55,
 "text": "I'll take this one"
 },
 {
-"id": "A1-227",
+"id": "A1_031-040-56",
+"group": "A1_031-040",
 "level": "A1",
+"num": 56,
 "text": "I'll take the blue dress, please"
 },
 {
-"id": "A1-228",
+"id": "A1_031-040-57",
+"group": "A1_031-040",
 "level": "A1",
-"text": "I'll take the red oneI'll take the red one"
+"num": 57,
+"text": "I'll take the red one"
 },
 {
-"id": "A1-229",
+"id": "A1_031-040-58",
+"group": "A1_031-040",
 "level": "A1",
+"num": 58,
 "text": "I want two"
 },
 {
-"id": "A1-230",
+"id": "A1_031-040-59",
+"group": "A1_031-040",
 "level": "A1",
+"num": 59,
 "text": "I'll take two, please"
 },
 {
-"id": "A1-231",
+"id": "A1_031-040-60",
+"group": "A1_031-040",
 "level": "A1",
+"num": 60,
 "text": "He wants small size"
 },
 {
-"id": "A1-232",
+"id": "A1_031-040-61",
+"group": "A1_031-040",
 "level": "A1",
+"num": 61,
 "text": "She'll take the small size"
 },
 {
-"id": "A1-233",
+"id": "A1_031-040-62",
+"group": "A1_031-040",
 "level": "A1",
+"num": 62,
 "text": "Do you have a smaller size?"
 },
 {
-"id": "A1-234",
+"id": "A1_031-040-63",
+"group": "A1_031-040",
 "level": "A1",
+"num": 63,
 "text": "This has red"
 },
 {
-"id": "A1-235",
+"id": "A1_031-040-64",
+"group": "A1_031-040",
 "level": "A1",
+"num": 64,
 "text": "Do you have this in red?"
 },
 {
-"id": "A1-236",
+"id": "A1_031-040-65",
+"group": "A1_031-040",
 "level": "A1",
+"num": 65,
 "text": "Do you have a map of the city?"
 },
 {
-"id": "A1-237",
+"id": "A1_031-040-66",
+"group": "A1_031-040",
 "level": "A1",
+"num": 66,
 "text": "Do you have any questions?"
 },
 {
-"id": "A1-238",
+"id": "A1_031-040-67",
+"group": "A1_031-040",
 "level": "A1",
+"num": 67,
 "text": "Do you have an extra pen?"
 },
 {
-"id": "A1-239",
+"id": "A1_041-050-1",
+"group": "A1_041-050",
 "level": "A1",
+"num": 1,
 "text": "He is reading a book right now"
 },
 {
-"id": "A1-240",
+"id": "A1_041-050-2",
+"group": "A1_041-050",
 "level": "A1",
+"num": 2,
 "text": "He is playing basketball at the park"
 },
 {
-"id": "A1-241",
+"id": "A1_041-050-3",
+"group": "A1_041-050",
 "level": "A1",
+"num": 3,
 "text": "They are watching a movie"
 },
 {
-"id": "A1-242",
+"id": "A1_041-050-4",
+"group": "A1_041-050",
 "level": "A1",
+"num": 4,
 "text": "I am writing a letter"
 },
 {
-"id": "A1-243",
+"id": "A1_041-050-5",
+"group": "A1_041-050",
 "level": "A1",
+"num": 5,
 "text": "The children are sleeping"
 },
 {
-"id": "A1-244",
+"id": "A1_041-050-6",
+"group": "A1_041-050",
 "level": "A1",
+"num": 6,
 "text": "What are you doing?"
 },
 {
-"id": "A1-245",
+"id": "A1_041-050-7",
+"group": "A1_041-050",
 "level": "A1",
+"num": 7,
 "text": "What is she cooking?"
 },
 {
-"id": "A1-246",
+"id": "A1_041-050-8",
+"group": "A1_041-050",
 "level": "A1",
+"num": 8,
 "text": "They are playing"
 },
 {
-"id": "A1-247",
+"id": "A1_041-050-9",
+"group": "A1_041-050",
 "level": "A1",
+"num": 9,
 "text": "What are they playing?"
 },
 {
-"id": "A1-248",
+"id": "A1_041-050-10",
+"group": "A1_041-050",
 "level": "A1",
+"num": 10,
 "text": "He is watching"
 },
 {
-"id": "A1-249",
+"id": "A1_041-050-11",
+"group": "A1_041-050",
 "level": "A1",
+"num": 11,
 "text": "What is he watching?"
 },
 {
-"id": "A1-250",
+"id": "A1_041-050-12",
+"group": "A1_041-050",
 "level": "A1",
+"num": 12,
 "text": "What are you eating?"
 },
 {
-"id": "A1-251",
+"id": "A1_041-050-13",
+"group": "A1_041-050",
 "level": "A1",
+"num": 13,
 "text": "Are you waiting for someone?"
 },
 {
-"id": "A1-252",
+"id": "A1_041-050-14",
+"group": "A1_041-050",
 "level": "A1",
+"num": 14,
 "text": "Is he working today?"
 },
 {
-"id": "A1-253",
+"id": "A1_041-050-15",
+"group": "A1_041-050",
 "level": "A1",
+"num": 15,
 "text": "Are you listening to music?"
 },
 {
-"id": "A1-254",
+"id": "A1_041-050-16",
+"group": "A1_041-050",
 "level": "A1",
+"num": 16,
 "text": "Is she coming to the party?"
 },
 {
-"id": "A1-255",
+"id": "A1_041-050-17",
+"group": "A1_041-050",
 "level": "A1",
+"num": 17,
 "text": "Are they eating dinner?"
 },
 {
-"id": "A1-256",
+"id": "A1_041-050-18",
+"group": "A1_041-050",
 "level": "A1",
+"num": 18,
 "text": "I'm just eating lunch"
 },
 {
-"id": "A1-257",
+"id": "A1_041-050-19",
+"group": "A1_041-050",
 "level": "A1",
+"num": 19,
 "text": "I'm just finishing my homework"
 },
 {
-"id": "A1-258",
+"id": "A1_041-050-20",
+"group": "A1_041-050",
 "level": "A1",
+"num": 20,
 "text": "I'm just reading a book"
 },
 {
-"id": "A1-259",
+"id": "A1_041-050-21",
+"group": "A1_041-050",
 "level": "A1",
+"num": 21,
 "text": "I'm just washing the dishes"
 },
 {
-"id": "A1-260",
+"id": "A1_041-050-22",
+"group": "A1_041-050",
 "level": "A1",
+"num": 22,
 "text": "He's just taking a shower"
 },
 {
-"id": "A1-261",
+"id": "A1_041-050-23",
+"group": "A1_041-050",
 "level": "A1",
+"num": 23,
 "text": "Look, the baby is sleeping"
 },
 {
-"id": "A1-262",
+"id": "A1_041-050-24",
+"group": "A1_041-050",
 "level": "A1",
+"num": 24,
 "text": "Look, it is raining outside"
 },
 {
-"id": "A1-263",
+"id": "A1_041-050-25",
+"group": "A1_041-050",
 "level": "A1",
+"num": 25,
 "text": "Look, the dog is running"
 },
 {
-"id": "A1-264",
+"id": "A1_041-050-26",
+"group": "A1_041-050",
 "level": "A1",
+"num": 26,
 "text": "Look, they are dancing"
 },
 {
-"id": "A1-265",
+"id": "A1_041-050-27",
+"group": "A1_041-050",
 "level": "A1",
+"num": 27,
 "text": "Look, the bus is coming"
 },
 {
-"id": "A1-266",
+"id": "A1_041-050-28",
+"group": "A1_041-050",
 "level": "A1",
-"text": "Look, the bus is coming"
-},
-{
-"id": "A1-267",
-"level": "A1",
+"num": 28,
 "text": "I drink milk every day"
 },
 {
-"id": "A1-268",
+"id": "A1_041-050-29",
+"group": "A1_041-050",
 "level": "A1",
+"num": 29,
 "text": "I now in drinking milk"
 },
 {
-"id": "A1-269",
+"id": "A1_041-050-30",
+"group": "A1_041-050",
 "level": "A1",
+"num": 30,
 "text": "I'm drinking milk now"
 },
 {
-"id": "A1-270",
+"id": "A1_041-050-31",
+"group": "A1_041-050",
 "level": "A1",
+"num": 31,
 "text": "I play tennis every Saturday"
 },
 {
-"id": "A1-271",
+"id": "A1_041-050-32",
+"group": "A1_041-050",
 "level": "A1",
+"num": 32,
 "text": "I'm playing tennis now"
 },
 {
-"id": "A1-272",
+"id": "A1_041-050-33",
+"group": "A1_041-050",
 "level": "A1",
+"num": 33,
 "text": "I eat an apple every day"
 },
 {
-"id": "A1-273",
+"id": "A1_041-050-34",
+"group": "A1_041-050",
 "level": "A1",
+"num": 34,
 "text": "Versus, I'm eating an apple now"
 },
 {
-"id": "A1-274",
+"id": "A1_041-050-35",
+"group": "A1_041-050",
 "level": "A1",
+"num": 35,
 "text": "She now going to the gym"
 },
 {
-"id": "A1-275",
+"id": "A1_041-050-36",
+"group": "A1_041-050",
 "level": "A1",
+"num": 36,
 "text": "She's going to the gym now"
 },
 {
-"id": "A1-276",
+"id": "A1_041-050-37",
+"group": "A1_041-050",
 "level": "A1",
-"text": "WeWe're watching a film now"
+"num": 37,
+"text": "We"
 },
 {
-"id": "A1-277",
+"id": "A1_041-050-38",
+"group": "A1_041-050",
 "level": "A1",
-"text": "We watch a film every Friday"
-},
-{
-"id": "A1-278",
-"level": "A1",
+"num": 38,
 "text": "We're watching a film now"
 },
 {
-"id": "A1-279",
+"id": "A1_041-050-39",
+"group": "A1_041-050",
 "level": "A1",
+"num": 39,
+"text": "We watch a film every Friday"
+},
+{
+"id": "A1_041-050-40",
+"group": "A1_041-050",
+"level": "A1",
+"num": 40,
 "text": "He works on Saturday"
 },
 {
-"id": "A1-280",
+"id": "A1_041-050-41",
+"group": "A1_041-050",
 "level": "A1",
+"num": 41,
 "text": "She works on Saturdays"
 },
 {
-"id": "A1-281",
+"id": "A1_041-050-42",
+"group": "A1_041-050",
 "level": "A1",
+"num": 42,
 "text": "Versus, she's working now"
 },
 {
-"id": "A1-282",
+"id": "A1_041-050-43",
+"group": "A1_041-050",
 "level": "A1",
+"num": 43,
 "text": "He swims every morning"
 },
 {
-"id": "A1-283",
+"id": "A1_041-050-44",
+"group": "A1_041-050",
 "level": "A1",
+"num": 44,
 "text": "Versus, he's swimming now"
 },
 {
-"id": "A1-284",
+"id": "A1_041-050-45",
+"group": "A1_041-050",
 "level": "A1",
-"text": "Versus, he's studying nowHe studies on weekdays"
+"num": 45,
+"text": "Versus, he's studying now"
 },
 {
-"id": "A1-285",
+"id": "A1_041-050-46",
+"group": "A1_041-050",
 "level": "A1",
+"num": 46,
+"text": "He studies on weekdays"
+},
+{
+"id": "A1_041-050-47",
+"group": "A1_041-050",
+"level": "A1",
+"num": 47,
 "text": "He runs on Sundays"
 },
 {
-"id": "A1-286",
+"id": "A1_041-050-48",
+"group": "A1_041-050",
 "level": "A1",
+"num": 48,
 "text": "Versus, she's running now"
 },
 {
-"id": "A1-287",
+"id": "A1_041-050-49",
+"group": "A1_041-050",
 "level": "A1",
+"num": 49,
 "text": "She runs on Sundays"
 },
 {
-"id": "A1-288",
+"id": "A1_041-050-50",
+"group": "A1_041-050",
 "level": "A1",
-"text": "He cooks on FridaysHe now is cooking"
+"num": 50,
+"text": "He cooks on Fridays"
 },
 {
-"id": "A1-289",
+"id": "A1_041-050-51",
+"group": "A1_041-050",
 "level": "A1",
+"num": 51,
+"text": "He now is cooking"
+},
+{
+"id": "A1_041-050-52",
+"group": "A1_041-050",
+"level": "A1",
+"num": 52,
 "text": "Right now, I am studying English"
 },
 {
-"id": "A1-290",
+"id": "A1_041-050-53",
+"group": "A1_041-050",
 "level": "A1",
+"num": 53,
 "text": "Right now I am waiting for the bus"
 },
 {
-"id": "A1-291",
+"id": "A1_041-050-54",
+"group": "A1_041-050",
 "level": "A1",
+"num": 54,
 "text": "Right now I am cooking dinner"
 },
 {
-"id": "A1-292",
+"id": "A1_041-050-55",
+"group": "A1_041-050",
 "level": "A1",
+"num": 55,
 "text": "Right now, I am cooking dinner"
 },
 {
-"id": "A1-293",
+"id": "A1_041-050-56",
+"group": "A1_041-050",
 "level": "A1",
+"num": 56,
 "text": "Now, I am talking on the phone"
 },
 {
-"id": "A1-294",
+"id": "A1_041-050-57",
+"group": "A1_041-050",
 "level": "A1",
+"num": 57,
 "text": "Right now, I am talking on the phone"
 },
 {
-"id": "A1-295",
+"id": "A1_041-050-58",
+"group": "A1_041-050",
 "level": "A1",
+"num": 58,
 "text": "Right now I am cleaning my room"
 },
 {
-"id": "A1-296",
+"id": "A1_041-050-59",
+"group": "A1_041-050",
 "level": "A1",
+"num": 59,
 "text": "At the moment, the train is arriving"
 },
 {
-"id": "A1-297",
+"id": "A1_041-050-60",
+"group": "A1_041-050",
 "level": "A1",
+"num": 60,
 "text": "At the moment, the teacher is explaining the lesson"
 },
 {
-"id": "A1-298",
+"id": "A1_041-050-61",
+"group": "A1_041-050",
 "level": "A1",
+"num": 61,
 "text": "At the moment, my brother is sleeping"
 },
 {
-"id": "A1-299",
+"id": "A1_041-050-62",
+"group": "A1_041-050",
 "level": "A1",
+"num": 62,
 "text": "At the moment, the baby is crying"
 },
 {
-"id": "A1-300",
+"id": "A1_041-050-63",
+"group": "A1_041-050",
 "level": "A1",
+"num": 63,
 "text": "At the moment, it is snowing"
 },
 {
-"id": "A1-301",
+"id": "A1_041-050-64",
+"group": "A1_041-050",
 "level": "A1",
-"text": "Listen,Someone is singing outside"
-},
-{
-"id": "A1-302",
-"level": "A1",
-"text": "Listen, someone is singing outside"
-},
-{
-"id": "A1-303",
-"level": "A1",
-"text": "Listen, a bird is singing in the tree"
-},
-{
-"id": "A1-304",
-"level": "A1",
-"text": "Listen, someone is knocking at the door"
-},
-{
-"id": "A1-305",
-"level": "A1",
-"text": "Listen, a dog is barking"
-},
-{
-"id": "A1-306",
-"level": "A1",
+"num": 64,
 "text": "Listen"
 },
 {
-"id": "A1-307",
+"id": "A1_041-050-65",
+"group": "A1_041-050",
 "level": "A1",
+"num": 65,
+"text": "Someone is singing outside"
+},
+{
+"id": "A1_041-050-66",
+"group": "A1_041-050",
+"level": "A1",
+"num": 66,
+"text": "Listen, someone is singing outside"
+},
+{
+"id": "A1_041-050-67",
+"group": "A1_041-050",
+"level": "A1",
+"num": 67,
+"text": "Listen, a bird is singing in the tree"
+},
+{
+"id": "A1_041-050-68",
+"group": "A1_041-050",
+"level": "A1",
+"num": 68,
+"text": "Listen, someone is knocking at the door"
+},
+{
+"id": "A1_041-050-69",
+"group": "A1_041-050",
+"level": "A1",
+"num": 69,
+"text": "Listen, a dog is barking"
+},
+{
+"id": "A1_041-050-70",
+"group": "A1_041-050",
+"level": "A1",
+"num": 70,
 "text": "The phone is ringing"
 },
 {
-"id": "A1-308",
+"id": "A1_051-060-1",
+"group": "A1_051-060",
 "level": "A1",
+"num": 1,
 "text": "I can swim"
 },
 {
-"id": "A1-309",
+"id": "A1_051-060-2",
+"group": "A1_051-060",
 "level": "A1",
+"num": 2,
 "text": "He can ride a bicycle"
 },
 {
-"id": "A1-310",
+"id": "A1_051-060-3",
+"group": "A1_051-060",
 "level": "A1",
+"num": 3,
 "text": "She can play the piano"
 },
 {
-"id": "A1-311",
+"id": "A1_051-060-4",
+"group": "A1_051-060",
 "level": "A1",
+"num": 4,
 "text": "I can say Chinese"
 },
 {
-"id": "A1-312",
+"id": "A1_051-060-5",
+"group": "A1_051-060",
 "level": "A1",
+"num": 5,
 "text": "I can speak Chinese"
 },
 {
-"id": "A1-313",
+"id": "A1_051-060-6",
+"group": "A1_051-060",
 "level": "A1",
+"num": 6,
 "text": "They can cook well"
 },
 {
-"id": "A1-314",
+"id": "A1_051-060-7",
+"group": "A1_051-060",
 "level": "A1",
+"num": 7,
 "text": "I can't cook"
 },
 {
-"id": "A1-315",
+"id": "A1_051-060-8",
+"group": "A1_051-060",
 "level": "A1",
+"num": 8,
 "text": "She can't drive a car"
 },
 {
-"id": "A1-316",
+"id": "A1_051-060-9",
+"group": "A1_051-060",
 "level": "A1",
+"num": 9,
 "text": "I can't sing"
 },
 {
-"id": "A1-317",
+"id": "A1_051-060-10",
+"group": "A1_051-060",
 "level": "A1",
+"num": 10,
 "text": "He can't use this app"
 },
 {
-"id": "A1-318",
+"id": "A1_051-060-11",
+"group": "A1_051-060",
 "level": "A1",
+"num": 11,
 "text": "We can't come tomorrow"
 },
 {
-"id": "A1-319",
+"id": "A1_051-060-12",
+"group": "A1_051-060",
 "level": "A1",
+"num": 12,
 "text": "Can you speak English?"
 },
 {
-"id": "A1-320",
+"id": "A1_051-060-13",
+"group": "A1_051-060",
 "level": "A1",
+"num": 13,
 "text": "Can you help me with this?"
 },
 {
-"id": "A1-321",
+"id": "A1_051-060-14",
+"group": "A1_051-060",
 "level": "A1",
+"num": 14,
 "text": "Can you open the window?"
 },
 {
-"id": "A1-322",
+"id": "A1_051-060-15",
+"group": "A1_051-060",
 "level": "A1",
+"num": 15,
 "text": "Can you call a taxi?"
 },
 {
-"id": "A1-323",
+"id": "A1_051-060-16",
+"group": "A1_051-060",
 "level": "A1",
+"num": 16,
 "text": "Can you turn off the light?"
 },
 {
-"id": "A1-324",
+"id": "A1_051-060-17",
+"group": "A1_051-060",
 "level": "A1",
+"num": 17,
 "text": "Can you ride a bike?"
 },
 {
-"id": "A1-325",
+"id": "A1_051-060-18",
+"group": "A1_051-060",
 "level": "A1",
+"num": 18,
 "text": "Yes, I can"
 },
 {
-"id": "A1-326",
+"id": "A1_051-060-19",
+"group": "A1_051-060",
 "level": "A1",
+"num": 19,
 "text": "You tonight?"
 },
 {
-"id": "A1-327",
+"id": "A1_051-060-20",
+"group": "A1_051-060",
 "level": "A1",
+"num": 20,
 "text": "No, I can't"
 },
 {
-"id": "A1-328",
+"id": "A1_051-060-21",
+"group": "A1_051-060",
 "level": "A1",
+"num": 21,
 "text": "Can you swim?"
 },
 {
-"id": "A1-329",
+"id": "A1_051-060-22",
+"group": "A1_051-060",
 "level": "A1",
+"num": 22,
 "text": "Can you lend me money?"
 },
 {
-"id": "A1-330",
+"id": "A1_051-060-23",
+"group": "A1_051-060",
 "level": "A1",
+"num": 23,
 "text": "Can you speak French?"
 },
 {
-"id": "A1-331",
+"id": "A1_051-060-24",
+"group": "A1_051-060",
 "level": "A1",
+"num": 24,
 "text": "Can I have some water, please?"
 },
 {
-"id": "A1-332",
+"id": "A1_051-060-25",
+"group": "A1_051-060",
 "level": "A1",
-"text": "Can I have some water, please?"
-},
-{
-"id": "A1-333",
-"level": "A1",
+"num": 25,
 "text": "Can I have a cup of tea, please?"
 },
 {
-"id": "A1-334",
+"id": "A1_051-060-26",
+"group": "A1_051-060",
 "level": "A1",
+"num": 26,
 "text": "Can we have the check, please?"
 },
 {
-"id": "A1-335",
+"id": "A1_051-060-27",
+"group": "A1_051-060",
 "level": "A1",
-"text": "He can eat a piece of cakeCan she have a piece of cake?"
+"num": 27,
+"text": "He can eat a piece of cake"
 },
 {
-"id": "A1-336",
+"id": "A1_051-060-28",
+"group": "A1_051-060",
 "level": "A1",
+"num": 28,
+"text": "Can she have a piece of cake?"
+},
+{
+"id": "A1_051-060-29",
+"group": "A1_051-060",
+"level": "A1",
+"num": 29,
 "text": "They can eat some ice cream"
 },
 {
-"id": "A1-337",
+"id": "A1_051-060-30",
+"group": "A1_051-060",
 "level": "A1",
+"num": 30,
 "text": "Can they have some ice cream?"
 },
 {
-"id": "A1-338",
+"id": "A1_051-060-31",
+"group": "A1_051-060",
 "level": "A1",
+"num": 31,
 "text": "I've got a big dog"
 },
 {
-"id": "A1-339",
+"id": "A1_051-060-32",
+"group": "A1_051-060",
 "level": "A1",
+"num": 32,
 "text": "She's got a new smartphone"
 },
 {
-"id": "A1-340",
+"id": "A1_051-060-33",
+"group": "A1_051-060",
 "level": "A1",
+"num": 33,
 "text": "I've got a small apartment"
 },
 {
-"id": "A1-341",
+"id": "A1_051-060-34",
+"group": "A1_051-060",
 "level": "A1",
-"text": "He has a red bicycleHe's got a red bicycle"
+"num": 34,
+"text": "He has a red bicycle"
 },
 {
-"id": "A1-342",
+"id": "A1_051-060-35",
+"group": "A1_051-060",
 "level": "A1",
+"num": 35,
+"text": "He's got a red bicycle"
+},
+{
+"id": "A1_051-060-36",
+"group": "A1_051-060",
+"level": "A1",
+"num": 36,
 "text": "We've got a garden"
 },
 {
-"id": "A1-343",
+"id": "A1_051-060-37",
+"group": "A1_051-060",
 "level": "A1",
+"num": 37,
 "text": "I haven't got a car"
 },
 {
-"id": "A1-344",
+"id": "A1_051-060-38",
+"group": "A1_051-060",
 "level": "A1",
+"num": 38,
 "text": "He hasn't got a job yet"
 },
 {
-"id": "A1-345",
+"id": "A1_051-060-39",
+"group": "A1_051-060",
 "level": "A1",
+"num": 39,
 "text": "I haven't got any brothers"
 },
 {
-"id": "A1-346",
+"id": "A1_051-060-40",
+"group": "A1_051-060",
 "level": "A1",
-"text": "He hasShe hasn't got a computer"
+"num": 40,
+"text": "He has"
 },
 {
-"id": "A1-347",
+"id": "A1_051-060-41",
+"group": "A1_051-060",
 "level": "A1",
+"num": 41,
 "text": "She hasn't got a computer"
 },
 {
-"id": "A1-348",
+"id": "A1_051-060-42",
+"group": "A1_051-060",
 "level": "A1",
+"num": 42,
 "text": "They haven't got much time"
 },
 {
-"id": "A1-349",
+"id": "A1_051-060-43",
+"group": "A1_051-060",
 "level": "A1",
+"num": 43,
 "text": "You have got a minute?"
 },
 {
-"id": "A1-350",
+"id": "A1_051-060-44",
+"group": "A1_051-060",
 "level": "A1",
+"num": 44,
 "text": "Have you got a minute?"
 },
 {
-"id": "A1-351",
+"id": "A1_051-060-45",
+"group": "A1_051-060",
 "level": "A1",
+"num": 45,
 "text": "You have one can you borrow my pen?"
 },
 {
-"id": "A1-352",
+"id": "A1_051-060-46",
+"group": "A1_051-060",
 "level": "A1",
+"num": 46,
 "text": "Have you got a pen I can borrow?"
 },
 {
-"id": "A1-353",
+"id": "A1_051-060-47",
+"group": "A1_051-060",
 "level": "A1",
+"num": 47,
 "text": "Have you got a sister?"
 },
 {
-"id": "A1-354",
+"id": "A1_051-060-48",
+"group": "A1_051-060",
 "level": "A1",
+"num": 48,
 "text": "You have got any money?"
 },
 {
-"id": "A1-355",
+"id": "A1_051-060-49",
+"group": "A1_051-060",
 "level": "A1",
+"num": 49,
 "text": "Have you got any money?"
 },
 {
-"id": "A1-356",
+"id": "A1_051-060-50",
+"group": "A1_051-060",
 "level": "A1",
+"num": 50,
 "text": "Do you know what time it is?"
 },
 {
-"id": "A1-357",
+"id": "A1_051-060-51",
+"group": "A1_051-060",
 "level": "A1",
+"num": 51,
 "text": "Have you got the time?"
 },
 {
-"id": "A1-358",
+"id": "A1_051-060-52",
+"group": "A1_051-060",
 "level": "A1",
+"num": 52,
 "text": "She has got blue eyes"
 },
 {
-"id": "A1-359",
+"id": "A1_051-060-53",
+"group": "A1_051-060",
 "level": "A1",
+"num": 53,
 "text": "She has got a"
 },
 {
-"id": "A1-360",
+"id": "A1_051-060-54",
+"group": "A1_051-060",
 "level": "A1",
+"num": 54,
 "text": "He has got a beautiful smile"
 },
 {
-"id": "A1-361",
+"id": "A1_051-060-55",
+"group": "A1_051-060",
 "level": "A1",
+"num": 55,
 "text": "He has got a big dog"
 },
 {
-"id": "A1-362",
+"id": "A1_051-060-56",
+"group": "A1_051-060",
 "level": "A1",
+"num": 56,
 "text": "She has got long hair"
 },
 {
-"id": "A1-363",
+"id": "A1_051-060-57",
+"group": "A1_051-060",
 "level": "A1",
+"num": 57,
 "text": "He has got a new job"
 },
 {
-"id": "A1-364",
+"id": "A1_051-060-58",
+"group": "A1_051-060",
 "level": "A1",
+"num": 58,
 "text": "We've got three rooms in our house"
 },
 {
-"id": "A1-365",
+"id": "A1_051-060-59",
+"group": "A1_051-060",
 "level": "A1",
+"num": 59,
 "text": "They've got five players on the team"
 },
 {
-"id": "A1-366",
+"id": "A1_051-060-60",
+"group": "A1_051-060",
 "level": "A1",
+"num": 60,
 "text": "We've got two cats at home"
 },
 {
-"id": "A1-367",
+"id": "A1_051-060-61",
+"group": "A1_051-060",
 "level": "A1",
+"num": 61,
 "text": "They've got four children"
 },
 {
-"id": "A1-368",
+"id": "A1_051-060-62",
+"group": "A1_051-060",
 "level": "A1",
-"text": "We have six applesWe've got six apples in the basket"
+"num": 62,
+"text": "We have six apples"
 },
 {
-"id": "A1-369",
+"id": "A1_051-060-63",
+"group": "A1_051-060",
 "level": "A1",
+"num": 63,
 "text": "We've got six apples in the basket"
 },
 {
-"id": "A1-370",
+"id": "A1_061-070-1",
+"group": "A1_061-070",
 "level": "A1",
+"num": 1,
 "text": "Go straight then turn right"
 },
 {
-"id": "A1-371",
+"id": "A1_061-070-2",
+"group": "A1_061-070",
 "level": "A1",
+"num": 2,
 "text": "Turn left at the traffic light, then go straight"
 },
 {
-"id": "A1-372",
+"id": "A1_061-070-3",
+"group": "A1_061-070",
 "level": "A1",
-"text": "Turn left at the traffic light, then go straight"
-},
-{
-"id": "A1-373",
-"level": "A1",
+"num": 3,
 "text": "Turn right at the corner"
 },
 {
-"id": "A1-374",
+"id": "A1_061-070-4",
+"group": "A1_061-070",
 "level": "A1",
+"num": 4,
 "text": "Go straight ahead for two blocks"
 },
 {
-"id": "A1-375",
+"id": "A1_061-070-5",
+"group": "A1_061-070",
 "level": "A1",
-"text": "Left turn, then leftTurn left, then turn left again"
+"num": 5,
+"text": "Left turn, then left"
 },
 {
-"id": "A1-376",
+"id": "A1_061-070-6",
+"group": "A1_061-070",
 "level": "A1",
+"num": 6,
 "text": "Turn left, then turn left again"
 },
 {
-"id": "A1-377",
+"id": "A1_061-070-7",
+"group": "A1_061-070",
 "level": "A1",
+"num": 7,
 "text": "The park is near my house"
 },
 {
-"id": "A1-378",
+"id": "A1_061-070-8",
+"group": "A1_061-070",
 "level": "A1",
+"num": 8,
 "text": "School is far from here"
 },
 {
-"id": "A1-379",
+"id": "A1_061-070-9",
+"group": "A1_061-070",
 "level": "A1",
+"num": 9,
 "text": "The school is far from here"
 },
 {
-"id": "A1-380",
+"id": "A1_061-070-10",
+"group": "A1_061-070",
 "level": "A1",
-"text": "Bank is in the stationThe bank is near the station"
+"num": 10,
+"text": "Bank is in the station"
 },
 {
-"id": "A1-381",
+"id": "A1_061-070-11",
+"group": "A1_061-070",
 "level": "A1",
-"text": "The beach is far from the cityMy office is near the supermarket"
+"num": 11,
+"text": "The bank is near the station"
 },
 {
-"id": "A1-382",
+"id": "A1_061-070-12",
+"group": "A1_061-070",
 "level": "A1",
+"num": 12,
+"text": "The beach is far from the city"
+},
+{
+"id": "A1_061-070-13",
+"group": "A1_061-070",
+"level": "A1",
+"num": 13,
+"text": "My office is near the supermarket"
+},
+{
+"id": "A1_061-070-14",
+"group": "A1_061-070",
+"level": "A1",
+"num": 14,
 "text": "How do I get to the station?"
 },
 {
-"id": "A1-383",
+"id": "A1_061-070-15",
+"group": "A1_061-070",
 "level": "A1",
+"num": 15,
 "text": "How do I get to the hospital?"
 },
 {
-"id": "A1-384",
+"id": "A1_061-070-16",
+"group": "A1_061-070",
 "level": "A1",
+"num": 16,
 "text": "How do I get to the airport?"
 },
 {
-"id": "A1-385",
+"id": "A1_061-070-17",
+"group": "A1_061-070",
 "level": "A1",
+"num": 17,
 "text": "How do I get to the museum?"
 },
 {
-"id": "A1-386",
+"id": "A1_061-070-18",
+"group": "A1_061-070",
 "level": "A1",
+"num": 18,
 "text": "How do I get to the post office?"
 },
 {
-"id": "A1-387",
+"id": "A1_061-070-19",
+"group": "A1_061-070",
 "level": "A1",
+"num": 19,
 "text": "I take the bus to school every day"
 },
 {
-"id": "A1-388",
+"id": "A1_061-070-20",
+"group": "A1_061-070",
 "level": "A1",
+"num": 20,
 "text": "She takes the train to work every morning"
 },
 {
-"id": "A1-389",
+"id": "A1_061-070-21",
+"group": "A1_061-070",
 "level": "A1",
+"num": 21,
 "text": "I take the subway to the city"
 },
 {
-"id": "A1-390",
+"id": "A1_061-070-22",
+"group": "A1_061-070",
 "level": "A1",
+"num": 22,
 "text": "He takes the bus to the library"
 },
 {
-"id": "A1-391",
+"id": "A1_061-070-23",
+"group": "A1_061-070",
 "level": "A1",
+"num": 23,
 "text": "We take the train on weekends"
 },
 {
-"id": "A1-392",
+"id": "A1_061-070-24",
+"group": "A1_061-070",
 "level": "A1",
+"num": 24,
 "text": "Is it far from here?"
 },
 {
-"id": "A1-393",
+"id": "A1_061-070-25",
+"group": "A1_061-070",
 "level": "A1",
+"num": 25,
 "text": "Is it near the park?"
 },
 {
-"id": "A1-394",
+"id": "A1_061-070-26",
+"group": "A1_061-070",
 "level": "A1",
+"num": 26,
 "text": "Is it near the station?"
 },
 {
-"id": "A1-395",
+"id": "A1_061-070-27",
+"group": "A1_061-070",
 "level": "A1",
+"num": 27,
 "text": "Is it far from your house?"
 },
 {
-"id": "A1-396",
+"id": "A1_061-070-28",
+"group": "A1_061-070",
 "level": "A1",
+"num": 28,
 "text": "Is it near here?"
 },
 {
-"id": "A1-397",
+"id": "A1_061-070-29",
+"group": "A1_061-070",
 "level": "A1",
+"num": 29,
 "text": "What's the weather like today?"
 },
 {
-"id": "A1-398",
+"id": "A1_061-070-30",
+"group": "A1_061-070",
 "level": "A1",
+"num": 30,
 "text": "What's the weather like in summer here?"
 },
 {
-"id": "A1-399",
+"id": "A1_061-070-31",
+"group": "A1_061-070",
 "level": "A1",
+"num": 31,
 "text": "What's the weather like tomorrow?"
 },
 {
-"id": "A1-400",
+"id": "A1_061-070-32",
+"group": "A1_061-070",
 "level": "A1",
+"num": 32,
 "text": "What's the weather like in winter?"
 },
 {
-"id": "A1-401",
+"id": "A1_061-070-33",
+"group": "A1_061-070",
 "level": "A1",
+"num": 33,
 "text": "What's the weather like in your country?"
 },
 {
-"id": "A1-402",
+"id": "A1_061-070-34",
+"group": "A1_061-070",
 "level": "A1",
+"num": 34,
 "text": "It's sunny, rainy, cold, hot today"
 },
 {
-"id": "A1-403",
+"id": "A1_061-070-35",
+"group": "A1_061-070",
 "level": "A1",
+"num": 35,
 "text": "Today, cloudy and windy"
 },
 {
-"id": "A1-404",
+"id": "A1_061-070-36",
+"group": "A1_061-070",
 "level": "A1",
+"num": 36,
 "text": "Today, it's cloudy and windy today"
 },
 {
-"id": "A1-405",
+"id": "A1_061-070-37",
+"group": "A1_061-070",
 "level": "A1",
+"num": 37,
 "text": "Outside, it's snowing outside"
 },
 {
-"id": "A1-406",
+"id": "A1_061-070-38",
+"group": "A1_061-070",
 "level": "A1",
+"num": 38,
 "text": "It's snowing outside"
 },
 {
-"id": "A1-407",
+"id": "A1_061-070-39",
+"group": "A1_061-070",
 "level": "A1",
+"num": 39,
 "text": "It's warm and sunny today"
 },
 {
-"id": "A1-408",
+"id": "A1_061-070-40",
+"group": "A1_061-070",
 "level": "A1",
+"num": 40,
 "text": "It's foggy in the morning"
 },
 {
-"id": "A1-409",
+"id": "A1_061-070-41",
+"group": "A1_061-070",
 "level": "A1",
+"num": 41,
 "text": "I like sunny weather"
 },
 {
-"id": "A1-410",
+"id": "A1_061-070-42",
+"group": "A1_061-070",
 "level": "A1",
+"num": 42,
 "text": "I like rainy weather"
 },
 {
-"id": "A1-411",
+"id": "A1_061-070-43",
+"group": "A1_061-070",
 "level": "A1",
+"num": 43,
 "text": "It's cozy to read in"
 },
 {
-"id": "A1-412",
+"id": "A1_061-070-44",
+"group": "A1_061-070",
 "level": "A1",
+"num": 44,
 "text": "I like cold weather"
 },
 {
-"id": "A1-413",
+"id": "A1_061-070-45",
+"group": "A1_061-070",
 "level": "A1",
+"num": 45,
 "text": "I like snowy weather"
 },
 {
-"id": "A1-414",
+"id": "A1_061-070-46",
+"group": "A1_061-070",
 "level": "A1",
+"num": 46,
 "text": "I like warm weather"
 },
 {
-"id": "A1-415",
+"id": "A1_061-070-47",
+"group": "A1_061-070",
 "level": "A1",
+"num": 47,
 "text": "In winter, it's very cold here"
 },
 {
-"id": "A1-416",
+"id": "A1_061-070-48",
+"group": "A1_061-070",
 "level": "A1",
+"num": 48,
 "text": "In summer, it's very hot and humid"
 },
 {
-"id": "A1-417",
+"id": "A1_061-070-49",
+"group": "A1_061-070",
 "level": "A1",
+"num": 49,
 "text": "Spring, it's warm and green"
 },
 {
-"id": "A1-418",
+"id": "A1_061-070-50",
+"group": "A1_061-070",
 "level": "A1",
+"num": 50,
 "text": "In spring, it's warm and green"
 },
 {
-"id": "A1-419",
+"id": "A1_061-070-51",
+"group": "A1_061-070",
 "level": "A1",
-"text": "In autumn, it's cool and dryIn autumn, it's cool and dry"
+"num": 51,
+"text": "In autumn, it's cool and dry"
 },
 {
-"id": "A1-420",
+"id": "A1_061-070-52",
+"group": "A1_061-070",
 "level": "A1",
+"num": 52,
 "text": "In winter, it often snows"
 },
 {
-"id": "A1-421",
+"id": "A1_061-070-53",
+"group": "A1_061-070",
 "level": "A1",
+"num": 53,
 "text": "Looks like rain"
 },
 {
-"id": "A1-422",
+"id": "A1_061-070-54",
+"group": "A1_061-070",
 "level": "A1",
-"text": "Looks like snow outsideIt looks like snow outside"
+"num": 54,
+"text": "Looks like snow outside"
 },
 {
-"id": "A1-423",
+"id": "A1_061-070-55",
+"group": "A1_061-070",
 "level": "A1",
+"num": 55,
+"text": "It looks like snow outside"
+},
+{
+"id": "A1_061-070-56",
+"group": "A1_061-070",
+"level": "A1",
+"num": 56,
 "text": "It looks like a nice day"
 },
 {
-"id": "A1-424",
+"id": "A1_061-070-57",
+"group": "A1_061-070",
 "level": "A1",
+"num": 57,
 "text": "It looks like trouble"
 },
 {
-"id": "A1-425",
+"id": "A1_061-070-58",
+"group": "A1_061-070",
 "level": "A1",
+"num": 58,
 "text": "It looks like a storm is coming"
 },
 {
-"id": "A1-426",
+"id": "A1_071-080-1",
+"group": "A1_071-080",
 "level": "A1",
+"num": 1,
 "text": "This car is red"
 },
 {
-"id": "A1-427",
+"id": "A1_071-080-2",
+"group": "A1_071-080",
 "level": "A1",
+"num": 2,
 "text": "The car is red"
 },
 {
-"id": "A1-428",
+"id": "A1_071-080-3",
+"group": "A1_071-080",
 "level": "A1",
+"num": 3,
 "text": "Today, the sky is blue"
 },
 {
-"id": "A1-429",
+"id": "A1_071-080-4",
+"group": "A1_071-080",
 "level": "A1",
+"num": 4,
 "text": "The sky is blue today"
 },
 {
-"id": "A1-430",
+"id": "A1_071-080-5",
+"group": "A1_071-080",
 "level": "A1",
+"num": 5,
 "text": "The leaves are green"
 },
 {
-"id": "A1-431",
+"id": "A1_071-080-6",
+"group": "A1_071-080",
 "level": "A1",
+"num": 6,
 "text": "Her dress is yellow"
 },
 {
-"id": "A1-432",
+"id": "A1_071-080-7",
+"group": "A1_071-080",
 "level": "A1",
+"num": 7,
 "text": "The cat is black and white"
 },
 {
-"id": "A1-433",
+"id": "A1_071-080-8",
+"group": "A1_071-080",
 "level": "A1",
+"num": 8,
 "text": "My dog is small and white"
 },
 {
-"id": "A1-434",
+"id": "A1_071-080-9",
+"group": "A1_071-080",
 "level": "A1",
+"num": 9,
 "text": "This apple is sweet and juicy"
 },
 {
-"id": "A1-435",
+"id": "A1_071-080-10",
+"group": "A1_071-080",
 "level": "A1",
+"num": 10,
 "text": "The water is cold"
 },
 {
-"id": "A1-436",
+"id": "A1_071-080-11",
+"group": "A1_071-080",
 "level": "A1",
+"num": 11,
 "text": "The room is clean and tidy"
 },
 {
-"id": "A1-437",
+"id": "A1_071-080-12",
+"group": "A1_071-080",
 "level": "A1",
+"num": 12,
 "text": "The soup is hot"
 },
 {
-"id": "A1-438",
+"id": "A1_071-080-13",
+"group": "A1_071-080",
 "level": "A1",
+"num": 13,
 "text": "What color is your bag?"
 },
 {
-"id": "A1-439",
+"id": "A1_071-080-14",
+"group": "A1_071-080",
 "level": "A1",
+"num": 14,
 "text": "What color are those flowers?"
 },
 {
-"id": "A1-440",
+"id": "A1_071-080-15",
+"group": "A1_071-080",
 "level": "A1",
+"num": 15,
 "text": "What color is the sky?"
 },
 {
-"id": "A1-441",
+"id": "A1_071-080-16",
+"group": "A1_071-080",
 "level": "A1",
+"num": 16,
 "text": "What color are her eyes?"
 },
 {
-"id": "A1-442",
+"id": "A1_071-080-17",
+"group": "A1_071-080",
 "level": "A1",
+"num": 17,
 "text": "This shirt is what color?"
 },
 {
-"id": "A1-443",
+"id": "A1_071-080-18",
+"group": "A1_071-080",
 "level": "A1",
+"num": 18,
 "text": "What color is this shirt?"
 },
 {
-"id": "A1-444",
+"id": "A1_071-080-19",
+"group": "A1_071-080",
 "level": "A1",
+"num": 19,
 "text": "He looks tired today"
 },
 {
-"id": "A1-445",
+"id": "A1_071-080-20",
+"group": "A1_071-080",
 "level": "A1",
+"num": 20,
 "text": "She looks happy and excited"
 },
 {
-"id": "A1-446",
+"id": "A1_071-080-21",
+"group": "A1_071-080",
 "level": "A1",
-"text": "He looks happyShe looks beautiful in that dress"
+"num": 21,
+"text": "He looks happy"
 },
 {
-"id": "A1-447",
+"id": "A1_071-080-22",
+"group": "A1_071-080",
 "level": "A1",
+"num": 22,
 "text": "She looks beautiful in that dress"
 },
 {
-"id": "A1-448",
+"id": "A1_071-080-23",
+"group": "A1_071-080",
 "level": "A1",
+"num": 23,
 "text": "He looks angry"
 },
 {
-"id": "A1-449",
+"id": "A1_071-080-24",
+"group": "A1_071-080",
 "level": "A1",
+"num": 24,
 "text": "They look surprised"
 },
 {
-"id": "A1-450",
+"id": "A1_071-080-25",
+"group": "A1_071-080",
 "level": "A1",
+"num": 25,
 "text": "That house looks very beautiful"
 },
 {
-"id": "A1-451",
+"id": "A1_071-080-26",
+"group": "A1_071-080",
 "level": "A1",
+"num": 26,
 "text": "That house looks beautiful"
 },
 {
-"id": "A1-452",
+"id": "A1_071-080-27",
+"group": "A1_071-080",
 "level": "A1",
+"num": 27,
 "text": "That restaurant looks very popular"
 },
 {
-"id": "A1-453",
+"id": "A1_071-080-28",
+"group": "A1_071-080",
 "level": "A1",
+"num": 28,
 "text": "That book looks interesting"
 },
 {
-"id": "A1-454",
+"id": "A1_071-080-29",
+"group": "A1_071-080",
 "level": "A1",
+"num": 29,
 "text": "That man looks friendly"
 },
 {
-"id": "A1-455",
+"id": "A1_071-080-30",
+"group": "A1_071-080",
 "level": "A1",
+"num": 30,
 "text": "That car looks new"
 },
 {
-"id": "A1-456",
+"id": "A1_071-080-31",
+"group": "A1_071-080",
 "level": "A1",
+"num": 31,
 "text": "I'm a primary school student"
 },
 {
-"id": "A1-457",
+"id": "A1_071-080-32",
+"group": "A1_071-080",
 "level": "A1",
+"num": 32,
 "text": "She's a high school student in Taipei"
 },
 {
-"id": "A1-458",
+"id": "A1_071-080-33",
+"group": "A1_071-080",
 "level": "A1",
+"num": 33,
 "text": "I'm a university student"
 },
 {
-"id": "A1-459",
+"id": "A1_071-080-34",
+"group": "A1_071-080",
 "level": "A1",
-"text": "He is a high schoolHe's a middle school student"
+"num": 34,
+"text": "He is a high school"
 },
 {
-"id": "A1-460",
+"id": "A1_071-080-35",
+"group": "A1_071-080",
 "level": "A1",
+"num": 35,
+"text": "He's a middle school student"
+},
+{
+"id": "A1_071-080-36",
+"group": "A1_071-080",
+"level": "A1",
+"num": 36,
 "text": "She's a music student"
 },
 {
-"id": "A1-461",
+"id": "A1_071-080-37",
+"group": "A1_071-080",
 "level": "A1",
+"num": 37,
 "text": "I study math and English"
 },
 {
-"id": "A1-462",
+"id": "A1_071-080-38",
+"group": "A1_071-080",
 "level": "A1",
+"num": 38,
 "text": "He in school study"
 },
 {
-"id": "A1-463",
+"id": "A1_071-080-39",
+"group": "A1_071-080",
 "level": "A1",
+"num": 39,
 "text": "He studies science and history at school"
 },
 {
-"id": "A1-464",
+"id": "A1_071-080-40",
+"group": "A1_071-080",
 "level": "A1",
+"num": 40,
 "text": "I study art and music"
 },
 {
-"id": "A1-465",
+"id": "A1_071-080-41",
+"group": "A1_071-080",
 "level": "A1",
+"num": 41,
 "text": "She studies Chinese and geography"
 },
 {
-"id": "A1-466",
+"id": "A1_071-080-42",
+"group": "A1_071-080",
 "level": "A1",
-"text": "We in university learn computerWe study computers at college"
+"num": 42,
+"text": "We in university learn computer"
 },
 {
-"id": "A1-467",
+"id": "A1_071-080-43",
+"group": "A1_071-080",
 "level": "A1",
+"num": 43,
+"text": "We study computers at college"
+},
+{
+"id": "A1_071-080-44",
+"group": "A1_071-080",
+"level": "A1",
+"num": 44,
 "text": "My favorite subject is science"
 },
 {
-"id": "A1-468",
+"id": "A1_071-080-45",
+"group": "A1_071-080",
 "level": "A1",
+"num": 45,
 "text": "Her favorite subject is art"
 },
 {
-"id": "A1-469",
+"id": "A1_071-080-46",
+"group": "A1_071-080",
 "level": "A1",
+"num": 46,
 "text": "My favorite subject is math"
 },
 {
-"id": "A1-470",
+"id": "A1_071-080-47",
+"group": "A1_071-080",
 "level": "A1",
+"num": 47,
 "text": "His favorite subject is PE"
 },
 {
-"id": "A1-471",
+"id": "A1_071-080-48",
+"group": "A1_071-080",
 "level": "A1",
+"num": 48,
 "text": "My favorite subject is music"
 },
 {
-"id": "A1-472",
+"id": "A1_071-080-49",
+"group": "A1_071-080",
 "level": "A1",
+"num": 49,
 "text": "Sorry, do you understand?"
 },
 {
-"id": "A1-473",
+"id": "A1_071-080-50",
+"group": "A1_071-080",
 "level": "A1",
+"num": 50,
 "text": "Do you understand what the teacher said?"
 },
 {
-"id": "A1-474",
+"id": "A1_071-080-51",
+"group": "A1_071-080",
 "level": "A1",
+"num": 51,
 "text": "Do you understand this word?"
 },
 {
-"id": "A1-475",
+"id": "A1_071-080-52",
+"group": "A1_071-080",
 "level": "A1",
+"num": 52,
 "text": "Do you understand the question?"
 },
 {
-"id": "A1-476",
+"id": "A1_071-080-53",
+"group": "A1_071-080",
 "level": "A1",
+"num": 53,
 "text": "Do you understand me?"
 },
 {
-"id": "A1-477",
+"id": "A1_071-080-54",
+"group": "A1_071-080",
 "level": "A1",
+"num": 54,
 "text": "Can you say that again?"
 },
 {
-"id": "A1-478",
+"id": "A1_071-080-55",
+"group": "A1_071-080",
 "level": "A1",
+"num": 55,
 "text": "Could you speak more slowly?"
 },
 {
-"id": "A1-479",
+"id": "A1_071-080-56",
+"group": "A1_071-080",
 "level": "A1",
+"num": 56,
 "text": "I don't understand this sentence"
 },
 {
-"id": "A1-480",
+"id": "A1_071-080-57",
+"group": "A1_071-080",
 "level": "A1",
+"num": 57,
 "text": "I don't understand the homework"
 },
 {
-"id": "A1-481",
+"id": "A1_071-080-58",
+"group": "A1_071-080",
 "level": "A1",
+"num": 58,
 "text": "I don't understand what he means"
 },
 {
-"id": "A1-482",
+"id": "A1_081-090-1",
+"group": "A1_081-090",
 "level": "A1",
+"num": 1,
 "text": "How do you feel today?"
 },
 {
-"id": "A1-483",
+"id": "A1_081-090-2",
+"group": "A1_081-090",
 "level": "A1",
+"num": 2,
 "text": "How do you feel after the long trip?"
 },
 {
-"id": "A1-484",
+"id": "A1_081-090-3",
+"group": "A1_081-090",
 "level": "A1",
+"num": 3,
 "text": "How do you feel now?"
 },
 {
-"id": "A1-485",
+"id": "A1_081-090-4",
+"group": "A1_081-090",
 "level": "A1",
+"num": 4,
 "text": "How do you feel about the exam?"
 },
 {
-"id": "A1-486",
+"id": "A1_081-090-5",
+"group": "A1_081-090",
 "level": "A1",
+"num": 5,
 "text": "How do you feel this morning?"
 },
 {
-"id": "A1-487",
+"id": "A1_081-090-6",
+"group": "A1_081-090",
 "level": "A1",
+"num": 6,
 "text": "I feel sick, better, tired"
 },
 {
-"id": "A1-488",
+"id": "A1_081-090-7",
+"group": "A1_081-090",
 "level": "A1",
+"num": 7,
 "text": "I feel happy and excited about the news"
 },
 {
-"id": "A1-489",
+"id": "A1_081-090-8",
+"group": "A1_081-090",
 "level": "A1",
+"num": 8,
 "text": "I feel cold"
 },
 {
-"id": "A1-490",
+"id": "A1_081-090-9",
+"group": "A1_081-090",
 "level": "A1",
+"num": 9,
 "text": "I feel relaxed at home"
 },
 {
-"id": "A1-491",
+"id": "A1_081-090-10",
+"group": "A1_081-090",
 "level": "A1",
+"num": 10,
 "text": "She feels lonely"
 },
 {
-"id": "A1-492",
+"id": "A1_081-090-11",
+"group": "A1_081-090",
 "level": "A1",
+"num": 11,
 "text": "I have a headache"
 },
 {
-"id": "A1-493",
+"id": "A1_081-090-12",
+"group": "A1_081-090",
 "level": "A1",
+"num": 12,
 "text": "He has a stomachache"
 },
 {
-"id": "A1-494",
+"id": "A1_081-090-13",
+"group": "A1_081-090",
 "level": "A1",
+"num": 13,
 "text": "She has a stomachache"
 },
 {
-"id": "A1-495",
+"id": "A1_081-090-14",
+"group": "A1_081-090",
 "level": "A1",
+"num": 14,
 "text": "I have a toothache"
 },
 {
-"id": "A1-496",
+"id": "A1_081-090-15",
+"group": "A1_081-090",
 "level": "A1",
-"text": "He has aHe has a fever"
+"num": 15,
+"text": "He has a"
 },
 {
-"id": "A1-497",
+"id": "A1_081-090-16",
+"group": "A1_081-090",
 "level": "A1",
+"num": 16,
 "text": "He has a fever"
 },
 {
-"id": "A1-498",
+"id": "A1_081-090-17",
+"group": "A1_081-090",
 "level": "A1",
+"num": 17,
 "text": "I have a cold"
 },
 {
-"id": "A1-499",
+"id": "A1_081-090-18",
+"group": "A1_081-090",
 "level": "A1",
+"num": 18,
 "text": "I need to see a doctor"
 },
 {
-"id": "A1-500",
+"id": "A1_081-090-19",
+"group": "A1_081-090",
 "level": "A1",
+"num": 19,
 "text": "I need to take a break"
 },
 {
-"id": "A1-501",
+"id": "A1_081-090-20",
+"group": "A1_081-090",
 "level": "A1",
+"num": 20,
 "text": "I need to buy some milk"
 },
 {
-"id": "A1-502",
+"id": "A1_081-090-21",
+"group": "A1_081-090",
 "level": "A1",
+"num": 21,
 "text": "She needs to finish her homework"
 },
 {
-"id": "A1-503",
+"id": "A1_081-090-22",
+"group": "A1_081-090",
 "level": "A1",
+"num": 22,
 "text": "We need to leave now"
 },
 {
-"id": "A1-504",
+"id": "A1_081-090-23",
+"group": "A1_081-090",
 "level": "A1",
+"num": 23,
 "text": "You should drink lots of water"
 },
 {
-"id": "A1-505",
+"id": "A1_081-090-24",
+"group": "A1_081-090",
 "level": "A1",
+"num": 24,
 "text": "You should get some rest"
 },
 {
-"id": "A1-506",
+"id": "A1_081-090-25",
+"group": "A1_081-090",
 "level": "A1",
+"num": 25,
 "text": "You should eat more vegetables"
 },
 {
-"id": "A1-507",
+"id": "A1_081-090-26",
+"group": "A1_081-090",
 "level": "A1",
+"num": 26,
 "text": "You should go to bed early"
 },
 {
-"id": "A1-508",
+"id": "A1_081-090-27",
+"group": "A1_081-090",
 "level": "A1",
+"num": 27,
 "text": "He should see a doctor"
 },
 {
-"id": "A1-509",
+"id": "A1_081-090-28",
+"group": "A1_081-090",
 "level": "A1",
+"num": 28,
 "text": "I am happy, sad, excited"
 },
 {
-"id": "A1-510",
+"id": "A1_081-090-29",
+"group": "A1_081-090",
 "level": "A1",
+"num": 29,
 "text": "He is both surprised and confused"
 },
 {
-"id": "A1-511",
+"id": "A1_081-090-30",
+"group": "A1_081-090",
 "level": "A1",
+"num": 30,
 "text": "She is surprised and confused"
 },
 {
-"id": "A1-512",
+"id": "A1_081-090-31",
+"group": "A1_081-090",
 "level": "A1",
+"num": 31,
 "text": "I am angry"
 },
 {
-"id": "A1-513",
+"id": "A1_081-090-32",
+"group": "A1_081-090",
 "level": "A1",
+"num": 32,
 "text": "He is quiet and shy"
 },
 {
-"id": "A1-514",
+"id": "A1_081-090-33",
+"group": "A1_081-090",
 "level": "A1",
+"num": 33,
 "text": "We are late"
 },
 {
-"id": "A1-515",
+"id": "A1_081-090-34",
+"group": "A1_081-090",
 "level": "A1",
+"num": 34,
 "text": "How do you feel about your new school?"
 },
 {
-"id": "A1-516",
+"id": "A1_081-090-35",
+"group": "A1_081-090",
 "level": "A1",
+"num": 35,
 "text": "How do you feel about the new teacher?"
 },
 {
-"id": "A1-517",
+"id": "A1_081-090-36",
+"group": "A1_081-090",
 "level": "A1",
+"num": 36,
 "text": "How do you feel about the test?"
 },
 {
-"id": "A1-518",
+"id": "A1_081-090-37",
+"group": "A1_081-090",
 "level": "A1",
+"num": 37,
 "text": "How do you feel about moving house?"
 },
 {
-"id": "A1-519",
+"id": "A1_081-090-38",
+"group": "A1_081-090",
 "level": "A1",
+"num": 38,
 "text": "How do you feel about the weather?"
 },
 {
-"id": "A1-520",
+"id": "A1_081-090-39",
+"group": "A1_081-090",
 "level": "A1",
+"num": 39,
 "text": "I'm really tired today"
 },
 {
-"id": "A1-521",
+"id": "A1_081-090-40",
+"group": "A1_081-090",
 "level": "A1",
+"num": 40,
 "text": "I'm very happy to see you again"
 },
 {
-"id": "A1-522",
+"id": "A1_081-090-41",
+"group": "A1_081-090",
 "level": "A1",
+"num": 41,
 "text": "I'm very hungry right now"
 },
 {
-"id": "A1-523",
+"id": "A1_081-090-42",
+"group": "A1_081-090",
 "level": "A1",
+"num": 42,
 "text": "She's really kind"
 },
 {
-"id": "A1-524",
+"id": "A1_081-090-43",
+"group": "A1_081-090",
 "level": "A1",
+"num": 43,
 "text": "I'm very proud of you"
 },
 {
-"id": "A1-525",
+"id": "A1_081-090-44",
+"group": "A1_081-090",
 "level": "A1",
+"num": 44,
 "text": "That movie makes me sad"
 },
 {
-"id": "A1-526",
+"id": "A1_081-090-45",
+"group": "A1_081-090",
 "level": "A1",
+"num": 45,
 "text": "Good news makes me happy"
 },
 {
-"id": "A1-527",
+"id": "A1_081-090-46",
+"group": "A1_081-090",
 "level": "A1",
+"num": 46,
 "text": "That song makes me relaxed"
 },
 {
-"id": "A1-528",
+"id": "A1_081-090-47",
+"group": "A1_081-090",
 "level": "A1",
+"num": 47,
 "text": "Loud noise makes me angry"
 },
 {
-"id": "A1-529",
+"id": "A1_081-090-48",
+"group": "A1_081-090",
 "level": "A1",
+"num": 48,
 "text": "His gift makes me surprised"
 },
 {
-"id": "A1-530",
+"id": "A1_081-090-49",
+"group": "A1_081-090",
 "level": "A1",
+"num": 49,
 "text": "I'm not scared at all"
 },
 {
-"id": "A1-531",
+"id": "A1_081-090-50",
+"group": "A1_081-090",
 "level": "A1",
+"num": 50,
 "text": "I'm not worried at all about the exam"
 },
 {
-"id": "A1-532",
+"id": "A1_081-090-51",
+"group": "A1_081-090",
 "level": "A1",
+"num": 51,
 "text": "I'm not tired at all"
 },
 {
-"id": "A1-533",
+"id": "A1_081-090-52",
+"group": "A1_081-090",
 "level": "A1",
+"num": 52,
 "text": "She's not angry at all"
 },
 {
-"id": "A1-534",
+"id": "A1_081-090-53",
+"group": "A1_081-090",
 "level": "A1",
+"num": 53,
 "text": "I'm not hungry at all"
 },
 {
-"id": "A1-535",
+"id": "A1_091-100-1",
+"group": "A1_091-100",
 "level": "A1",
+"num": 1,
 "text": "I like playing football"
 },
 {
-"id": "A1-536",
+"id": "A1_091-100-2",
+"group": "A1_091-100",
 "level": "A1",
+"num": 2,
 "text": "I like listening to music"
 },
 {
-"id": "A1-537",
+"id": "A1_091-100-3",
+"group": "A1_091-100",
 "level": "A1",
+"num": 3,
 "text": "I like drawing pictures"
 },
 {
-"id": "A1-538",
+"id": "A1_091-100-4",
+"group": "A1_091-100",
 "level": "A1",
+"num": 4,
 "text": "I like riding a bicycleI like riding a bike"
 },
 {
-"id": "A1-539",
+"id": "A1_091-100-5",
+"group": "A1_091-100",
 "level": "A1",
+"num": 5,
 "text": "I like ice cream"
 },
 {
-"id": "A1-540",
+"id": "A1_091-100-6",
+"group": "A1_091-100",
 "level": "A1",
+"num": 6,
 "text": "My hobby is collecting stamps"
 },
 {
-"id": "A1-541",
+"id": "A1_091-100-7",
+"group": "A1_091-100",
 "level": "A1",
+"num": 7,
 "text": "His hobby is photography"
 },
 {
-"id": "A1-542",
+"id": "A1_091-100-8",
+"group": "A1_091-100",
 "level": "A1",
+"num": 8,
 "text": "His hobby is taking photographs"
 },
 {
-"id": "A1-543",
+"id": "A1_091-100-9",
+"group": "A1_091-100",
 "level": "A1",
+"num": 9,
 "text": "My hobby is cooking"
 },
 {
-"id": "A1-544",
+"id": "A1_091-100-10",
+"group": "A1_091-100",
 "level": "A1",
+"num": 10,
 "text": "Her hobby is dancing"
 },
 {
-"id": "A1-545",
+"id": "A1_091-100-11",
+"group": "A1_091-100",
 "level": "A1",
+"num": 11,
 "text": "My hobby is reading"
 },
 {
-"id": "A1-546",
+"id": "A1_091-100-12",
+"group": "A1_091-100",
 "level": "A1",
+"num": 12,
 "text": "I usually watch TV on weekends"
 },
 {
-"id": "A1-547",
+"id": "A1_091-100-13",
+"group": "A1_091-100",
 "level": "A1",
+"num": 13,
 "text": "She usually goes shopping on Saturdays"
 },
 {
-"id": "A1-548",
+"id": "A1_091-100-14",
+"group": "A1_091-100",
 "level": "A1",
+"num": 14,
 "text": "I usually go shopping on Saturdays"
 },
 {
-"id": "A1-549",
+"id": "A1_091-100-15",
+"group": "A1_091-100",
 "level": "A1",
+"num": 15,
 "text": "I usually call my mom on Sundays"
 },
 {
-"id": "A1-550",
+"id": "A1_091-100-16",
+"group": "A1_091-100",
 "level": "A1",
+"num": 16,
 "text": "He usually plays soccer on Fridays"
 },
 {
-"id": "A1-551",
+"id": "A1_091-100-17",
+"group": "A1_091-100",
 "level": "A1",
+"num": 17,
 "text": "We usually eat out on holidays"
 },
 {
-"id": "A1-552",
+"id": "A1_091-100-18",
+"group": "A1_091-100",
 "level": "A1",
+"num": 18,
 "text": "What do you do in your free time?"
 },
 {
-"id": "A1-553",
+"id": "A1_091-100-19",
+"group": "A1_091-100",
 "level": "A1",
+"num": 19,
 "text": "What do you usually do after school?"
 },
 {
-"id": "A1-554",
+"id": "A1_091-100-20",
+"group": "A1_091-100",
 "level": "A1",
+"num": 20,
 "text": "What do you do on weekends?"
 },
 {
-"id": "A1-555",
+"id": "A1_091-100-21",
+"group": "A1_091-100",
 "level": "A1",
+"num": 21,
 "text": "What do you usually do in the evening?"
 },
 {
-"id": "A1-556",
+"id": "A1_091-100-22",
+"group": "A1_091-100",
 "level": "A1",
+"num": 22,
 "text": "What does he do for fun?"
 },
 {
-"id": "A1-557",
+"id": "A1_091-100-23",
+"group": "A1_091-100",
 "level": "A1",
-"text": "I spend time reading booksHe spends time playing video games"
+"num": 23,
+"text": "I spend time reading books"
 },
 {
-"id": "A1-558",
+"id": "A1_091-100-24",
+"group": "A1_091-100",
 "level": "A1",
+"num": 24,
+"text": "He spends time playing video games"
+},
+{
+"id": "A1_091-100-25",
+"group": "A1_091-100",
+"level": "A1",
+"num": 25,
 "text": "I put time in the parkI spend time walking in the park"
 },
 {
-"id": "A1-559",
+"id": "A1_091-100-26",
+"group": "A1_091-100",
 "level": "A1",
-"text": "She spends time paintingWe spend time talking with friends"
+"num": 26,
+"text": "She spends time painting"
 },
 {
-"id": "A1-560",
+"id": "A1_091-100-27",
+"group": "A1_091-100",
 "level": "A1",
+"num": 27,
+"text": "We spend time talking with friends"
+},
+{
+"id": "A1_091-100-28",
+"group": "A1_091-100",
+"level": "A1",
+"num": 28,
 "text": "Please sit"
 },
 {
-"id": "A1-561",
+"id": "A1_091-100-29",
+"group": "A1_091-100",
 "level": "A1",
+"num": 29,
 "text": "Please wait here"
 },
 {
-"id": "A1-562",
+"id": "A1_091-100-30",
+"group": "A1_091-100",
 "level": "A1",
+"num": 30,
 "text": "Sit down, please"
 },
 {
-"id": "A1-563",
+"id": "A1_091-100-31",
+"group": "A1_091-100",
 "level": "A1",
+"num": 31,
 "text": "Wait here, please"
 },
 {
-"id": "A1-564",
+"id": "A1_091-100-32",
+"group": "A1_091-100",
 "level": "A1",
+"num": 32,
 "text": "Come in, please"
 },
 {
-"id": "A1-565",
+"id": "A1_091-100-33",
+"group": "A1_091-100",
 "level": "A1",
+"num": 33,
 "text": "Hold on, please"
 },
 {
-"id": "A1-566",
+"id": "A1_091-100-34",
+"group": "A1_091-100",
 "level": "A1",
+"num": 34,
 "text": "Please close the door, please"
 },
 {
-"id": "A1-567",
+"id": "A1_091-100-35",
+"group": "A1_091-100",
 "level": "A1",
+"num": 35,
 "text": "Be quiet, please"
 },
 {
-"id": "A1-568",
+"id": "A1_091-100-36",
+"group": "A1_091-100",
 "level": "A1",
+"num": 36,
 "text": "Close the door, please"
 },
 {
-"id": "A1-569",
+"id": "A1_091-100-37",
+"group": "A1_091-100",
 "level": "A1",
+"num": 37,
 "text": "Sit here, please"
 },
 {
-"id": "A1-570",
+"id": "A1_091-100-38",
+"group": "A1_091-100",
 "level": "A1",
+"num": 38,
 "text": "Listen, please"
 },
 {
-"id": "A1-571",
+"id": "A1_091-100-39",
+"group": "A1_091-100",
 "level": "A1",
+"num": 39,
 "text": "Please open your book"
 },
 {
-"id": "A1-572",
+"id": "A1_091-100-40",
+"group": "A1_091-100",
 "level": "A1",
+"num": 40,
 "text": "Stop, please"
 },
 {
-"id": "A1-573",
+"id": "A1_091-100-41",
+"group": "A1_091-100",
 "level": "A1",
+"num": 41,
 "text": "Open your book, please"
 },
 {
-"id": "A1-574",
+"id": "A1_091-100-42",
+"group": "A1_091-100",
 "level": "A1",
+"num": 42,
 "text": "Don't touch that"
 },
 {
-"id": "A1-575",
+"id": "A1_091-100-43",
+"group": "A1_091-100",
 "level": "A1",
+"num": 43,
 "text": "Don't worry"
 },
 {
-"id": "A1-576",
+"id": "A1_091-100-44",
+"group": "A1_091-100",
 "level": "A1",
+"num": 44,
 "text": "Don't run in the hallway"
 },
 {
-"id": "A1-577",
+"id": "A1_091-100-45",
+"group": "A1_091-100",
 "level": "A1",
+"num": 45,
 "text": "Don't be late"
 },
 {
-"id": "A1-578",
+"id": "A1_091-100-46",
+"group": "A1_091-100",
 "level": "A1",
+"num": 46,
 "text": "Don't cry"
 },
 {
-"id": "A1-579",
+"id": "A1_091-100-47",
+"group": "A1_091-100",
 "level": "A1",
+"num": 47,
 "text": "Don't forget your bag"
 },
 {
-"id": "A1-580",
+"id": "A1_091-100-48",
+"group": "A1_091-100",
 "level": "A1",
+"num": 48,
 "text": "Don't open the window"
 },
 {
-"id": "A1-581",
+"id": "A1_091-100-49",
+"group": "A1_091-100",
 "level": "A1",
+"num": 49,
 "text": "Don't make noise"
 },
 {
-"id": "A1-582",
+"id": "A1_091-100-50",
+"group": "A1_091-100",
 "level": "A1",
+"num": 50,
 "text": "Don't eat here"
 },
 {
-"id": "A1-583",
+"id": "A1_091-100-51",
+"group": "A1_091-100",
 "level": "A1",
+"num": 51,
 "text": "Don't be silly"
 },
 {
-"id": "A1-584",
+"id": "A1_091-100-52",
+"group": "A1_091-100",
 "level": "A1",
+"num": 52,
 "text": "We'll go"
 },
 {
-"id": "A1-585",
+"id": "A1_091-100-53",
+"group": "A1_091-100",
 "level": "A1",
+"num": 53,
 "text": "Let's play a game"
 },
 {
-"id": "A1-586",
+"id": "A1_091-100-54",
+"group": "A1_091-100",
 "level": "A1",
+"num": 54,
 "text": "Let's go"
 },
 {
-"id": "A1-587",
+"id": "A1_091-100-55",
+"group": "A1_091-100",
 "level": "A1",
-"text": "Let's play a gameWe eat"
+"num": 55,
+"text": "We eat"
 },
 {
-"id": "A1-588",
+"id": "A1_091-100-56",
+"group": "A1_091-100",
 "level": "A1",
+"num": 56,
 "text": "Let's start the meeting"
 },
 {
-"id": "A1-589",
+"id": "A1_091-100-57",
+"group": "A1_091-100",
 "level": "A1",
-"text": "Let's eat"
-},
-{
-"id": "A1-590",
-"level": "A1",
+"num": 57,
 "text": "We'll dance"
 },
 {
-"id": "A1-591",
+"id": "A1_091-100-58",
+"group": "A1_091-100",
 "level": "A1",
+"num": 58,
 "text": "Let's take a photo"
 },
 {
-"id": "A1-592",
+"id": "A1_091-100-59",
+"group": "A1_091-100",
 "level": "A1",
+"num": 59,
 "text": "Let's dance"
 },
 {
-"id": "A1-593",
+"id": "A1_091-100-60",
+"group": "A1_091-100",
 "level": "A1",
+"num": 60,
 "text": "We'll sit down"
 },
 {
-"id": "A1-594",
+"id": "A1_091-100-61",
+"group": "A1_091-100",
 "level": "A1",
+"num": 61,
 "text": "We'll watch a movie"
 },
 {
-"id": "A1-595",
+"id": "A1_091-100-62",
+"group": "A1_091-100",
 "level": "A1",
+"num": 62,
 "text": "Let's sit down"
 },
 {
-"id": "A1-596",
+"id": "A1_091-100-63",
+"group": "A1_091-100",
 "level": "A1",
+"num": 63,
 "text": "Let's watch a movie"
 },
 {
-"id": "A1-597",
+"id": "A1_091-100-64",
+"group": "A1_091-100",
 "level": "A1",
+"num": 64,
 "text": "Let's study together"
 },
 {
-"id": "A1-598",
+"id": "A1_091-100-65",
+"group": "A1_091-100",
 "level": "A1",
+"num": 65,
 "text": "Let's go home"
 },
 {
-"id": "A1-599",
+"id": "A1_091-100-66",
+"group": "A1_091-100",
 "level": "A1",
+"num": 66,
 "text": "Please open the door"
 },
 {
-"id": "A1-600",
+"id": "A1_091-100-67",
+"group": "A1_091-100",
 "level": "A1",
+"num": 67,
 "text": "Please fill out this form"
 },
 {
-"id": "A1-601",
+"id": "A1_091-100-68",
+"group": "A1_091-100",
 "level": "A1",
+"num": 68,
 "text": "Please close the window"
 },
 {
-"id": "A1-602",
+"id": "A1_091-100-69",
+"group": "A1_091-100",
 "level": "A1",
+"num": 69,
 "text": "Please turn off your phone"
 },
 {
-"id": "A1-603",
+"id": "A1_091-100-70",
+"group": "A1_091-100",
 "level": "A1",
+"num": 70,
 "text": "Please sit down"
 },
 {
-"id": "A1-604",
+"id": "A1_091-100-71",
+"group": "A1_091-100",
 "level": "A1",
+"num": 71,
 "text": "Help yourself to some fruit"
 },
 {
-"id": "A1-605",
+"id": "A1_091-100-72",
+"group": "A1_091-100",
 "level": "A1",
+"num": 72,
 "text": "Help yourself to some cake"
 },
 {
-"id": "A1-606",
+"id": "A1_091-100-73",
+"group": "A1_091-100",
 "level": "A1",
+"num": 73,
 "text": "There's plenty"
 },
 {
-"id": "A1-607",
+"id": "A1_091-100-74",
+"group": "A1_091-100",
 "level": "A1",
+"num": 74,
 "text": "Help yourself to some tea"
 },
 {
-"id": "A1-608",
+"id": "A1_091-100-75",
+"group": "A1_091-100",
 "level": "A1",
+"num": 75,
 "text": "Help yourself to some cookies"
 },
 {
-"id": "A1-609",
+"id": "A1_091-100-76",
+"group": "A1_091-100",
 "level": "A1",
+"num": 76,
 "text": "Please drink some water"
 },
 {
-"id": "A1-610",
+"id": "A1_091-100-77",
+"group": "A1_091-100",
 "level": "A1",
+"num": 77,
 "text": "Help yourself to some water"
 },
 {
-"id": "A2-1",
+"id": "A2_001-010-1",
+"group": "A2_001-010",
 "level": "A2",
+"num": 1,
 "text": "I watched a movie last night"
 },
 {
-"id": "A2-2",
+"id": "A2_001-010-2",
+"group": "A2_001-010",
 "level": "A2",
+"num": 2,
 "text": "She visited her grandmother last weekend"
 },
 {
-"id": "A2-3",
+"id": "A2_001-010-3",
+"group": "A2_001-010",
 "level": "A2",
+"num": 3,
 "text": "We ate dinner at a new restaurant yesterday"
 },
 {
-"id": "A2-4",
+"id": "A2_001-010-4",
+"group": "A2_001-010",
 "level": "A2",
+"num": 4,
 "text": "He bought a bicycle last month"
 },
 {
-"id": "A2-5",
+"id": "A2_001-010-5",
+"group": "A2_001-010",
 "level": "A2",
+"num": 5,
 "text": "They went to the museum on Sunday"
 },
 {
-"id": "A2-6",
+"id": "A2_001-010-6",
+"group": "A2_001-010",
 "level": "A2",
+"num": 6,
 "text": "Did you enjoy the party yesterday?"
 },
 {
-"id": "A2-7",
+"id": "A2_001-010-7",
+"group": "A2_001-010",
 "level": "A2",
+"num": 7,
 "text": "Did you see the sunset at the beach?"
 },
 {
-"id": "A2-8",
+"id": "A2_001-010-8",
+"group": "A2_001-010",
 "level": "A2",
+"num": 8,
 "text": "Did you finish the report on time?"
 },
 {
-"id": "A2-9",
+"id": "A2_001-010-9",
+"group": "A2_001-010",
 "level": "A2",
+"num": 9,
 "text": "Did you meet the new teacher?"
 },
 {
-"id": "A2-10",
+"id": "A2_001-010-10",
+"group": "A2_001-010",
 "level": "A2",
+"num": 10,
 "text": "Did you like the gift I gave you?"
 },
 {
-"id": "A2-11",
+"id": "A2_001-010-11",
+"group": "A2_001-010",
 "level": "A2",
+"num": 11,
 "text": "I didn't go to school yesterday"
 },
 {
-"id": "A2-12",
+"id": "A2_001-010-12",
+"group": "A2_001-010",
 "level": "A2",
+"num": 12,
 "text": "He didn't call me last night"
 },
 {
-"id": "A2-13",
+"id": "A2_001-010-13",
+"group": "A2_001-010",
 "level": "A2",
+"num": 13,
 "text": "I didn't understand the question"
 },
 {
-"id": "A2-14",
+"id": "A2_001-010-14",
+"group": "A2_001-010",
 "level": "A2",
-"text": "He didn'tShe didn't bring her umbrella"
+"num": 14,
+"text": "He didn't"
 },
 {
-"id": "A2-15",
+"id": "A2_001-010-15",
+"group": "A2_001-010",
 "level": "A2",
+"num": 15,
 "text": "She didn't bring her umbrella"
 },
 {
-"id": "A2-16",
+"id": "A2_001-010-16",
+"group": "A2_001-010",
 "level": "A2",
+"num": 16,
 "text": "They didn't like the movie"
 },
 {
-"id": "A2-17",
+"id": "A2_001-010-17",
+"group": "A2_001-010",
 "level": "A2",
+"num": 17,
 "text": "When did you arrive?"
 },
 {
-"id": "A2-18",
+"id": "A2_001-010-18",
+"group": "A2_001-010",
 "level": "A2",
+"num": 18,
 "text": "Where did she buy that dress?"
 },
 {
-"id": "A2-19",
+"id": "A2_001-010-19",
+"group": "A2_001-010",
 "level": "A2",
+"num": 19,
 "text": "You put the car where?"
 },
 {
-"id": "A2-20",
+"id": "A2_001-010-20",
+"group": "A2_001-010",
 "level": "A2",
+"num": 20,
 "text": "Where did you park the car?"
 },
 {
-"id": "A2-21",
+"id": "A2_001-010-21",
+"group": "A2_001-010",
 "level": "A2",
+"num": 21,
 "text": "When did the meeting end?"
 },
 {
-"id": "A2-22",
+"id": "A2_001-010-22",
+"group": "A2_001-010",
 "level": "A2",
+"num": 22,
 "text": "Where did he learn to cook?"
 },
 {
-"id": "A2-23",
+"id": "A2_001-010-23",
+"group": "A2_001-010",
 "level": "A2",
+"num": 23,
 "text": "It was a wonderful trip"
 },
 {
-"id": "A2-24",
+"id": "A2_001-010-24",
+"group": "A2_001-010",
 "level": "A2",
+"num": 24,
 "text": "That was a long and difficult journey"
 },
 {
-"id": "A2-25",
+"id": "A2_001-010-25",
+"group": "A2_001-010",
 "level": "A2",
+"num": 25,
 "text": "It was a long and difficult journey"
 },
 {
-"id": "A2-26",
+"id": "A2_001-010-26",
+"group": "A2_001-010",
 "level": "A2",
+"num": 26,
 "text": "That was a great party"
 },
 {
-"id": "A2-27",
+"id": "A2_001-010-27",
+"group": "A2_001-010",
 "level": "A2",
+"num": 27,
 "text": "It was a great party"
 },
 {
-"id": "A2-28",
+"id": "A2_001-010-28",
+"group": "A2_001-010",
 "level": "A2",
+"num": 28,
 "text": "That is a book"
 },
 {
-"id": "A2-29",
+"id": "A2_001-010-29",
+"group": "A2_001-010",
 "level": "A2",
+"num": 29,
 "text": "It was an interesting book"
 },
 {
-"id": "A2-30",
+"id": "A2_001-010-30",
+"group": "A2_001-010",
 "level": "A2",
-"text": "That is a quiet nightIt was a quiet evening"
+"num": 30,
+"text": "That is a quiet night"
 },
 {
-"id": "A2-31",
+"id": "A2_001-010-31",
+"group": "A2_001-010",
 "level": "A2",
+"num": 31,
+"text": "It was a quiet evening"
+},
+{
+"id": "A2_001-010-32",
+"group": "A2_001-010",
+"level": "A2",
+"num": 32,
 "text": "Yesterday, there was a big storm"
 },
 {
-"id": "A2-32",
+"id": "A2_001-010-33",
+"group": "A2_001-010",
 "level": "A2",
+"num": 33,
 "text": "There was a big storm yesterday"
 },
 {
-"id": "A2-33",
+"id": "A2_001-010-34",
+"group": "A2_001-010",
 "level": "A2",
+"num": 34,
 "text": "There was a cat sleeping on the sofa"
 },
 {
-"id": "A2-34",
+"id": "A2_001-010-35",
+"group": "A2_001-010",
 "level": "A2",
+"num": 35,
 "text": "There was a letter on the desk"
 },
 {
-"id": "A2-35",
+"id": "A2_001-010-36",
+"group": "A2_001-010",
 "level": "A2",
+"num": 36,
 "text": "There was a dog in the garden"
 },
 {
-"id": "A2-36",
+"id": "A2_001-010-37",
+"group": "A2_001-010",
 "level": "A2",
+"num": 37,
 "text": "Turn"
 },
 {
-"id": "A2-37",
+"id": "A2_001-010-38",
+"group": "A2_001-010",
 "level": "A2",
+"num": 38,
 "text": "There was an accident at the corner"
 },
 {
-"id": "A2-38",
+"id": "A2_001-010-39",
+"group": "A2_001-010",
 "level": "A2",
+"num": 39,
 "text": "There were many people at the concert"
 },
 {
-"id": "A2-39",
+"id": "A2_001-010-40",
+"group": "A2_001-010",
 "level": "A2",
+"num": 40,
 "text": "There were five cakes on the table"
 },
 {
-"id": "A2-40",
+"id": "A2_001-010-41",
+"group": "A2_001-010",
 "level": "A2",
+"num": 41,
 "text": "There were three books on the shelf"
 },
 {
-"id": "A2-41",
+"id": "A2_001-010-42",
+"group": "A2_001-010",
 "level": "A2",
+"num": 42,
 "text": "There were some children in the park"
 },
 {
-"id": "A2-42",
+"id": "A2_001-010-43",
+"group": "A2_001-010",
 "level": "A2",
+"num": 43,
 "text": "There were ten students in the classroom"
 },
 {
-"id": "A2-43",
+"id": "A2_001-010-44",
+"group": "A2_001-010",
 "level": "A2",
+"num": 44,
 "text": "We were very tired after the trip"
 },
 {
-"id": "A2-44",
+"id": "A2_001-010-45",
+"group": "A2_001-010",
 "level": "A2",
+"num": 45,
 "text": "She was happy to see her old friends again"
 },
 {
-"id": "A2-45",
+"id": "A2_001-010-46",
+"group": "A2_001-010",
 "level": "A2",
+"num": 46,
 "text": "He was sick yesterday"
 },
 {
-"id": "A2-46",
+"id": "A2_001-010-47",
+"group": "A2_001-010",
 "level": "A2",
+"num": 47,
 "text": "They were late for the meeting"
 },
 {
-"id": "A2-47",
+"id": "A2_001-010-48",
+"group": "A2_001-010",
 "level": "A2",
+"num": 48,
 "text": "I was busy all day"
 },
 {
-"id": "A2-48",
+"id": "A2_001-010-49",
+"group": "A2_001-010",
 "level": "A2",
+"num": 49,
 "text": "You play"
 },
 {
-"id": "A2-49",
+"id": "A2_001-010-50",
+"group": "A2_001-010",
 "level": "A2",
+"num": 50,
 "text": "Did you have a good time?"
 },
 {
-"id": "A2-50",
+"id": "A2_001-010-51",
+"group": "A2_001-010",
 "level": "A2",
+"num": 51,
 "text": "Did they have breakfast this morning?"
 },
 {
-"id": "A2-51",
+"id": "A2_001-010-52",
+"group": "A2_001-010",
 "level": "A2",
+"num": 52,
 "text": "Did she have a headache?"
 },
 {
-"id": "A2-52",
+"id": "A2_001-010-53",
+"group": "A2_001-010",
 "level": "A2",
+"num": 53,
 "text": "Your money enough?"
 },
 {
-"id": "A2-53",
+"id": "A2_001-010-54",
+"group": "A2_001-010",
 "level": "A2",
+"num": 54,
 "text": "Did you have enough money?"
 },
 {
-"id": "A2-54",
+"id": "A2_001-010-55",
+"group": "A2_001-010",
 "level": "A2",
+"num": 55,
 "text": "He today have a meeting?"
 },
 {
-"id": "A2-55",
+"id": "A2_001-010-56",
+"group": "A2_001-010",
 "level": "A2",
+"num": 56,
 "text": "Did he have a meeting today?"
 },
 {
-"id": "A2-56",
+"id": "A2_001-010-57",
+"group": "A2_001-010",
 "level": "A2",
+"num": 57,
 "text": "I didn't have breakfast this morning"
 },
 {
-"id": "A2-57",
+"id": "A2_001-010-58",
+"group": "A2_001-010",
 "level": "A2",
+"num": 58,
 "text": "He didn't have lunch yesterday"
 },
 {
-"id": "A2-58",
+"id": "A2_001-010-59",
+"group": "A2_001-010",
 "level": "A2",
+"num": 59,
 "text": "I didn't have time to call you"
 },
 {
-"id": "A2-59",
+"id": "A2_001-010-60",
+"group": "A2_001-010",
 "level": "A2",
+"num": 60,
 "text": "She didn't have a ticket for the concert"
 },
 {
-"id": "A2-60",
+"id": "A2_001-010-61",
+"group": "A2_001-010",
 "level": "A2",
-"text": "They have a little milkThey didn't have any milk at home"
+"num": 61,
+"text": "They have a little milk"
 },
 {
-"id": "A2-61",
+"id": "A2_001-010-62",
+"group": "A2_001-010",
 "level": "A2",
+"num": 62,
+"text": "They didn't have any milk at home"
+},
+{
+"id": "A2_011-020-1",
+"group": "A2_011-020",
+"level": "A2",
+"num": 1,
 "text": "I will call you tomorrow"
 },
 {
-"id": "A2-62",
+"id": "A2_011-020-2",
+"group": "A2_011-020",
 "level": "A2",
+"num": 2,
 "text": "He will arrive at the airport at 6 p"
 },
 {
-"id": "A2-63",
+"id": "A2_011-020-3",
+"group": "A2_011-020",
 "level": "A2",
+"num": 3,
 "text": "She will arrive at the airport at 6 p"
 },
 {
-"id": "A2-64",
+"id": "A2_011-020-4",
+"group": "A2_011-020",
 "level": "A2",
+"num": 4,
 "text": "We will visit the museum on Sunday"
 },
 {
-"id": "A2-65",
+"id": "A2_011-020-5",
+"group": "A2_011-020",
 "level": "A2",
+"num": 5,
 "text": "He will finish the project next week"
 },
 {
-"id": "A2-66",
+"id": "A2_011-020-6",
+"group": "A2_011-020",
 "level": "A2",
+"num": 6,
 "text": "They will bring some food to the party"
 },
 {
-"id": "A2-67",
+"id": "A2_011-020-7",
+"group": "A2_011-020",
 "level": "A2",
+"num": 7,
 "text": "It won't rain today"
 },
 {
-"id": "A2-68",
+"id": "A2_011-020-8",
+"group": "A2_011-020",
 "level": "A2",
+"num": 8,
 "text": "He won't forget your birthday this year"
 },
 {
-"id": "A2-69",
+"id": "A2_011-020-9",
+"group": "A2_011-020",
 "level": "A2",
+"num": 9,
 "text": "We won't be late"
 },
 {
-"id": "A2-70",
+"id": "A2_011-020-10",
+"group": "A2_011-020",
 "level": "A2",
+"num": 10,
 "text": "She won't eat meat"
 },
 {
-"id": "A2-71",
+"id": "A2_011-020-11",
+"group": "A2_011-020",
 "level": "A2",
+"num": 11,
 "text": "I won't tell anyone your secret"
 },
 {
-"id": "A2-72",
+"id": "A2_011-020-12",
+"group": "A2_011-020",
 "level": "A2",
+"num": 12,
 "text": "Will you come to the party?"
 },
 {
-"id": "A2-73",
+"id": "A2_011-020-13",
+"group": "A2_011-020",
 "level": "A2",
+"num": 13,
 "text": "Can you help me move this table?"
 },
 {
-"id": "A2-74",
+"id": "A2_011-020-14",
+"group": "A2_011-020",
 "level": "A2",
+"num": 14,
 "text": "Will you help me move this table?"
 },
 {
-"id": "A2-75",
+"id": "A2_011-020-15",
+"group": "A2_011-020",
 "level": "A2",
+"num": 15,
 "text": "Will you open the door for me?"
 },
 {
-"id": "A2-76",
+"id": "A2_011-020-16",
+"group": "A2_011-020",
 "level": "A2",
+"num": 16,
 "text": "Will you send me the file?"
 },
 {
-"id": "A2-77",
+"id": "A2_011-020-17",
+"group": "A2_011-020",
 "level": "A2",
+"num": 17,
 "text": "Can you wait here for a moment?"
 },
 {
-"id": "A2-78",
+"id": "A2_011-020-18",
+"group": "A2_011-020",
 "level": "A2",
+"num": 18,
 "text": "Will you wait here for a moment?"
 },
 {
-"id": "A2-79",
+"id": "A2_011-020-19",
+"group": "A2_011-020",
 "level": "A2",
+"num": 19,
 "text": "I think she will like the gift"
 },
 {
-"id": "A2-80",
+"id": "A2_011-020-20",
+"group": "A2_011-020",
 "level": "A2",
+"num": 20,
 "text": "I think tomorrow the weather will be nice"
 },
 {
-"id": "A2-81",
+"id": "A2_011-020-21",
+"group": "A2_011-020",
 "level": "A2",
+"num": 21,
 "text": "I think the weather will be nice tomorrow"
 },
 {
-"id": "A2-82",
+"id": "A2_011-020-22",
+"group": "A2_011-020",
 "level": "A2",
+"num": 22,
 "text": "I think he will pass the test"
 },
 {
-"id": "A2-83",
+"id": "A2_011-020-23",
+"group": "A2_011-020",
 "level": "A2",
+"num": 23,
 "text": "I think they will enjoy the trip"
 },
 {
-"id": "A2-84",
+"id": "A2_011-020-24",
+"group": "A2_011-020",
 "level": "A2",
+"num": 24,
 "text": "I think it will snow tonight"
 },
 {
-"id": "A2-85",
+"id": "A2_011-020-25",
+"group": "A2_011-020",
 "level": "A2",
+"num": 25,
 "text": "I hope everything will be okay"
 },
 {
-"id": "A2-86",
+"id": "A2_011-020-26",
+"group": "A2_011-020",
 "level": "A2",
+"num": 26,
 "text": "I hope he will pass the exam"
 },
 {
-"id": "A2-87",
+"id": "A2_011-020-27",
+"group": "A2_011-020",
 "level": "A2",
+"num": 27,
 "text": "I hope you will feel better soon"
 },
 {
-"id": "A2-88",
+"id": "A2_011-020-28",
+"group": "A2_011-020",
 "level": "A2",
+"num": 28,
 "text": "I hope it will stop raining"
 },
 {
-"id": "A2-89",
+"id": "A2_011-020-29",
+"group": "A2_011-020",
 "level": "A2",
+"num": 29,
 "text": "I hope we will meet again"
 },
 {
-"id": "A2-90",
+"id": "A2_011-020-30",
+"group": "A2_011-020",
 "level": "A2",
+"num": 30,
 "text": "I'm going to study medicine"
 },
 {
-"id": "A2-91",
+"id": "A2_011-020-31",
+"group": "A2_011-020",
 "level": "A2",
+"num": 31,
 "text": "He's going to learn how to drive"
 },
 {
-"id": "A2-92",
+"id": "A2_011-020-32",
+"group": "A2_011-020",
 "level": "A2",
+"num": 32,
 "text": "She is going to start a new job"
 },
 {
-"id": "A2-93",
+"id": "A2_011-020-33",
+"group": "A2_011-020",
 "level": "A2",
-"text": "We are going to paint the roomThey are going to plant some trees"
+"num": 33,
+"text": "We are going to paint the room"
 },
 {
-"id": "A2-94",
+"id": "A2_011-020-34",
+"group": "A2_011-020",
 "level": "A2",
-"text": "This weekend, you plan to doWhat are you going to do this weekend?"
+"num": 34,
+"text": "They are going to plant some trees"
 },
 {
-"id": "A2-95",
+"id": "A2_011-020-35",
+"group": "A2_011-020",
 "level": "A2",
+"num": 35,
+"text": "This weekend, you plan to do"
+},
+{
+"id": "A2_011-020-36",
+"group": "A2_011-020",
+"level": "A2",
+"num": 36,
+"text": "What are you going to do this weekend?"
+},
+{
+"id": "A2_011-020-37",
+"group": "A2_011-020",
+"level": "A2",
+"num": 37,
 "text": "What is she going to study in university?"
 },
 {
-"id": "A2-96",
+"id": "A2_011-020-38",
+"group": "A2_011-020",
 "level": "A2",
+"num": 38,
 "text": "What are you going to eat for lunch?"
 },
 {
-"id": "A2-97",
+"id": "A2_011-020-39",
+"group": "A2_011-020",
 "level": "A2",
-"text": "He plans to buy what for momWhat is he going to buy for his mom?"
+"num": 39,
+"text": "He plans to buy what for mom"
 },
 {
-"id": "A2-98",
+"id": "A2_011-020-40",
+"group": "A2_011-020",
 "level": "A2",
+"num": 40,
+"text": "What is he going to buy for his mom?"
+},
+{
+"id": "A2_011-020-41",
+"group": "A2_011-020",
+"level": "A2",
+"num": 41,
 "text": "What are they going to do after the exam?"
 },
 {
-"id": "A2-99",
+"id": "A2_011-020-42",
+"group": "A2_011-020",
 "level": "A2",
+"num": 42,
 "text": "He's not going to travel this year"
 },
 {
-"id": "A2-100",
+"id": "A2_011-020-43",
+"group": "A2_011-020",
 "level": "A2",
+"num": 43,
 "text": "We're not going to watch that movie tonight"
 },
 {
-"id": "A2-101",
+"id": "A2_011-020-44",
+"group": "A2_011-020",
 "level": "A2",
-"text": "I don't plan to buy a new phoneI'm not going to buy a new phone"
+"num": 44,
+"text": "I don't plan to buy a new phone"
 },
 {
-"id": "A2-102",
+"id": "A2_011-020-45",
+"group": "A2_011-020",
 "level": "A2",
+"num": 45,
+"text": "I'm not going to buy a new phone"
+},
+{
+"id": "A2_011-020-46",
+"group": "A2_011-020",
+"level": "A2",
+"num": 46,
 "text": "She is not going to join the club"
 },
 {
-"id": "A2-103",
+"id": "A2_011-020-47",
+"group": "A2_011-020",
 "level": "A2",
+"num": 47,
 "text": "They are not going to sell the house"
 },
 {
-"id": "A2-104",
+"id": "A2_011-020-48",
+"group": "A2_011-020",
 "level": "A2",
+"num": 48,
 "text": "Are you going to apply for the job?"
 },
 {
-"id": "A2-105",
+"id": "A2_011-020-49",
+"group": "A2_011-020",
 "level": "A2",
+"num": 49,
 "text": "This holiday, you"
 },
 {
-"id": "A2-106",
+"id": "A2_011-020-50",
+"group": "A2_011-020",
 "level": "A2",
+"num": 50,
 "text": "Are you going to visit your parents this holiday?"
 },
 {
-"id": "A2-107",
+"id": "A2_011-020-51",
+"group": "A2_011-020",
 "level": "A2",
+"num": 51,
 "text": "You want to take the bus?"
 },
 {
-"id": "A2-108",
+"id": "A2_011-020-52",
+"group": "A2_011-020",
 "level": "A2",
+"num": 52,
 "text": "Are you going to take the bus?"
 },
 {
-"id": "A2-109",
+"id": "A2_011-020-53",
+"group": "A2_011-020",
 "level": "A2",
+"num": 53,
 "text": "Are you going to cook dinner tonight?"
 },
 {
-"id": "A2-110",
+"id": "A2_011-020-54",
+"group": "A2_011-020",
 "level": "A2",
+"num": 54,
 "text": "Are you going to join the competition?"
 },
 {
-"id": "A2-111",
+"id": "A2_011-020-55",
+"group": "A2_011-020",
 "level": "A2",
+"num": 55,
 "text": "I'm going to Japan because I got a job there"
 },
 {
-"id": "A2-112",
+"id": "A2_011-020-56",
+"group": "A2_011-020",
 "level": "A2",
+"num": 56,
 "text": "She's going to buy a car because she got a promotion"
 },
 {
-"id": "A2-113",
+"id": "A2_011-020-57",
+"group": "A2_011-020",
 "level": "A2",
+"num": 57,
 "text": "I want to go to bed early because I'm tired"
 },
 {
-"id": "A2-114",
+"id": "A2_011-020-58",
+"group": "A2_011-020",
 "level": "A2",
+"num": 58,
 "text": "I'm going to bed early because I'm tired"
 },
 {
-"id": "A2-115",
+"id": "A2_011-020-59",
+"group": "A2_011-020",
 "level": "A2",
+"num": 59,
 "text": "He's going to study abroad because he wants to learn more"
 },
 {
-"id": "A2-116",
+"id": "A2_011-020-60",
+"group": "A2_011-020",
 "level": "A2",
+"num": 60,
 "text": "We're going to cancel the trip because the weather is bad"
 },
 {
-"id": "A2-117",
+"id": "A2_021-030-1",
+"group": "A2_021-030",
 "level": "A2",
+"num": 1,
 "text": "Wait, I'll open the door for you"
 },
 {
-"id": "A2-118",
+"id": "A2_021-030-2",
+"group": "A2_021-030",
 "level": "A2",
+"num": 2,
 "text": "Don't worry, I'll carry that heavy bag for you"
 },
 {
-"id": "A2-119",
+"id": "A2_021-030-3",
+"group": "A2_021-030",
 "level": "A2",
+"num": 3,
 "text": "I'll make some coffee for us"
 },
 {
-"id": "A2-120",
+"id": "A2_021-030-4",
+"group": "A2_021-030",
 "level": "A2",
+"num": 4,
 "text": "I'll check"
 },
 {
-"id": "A2-121",
+"id": "A2_021-030-5",
+"group": "A2_021-030",
 "level": "A2",
+"num": 5,
 "text": "I'll call the restaurant now"
 },
 {
-"id": "A2-122",
+"id": "A2_021-030-6",
+"group": "A2_021-030",
 "level": "A2",
+"num": 6,
 "text": "Let me check"
 },
 {
-"id": "A2-123",
+"id": "A2_021-030-7",
+"group": "A2_021-030",
 "level": "A2",
+"num": 7,
 "text": "I'll write down your number"
 },
 {
-"id": "A2-124",
+"id": "A2_021-030-8",
+"group": "A2_021-030",
 "level": "A2",
+"num": 8,
 "text": "I've booked the tickets"
 },
 {
-"id": "A2-125",
+"id": "A2_021-030-9",
+"group": "A2_021-030",
 "level": "A2",
+"num": 9,
 "text": "I'm going to fly to London"
 },
 {
-"id": "A2-126",
+"id": "A2_021-030-10",
+"group": "A2_021-030",
 "level": "A2",
+"num": 10,
 "text": "I've already signed up"
 },
 {
-"id": "A2-127",
+"id": "A2_021-030-11",
+"group": "A2_021-030",
 "level": "A2",
-"text": "I'm going to run a marathonI've already registered"
+"num": 11,
+"text": "I'm going to run a marathon"
 },
 {
-"id": "A2-128",
+"id": "A2_021-030-12",
+"group": "A2_021-030",
 "level": "A2",
+"num": 12,
+"text": "I've already registered"
+},
+{
+"id": "A2_021-030-13",
+"group": "A2_021-030",
+"level": "A2",
+"num": 13,
 "text": "I'm going to run the marathon next month"
 },
 {
-"id": "A2-129",
+"id": "A2_021-030-14",
+"group": "A2_021-030",
 "level": "A2",
-"text": "I've alreadyI've rented an apartment"
+"num": 14,
+"text": "I've already"
 },
 {
-"id": "A2-130",
+"id": "A2_021-030-15",
+"group": "A2_021-030",
 "level": "A2",
-"text": "I'm going to move next month"
-},
-{
-"id": "A2-131",
-"level": "A2",
+"num": 15,
 "text": "I've rented an apartment"
 },
 {
-"id": "A2-132",
+"id": "A2_021-030-16",
+"group": "A2_021-030",
 "level": "A2",
+"num": 16,
+"text": "I'm going to move next month"
+},
+{
+"id": "A2_021-030-17",
+"group": "A2_021-030",
+"level": "A2",
+"num": 17,
 "text": "I'll make a big meal"
 },
 {
-"id": "A2-133",
+"id": "A2_021-030-18",
+"group": "A2_021-030",
 "level": "A2",
+"num": 18,
 "text": "I've bought the ingredients"
 },
 {
-"id": "A2-134",
+"id": "A2_021-030-19",
+"group": "A2_021-030",
 "level": "A2",
+"num": 19,
 "text": "I'm going to cook a big meal"
 },
 {
-"id": "A2-135",
+"id": "A2_021-030-20",
+"group": "A2_021-030",
 "level": "A2",
+"num": 20,
 "text": "I've saved enough money"
 },
 {
-"id": "A2-136",
+"id": "A2_021-030-21",
+"group": "A2_021-030",
 "level": "A2",
+"num": 21,
 "text": "I'm going to buy a laptop"
 },
 {
-"id": "A2-137",
+"id": "A2_021-030-22",
+"group": "A2_021-030",
 "level": "A2",
+"num": 22,
 "text": "I think it will get better soon"
 },
 {
-"id": "A2-138",
+"id": "A2_021-030-23",
+"group": "A2_021-030",
 "level": "A2",
+"num": 23,
 "text": "I think she will arrive in about ten minutes"
 },
 {
-"id": "A2-139",
+"id": "A2_021-030-24",
+"group": "A2_021-030",
 "level": "A2",
+"num": 24,
 "text": "I think she will arrive in about 10 minutes"
 },
 {
-"id": "A2-140",
+"id": "A2_021-030-25",
+"group": "A2_021-030",
 "level": "A2",
+"num": 25,
 "text": "I think it will be sunny tomorrow"
 },
 {
-"id": "A2-141",
+"id": "A2_021-030-26",
+"group": "A2_021-030",
 "level": "A2",
+"num": 26,
 "text": "I think it will rain later"
 },
 {
-"id": "A2-142",
+"id": "A2_021-030-27",
+"group": "A2_021-030",
 "level": "A2",
+"num": 27,
 "text": "I think it will take about an hour"
 },
 {
-"id": "A2-143",
+"id": "A2_021-030-28",
+"group": "A2_021-030",
 "level": "A2",
+"num": 28,
 "text": "Look at the sky, it's going to rain"
 },
 {
-"id": "A2-144",
+"id": "A2_021-030-29",
+"group": "A2_021-030",
 "level": "A2",
+"num": 29,
 "text": "Look at those black clouds"
 },
 {
-"id": "A2-145",
+"id": "A2_021-030-30",
+"group": "A2_021-030",
 "level": "A2",
-"text": "It's going to stormLook at the wind, it's going to be a strong storm"
+"num": 30,
+"text": "It's going to storm"
 },
 {
-"id": "A2-146",
+"id": "A2_021-030-31",
+"group": "A2_021-030",
 "level": "A2",
+"num": 31,
 "text": "Look at the wind, it's going to be a strong storm"
 },
 {
-"id": "A2-147",
+"id": "A2_021-030-32",
+"group": "A2_021-030",
 "level": "A2",
+"num": 32,
 "text": "Look at the dark sky"
 },
 {
-"id": "A2-148",
+"id": "A2_021-030-33",
+"group": "A2_021-030",
 "level": "A2",
+"num": 33,
 "text": "It's going to snow"
 },
 {
-"id": "A2-149",
+"id": "A2_021-030-34",
+"group": "A2_021-030",
 "level": "A2",
+"num": 34,
 "text": "Look at the clouds"
 },
 {
-"id": "A2-150",
+"id": "A2_021-030-35",
+"group": "A2_021-030",
 "level": "A2",
+"num": 35,
 "text": "It's going to pour"
 },
 {
-"id": "A2-151",
+"id": "A2_021-030-36",
+"group": "A2_021-030",
 "level": "A2",
+"num": 36,
 "text": "Don't worry, I'll help you with the homework"
 },
 {
-"id": "A2-152",
+"id": "A2_021-030-37",
+"group": "A2_021-030",
 "level": "A2",
+"num": 37,
 "text": "Don't worry, I'll drive you to the station"
 },
 {
-"id": "A2-153",
+"id": "A2_021-030-38",
+"group": "A2_021-030",
 "level": "A2",
+"num": 38,
 "text": "Don't worry, I'll pay for the tickets"
 },
 {
-"id": "A2-154",
+"id": "A2_021-030-39",
+"group": "A2_021-030",
 "level": "A2",
+"num": 39,
 "text": "Don't worry, I'll take care of the dog"
 },
 {
-"id": "A2-155",
+"id": "A2_021-030-40",
+"group": "A2_021-030",
 "level": "A2",
+"num": 40,
 "text": "Don't worry, I'll fix the computer"
 },
 {
-"id": "A2-156",
+"id": "A2_021-030-41",
+"group": "A2_021-030",
 "level": "A2",
+"num": 41,
 "text": "This book is more interesting than that one"
 },
 {
-"id": "A2-157",
+"id": "A2_021-030-42",
+"group": "A2_021-030",
 "level": "A2",
+"num": 42,
 "text": "My house is bigger than yours"
 },
 {
-"id": "A2-158",
+"id": "A2_021-030-43",
+"group": "A2_021-030",
 "level": "A2",
+"num": 43,
 "text": "Your bag is heavier than mine"
 },
 {
-"id": "A2-159",
+"id": "A2_021-030-44",
+"group": "A2_021-030",
 "level": "A2",
-"text": "This road is shorterThis road is shorter than the other one"
+"num": 44,
+"text": "This road is shorter"
 },
 {
-"id": "A2-160",
+"id": "A2_021-030-45",
+"group": "A2_021-030",
 "level": "A2",
+"num": 45,
 "text": "This road is shorter than the other one"
 },
 {
-"id": "A2-161",
+"id": "A2_021-030-46",
+"group": "A2_021-030",
 "level": "A2",
+"num": 46,
 "text": "His car is faster than hers"
 },
 {
-"id": "A2-162",
+"id": "A2_021-030-47",
+"group": "A2_021-030",
 "level": "A2",
+"num": 47,
 "text": "She is the tallest in our class"
 },
 {
-"id": "A2-163",
+"id": "A2_021-030-48",
+"group": "A2_021-030",
 "level": "A2",
+"num": 48,
 "text": "He is the fastest runner in the school"
 },
 {
-"id": "A2-164",
+"id": "A2_021-030-49",
+"group": "A2_021-030",
 "level": "A2",
+"num": 49,
 "text": "This is the cheapest restaurant in the area"
 },
 {
-"id": "A2-165",
+"id": "A2_021-030-50",
+"group": "A2_021-030",
 "level": "A2",
+"num": 50,
 "text": "She is the smartest student in the grade"
 },
 {
-"id": "A2-166",
+"id": "A2_021-030-51",
+"group": "A2_021-030",
 "level": "A2",
+"num": 51,
 "text": "That was the best movie of the year"
 },
 {
-"id": "A2-167",
+"id": "A2_021-030-52",
+"group": "A2_021-030",
 "level": "A2",
-"text": "This phone is more expensiveThis phone is more expensive than mine"
+"num": 52,
+"text": "This phone is more expensive"
 },
 {
-"id": "A2-168",
+"id": "A2_021-030-53",
+"group": "A2_021-030",
 "level": "A2",
+"num": 53,
+"text": "This phone is more expensive than mine"
+},
+{
+"id": "A2_021-030-54",
+"group": "A2_021-030",
+"level": "A2",
+"num": 54,
 "text": "This plan is more practical than the last one"
 },
 {
-"id": "A2-169",
+"id": "A2_021-030-55",
+"group": "A2_021-030",
 "level": "A2",
+"num": 55,
 "text": "This question is more difficult than the first one"
 },
 {
-"id": "A2-170",
+"id": "A2_021-030-56",
+"group": "A2_021-030",
 "level": "A2",
+"num": 56,
 "text": "Her idea is more creative than his"
 },
 {
-"id": "A2-171",
+"id": "A2_021-030-57",
+"group": "A2_021-030",
 "level": "A2",
+"num": 57,
 "text": "Living in the city is more convenient than in the village"
 },
 {
-"id": "A2-172",
+"id": "A2_021-030-58",
+"group": "A2_021-030",
 "level": "A2",
-"text": "English and math areEnglish is as important as math"
+"num": 58,
+"text": "English and math are"
 },
 {
-"id": "A2-173",
+"id": "A2_021-030-59",
+"group": "A2_021-030",
 "level": "A2",
+"num": 59,
 "text": "English is as important as math"
 },
 {
-"id": "A2-174",
+"id": "A2_021-030-60",
+"group": "A2_021-030",
 "level": "A2",
+"num": 60,
 "text": "This bag is as heavy as that one"
 },
 {
-"id": "A2-175",
+"id": "A2_021-030-61",
+"group": "A2_021-030",
 "level": "A2",
+"num": 61,
 "text": "He is as tall as his brother"
 },
 {
-"id": "A2-176",
+"id": "A2_021-030-62",
+"group": "A2_021-030",
 "level": "A2",
+"num": 62,
 "text": "This box is as light as that one"
 },
 {
-"id": "A2-177",
+"id": "A2_021-030-63",
+"group": "A2_021-030",
 "level": "A2",
+"num": 63,
 "text": "Reading and writing are the same"
 },
 {
-"id": "A2-178",
+"id": "A2_021-030-64",
+"group": "A2_021-030",
 "level": "A2",
+"num": 64,
 "text": "This restaurant isn't as good as the other one"
 },
 {
-"id": "A2-179",
+"id": "A2_021-030-65",
+"group": "A2_021-030",
 "level": "A2",
+"num": 65,
 "text": "His English isn't as fluent as hers"
 },
 {
-"id": "A2-180",
+"id": "A2_021-030-66",
+"group": "A2_021-030",
 "level": "A2",
-"text": "His English isn't as fluent as hers"
-},
-{
-"id": "A2-181",
-"level": "A2",
+"num": 66,
 "text": "My room isn't as clean as yours"
 },
 {
-"id": "A2-182",
+"id": "A2_021-030-67",
+"group": "A2_021-030",
 "level": "A2",
+"num": 67,
 "text": "This movie isn't as funny as the first one"
 },
 {
-"id": "A2-183",
+"id": "A2_021-030-68",
+"group": "A2_021-030",
 "level": "A2",
+"num": 68,
 "text": "Red one isn't as cheap as the blue one"
 },
 {
-"id": "A2-184",
+"id": "A2_031-040-1",
+"group": "A2_031-040",
 "level": "A2",
+"num": 1,
 "text": "If it rains, I'll stay at home"
 },
 {
-"id": "A2-185",
+"id": "A2_031-040-2",
+"group": "A2_031-040",
 "level": "A2",
+"num": 2,
 "text": "If you study hard, you will succeed"
 },
 {
-"id": "A2-186",
+"id": "A2_031-040-3",
+"group": "A2_031-040",
 "level": "A2",
+"num": 3,
 "text": "If we leave now, we will catch the train"
 },
 {
-"id": "A2-187",
+"id": "A2_031-040-4",
+"group": "A2_031-040",
 "level": "A2",
+"num": 4,
 "text": "If she works late, she will be tired"
 },
 {
-"id": "A2-188",
+"id": "A2_031-040-5",
+"group": "A2_031-040",
 "level": "A2",
+"num": 5,
 "text": "If they save money, they will buy a house"
 },
 {
-"id": "A2-189",
+"id": "A2_031-040-6",
+"group": "A2_031-040",
 "level": "A2",
+"num": 6,
 "text": "If I study hard, I will pass the exam"
 },
 {
-"id": "A2-190",
+"id": "A2_031-040-7",
+"group": "A2_031-040",
 "level": "A2",
+"num": 7,
 "text": "If I finish work early, I will go to the gym"
 },
 {
-"id": "A2-191",
+"id": "A2_031-040-8",
+"group": "A2_031-040",
 "level": "A2",
+"num": 8,
 "text": "If I have time, I will call you"
 },
 {
-"id": "A2-192",
+"id": "A2_031-040-9",
+"group": "A2_031-040",
 "level": "A2",
+"num": 9,
 "text": "If I feel better, I will go to the party"
 },
 {
-"id": "A2-193",
+"id": "A2_031-040-10",
+"group": "A2_031-040",
 "level": "A2",
+"num": 10,
 "text": "If I win the contest, I will buy a gift for my mom"
 },
 {
-"id": "A2-194",
+"id": "A2_031-040-11",
+"group": "A2_031-040",
 "level": "A2",
+"num": 11,
 "text": "If you don't hurry, you will miss the bus"
 },
 {
-"id": "A2-195",
+"id": "A2_031-040-12",
+"group": "A2_031-040",
 "level": "A2",
+"num": 12,
 "text": "If you don't practice, you won't improve"
 },
 {
-"id": "A2-196",
+"id": "A2_031-040-13",
+"group": "A2_031-040",
 "level": "A2",
+"num": 13,
 "text": "If you don't eat, you will be hungry"
 },
 {
-"id": "A2-197",
+"id": "A2_031-040-14",
+"group": "A2_031-040",
 "level": "A2",
-"text": "If you don't lock the door, someone might come inIf you don't water the plants, they will die"
+"num": 14,
+"text": "If you don't lock the door, someone might come in"
 },
 {
-"id": "A2-198",
+"id": "A2_031-040-15",
+"group": "A2_031-040",
 "level": "A2",
+"num": 15,
+"text": "If you don't water the plants, they will die"
+},
+{
+"id": "A2_031-040-16",
+"group": "A2_031-040",
+"level": "A2",
+"num": 16,
 "text": "If I invite you, will you come?"
 },
 {
-"id": "A2-199",
+"id": "A2_031-040-17",
+"group": "A2_031-040",
 "level": "A2",
+"num": 17,
 "text": "If I invite you, if I open, will you help?"
 },
 {
-"id": "A2-200",
+"id": "A2_031-040-18",
+"group": "A2_031-040",
 "level": "A2",
+"num": 18,
 "text": "Will you help if I ask you?"
 },
 {
-"id": "A2-201",
+"id": "A2_031-040-19",
+"group": "A2_031-040",
 "level": "A2",
+"num": 19,
 "text": "If I'm late, will you wait?"
 },
 {
-"id": "A2-202",
+"id": "A2_031-040-20",
+"group": "A2_031-040",
 "level": "A2",
+"num": 20,
 "text": "Will you wait if I am late?"
 },
 {
-"id": "A2-203",
+"id": "A2_031-040-21",
+"group": "A2_031-040",
 "level": "A2",
+"num": 21,
 "text": "Will you join us if we go camping?"
 },
 {
-"id": "A2-204",
+"id": "A2_031-040-22",
+"group": "A2_031-040",
 "level": "A2",
+"num": 22,
 "text": "Will you lend me money if I need it?"
 },
 {
-"id": "A2-205",
+"id": "A2_031-040-23",
+"group": "A2_031-040",
 "level": "A2",
+"num": 23,
 "text": "If you practice every day, you can improve quickly"
 },
 {
-"id": "A2-206",
+"id": "A2_031-040-24",
+"group": "A2_031-040",
 "level": "A2",
-"text": "If you arrive early, you might get a good seatIf it is sunny, we can go to the beach"
+"num": 24,
+"text": "If you arrive early, you might get a good seat"
 },
 {
-"id": "A2-207",
+"id": "A2_031-040-25",
+"group": "A2_031-040",
 "level": "A2",
+"num": 25,
+"text": "If it is sunny, we can go to the beach"
+},
+{
+"id": "A2_031-040-26",
+"group": "A2_031-040",
+"level": "A2",
+"num": 26,
 "text": "If you read more, you might learn new words"
 },
 {
-"id": "A2-208",
+"id": "A2_031-040-27",
+"group": "A2_031-040",
 "level": "A2",
+"num": 27,
 "text": "If he leaves now, he can catch the last train"
 },
 {
-"id": "A2-209",
+"id": "A2_031-040-28",
+"group": "A2_031-040",
 "level": "A2",
-"text": "You should try this restaurantYou should take an umbrella today"
+"num": 28,
+"text": "You should try this restaurant"
 },
 {
-"id": "A2-210",
+"id": "A2_031-040-29",
+"group": "A2_031-040",
 "level": "A2",
+"num": 29,
+"text": "You should take an umbrella today"
+},
+{
+"id": "A2_031-040-30",
+"group": "A2_031-040",
+"level": "A2",
+"num": 30,
 "text": "You should drink more water"
 },
 {
-"id": "A2-211",
+"id": "A2_031-040-31",
+"group": "A2_031-040",
 "level": "A2",
+"num": 31,
 "text": "You should see a doctor"
 },
 {
-"id": "A2-212",
+"id": "A2_031-040-32",
+"group": "A2_031-040",
 "level": "A2",
+"num": 32,
 "text": "You should save some money"
 },
 {
-"id": "A2-213",
+"id": "A2_031-040-33",
+"group": "A2_031-040",
 "level": "A2",
+"num": 33,
 "text": "You shouldn't give up"
 },
 {
-"id": "A2-214",
+"id": "A2_031-040-34",
+"group": "A2_031-040",
 "level": "A2",
+"num": 34,
 "text": "You shouldn't be late for the interview"
 },
 {
-"id": "A2-215",
+"id": "A2_031-040-35",
+"group": "A2_031-040",
 "level": "A2",
+"num": 35,
 "text": "You shouldn't eat too much sugar"
 },
 {
-"id": "A2-216",
+"id": "A2_031-040-36",
+"group": "A2_031-040",
 "level": "A2",
-"text": "You shouldn't talk to strangersYou shouldn't waste your time"
+"num": 36,
+"text": "You shouldn't talk to strangers"
 },
 {
-"id": "A2-217",
+"id": "A2_031-040-37",
+"group": "A2_031-040",
 "level": "A2",
-"text": "You shouldYou should have asked me earlier"
+"num": 37,
+"text": "You shouldn't waste your time"
 },
 {
-"id": "A2-218",
+"id": "A2_031-040-38",
+"group": "A2_031-040",
 "level": "A2",
+"num": 38,
+"text": "You should"
+},
+{
+"id": "A2_031-040-39",
+"group": "A2_031-040",
+"level": "A2",
+"num": 39,
 "text": "You should have asked me earlier"
 },
 {
-"id": "A2-219",
+"id": "A2_031-040-40",
+"group": "A2_031-040",
 "level": "A2",
+"num": 40,
 "text": "He should have studied more for the exam"
 },
 {
-"id": "A2-220",
+"id": "A2_031-040-41",
+"group": "A2_031-040",
 "level": "A2",
+"num": 41,
 "text": "We should have left earlier"
 },
 {
-"id": "A2-221",
+"id": "A2_031-040-42",
+"group": "A2_031-040",
 "level": "A2",
+"num": 42,
 "text": "He should have said the truth"
 },
 {
-"id": "A2-222",
+"id": "A2_031-040-43",
+"group": "A2_031-040",
 "level": "A2",
+"num": 43,
 "text": "She should have told the truth"
 },
 {
-"id": "A2-223",
+"id": "A2_031-040-44",
+"group": "A2_031-040",
 "level": "A2",
-"text": "I should have brought an umbrellaYou must be careful on icy roads"
+"num": 44,
+"text": "I should have brought an umbrella"
 },
 {
-"id": "A2-224",
+"id": "A2_031-040-45",
+"group": "A2_031-040",
 "level": "A2",
+"num": 45,
+"text": "You must be careful on icy roads"
+},
+{
+"id": "A2_031-040-46",
+"group": "A2_031-040",
+"level": "A2",
+"num": 46,
 "text": "You must submit the form before Friday"
 },
 {
-"id": "A2-225",
+"id": "A2_031-040-47",
+"group": "A2_031-040",
 "level": "A2",
+"num": 47,
 "text": "You ride a bike, you must wear a helmet"
 },
 {
-"id": "A2-226",
+"id": "A2_031-040-48",
+"group": "A2_031-040",
 "level": "A2",
+"num": 48,
 "text": "You must wear a helmet when riding a bike"
 },
 {
-"id": "A2-227",
+"id": "A2_031-040-49",
+"group": "A2_031-040",
 "level": "A2",
+"num": 49,
 "text": "You must turn off the lights before leaving"
 },
 {
-"id": "A2-228",
+"id": "A2_031-040-50",
+"group": "A2_031-040",
 "level": "A2",
+"num": 50,
 "text": "You must finish your homework tonight"
 },
 {
-"id": "A2-229",
+"id": "A2_031-040-51",
+"group": "A2_031-040",
 "level": "A2",
+"num": 51,
 "text": "You mustn't be late for the interview"
 },
 {
-"id": "A2-230",
+"id": "A2_031-040-52",
+"group": "A2_031-040",
 "level": "A2",
+"num": 52,
 "text": "You mustn't share your password with anyone"
 },
 {
-"id": "A2-231",
+"id": "A2_031-040-53",
+"group": "A2_031-040",
 "level": "A2",
-"text": "You mustn't touch the hot stoveYou mustn't touch the hot stove"
+"num": 53,
+"text": "You mustn't touch the hot stove"
 },
 {
-"id": "A2-232",
+"id": "A2_031-040-54",
+"group": "A2_031-040",
 "level": "A2",
+"num": 54,
 "text": "You mustn't smoke in the hospital"
 },
 {
-"id": "A2-233",
+"id": "A2_031-040-55",
+"group": "A2_031-040",
 "level": "A2",
+"num": 55,
 "text": "Red light means you"
 },
 {
-"id": "A2-234",
+"id": "A2_031-040-56",
+"group": "A2_031-040",
 "level": "A2",
+"num": 56,
 "text": "You mustn't cross the road when the light is red"
 },
 {
-"id": "A2-235",
+"id": "A2_041-050-1",
+"group": "A2_041-050",
 "level": "A2",
-"text": "You mustn't cross the road when the light is red"
-},
-{
-"id": "A2-236",
-"level": "A2",
+"num": 1,
 "text": "This cake is made by my mom"
 },
 {
-"id": "A2-237",
+"id": "A2_041-050-2",
+"group": "A2_041-050",
 "level": "A2",
+"num": 2,
 "text": "This song was written by a famous singer"
 },
 {
-"id": "A2-238",
+"id": "A2_041-050-3",
+"group": "A2_041-050",
 "level": "A2",
+"num": 3,
 "text": "This bridge is built by local workers"
 },
 {
-"id": "A2-239",
+"id": "A2_041-050-4",
+"group": "A2_041-050",
 "level": "A2",
+"num": 4,
 "text": "The book is written by a famous author"
 },
 {
-"id": "A2-240",
+"id": "A2_041-050-5",
+"group": "A2_041-050",
 "level": "A2",
+"num": 5,
 "text": "These clothes are made in Vietnam"
 },
 {
-"id": "A2-241",
+"id": "A2_041-050-6",
+"group": "A2_041-050",
 "level": "A2",
+"num": 6,
 "text": "The letter was sent yesterday"
 },
 {
-"id": "A2-242",
+"id": "A2_041-050-7",
+"group": "A2_041-050",
 "level": "A2",
+"num": 7,
 "text": "The window was broken by the strong wind"
 },
 {
-"id": "A2-243",
+"id": "A2_041-050-8",
+"group": "A2_041-050",
 "level": "A2",
+"num": 8,
 "text": "The cake was eaten by the children"
 },
 {
-"id": "A2-244",
+"id": "A2_041-050-9",
+"group": "A2_041-050",
 "level": "A2",
+"num": 9,
 "text": "The door was locked by the manager"
 },
 {
-"id": "A2-245",
+"id": "A2_041-050-10",
+"group": "A2_041-050",
 "level": "A2",
+"num": 10,
 "text": "The picture was taken by my friend"
 },
 {
-"id": "A2-246",
+"id": "A2_041-050-11",
+"group": "A2_041-050",
 "level": "A2",
+"num": 11,
 "text": "English is spoken in many countries"
 },
 {
-"id": "A2-247",
+"id": "A2_041-050-12",
+"group": "A2_041-050",
 "level": "A2",
+"num": 12,
 "text": "Spanish is spoken in most Latin American countries"
 },
 {
-"id": "A2-248",
+"id": "A2_041-050-13",
+"group": "A2_041-050",
 "level": "A2",
+"num": 13,
 "text": "French is spoken in France and Canada"
 },
 {
-"id": "A2-249",
+"id": "A2_041-050-14",
+"group": "A2_041-050",
 "level": "A2",
+"num": 14,
 "text": "Chinese is spoken by many people in the world"
 },
 {
-"id": "A2-250",
+"id": "A2_041-050-15",
+"group": "A2_041-050",
 "level": "A2",
+"num": 15,
 "text": "Arabic is spoken in many Middle Eastern countries"
 },
 {
-"id": "A2-251",
+"id": "A2_041-050-16",
+"group": "A2_041-050",
 "level": "A2",
+"num": 16,
 "text": "This movie is a famous director"
 },
 {
-"id": "A2-252",
+"id": "A2_041-050-17",
+"group": "A2_041-050",
 "level": "A2",
+"num": 17,
 "text": "The movie was directed by a famous director"
 },
 {
-"id": "A2-253",
+"id": "A2_041-050-18",
+"group": "A2_041-050",
 "level": "A2",
+"num": 18,
 "text": "This novel was written by a young author from Taiwan"
 },
 {
-"id": "A2-254",
+"id": "A2_041-050-19",
+"group": "A2_041-050",
 "level": "A2",
+"num": 19,
 "text": "The novel was written by a young author from Taiwan"
 },
 {
-"id": "A2-255",
+"id": "A2_041-050-20",
+"group": "A2_041-050",
 "level": "A2",
+"num": 20,
 "text": "This song is a young musician"
 },
 {
-"id": "A2-256",
+"id": "A2_041-050-21",
+"group": "A2_041-050",
 "level": "A2",
+"num": 21,
 "text": "This bridge was designed by a famous engineer"
 },
 {
-"id": "A2-257",
+"id": "A2_041-050-22",
+"group": "A2_041-050",
 "level": "A2",
-"text": "This painting was painted by a local artistThe painting was painted by a local artist"
+"num": 22,
+"text": "This painting was painted by a local artist"
 },
 {
-"id": "A2-258",
+"id": "A2_041-050-23",
+"group": "A2_041-050",
 "level": "A2",
-"text": "Here, many languages are taughtMany languages are taught here"
+"num": 23,
+"text": "The painting was painted by a local artist"
 },
 {
-"id": "A2-259",
+"id": "A2_041-050-24",
+"group": "A2_041-050",
 "level": "A2",
+"num": 24,
+"text": "Here, many languages are taught"
+},
+{
+"id": "A2_041-050-25",
+"group": "A2_041-050",
+"level": "A2",
+"num": 25,
+"text": "Many languages are taught here"
+},
+{
+"id": "A2_041-050-26",
+"group": "A2_041-050",
+"level": "A2",
+"num": 26,
 "text": "This art school has painting and drawing"
 },
 {
-"id": "A2-260",
+"id": "A2_041-050-27",
+"group": "A2_041-050",
 "level": "A2",
+"num": 27,
 "text": "Painting and drawing are taught in this art school"
 },
 {
-"id": "A2-261",
+"id": "A2_041-050-28",
+"group": "A2_041-050",
 "level": "A2",
+"num": 28,
 "text": "Music and dance are taught at this academy"
 },
 {
-"id": "A2-262",
+"id": "A2_041-050-29",
+"group": "A2_041-050",
 "level": "A2",
+"num": 29,
 "text": "Swimming is taught at the community center"
 },
 {
-"id": "A2-263",
+"id": "A2_041-050-30",
+"group": "A2_041-050",
 "level": "A2",
+"num": 30,
 "text": "This evening course has cooking"
 },
 {
-"id": "A2-264",
+"id": "A2_041-050-31",
+"group": "A2_041-050",
 "level": "A2",
-"text": "Cooking is taught in this evening classCooking is taught in this evening class"
+"num": 31,
+"text": "Cooking is taught in this evening class"
 },
 {
-"id": "A2-265",
+"id": "A2_041-050-32",
+"group": "A2_041-050",
 "level": "A2",
+"num": 32,
 "text": "Telephone"
 },
 {
-"id": "A2-266",
+"id": "A2_041-050-33",
+"group": "A2_041-050",
 "level": "A2",
+"num": 33,
 "text": "When I was sleeping, I was sleeping when the phone rang"
 },
 {
-"id": "A2-267",
+"id": "A2_041-050-34",
+"group": "A2_041-050",
 "level": "A2",
+"num": 34,
 "text": "She was cooking dinner when the power went out"
 },
 {
-"id": "A2-268",
+"id": "A2_041-050-35",
+"group": "A2_041-050",
 "level": "A2",
+"num": 35,
 "text": "He was watching TV when it started to rain"
 },
 {
-"id": "A2-269",
+"id": "A2_041-050-36",
+"group": "A2_041-050",
 "level": "A2",
+"num": 36,
 "text": "We were walking home when we saw a cat"
 },
 {
-"id": "A2-270",
+"id": "A2_041-050-37",
+"group": "A2_041-050",
 "level": "A2",
+"num": 37,
 "text": "They were eating lunch when the guest arrived"
 },
 {
-"id": "A2-271",
+"id": "A2_041-050-38",
+"group": "A2_041-050",
 "level": "A2",
+"num": 38,
 "text": "What were you doing at 9 p"
 },
 {
-"id": "A2-272",
+"id": "A2_041-050-39",
+"group": "A2_041-050",
 "level": "A2",
+"num": 39,
 "text": "last night?"
 },
 {
-"id": "A2-273",
+"id": "A2_041-050-40",
+"group": "A2_041-050",
 "level": "A2",
+"num": 40,
 "text": "What were you doing when the earthquake happened?"
 },
 {
-"id": "A2-274",
+"id": "A2_041-050-41",
+"group": "A2_041-050",
 "level": "A2",
+"num": 41,
 "text": "What were you doing this time yesterday?"
 },
 {
-"id": "A2-275",
+"id": "A2_041-050-42",
+"group": "A2_041-050",
 "level": "A2",
+"num": 42,
 "text": "What is he doing in the kitchen?"
 },
 {
-"id": "A2-276",
+"id": "A2_041-050-43",
+"group": "A2_041-050",
 "level": "A2",
+"num": 43,
 "text": "What were they doing during the break?"
 },
 {
-"id": "A2-277",
+"id": "A2_041-050-44",
+"group": "A2_041-050",
 "level": "A2",
+"num": 44,
 "text": "She was studying all day yesterday"
 },
 {
-"id": "A2-278",
+"id": "A2_041-050-45",
+"group": "A2_041-050",
 "level": "A2",
+"num": 45,
 "text": "He was working all night to finish the project"
 },
 {
-"id": "A2-279",
+"id": "A2_041-050-46",
+"group": "A2_041-050",
 "level": "A2",
+"num": 46,
 "text": "They were playing outside all afternoon"
 },
 {
-"id": "A2-280",
+"id": "A2_041-050-47",
+"group": "A2_041-050",
 "level": "A2",
+"num": 47,
 "text": "I whole morning were in the houseI was cleaning the house all morning"
 },
 {
-"id": "A2-281",
+"id": "A2_041-050-48",
+"group": "A2_041-050",
 "level": "A2",
+"num": 48,
 "text": "We were waiting for the bus all evening"
 },
 {
-"id": "A2-282",
+"id": "A2_041-050-49",
+"group": "A2_041-050",
 "level": "A2",
+"num": 49,
 "text": "When I arrived, she was cooking dinner"
 },
 {
-"id": "A2-283",
+"id": "A2_041-050-50",
+"group": "A2_041-050",
 "level": "A2",
+"num": 50,
 "text": "When the teacher walked in, the students were talking"
 },
 {
-"id": "A2-284",
+"id": "A2_041-050-51",
+"group": "A2_041-050",
 "level": "A2",
+"num": 51,
 "text": "When the phone rang, I was taking a shower"
 },
 {
-"id": "A2-285",
+"id": "A2_041-050-52",
+"group": "A2_041-050",
 "level": "A2",
+"num": 52,
 "text": "When it started to rain, they were riding bikes"
 },
 {
-"id": "A2-286",
+"id": "A2_041-050-53",
+"group": "A2_041-050",
 "level": "A2",
+"num": 53,
 "text": "He was reading a book"
 },
 {
-"id": "A2-287",
+"id": "A2_041-050-54",
+"group": "A2_041-050",
 "level": "A2",
+"num": 54,
 "text": "At that moment, I was driving to work"
 },
 {
-"id": "A2-288",
+"id": "A2_041-050-55",
+"group": "A2_041-050",
 "level": "A2",
+"num": 55,
 "text": "At noon, he was having lunch with his colleagues"
 },
 {
-"id": "A2-289",
+"id": "A2_041-050-56",
+"group": "A2_041-050",
 "level": "A2",
+"num": 56,
 "text": "At 8 p"
 },
 {
-"id": "A2-290",
+"id": "A2_041-050-57",
+"group": "A2_041-050",
 "level": "A2",
+"num": 57,
 "text": "we were watching a movie"
 },
 {
-"id": "A2-291",
+"id": "A2_041-050-58",
+"group": "A2_041-050",
 "level": "A2",
+"num": 58,
 "text": "At dawn, she was jogging in the park"
 },
 {
-"id": "A2-292",
+"id": "A2_041-050-59",
+"group": "A2_041-050",
 "level": "A2",
+"num": 59,
 "text": "At midnight, the baby was crying"
 },
 {
-"id": "A2-293",
+"id": "A2_051-060-1",
+"group": "A2_051-060",
 "level": "A2",
+"num": 1,
 "text": "I have lived here for five years"
 },
 {
-"id": "A2-294",
+"id": "A2_051-060-2",
+"group": "A2_051-060",
 "level": "A2",
+"num": 2,
 "text": "She has worked at this company for three years"
 },
 {
-"id": "A2-295",
+"id": "A2_051-060-3",
+"group": "A2_051-060",
 "level": "A2",
+"num": 3,
 "text": "He has studied French for two months"
 },
 {
-"id": "A2-296",
+"id": "A2_051-060-4",
+"group": "A2_051-060",
 "level": "A2",
+"num": 4,
 "text": "We have known each other for ten years"
 },
 {
-"id": "A2-297",
+"id": "A2_051-060-5",
+"group": "A2_051-060",
 "level": "A2",
+"num": 5,
 "text": "They have played in this band for a year"
 },
 {
-"id": "A2-298",
+"id": "A2_051-060-6",
+"group": "A2_051-060",
 "level": "A2",
+"num": 6,
 "text": "I've been living here since 2021"
 },
 {
-"id": "A2-299",
+"id": "A2_051-060-7",
+"group": "A2_051-060",
 "level": "A2",
+"num": 7,
 "text": "I have lived here since 2021"
 },
 {
-"id": "A2-300",
+"id": "A2_051-060-8",
+"group": "A2_051-060",
 "level": "A2",
+"num": 8,
 "text": "He has been a teacher since he graduated"
 },
 {
-"id": "A2-301",
+"id": "A2_051-060-9",
+"group": "A2_051-060",
 "level": "A2",
+"num": 9,
 "text": "We have owned this car since 2019"
 },
 {
-"id": "A2-302",
+"id": "A2_051-060-10",
+"group": "A2_051-060",
 "level": "A2",
+"num": 10,
 "text": "He has played the piano since he was a child"
 },
 {
-"id": "A2-303",
+"id": "A2_051-060-11",
+"group": "A2_051-060",
 "level": "A2",
+"num": 11,
 "text": "You know him for how long?"
 },
 {
-"id": "A2-304",
+"id": "A2_051-060-12",
+"group": "A2_051-060",
 "level": "A2",
+"num": 12,
 "text": "How long have you known her?"
 },
 {
-"id": "A2-305",
+"id": "A2_051-060-13",
+"group": "A2_051-060",
 "level": "A2",
+"num": 13,
 "text": "How long have they been married?"
 },
 {
-"id": "A2-306",
+"id": "A2_051-060-14",
+"group": "A2_051-060",
 "level": "A2",
+"num": 14,
 "text": "How long have you studied English?"
 },
 {
-"id": "A2-307",
+"id": "A2_051-060-15",
+"group": "A2_051-060",
 "level": "A2",
+"num": 15,
 "text": "How long has she worked here?"
 },
 {
-"id": "A2-308",
+"id": "A2_051-060-16",
+"group": "A2_051-060",
 "level": "A2",
+"num": 16,
 "text": "How long have they lived in this city?"
 },
 {
-"id": "A2-309",
+"id": "A2_051-060-17",
+"group": "A2_051-060",
 "level": "A2",
+"num": 17,
 "text": "I have been learning English for two years"
 },
 {
-"id": "A2-310",
+"id": "A2_051-060-18",
+"group": "A2_051-060",
 "level": "A2",
-"text": "He has been working here for six monthsHe has been working here for six months"
+"num": 18,
+"text": "He has been working here for six months"
 },
 {
-"id": "A2-311",
+"id": "A2_051-060-19",
+"group": "A2_051-060",
 "level": "A2",
+"num": 19,
 "text": "He has been teaching kids for five years"
 },
 {
-"id": "A2-312",
+"id": "A2_051-060-20",
+"group": "A2_051-060",
 "level": "A2",
+"num": 20,
 "text": "She has been teaching kids for five years"
 },
 {
-"id": "A2-313",
+"id": "A2_051-060-21",
+"group": "A2_051-060",
 "level": "A2",
-"text": "We have been waiting for the bus for half an hourThey have been building the house for months"
+"num": 21,
+"text": "We have been waiting for the bus for half an hour"
 },
 {
-"id": "A2-314",
+"id": "A2_051-060-22",
+"group": "A2_051-060",
 "level": "A2",
+"num": 22,
+"text": "They have been building the house for months"
+},
+{
+"id": "A2_051-060-23",
+"group": "A2_051-060",
+"level": "A2",
+"num": 23,
 "text": "Since January, I have been working here"
 },
 {
-"id": "A2-315",
+"id": "A2_051-060-24",
+"group": "A2_051-060",
 "level": "A2",
+"num": 24,
 "text": "Since last summer, she has been living abroad"
 },
 {
-"id": "A2-316",
+"id": "A2_051-060-25",
+"group": "A2_051-060",
 "level": "A2",
+"num": 25,
 "text": "From 2020, he has been learning the guitar"
 },
 {
-"id": "A2-317",
+"id": "A2_051-060-26",
+"group": "A2_051-060",
 "level": "A2",
+"num": 26,
 "text": "Since 2020, he has been learning the guitar"
 },
 {
-"id": "A2-318",
+"id": "A2_051-060-27",
+"group": "A2_051-060",
 "level": "A2",
+"num": 27,
 "text": "Since Monday, we have been painting the walls"
 },
 {
-"id": "A2-319",
+"id": "A2_051-060-28",
+"group": "A2_051-060",
 "level": "A2",
+"num": 28,
 "text": "Since she was little, she has been dancing"
 },
 {
-"id": "A2-320",
+"id": "A2_051-060-29",
+"group": "A2_051-060",
 "level": "A2",
+"num": 29,
 "text": "I have already finished my homework"
 },
 {
-"id": "A2-321",
+"id": "A2_051-060-30",
+"group": "A2_051-060",
 "level": "A2",
+"num": 30,
 "text": "She has already left the office"
 },
 {
-"id": "A2-322",
+"id": "A2_051-060-31",
+"group": "A2_051-060",
 "level": "A2",
+"num": 31,
 "text": "We have already eaten dinner"
 },
 {
-"id": "A2-323",
+"id": "A2_051-060-32",
+"group": "A2_051-060",
 "level": "A2",
+"num": 32,
 "text": "She has already seen that movie"
 },
 {
-"id": "A2-324",
+"id": "A2_051-060-33",
+"group": "A2_051-060",
 "level": "A2",
+"num": 33,
 "text": "He has already seen that movie"
 },
 {
-"id": "A2-325",
+"id": "A2_051-060-34",
+"group": "A2_051-060",
 "level": "A2",
+"num": 34,
 "text": "They have already booked the hotel"
 },
 {
-"id": "A2-326",
+"id": "A2_051-060-35",
+"group": "A2_051-060",
 "level": "A2",
+"num": 35,
 "text": "I haven't eaten lunch yet"
 },
 {
-"id": "A2-327",
+"id": "A2_051-060-36",
+"group": "A2_051-060",
 "level": "A2",
+"num": 36,
 "text": "He hasn't called me back yet"
 },
 {
-"id": "A2-328",
+"id": "A2_051-060-37",
+"group": "A2_051-060",
 "level": "A2",
+"num": 37,
 "text": "She hasn't finished the report yet"
 },
 {
-"id": "A2-329",
+"id": "A2_051-060-38",
+"group": "A2_051-060",
 "level": "A2",
+"num": 38,
 "text": "We haven't decided where to go yet"
 },
 {
-"id": "A2-330",
+"id": "A2_051-060-39",
+"group": "A2_051-060",
 "level": "A2",
+"num": 39,
 "text": "They haven't arrived yet"
 },
 {
-"id": "A2-331",
+"id": "A2_051-060-40",
+"group": "A2_051-060",
 "level": "A2",
+"num": 40,
 "text": "Have you ever been to Japan?"
 },
 {
-"id": "A2-332",
+"id": "A2_051-060-41",
+"group": "A2_051-060",
 "level": "A2",
+"num": 41,
 "text": "Have you ever tried Thai food?"
 },
 {
-"id": "A2-333",
+"id": "A2_051-060-42",
+"group": "A2_051-060",
 "level": "A2",
+"num": 42,
 "text": "Have you ever ridden a horse?"
 },
 {
-"id": "A2-334",
+"id": "A2_051-060-43",
+"group": "A2_051-060",
 "level": "A2",
+"num": 43,
 "text": "Has she ever visited Europe?"
 },
 {
-"id": "A2-335",
+"id": "A2_051-060-44",
+"group": "A2_051-060",
 "level": "A2",
+"num": 44,
 "text": "Have you ever eaten sushi?"
 },
 {
-"id": "A2-336",
+"id": "A2_051-060-45",
+"group": "A2_051-060",
 "level": "A2",
+"num": 45,
 "text": "The train has just arrived"
 },
 {
-"id": "A2-337",
+"id": "A2_051-060-46",
+"group": "A2_051-060",
 "level": "A2",
+"num": 46,
 "text": "She has just finished her presentation"
 },
 {
-"id": "A2-338",
+"id": "A2_051-060-47",
+"group": "A2_051-060",
 "level": "A2",
+"num": 47,
 "text": "She has just finished her presentationI have just made some tea"
 },
 {
-"id": "A2-339",
+"id": "A2_051-060-48",
+"group": "A2_051-060",
 "level": "A2",
+"num": 48,
 "text": "He has just left the building"
 },
 {
-"id": "A2-340",
+"id": "A2_051-060-49",
+"group": "A2_051-060",
 "level": "A2",
+"num": 49,
 "text": "They have just moved to a new house"
 },
 {
-"id": "A2-341",
+"id": "A2_051-060-50",
+"group": "A2_051-060",
 "level": "A2",
+"num": 50,
 "text": "This is the first time I've flown on a plane"
 },
 {
-"id": "A2-342",
+"id": "A2_051-060-51",
+"group": "A2_051-060",
 "level": "A2",
+"num": 51,
 "text": "This is the first time she's ridden a horse"
 },
 {
-"id": "A2-343",
+"id": "A2_051-060-52",
+"group": "A2_051-060",
 "level": "A2",
+"num": 52,
 "text": "This is the first time I've eaten squid"
 },
 {
-"id": "A2-344",
+"id": "A2_051-060-53",
+"group": "A2_051-060",
 "level": "A2",
+"num": 53,
 "text": "This is the first time he's cooked dinner"
 },
 {
-"id": "A2-345",
+"id": "A2_051-060-54",
+"group": "A2_051-060",
 "level": "A2",
+"num": 54,
 "text": "This is the first time we visited this museum"
 },
 {
-"id": "A2-346",
+"id": "A2_061-070-1",
+"group": "A2_061-070",
 "level": "A2",
+"num": 1,
 "text": "I was tired because I didn't sleep well"
 },
 {
-"id": "A2-347",
+"id": "A2_061-070-2",
+"group": "A2_061-070",
 "level": "A2",
-"text": "He was late because he missed the busShe was late because she missed the bus"
+"num": 2,
+"text": "He was late because he missed the bus"
 },
 {
-"id": "A2-348",
+"id": "A2_061-070-3",
+"group": "A2_061-070",
 "level": "A2",
+"num": 3,
+"text": "She was late because she missed the bus"
+},
+{
+"id": "A2_061-070-4",
+"group": "A2_061-070",
+"level": "A2",
+"num": 4,
 "text": "He is happy because he got a gift"
 },
 {
-"id": "A2-349",
+"id": "A2_061-070-5",
+"group": "A2_061-070",
 "level": "A2",
+"num": 5,
 "text": "We stayed at home because it rained"
 },
 {
-"id": "A2-350",
+"id": "A2_061-070-6",
+"group": "A2_061-070",
 "level": "A2",
+"num": 6,
 "text": "We stayed home because it rained"
 },
 {
-"id": "A2-351",
+"id": "A2_061-070-7",
+"group": "A2_061-070",
 "level": "A2",
+"num": 7,
 "text": "They cancelled the trip because they were busy"
 },
 {
-"id": "A2-352",
+"id": "A2_061-070-8",
+"group": "A2_061-070",
 "level": "A2",
+"num": 8,
 "text": "Because of the rain, the game was cancelled"
 },
 {
-"id": "A2-353",
+"id": "A2_061-070-9",
+"group": "A2_061-070",
 "level": "A2",
+"num": 9,
 "text": "Because of the traffic, we were late"
 },
 {
-"id": "A2-354",
+"id": "A2_061-070-10",
+"group": "A2_061-070",
 "level": "A2",
+"num": 10,
 "text": "Because of the storm, the flight was delayed"
 },
 {
-"id": "A2-355",
+"id": "A2_061-070-11",
+"group": "A2_061-070",
 "level": "A2",
+"num": 11,
 "text": "Because of the holiday, the shop was closed"
 },
 {
-"id": "A2-356",
+"id": "A2_061-070-12",
+"group": "A2_061-070",
 "level": "A2",
+"num": 12,
 "text": "Because of the noise, I couldn't sleep"
 },
 {
-"id": "A2-357",
+"id": "A2_061-070-13",
+"group": "A2_061-070",
 "level": "A2",
+"num": 13,
 "text": "Although it was cold, we went outside"
 },
 {
-"id": "A2-358",
+"id": "A2_061-070-14",
+"group": "A2_061-070",
 "level": "A2",
+"num": 14,
 "text": "Although she was tired, she finished the work"
 },
 {
-"id": "A2-359",
+"id": "A2_061-070-15",
+"group": "A2_061-070",
 "level": "A2",
+"num": 15,
 "text": "Although it was expensive, he bought it"
 },
 {
-"id": "A2-360",
+"id": "A2_061-070-16",
+"group": "A2_061-070",
 "level": "A2",
+"num": 16,
 "text": "Although it rained, they went for a walk"
 },
 {
-"id": "A2-361",
+"id": "A2_061-070-17",
+"group": "A2_061-070",
 "level": "A2",
+"num": 17,
 "text": "Although he was busy, he still helped me"
 },
 {
-"id": "A2-362",
+"id": "A2_061-070-18",
+"group": "A2_061-070",
 "level": "A2",
+"num": 18,
 "text": "Although he was busy, he helped me"
 },
 {
-"id": "A2-363",
+"id": "A2_061-070-19",
+"group": "A2_061-070",
 "level": "A2",
+"num": 19,
 "text": "When I was young, I played soccer every day"
 },
 {
-"id": "A2-364",
+"id": "A2_061-070-20",
+"group": "A2_061-070",
 "level": "A2",
+"num": 20,
 "text": "When he graduated, he got a job immediately"
 },
 {
-"id": "A2-365",
+"id": "A2_061-070-21",
+"group": "A2_061-070",
 "level": "A2",
+"num": 21,
 "text": "When she was a child, she loved to draw"
 },
 {
-"id": "A2-366",
+"id": "A2_061-070-22",
+"group": "A2_061-070",
 "level": "A2",
-"text": "We went to Taipei and ate many deliciousWhen we visited Taipei, we ate a lot of food"
+"num": 22,
+"text": "We went to Taipei and ate many delicious"
 },
 {
-"id": "A2-367",
+"id": "A2_061-070-23",
+"group": "A2_061-070",
 "level": "A2",
+"num": 23,
+"text": "When we visited Taipei, we ate a lot of food"
+},
+{
+"id": "A2_061-070-24",
+"group": "A2_061-070",
+"level": "A2",
+"num": 24,
 "text": "When the bell rang, the students left the classroom"
 },
 {
-"id": "A2-368",
+"id": "A2_061-070-25",
+"group": "A2_061-070",
 "level": "A2",
+"num": 25,
 "text": "After I graduated, I started working"
 },
 {
-"id": "A2-369",
+"id": "A2_061-070-26",
+"group": "A2_061-070",
 "level": "A2",
+"num": 26,
 "text": "After she finished dinner, she washed the dishes"
 },
 {
-"id": "A2-370",
+"id": "A2_061-070-27",
+"group": "A2_061-070",
 "level": "A2",
+"num": 27,
 "text": "After he finished the book, he watched the movie"
 },
 {
-"id": "A2-371",
+"id": "A2_061-070-28",
+"group": "A2_061-070",
 "level": "A2",
+"num": 28,
 "text": "After we ate, we went for a walk"
 },
 {
-"id": "A2-372",
+"id": "A2_061-070-29",
+"group": "A2_061-070",
 "level": "A2",
-"text": "After we ate, we went for a walk"
-},
-{
-"id": "A2-373",
-"level": "A2",
+"num": 29,
 "text": "After the rain stopped, they went outside"
 },
 {
-"id": "A2-374",
+"id": "A2_061-070-30",
+"group": "A2_061-070",
 "level": "A2",
+"num": 30,
 "text": "Do you know where the nearest hospital is?"
 },
 {
-"id": "A2-375",
+"id": "A2_061-070-31",
+"group": "A2_061-070",
 "level": "A2",
+"num": 31,
 "text": "Do you know when the movie starts?"
 },
 {
-"id": "A2-376",
+"id": "A2_061-070-32",
+"group": "A2_061-070",
 "level": "A2",
+"num": 32,
 "text": "Do you know what time the store closes?"
 },
 {
-"id": "A2-377",
+"id": "A2_061-070-33",
+"group": "A2_061-070",
 "level": "A2",
+"num": 33,
 "text": "Do you know where the bus stop is?"
 },
 {
-"id": "A2-378",
+"id": "A2_061-070-34",
+"group": "A2_061-070",
 "level": "A2",
+"num": 34,
 "text": "Do you know when the train arrives?"
 },
 {
-"id": "A2-379",
+"id": "A2_061-070-35",
+"group": "A2_061-070",
 "level": "A2",
+"num": 35,
 "text": "Could you tell me when the store opens?"
 },
 {
-"id": "A2-380",
+"id": "A2_061-070-36",
+"group": "A2_061-070",
 "level": "A2",
+"num": 36,
 "text": "Could you tell me where the post office is?"
 },
 {
-"id": "A2-381",
+"id": "A2_061-070-37",
+"group": "A2_061-070",
 "level": "A2",
+"num": 37,
 "text": "Can you tell me where the library is?"
 },
 {
-"id": "A2-382",
+"id": "A2_061-070-38",
+"group": "A2_061-070",
 "level": "A2",
+"num": 38,
 "text": "Can you tell me when the flight leaves?"
 },
 {
-"id": "A2-383",
+"id": "A2_061-070-39",
+"group": "A2_061-070",
 "level": "A2",
+"num": 39,
 "text": "Can you tell me where I can buy a ticket?"
 },
 {
-"id": "A2-384",
+"id": "A2_061-070-40",
+"group": "A2_061-070",
 "level": "A2",
+"num": 40,
 "text": "Could you tell me where I can buy a ticket?"
 },
 {
-"id": "A2-385",
+"id": "A2_061-070-41",
+"group": "A2_061-070",
 "level": "A2",
+"num": 41,
 "text": "I don't know if she is coming today"
 },
 {
-"id": "A2-386",
+"id": "A2_061-070-42",
+"group": "A2_061-070",
 "level": "A2",
+"num": 42,
 "text": "I don't know whether he likes the gift"
 },
 {
-"id": "A2-387",
+"id": "A2_061-070-43",
+"group": "A2_061-070",
 "level": "A2",
+"num": 43,
 "text": "I don't know if it will rain tomorrow"
 },
 {
-"id": "A2-388",
+"id": "A2_061-070-44",
+"group": "A2_061-070",
 "level": "A2",
+"num": 44,
 "text": "I don't know whether the restaurant is open"
 },
 {
-"id": "A2-389",
+"id": "A2_061-070-45",
+"group": "A2_061-070",
 "level": "A2",
+"num": 45,
 "text": "I don't know if they are married"
 },
 {
-"id": "A2-390",
+"id": "A2_061-070-46",
+"group": "A2_061-070",
 "level": "A2",
+"num": 46,
 "text": "Can you tell me what time the train leaves?"
 },
 {
-"id": "A2-391",
+"id": "A2_061-070-47",
+"group": "A2_061-070",
 "level": "A2",
+"num": 47,
 "text": "Can you tell me what time the meeting is?"
 },
 {
-"id": "A2-392",
+"id": "A2_061-070-48",
+"group": "A2_061-070",
 "level": "A2",
+"num": 48,
 "text": "Can you tell me what time the movie ends?"
 },
 {
-"id": "A2-393",
+"id": "A2_061-070-49",
+"group": "A2_061-070",
 "level": "A2",
+"num": 49,
 "text": "Can you tell me what time the shop opens?"
 },
 {
-"id": "A2-394",
+"id": "A2_061-070-50",
+"group": "A2_061-070",
 "level": "A2",
+"num": 50,
 "text": "Can you tell me what time dinner is served?"
 },
 {
-"id": "A2-395",
+"id": "A2_061-070-51",
+"group": "A2_061-070",
 "level": "A2",
+"num": 51,
 "text": "I wonder if the weather will be nice tomorrow"
 },
 {
-"id": "A2-396",
+"id": "A2_061-070-52",
+"group": "A2_061-070",
 "level": "A2",
+"num": 52,
 "text": "I wonder whether he will accept the offer"
 },
 {
-"id": "A2-397",
+"id": "A2_061-070-53",
+"group": "A2_061-070",
 "level": "A2",
+"num": 53,
 "text": "I want to know if he has arrived yet"
 },
 {
-"id": "A2-398",
+"id": "A2_061-070-54",
+"group": "A2_061-070",
 "level": "A2",
+"num": 54,
 "text": "I wonder if she has arrived yet"
 },
 {
-"id": "A2-399",
+"id": "A2_061-070-55",
+"group": "A2_061-070",
 "level": "A2",
+"num": 55,
 "text": "I want to know if they will come to the party"
 },
 {
-"id": "A2-400",
+"id": "A2_061-070-56",
+"group": "A2_061-070",
 "level": "A2",
+"num": 56,
 "text": "I wonder whether they will come to the party"
 },
 {
-"id": "A2-401",
+"id": "A2_061-070-57",
+"group": "A2_061-070",
 "level": "A2",
+"num": 57,
 "text": "I want to know if this bus will arriveI wonder if this bus goes to the station"
 },
 {
-"id": "A2-402",
+"id": "A2_071-080-1",
+"group": "A2_071-080",
 "level": "A2",
+"num": 1,
 "text": "I'd rather stay home than go out tonight"
 },
 {
-"id": "A2-403",
+"id": "A2_071-080-2",
+"group": "A2_071-080",
 "level": "A2",
+"num": 2,
 "text": "She'd rather walk than take the bus"
 },
 {
-"id": "A2-404",
+"id": "A2_071-080-3",
+"group": "A2_071-080",
 "level": "A2",
+"num": 3,
 "text": "I'd rather read a book than watch TV"
 },
 {
-"id": "A2-405",
+"id": "A2_071-080-4",
+"group": "A2_071-080",
 "level": "A2",
+"num": 4,
 "text": "He'd rather cook than order food"
 },
 {
-"id": "A2-406",
+"id": "A2_071-080-5",
+"group": "A2_071-080",
 "level": "A2",
+"num": 5,
 "text": "We'd rather take a taxi than wait for the bus"
 },
 {
-"id": "A2-407",
+"id": "A2_071-080-6",
+"group": "A2_071-080",
 "level": "A2",
+"num": 6,
 "text": "I prefer reading to watching TV"
 },
 {
-"id": "A2-408",
+"id": "A2_071-080-7",
+"group": "A2_071-080",
 "level": "A2",
+"num": 7,
 "text": "He prefers coffee to tea"
 },
 {
-"id": "A2-409",
+"id": "A2_071-080-8",
+"group": "A2_071-080",
 "level": "A2",
+"num": 8,
 "text": "She prefers swimming to running"
 },
 {
-"id": "A2-410",
+"id": "A2_071-080-9",
+"group": "A2_071-080",
 "level": "A2",
+"num": 9,
 "text": "I prefer walking to driving"
 },
 {
-"id": "A2-411",
+"id": "A2_071-080-10",
+"group": "A2_071-080",
 "level": "A2",
+"num": 10,
 "text": "They prefer staying home to going out"
 },
 {
-"id": "A2-412",
+"id": "A2_071-080-11",
+"group": "A2_071-080",
 "level": "A2",
+"num": 11,
 "text": "My favorite season is autumn"
 },
 {
-"id": "A2-413",
+"id": "A2_071-080-12",
+"group": "A2_071-080",
 "level": "A2",
+"num": 12,
 "text": "My favorite food is pizza"
 },
 {
-"id": "A2-414",
+"id": "A2_071-080-13",
+"group": "A2_071-080",
 "level": "A2",
+"num": 13,
 "text": "My favorite color is blue"
 },
 {
-"id": "A2-415",
+"id": "A2_071-080-14",
+"group": "A2_071-080",
 "level": "A2",
+"num": 14,
 "text": "My favorite sport is basketball"
 },
 {
-"id": "A2-416",
+"id": "A2_071-080-15",
+"group": "A2_071-080",
 "level": "A2",
+"num": 15,
 "text": "My favorite movie is this one"
 },
 {
-"id": "A2-417",
+"id": "A2_071-080-16",
+"group": "A2_071-080",
 "level": "A2",
+"num": 16,
 "text": "I really like to spend time with familyI really enjoy spending time with my family"
 },
 {
-"id": "A2-418",
+"id": "A2_071-080-17",
+"group": "A2_071-080",
 "level": "A2",
+"num": 17,
 "text": "She really enjoys traveling to new places"
 },
 {
-"id": "A2-419",
+"id": "A2_071-080-18",
+"group": "A2_071-080",
 "level": "A2",
+"num": 18,
 "text": "I really enjoy listening to music"
 },
 {
-"id": "A2-420",
+"id": "A2_071-080-19",
+"group": "A2_071-080",
 "level": "A2",
+"num": 19,
 "text": "He really enjoys playing the guitar"
 },
 {
-"id": "A2-421",
+"id": "A2_071-080-20",
+"group": "A2_071-080",
 "level": "A2",
+"num": 20,
 "text": "We really enjoy playing the guitar"
 },
 {
-"id": "A2-422",
+"id": "A2_071-080-21",
+"group": "A2_071-080",
 "level": "A2",
+"num": 21,
 "text": "We really enjoy hiking in the mountains"
 },
 {
-"id": "A2-423",
+"id": "A2_071-080-22",
+"group": "A2_071-080",
 "level": "A2",
+"num": 22,
 "text": "I'd love to visit Paris one day"
 },
 {
-"id": "A2-424",
+"id": "A2_071-080-23",
+"group": "A2_071-080",
 "level": "A2",
+"num": 23,
 "text": "I'd love to learn how to play the piano"
 },
 {
-"id": "A2-425",
+"id": "A2_071-080-24",
+"group": "A2_071-080",
 "level": "A2",
+"num": 24,
 "text": "I'd love to try that restaurant"
 },
 {
-"id": "A2-426",
+"id": "A2_071-080-25",
+"group": "A2_071-080",
 "level": "A2",
+"num": 25,
 "text": "She'd love to meet your brother"
 },
 {
-"id": "A2-427",
+"id": "A2_071-080-26",
+"group": "A2_071-080",
 "level": "A2",
+"num": 26,
 "text": "We'd love to go camping with you"
 },
 {
-"id": "A2-428",
+"id": "A2_071-080-27",
+"group": "A2_071-080",
 "level": "A2",
+"num": 27,
 "text": "Can you pass me the salt, please?"
 },
 {
-"id": "A2-429",
+"id": "A2_071-080-28",
+"group": "A2_071-080",
 "level": "A2",
+"num": 28,
 "text": "Can you help me open the window?"
 },
 {
-"id": "A2-430",
+"id": "A2_071-080-29",
+"group": "A2_071-080",
 "level": "A2",
+"num": 29,
 "text": "Could you open the window, please?"
 },
 {
-"id": "A2-431",
+"id": "A2_071-080-30",
+"group": "A2_071-080",
 "level": "A2",
+"num": 30,
 "text": "Can you help me turn off the light, please?"
 },
 {
-"id": "A2-432",
+"id": "A2_071-080-31",
+"group": "A2_071-080",
 "level": "A2",
+"num": 31,
 "text": "Could you turn off the light, please?"
 },
 {
-"id": "A2-433",
+"id": "A2_071-080-32",
+"group": "A2_071-080",
 "level": "A2",
+"num": 32,
 "text": "Can you help me carry this box, please?"
 },
 {
-"id": "A2-434",
+"id": "A2_071-080-33",
+"group": "A2_071-080",
 "level": "A2",
-"text": "Can you say that again?"
-},
-{
-"id": "A2-435",
-"level": "A2",
+"num": 33,
 "text": "Could you repeat that, please?"
 },
 {
-"id": "A2-436",
+"id": "A2_071-080-34",
+"group": "A2_071-080",
 "level": "A2",
+"num": 34,
 "text": "Would you like some tea?"
 },
 {
-"id": "A2-437",
+"id": "A2_071-080-35",
+"group": "A2_071-080",
 "level": "A2",
+"num": 35,
 "text": "Would you like to join us for dinner?"
 },
 {
-"id": "A2-438",
+"id": "A2_071-080-36",
+"group": "A2_071-080",
 "level": "A2",
+"num": 36,
 "text": "Would you like a piece of cake?"
 },
 {
-"id": "A2-439",
+"id": "A2_071-080-37",
+"group": "A2_071-080",
 "level": "A2",
-"text": "Would you like to go for a walkWould you like some water?"
+"num": 37,
+"text": "Would you like to go for a walk"
 },
 {
-"id": "A2-440",
+"id": "A2_071-080-38",
+"group": "A2_071-080",
 "level": "A2",
-"text": "If you need help, tellLet me know if you need any help"
+"num": 38,
+"text": "Would you like some water?"
 },
 {
-"id": "A2-441",
+"id": "A2_071-080-39",
+"group": "A2_071-080",
 "level": "A2",
+"num": 39,
+"text": "If you need help, tell"
+},
+{
+"id": "A2_071-080-40",
+"group": "A2_071-080",
+"level": "A2",
+"num": 40,
+"text": "Let me know if you need any help"
+},
+{
+"id": "A2_071-080-41",
+"group": "A2_071-080",
+"level": "A2",
+"num": 41,
 "text": "If you need more information, let me know if you need more information"
 },
 {
-"id": "A2-442",
+"id": "A2_071-080-42",
+"group": "A2_071-080",
 "level": "A2",
-"text": "If you need a ride, let me knowIf you need money, let me know if you need money"
+"num": 42,
+"text": "If you need a ride, let me know"
 },
 {
-"id": "A2-443",
+"id": "A2_071-080-43",
+"group": "A2_071-080",
 "level": "A2",
+"num": 43,
+"text": "If you need money, let me know if you need money"
+},
+{
+"id": "A2_071-080-44",
+"group": "A2_071-080",
+"level": "A2",
+"num": 44,
 "text": "If you need my notes, let me know if you need my notes"
 },
 {
-"id": "A2-444",
+"id": "A2_071-080-45",
+"group": "A2_071-080",
 "level": "A2",
+"num": 45,
 "text": "I'll be happy to show you around"
 },
 {
-"id": "A2-445",
+"id": "A2_071-080-46",
+"group": "A2_071-080",
 "level": "A2",
+"num": 46,
 "text": "I'll be happy to answer your questions"
 },
 {
-"id": "A2-446",
+"id": "A2_071-080-47",
+"group": "A2_071-080",
 "level": "A2",
+"num": 47,
 "text": "I'll be happy to help you move"
 },
 {
-"id": "A2-447",
+"id": "A2_071-080-48",
+"group": "A2_071-080",
 "level": "A2",
+"num": 48,
 "text": "I'll be happy to lend you my book"
 },
 {
-"id": "A2-448",
+"id": "A2_071-080-49",
+"group": "A2_071-080",
 "level": "A2",
+"num": 49,
 "text": "I'll be happy to help you translate this email"
 },
 {
-"id": "A2-449",
+"id": "A2_071-080-50",
+"group": "A2_071-080",
 "level": "A2",
+"num": 50,
 "text": "I'll be happy to translate the email"
 },
 {
-"id": "A2-450",
+"id": "A2_071-080-51",
+"group": "A2_071-080",
 "level": "A2",
+"num": 51,
 "text": "I'd be grateful if you could send me the details"
 },
 {
-"id": "A2-451",
+"id": "A2_071-080-52",
+"group": "A2_071-080",
 "level": "A2",
+"num": 52,
 "text": "If you could help me look at the report, I'd be grateful if you could review the report"
 },
 {
-"id": "A2-452",
+"id": "A2_071-080-53",
+"group": "A2_071-080",
 "level": "A2",
+"num": 53,
 "text": "I'd be grateful if you could pick up my package"
 },
 {
-"id": "A2-453",
+"id": "A2_071-080-54",
+"group": "A2_071-080",
 "level": "A2",
+"num": 54,
 "text": "If you could keep this secret, I'd be grateful if you could keep this secret"
 },
 {
-"id": "A2-454",
+"id": "A2_071-080-55",
+"group": "A2_071-080",
 "level": "A2",
-"text": "If you could keep this secret, if you could keep this secret, if you could keep this secret, if you could keep this secret, if you could keep this secret, if you could keep this secret, if you could keep this secret,I'd be grateful if you could call me later"
+"num": 55,
+"text": "If you could keep this secret, if you could keep this secret, if you could keep this secret, if you could keep this secret, if you could keep this secret, if you could keep this secret, if you could keep this secret"
 },
 {
-"id": "A2-455",
+"id": "A2_071-080-56",
+"group": "A2_071-080",
 "level": "A2",
+"num": 56,
+"text": "I'd be grateful if you could call me later"
+},
+{
+"id": "A2_081-090-1",
+"group": "A2_081-090",
+"level": "A2",
+"num": 1,
 "text": "There is a swimming pool on the second floor"
 },
 {
-"id": "A2-456",
+"id": "A2_081-090-2",
+"group": "A2_081-090",
 "level": "A2",
+"num": 2,
 "text": "There is a cafe on the corner of the street"
 },
 {
-"id": "A2-457",
+"id": "A2_081-090-3",
+"group": "A2_081-090",
 "level": "A2",
+"num": 3,
 "text": "There are some books on the desk"
 },
 {
-"id": "A2-458",
+"id": "A2_081-090-4",
+"group": "A2_081-090",
 "level": "A2",
+"num": 4,
 "text": "There is a cat in the garden"
 },
 {
-"id": "A2-459",
+"id": "A2_081-090-5",
+"group": "A2_081-090",
 "level": "A2",
+"num": 5,
 "text": "There is a bank next to the post office"
 },
 {
-"id": "A2-460",
+"id": "A2_081-090-6",
+"group": "A2_081-090",
 "level": "A2",
+"num": 6,
 "text": "This town is known for its beautiful beaches"
 },
 {
-"id": "A2-461",
+"id": "A2_081-090-7",
+"group": "A2_081-090",
 "level": "A2",
+"num": 7,
 "text": "Taiwan is known for producing high quality tea"
 },
 {
-"id": "A2-462",
+"id": "A2_081-090-8",
+"group": "A2_081-090",
 "level": "A2",
+"num": 8,
 "text": "This city is known for its old temples"
 },
 {
-"id": "A2-463",
+"id": "A2_081-090-9",
+"group": "A2_081-090",
 "level": "A2",
+"num": 9,
 "text": "France is known for making good wine"
 },
 {
-"id": "A2-464",
+"id": "A2_081-090-10",
+"group": "A2_081-090",
 "level": "A2",
+"num": 10,
 "text": "This school is known for its strong sports teams"
 },
 {
-"id": "A2-465",
+"id": "A2_081-090-11",
+"group": "A2_081-090",
 "level": "A2",
+"num": 11,
 "text": "The school is known for its strong sports teams"
 },
 {
-"id": "A2-466",
+"id": "A2_081-090-12",
+"group": "A2_081-090",
 "level": "A2",
+"num": 12,
 "text": "Italy is famous for its food and art"
 },
 {
-"id": "A2-467",
+"id": "A2_081-090-13",
+"group": "A2_081-090",
 "level": "A2",
+"num": 13,
 "text": "Japan is famous for its cherry blossoms and technology"
 },
 {
-"id": "A2-468",
+"id": "A2_081-090-14",
+"group": "A2_081-090",
 "level": "A2",
+"num": 14,
 "text": "Egypt is famous for its pyramids"
 },
 {
-"id": "A2-469",
+"id": "A2_081-090-15",
+"group": "A2_081-090",
 "level": "A2",
-"text": "This lake is famous for its clear waterThis lake is famous for its clear water"
+"num": 15,
+"text": "This lake is famous for its clear water"
 },
 {
-"id": "A2-470",
+"id": "A2_081-090-16",
+"group": "A2_081-090",
 "level": "A2",
+"num": 16,
 "text": "This brand is famous for its comfortable shoes"
 },
 {
-"id": "A2-471",
+"id": "A2_081-090-17",
+"group": "A2_081-090",
 "level": "A2",
+"num": 17,
 "text": "The brand is famous for its comfortable shoes"
 },
 {
-"id": "A2-472",
+"id": "A2_081-090-18",
+"group": "A2_081-090",
 "level": "A2",
+"num": 18,
 "text": "You can buy tickets at the counter"
 },
 {
-"id": "A2-473",
+"id": "A2_081-090-19",
+"group": "A2_081-090",
 "level": "A2",
+"num": 19,
 "text": "You can withdraw money at the ATM"
 },
 {
-"id": "A2-474",
+"id": "A2_081-090-20",
+"group": "A2_081-090",
 "level": "A2",
+"num": 20,
 "text": "You can park your car at the garage"
 },
 {
-"id": "A2-475",
+"id": "A2_081-090-21",
+"group": "A2_081-090",
 "level": "A2",
+"num": 21,
 "text": "You can borrow books at the library"
 },
 {
-"id": "A2-476",
+"id": "A2_081-090-22",
+"group": "A2_081-090",
 "level": "A2",
+"num": 22,
 "text": "You can order food at the kiosk"
 },
 {
-"id": "A2-477",
+"id": "A2_081-090-23",
+"group": "A2_081-090",
 "level": "A2",
+"num": 23,
 "text": "It's a great place to learn English"
 },
 {
-"id": "A2-478",
+"id": "A2_081-090-24",
+"group": "A2_081-090",
 "level": "A2",
+"num": 24,
 "text": "It's a quiet place to study"
 },
 {
-"id": "A2-479",
+"id": "A2_081-090-25",
+"group": "A2_081-090",
 "level": "A2",
+"num": 25,
 "text": "That is a nice place to take photos"
 },
 {
-"id": "A2-480",
+"id": "A2_081-090-26",
+"group": "A2_081-090",
 "level": "A2",
+"num": 26,
 "text": "That is a place to take photos"
 },
 {
-"id": "A2-481",
+"id": "A2_081-090-27",
+"group": "A2_081-090",
 "level": "A2",
+"num": 27,
 "text": "It's a safe place to raise children"
 },
 {
-"id": "A2-482",
+"id": "A2_081-090-28",
+"group": "A2_081-090",
 "level": "A2",
+"num": 28,
 "text": "That's a relaxing place"
 },
 {
-"id": "A2-483",
+"id": "A2_081-090-29",
+"group": "A2_081-090",
 "level": "A2",
+"num": 29,
 "text": "It's a perfect place to relax"
 },
 {
-"id": "A2-484",
+"id": "A2_081-090-30",
+"group": "A2_081-090",
 "level": "A2",
+"num": 30,
 "text": "I'd like to book a room for two nights"
 },
 {
-"id": "A2-485",
+"id": "A2_081-090-31",
+"group": "A2_081-090",
 "level": "A2",
+"num": 31,
 "text": "I'd like to book a table for four people tonight"
 },
 {
-"id": "A2-486",
+"id": "A2_081-090-32",
+"group": "A2_081-090",
 "level": "A2",
+"num": 32,
 "text": "I want to book a table for four people tonight"
 },
 {
-"id": "A2-487",
+"id": "A2_081-090-33",
+"group": "A2_081-090",
 "level": "A2",
+"num": 33,
 "text": "I'd like to book a taxi for tomorrow morning"
 },
 {
-"id": "A2-488",
+"id": "A2_081-090-34",
+"group": "A2_081-090",
 "level": "A2",
+"num": 34,
 "text": "I want to book a seat near the window"
 },
 {
-"id": "A2-489",
+"id": "A2_081-090-35",
+"group": "A2_081-090",
 "level": "A2",
+"num": 35,
 "text": "I'd like to book a seat near the window"
 },
 {
-"id": "A2-490",
+"id": "A2_081-090-36",
+"group": "A2_081-090",
 "level": "A2",
+"num": 36,
 "text": "I'd like to book a ticket to the concert"
 },
 {
-"id": "A2-491",
+"id": "A2_081-090-37",
+"group": "A2_081-090",
 "level": "A2",
+"num": 37,
 "text": "How long will you be staying with us?"
 },
 {
-"id": "A2-492",
+"id": "A2_081-090-38",
+"group": "A2_081-090",
 "level": "A2",
+"num": 38,
 "text": "How long will you be staying in Taipei?"
 },
 {
-"id": "A2-493",
+"id": "A2_081-090-39",
+"group": "A2_081-090",
 "level": "A2",
+"num": 39,
 "text": "How long will you be staying at the hotel?"
 },
 {
-"id": "A2-494",
+"id": "A2_081-090-40",
+"group": "A2_081-090",
 "level": "A2",
+"num": 40,
 "text": "How long will you be staying in Taiwan?"
 },
 {
-"id": "A2-495",
+"id": "A2_081-090-41",
+"group": "A2_081-090",
 "level": "A2",
+"num": 41,
 "text": "How long will you be staying for the holidays?"
 },
 {
-"id": "A2-496",
+"id": "A2_081-090-42",
+"group": "A2_081-090",
 "level": "A2",
+"num": 42,
 "text": "Can you give me the key?"
 },
 {
-"id": "A2-497",
+"id": "A2_081-090-43",
+"group": "A2_081-090",
 "level": "A2",
+"num": 43,
 "text": "Could I have the key, please?"
 },
 {
-"id": "A2-498",
+"id": "A2_081-090-44",
+"group": "A2_081-090",
 "level": "A2",
+"num": 44,
 "text": "Can you give me a receipt copy?"
 },
 {
-"id": "A2-499",
+"id": "A2_081-090-45",
+"group": "A2_081-090",
 "level": "A2",
-"text": "Can I have a glass of water, please?"
-},
-{
-"id": "A2-500",
-"level": "A2",
-"text": "Can I have the menu, please?"
-},
-{
-"id": "A2-501",
-"level": "A2",
+"num": 45,
 "text": "Could I have the menu, please?"
 },
 {
-"id": "A2-502",
+"id": "A2_081-090-46",
+"group": "A2_081-090",
 "level": "A2",
+"num": 46,
 "text": "Can you give me your phone number, please?"
 },
 {
-"id": "A2-503",
+"id": "A2_081-090-47",
+"group": "A2_081-090",
 "level": "A2",
+"num": 47,
 "text": "Could I have your phone number, please?"
 },
 {
-"id": "A2-504",
+"id": "A2_081-090-48",
+"group": "A2_081-090",
 "level": "A2",
+"num": 48,
 "text": "What time is checkout?"
 },
 {
-"id": "A2-505",
+"id": "A2_081-090-49",
+"group": "A2_081-090",
 "level": "A2",
+"num": 49,
 "text": "What time is checkin at the hotel?"
 },
 {
-"id": "A2-506",
+"id": "A2_081-090-50",
+"group": "A2_081-090",
 "level": "A2",
+"num": 50,
 "text": "What time is check-in at the hotel?"
 },
 {
-"id": "A2-507",
+"id": "A2_081-090-51",
+"group": "A2_081-090",
 "level": "A2",
+"num": 51,
 "text": "Check-in at the hotel"
 },
 {
-"id": "A2-508",
+"id": "A2_081-090-52",
+"group": "A2_081-090",
 "level": "A2",
+"num": 52,
 "text": "What time does check in open?"
 },
 {
-"id": "A2-509",
+"id": "A2_081-090-53",
+"group": "A2_081-090",
 "level": "A2",
+"num": 53,
 "text": "What time is checkout at this hotel?"
 },
 {
-"id": "A2-510",
+"id": "A2_081-090-54",
+"group": "A2_081-090",
 "level": "A2",
+"num": 54,
 "text": "Is breakfast included in the price?"
 },
 {
-"id": "A2-511",
+"id": "A2_081-090-55",
+"group": "A2_081-090",
 "level": "A2",
+"num": 55,
 "text": "Is lunch included in the tour package?"
 },
 {
-"id": "A2-512",
+"id": "A2_081-090-56",
+"group": "A2_081-090",
 "level": "A2",
+"num": 56,
 "text": "Is dinner included in the room rate?"
 },
 {
-"id": "A2-513",
+"id": "A2_081-090-57",
+"group": "A2_081-090",
 "level": "A2",
+"num": 57,
 "text": "Is the taxi included in the fee?"
 },
 {
-"id": "A2-514",
+"id": "A2_081-090-58",
+"group": "A2_081-090",
 "level": "A2",
-"text": "WiFi"
+"num": 58,
+"text": "Wi"
 },
 {
-"id": "A2-515",
+"id": "A2_081-090-59",
+"group": "A2_081-090",
 "level": "A2",
+"num": 59,
+"text": "Fi"
+},
+{
+"id": "A2_081-090-60",
+"group": "A2_081-090",
+"level": "A2",
+"num": 60,
 "text": "Is Wi-Fi included in the plan?"
 },
 {
-"id": "A2-516",
+"id": "A2_091-100-1",
+"group": "A2_091-100",
 "level": "A2",
+"num": 1,
 "text": "In my opinion, learning English is very important"
 },
 {
-"id": "A2-517",
+"id": "A2_091-100-2",
+"group": "A2_091-100",
 "level": "A2",
+"num": 2,
 "text": "In my opinion, this is the best restaurant in town"
 },
 {
-"id": "A2-518",
+"id": "A2_091-100-3",
+"group": "A2_091-100",
 "level": "A2",
+"num": 3,
 "text": "In my opinion, exercise is good for health"
 },
 {
-"id": "A2-519",
+"id": "A2_091-100-4",
+"group": "A2_091-100",
 "level": "A2",
-"text": "In my opinion, the movie was too longIn my opinion, the movie was too long"
+"num": 4,
+"text": "In my opinion, the movie was too long"
 },
 {
-"id": "A2-520",
+"id": "A2_091-100-5",
+"group": "A2_091-100",
 "level": "A2",
+"num": 5,
 "text": "In my opinion, we should take the train"
 },
 {
-"id": "A2-521",
+"id": "A2_091-100-6",
+"group": "A2_091-100",
 "level": "A2",
+"num": 6,
 "text": "The reason I like this city is that it's very clean"
 },
 {
-"id": "A2-522",
+"id": "A2_091-100-7",
+"group": "A2_091-100",
 "level": "A2",
+"num": 7,
 "text": "The reason he failed the exam is that he didn't study enough"
 },
 {
-"id": "A2-523",
+"id": "A2_091-100-8",
+"group": "A2_091-100",
 "level": "A2",
+"num": 8,
 "text": "The reason we are late is that the bus was slow"
 },
 {
-"id": "A2-524",
+"id": "A2_091-100-9",
+"group": "A2_091-100",
 "level": "A2",
+"num": 9,
 "text": "The reason she is happy is that she got a new job"
 },
 {
-"id": "A2-525",
+"id": "A2_091-100-10",
+"group": "A2_091-100",
 "level": "A2",
-"text": "They moved because the rent was too highThe reason they moved is that the rent was too high"
+"num": 10,
+"text": "They moved because the rent was too high"
 },
 {
-"id": "A2-526",
+"id": "A2_091-100-11",
+"group": "A2_091-100",
 "level": "A2",
+"num": 11,
+"text": "The reason they moved is that the rent was too high"
+},
+{
+"id": "A2_091-100-12",
+"group": "A2_091-100",
+"level": "A2",
+"num": 12,
 "text": "I agree with your ideaI disagree with his decision"
 },
 {
-"id": "A2-527",
+"id": "A2_091-100-13",
+"group": "A2_091-100",
 "level": "A2",
+"num": 13,
 "text": "I agree with her plan"
 },
 {
-"id": "A2-528",
+"id": "A2_091-100-14",
+"group": "A2_091-100",
 "level": "A2",
+"num": 14,
 "text": "I disagree with that rule"
 },
 {
-"id": "A2-529",
+"id": "A2_091-100-15",
+"group": "A2_091-100",
 "level": "A2",
+"num": 15,
 "text": "I agree withI agree with the teacher's advice"
 },
 {
-"id": "A2-530",
+"id": "A2_091-100-16",
+"group": "A2_091-100",
 "level": "A2",
+"num": 16,
 "text": "I agree with the teacher's advice"
 },
 {
-"id": "A2-531",
+"id": "A2_091-100-17",
+"group": "A2_091-100",
 "level": "A2",
+"num": 17,
 "text": "I believe you can do it"
 },
 {
-"id": "A2-532",
+"id": "A2_091-100-18",
+"group": "A2_091-100",
 "level": "A2",
+"num": 18,
 "text": "I believe she will succeed in her new job"
 },
 {
-"id": "A2-533",
+"id": "A2_091-100-19",
+"group": "A2_091-100",
 "level": "A2",
+"num": 19,
 "text": "I believe he will keep his promise"
 },
 {
-"id": "A2-534",
+"id": "A2_091-100-20",
+"group": "A2_091-100",
 "level": "A2",
+"num": 20,
 "text": "I believe we can finish on time"
 },
 {
-"id": "A2-535",
+"id": "A2_091-100-21",
+"group": "A2_091-100",
 "level": "A2",
+"num": 21,
 "text": "I believe they will win the game"
 },
 {
-"id": "A2-536",
+"id": "A2_091-100-22",
+"group": "A2_091-100",
 "level": "A2",
+"num": 22,
 "text": "I'm sure you'll have a great time"
 },
 {
-"id": "A2-537",
+"id": "A2_091-100-23",
+"group": "A2_091-100",
 "level": "A2",
+"num": 23,
 "text": "I'm sure everything will work out fine"
 },
 {
-"id": "A2-538",
+"id": "A2_091-100-24",
+"group": "A2_091-100",
 "level": "A2",
+"num": 24,
 "text": "I'm sure he will come soon"
 },
 {
-"id": "A2-539",
+"id": "A2_091-100-25",
+"group": "A2_091-100",
 "level": "A2",
+"num": 25,
 "text": "I'm sure this is the right way"
 },
 {
-"id": "A2-540",
+"id": "A2_091-100-26",
+"group": "A2_091-100",
 "level": "A2",
-"text": "I'm sure he passed the examI'm sure she passed the test"
+"num": 26,
+"text": "I'm sure he passed the exam"
 },
 {
-"id": "A2-541",
+"id": "A2_091-100-27",
+"group": "A2_091-100",
 "level": "A2",
-"text": "What a beautiful day it isWhat a beautiful day it is!"
+"num": 27,
+"text": "I'm sure she passed the test"
 },
 {
-"id": "A2-542",
+"id": "A2_091-100-28",
+"group": "A2_091-100",
 "level": "A2",
+"num": 28,
+"text": "What a beautiful day it is"
+},
+{
+"id": "A2_091-100-29",
+"group": "A2_091-100",
+"level": "A2",
+"num": 29,
+"text": "What a beautiful day it is!"
+},
+{
+"id": "A2_091-100-30",
+"group": "A2_091-100",
+"level": "A2",
+"num": 30,
 "text": "What a wonderful view it is!"
 },
 {
-"id": "A2-543",
+"id": "A2_091-100-31",
+"group": "A2_091-100",
 "level": "A2",
+"num": 31,
 "text": "What a kind person he is"
 },
 {
-"id": "A2-544",
+"id": "A2_091-100-32",
+"group": "A2_091-100",
 "level": "A2",
+"num": 32,
 "text": "What a delicious meal it is"
 },
 {
-"id": "A2-545",
+"id": "A2_091-100-33",
+"group": "A2_091-100",
 "level": "A2",
+"num": 33,
 "text": "What a strange noise that was!"
 },
 {
-"id": "A2-546",
+"id": "A2_091-100-34",
+"group": "A2_091-100",
 "level": "A2",
+"num": 34,
 "text": "You're so kind"
 },
 {
-"id": "A2-547",
+"id": "A2_091-100-35",
+"group": "A2_091-100",
 "level": "A2",
+"num": 35,
 "text": "How kind you are!"
 },
 {
-"id": "A2-548",
+"id": "A2_091-100-36",
+"group": "A2_091-100",
 "level": "A2",
+"num": 36,
 "text": "How fast he runs"
 },
 {
-"id": "A2-549",
+"id": "A2_091-100-37",
+"group": "A2_091-100",
 "level": "A2",
+"num": 37,
 "text": "How beautiful the sunset is!"
 },
 {
-"id": "A2-550",
+"id": "A2_091-100-38",
+"group": "A2_091-100",
 "level": "A2",
+"num": 38,
 "text": "How smart the child is!"
 },
 {
-"id": "A2-551",
+"id": "A2_091-100-39",
+"group": "A2_091-100",
 "level": "A2",
+"num": 39,
 "text": "How cold it is today!"
 },
 {
-"id": "A2-552",
+"id": "A2_091-100-40",
+"group": "A2_091-100",
 "level": "A2",
+"num": 40,
 "text": "I like this song"
 },
 {
-"id": "A2-553",
+"id": "A2_091-100-41",
+"group": "A2_091-100",
 "level": "A2",
+"num": 41,
 "text": "II don't like fish"
 },
 {
-"id": "A2-554",
+"id": "A2_091-100-42",
+"group": "A2_091-100",
 "level": "A2",
+"num": 42,
 "text": "I love this song"
 },
 {
-"id": "A2-555",
+"id": "A2_091-100-43",
+"group": "A2_091-100",
 "level": "A2",
-"text": "I don't like fish"
-},
-{
-"id": "A2-556",
-"level": "A2",
-"text": "I am tired todayMe too"
-},
-{
-"id": "A2-557",
-"level": "A2",
-"text": "I don't enjoy parties"
-},
-{
-"id": "A2-558",
-"level": "A2",
+"num": 43,
 "text": "I am tired today"
 },
 {
-"id": "A2-559",
+"id": "A2_091-100-44",
+"group": "A2_091-100",
 "level": "A2",
+"num": 44,
+"text": "Me too"
+},
+{
+"id": "A2_091-100-45",
+"group": "A2_091-100",
+"level": "A2",
+"num": 45,
+"text": "I don't enjoy parties"
+},
+{
+"id": "A2_091-100-46",
+"group": "A2_091-100",
+"level": "A2",
+"num": 46,
 "text": "I want some coffee"
 },
 {
-"id": "A2-560",
+"id": "A2_091-100-47",
+"group": "A2_091-100",
 "level": "A2",
+"num": 47,
 "text": "I can't swim"
 },
 {
-"id": "A2-561",
+"id": "A2_091-100-48",
+"group": "A2_091-100",
 "level": "A2",
+"num": 48,
 "text": "Neither can I"
 },
 {
-"id": "A2-562",
+"id": "A2_091-100-49",
+"group": "A2_091-100",
 "level": "A2",
+"num": 49,
 "text": "I hate Mondays"
 },
 {
-"id": "A2-563",
+"id": "A2_091-100-50",
+"group": "A2_091-100",
 "level": "A2",
+"num": 50,
 "text": "I don't eat beef"
 },
 {
-"id": "A2-564",
+"id": "A2_091-100-51",
+"group": "A2_091-100",
 "level": "A2",
+"num": 51,
 "text": "I'm too"
 },
 {
-"id": "A2-565",
+"id": "A2_091-100-52",
+"group": "A2_091-100",
 "level": "A2",
-"text": "I don't like spicy foodNeither do I"
-},
-{
-"id": "A2-566",
-"level": "A2",
-"text": "I feel sick"
-},
-{
-"id": "A2-567",
-"level": "A2",
+"num": 52,
 "text": "I don't like spicy food"
 },
 {
-"id": "A2-568",
+"id": "A2_091-100-53",
+"group": "A2_091-100",
 "level": "A2",
+"num": 53,
+"text": "Neither do I"
+},
+{
+"id": "A2_091-100-54",
+"group": "A2_091-100",
+"level": "A2",
+"num": 54,
+"text": "I feel sick"
+},
+{
+"id": "A2_091-100-55",
+"group": "A2_091-100",
+"level": "A2",
+"num": 55,
 "text": "I'mI was tired yesterday"
 },
 {
-"id": "A2-569",
+"id": "A2_091-100-56",
+"group": "A2_091-100",
 "level": "A2",
+"num": 56,
 "text": "So was I"
 },
 {
-"id": "A2-570",
+"id": "A2_091-100-57",
+"group": "A2_091-100",
 "level": "A2",
+"num": 57,
 "text": "I was tired yesterday"
 },
 {
-"id": "A2-571",
+"id": "A2_091-100-58",
+"group": "A2_091-100",
 "level": "A2",
+"num": 58,
 "text": "She was happy"
 },
 {
-"id": "A2-572",
+"id": "A2_091-100-59",
+"group": "A2_091-100",
 "level": "A2",
+"num": 59,
 "text": "So was he"
 },
 {
-"id": "A2-573",
+"id": "A2_091-100-60",
+"group": "A2_091-100",
 "level": "A2",
+"num": 60,
 "text": "I am hungry"
 },
 {
-"id": "A2-574",
+"id": "A2_091-100-61",
+"group": "A2_091-100",
 "level": "A2",
+"num": 61,
 "text": "So am I"
 },
 {
-"id": "A2-575",
+"id": "A2_091-100-62",
+"group": "A2_091-100",
 "level": "A2",
+"num": 62,
 "text": "I am not a teacher"
 },
 {
-"id": "A2-576",
+"id": "A2_091-100-63",
+"group": "A2_091-100",
 "level": "A2",
+"num": 63,
 "text": "Neither am I"
 },
 {
-"id": "A2-577",
+"id": "A2_091-100-64",
+"group": "A2_091-100",
 "level": "A2",
+"num": 64,
 "text": "He was late"
 },
 {
-"id": "A2-578",
+"id": "A2_091-100-65",
+"group": "A2_091-100",
 "level": "A2",
+"num": 65,
 "text": "So was she"
 },
 {
-"id": "A2-579",
+"id": "A2_091-100-66",
+"group": "A2_091-100",
 "level": "A2",
+"num": 66,
 "text": "You should study more"
 },
 {
-"id": "A2-580",
+"id": "A2_091-100-67",
+"group": "A2_091-100",
 "level": "A2",
+"num": 67,
 "text": "That's not fair"
 },
 {
-"id": "A2-581",
+"id": "A2_091-100-68",
+"group": "A2_091-100",
 "level": "A2",
+"num": 68,
 "text": "You finished first"
 },
 {
-"id": "A2-582",
+"id": "A2_091-100-69",
+"group": "A2_091-100",
 "level": "A2",
+"num": 69,
 "text": "That's right"
 },
 {
-"id": "A2-583",
+"id": "A2_091-100-70",
+"group": "A2_091-100",
 "level": "A2",
+"num": 70,
 "text": "That's|The test was too hard"
 },
 {
-"id": "A2-584",
+"id": "A2_091-100-71",
+"group": "A2_091-100",
 "level": "A2",
+"num": 71,
 "text": "We have to work overtime"
 },
 {
-"id": "A2-585",
+"id": "A2_091-100-72",
+"group": "A2_091-100",
 "level": "A2",
+"num": 72,
 "text": "You win the prize"
 },
 {
-"id": "B1-1",
+"id": "B1_001-010-1",
+"group": "B1_001-010",
 "level": "B1",
+"num": 1,
 "text": "Hey Mark, how's it going?"
 },
 {
-"id": "B1-2",
+"id": "B1_001-010-2",
+"group": "B1_001-010",
 "level": "B1",
+"num": 2,
 "text": "Hey Sarah, how are you doing?"
 },
 {
-"id": "B1-3",
+"id": "B1_001-010-3",
+"group": "B1_001-010",
 "level": "B1",
+"num": 3,
 "text": "Hey, how's it going?"
 },
 {
-"id": "B1-4",
+"id": "B1_001-010-4",
+"group": "B1_001-010",
 "level": "B1",
+"num": 4,
 "text": "I haven't seen you in ages"
 },
 {
-"id": "B1-5",
+"id": "B1_001-010-5",
+"group": "B1_001-010",
 "level": "B1",
+"num": 5,
 "text": "Hi, Lisa"
 },
 {
-"id": "B1-6",
+"id": "B1_001-010-6",
+"group": "B1_001-010",
 "level": "B1",
+"num": 6,
 "text": "How are you doing?"
 },
 {
-"id": "B1-7",
+"id": "B1_001-010-7",
+"group": "B1_001-010",
 "level": "B1",
+"num": 7,
 "text": "Did you have a good holiday?"
 },
 {
-"id": "B1-8",
+"id": "B1_001-010-8",
+"group": "B1_001-010",
 "level": "B1",
+"num": 8,
 "text": "Hi Lisa, how are you doing?"
 },
 {
-"id": "B1-9",
+"id": "B1_001-010-9",
+"group": "B1_001-010",
 "level": "B1",
+"num": 9,
 "text": "Hey Tom, how's it going?"
 },
 {
-"id": "B1-10",
+"id": "B1_001-010-10",
+"group": "B1_001-010",
 "level": "B1",
+"num": 10,
 "text": "Everything okay at work?"
 },
 {
-"id": "B1-11",
+"id": "B1_001-010-11",
+"group": "B1_001-010",
 "level": "B1",
+"num": 11,
 "text": "How was your weekend?"
 },
 {
-"id": "B1-12",
+"id": "B1_001-010-12",
+"group": "B1_001-010",
 "level": "B1",
+"num": 12,
 "text": "How was your trip to Tokyo?"
 },
 {
-"id": "B1-13",
+"id": "B1_001-010-13",
+"group": "B1_001-010",
 "level": "B1",
+"num": 13,
 "text": "How was the exam?"
 },
 {
-"id": "B1-14",
+"id": "B1_001-010-14",
+"group": "B1_001-010",
 "level": "B1",
+"num": 14,
 "text": "How was the concert last night?"
 },
 {
-"id": "B1-15",
+"id": "B1_001-010-15",
+"group": "B1_001-010",
 "level": "B1",
+"num": 15,
 "text": "How was your first day at the new school?"
 },
 {
-"id": "B1-16",
+"id": "B1_001-010-16",
+"group": "B1_001-010",
 "level": "B1",
+"num": 16,
 "text": "What have you been up to lately?"
 },
 {
-"id": "B1-17",
+"id": "B1_001-010-17",
+"group": "B1_001-010",
 "level": "B1",
+"num": 17,
 "text": "What have you been up to since we last met?"
 },
 {
-"id": "B1-18",
+"id": "B1_001-010-18",
+"group": "B1_001-010",
 "level": "B1",
+"num": 18,
 "text": "What have you been up to this summer?"
 },
 {
-"id": "B1-19",
+"id": "B1_001-010-19",
+"group": "B1_001-010",
 "level": "B1",
+"num": 19,
 "text": "What have you two been up to?"
 },
 {
-"id": "B1-20",
+"id": "B1_001-010-20",
+"group": "B1_001-010",
 "level": "B1",
+"num": 20,
 "text": "You look busy"
 },
 {
-"id": "B1-21",
+"id": "B1_001-010-21",
+"group": "B1_001-010",
 "level": "B1",
+"num": 21,
 "text": "He moved away.What has she been up to since she moved away?"
 },
 {
-"id": "B1-22",
+"id": "B1_001-010-22",
+"group": "B1_001-010",
 "level": "B1",
+"num": 22,
 "text": "You look upset"
 },
 {
-"id": "B1-23",
+"id": "B1_001-010-23",
+"group": "B1_001-010",
 "level": "B1",
+"num": 23,
 "text": "You look tired"
 },
 {
-"id": "B1-24",
+"id": "B1_001-010-24",
+"group": "B1_001-010",
 "level": "B1",
+"num": 24,
 "text": "What's wrong with you?"
 },
 {
-"id": "B1-25",
+"id": "B1_001-010-25",
+"group": "B1_001-010",
 "level": "B1",
+"num": 25,
 "text": "The car won't start"
 },
 {
-"id": "B1-26",
+"id": "B1_001-010-26",
+"group": "B1_001-010",
 "level": "B1",
+"num": 26,
 "text": "What's wrong with it?"
 },
 {
-"id": "B1-27",
+"id": "B1_001-010-27",
+"group": "B1_001-010",
 "level": "B1",
+"num": 27,
 "text": "You're quiet today"
 },
 {
-"id": "B1-28",
+"id": "B1_001-010-28",
+"group": "B1_001-010",
 "level": "B1",
+"num": 28,
 "text": "Always"
 },
 {
-"id": "B1-29",
+"id": "B1_001-010-29",
+"group": "B1_001-010",
 "level": "B1",
+"num": 29,
 "text": "What's wrong with the printer?"
 },
 {
-"id": "B1-30",
+"id": "B1_001-010-30",
+"group": "B1_001-010",
 "level": "B1",
+"num": 30,
 "text": "It keeps jamming"
 },
 {
-"id": "B1-31",
+"id": "B1_001-010-31",
+"group": "B1_001-010",
 "level": "B1",
+"num": 31,
 "text": "What do you think about the new policy?"
 },
 {
-"id": "B1-32",
+"id": "B1_001-010-32",
+"group": "B1_001-010",
 "level": "B1",
+"num": 32,
 "text": "What do you think of this idea?"
 },
 {
-"id": "B1-33",
+"id": "B1_001-010-33",
+"group": "B1_001-010",
 "level": "B1",
+"num": 33,
 "text": "What do you think of the new manager?"
 },
 {
-"id": "B1-34",
+"id": "B1_001-010-34",
+"group": "B1_001-010",
 "level": "B1",
+"num": 34,
 "text": "What do you think about moving to a smaller apartment?"
 },
 {
-"id": "B1-35",
+"id": "B1_001-010-35",
+"group": "B1_001-010",
 "level": "B1",
+"num": 35,
 "text": "What do you think of learning to cook together?"
 },
 {
-"id": "B1-36",
+"id": "B1_001-010-36",
+"group": "B1_001-010",
 "level": "B1",
+"num": 36,
 "text": "How do you like your new apartment?"
 },
 {
-"id": "B1-37",
+"id": "B1_001-010-37",
+"group": "B1_001-010",
 "level": "B1",
+"num": 37,
 "text": "How do you like your new job so far?"
 },
 {
-"id": "B1-38",
+"id": "B1_001-010-38",
+"group": "B1_001-010",
 "level": "B1",
+"num": 38,
 "text": "How do you like the city so far?"
 },
 {
-"id": "B1-39",
+"id": "B1_001-010-39",
+"group": "B1_001-010",
 "level": "B1",
-"text": "How do you like the city so far?"
-},
-{
-"id": "B1-40",
-"level": "B1",
+"num": 39,
 "text": "How do you like your new haircut?"
 },
 {
-"id": "B1-41",
+"id": "B1_001-010-40",
+"group": "B1_001-010",
 "level": "B1",
+"num": 40,
 "text": "How do you like the coffee here?"
 },
 {
-"id": "B1-42",
+"id": "B1_001-010-41",
+"group": "B1_001-010",
 "level": "B1",
+"num": 41,
 "text": "Do you think it will rain tomorrow?"
 },
 {
-"id": "B1-43",
+"id": "B1_001-010-42",
+"group": "B1_001-010",
 "level": "B1",
+"num": 42,
 "text": "Do you think she will get the job?"
 },
 {
-"id": "B1-44",
+"id": "B1_001-010-43",
+"group": "B1_001-010",
 "level": "B1",
+"num": 43,
 "text": "Do you think this bus goes to the station?"
 },
 {
-"id": "B1-45",
+"id": "B1_001-010-44",
+"group": "B1_001-010",
 "level": "B1",
+"num": 44,
 "text": "Do you think they'll like the gift?"
 },
 {
-"id": "B1-46",
+"id": "B1_001-010-45",
+"group": "B1_001-010",
 "level": "B1",
+"num": 45,
 "text": "Do you think we have enough time?"
 },
 {
-"id": "B1-47",
+"id": "B1_001-010-46",
+"group": "B1_001-010",
 "level": "B1",
+"num": 46,
 "text": "Which do you prefer, coffee or tea?"
 },
 {
-"id": "B1-48",
+"id": "B1_001-010-47",
+"group": "B1_001-010",
 "level": "B1",
+"num": 47,
 "text": "Which do you prefer, mountains or the beach?"
 },
 {
-"id": "B1-49",
+"id": "B1_001-010-48",
+"group": "B1_001-010",
 "level": "B1",
+"num": 48,
 "text": "Which do you prefer, reading a book or watching a film?"
 },
 {
-"id": "B1-50",
+"id": "B1_001-010-49",
+"group": "B1_001-010",
 "level": "B1",
-"text": "Living in the city or the countrysideWhich do you prefer, living in the city or the countryside?"
+"num": 49,
+"text": "Living in the city or the countryside"
 },
 {
-"id": "B1-51",
+"id": "B1_001-010-50",
+"group": "B1_001-010",
 "level": "B1",
+"num": 50,
+"text": "Which do you prefer, living in the city or the countryside?"
+},
+{
+"id": "B1_001-010-51",
+"group": "B1_001-010",
+"level": "B1",
+"num": 51,
 "text": "Tea and"
 },
 {
-"id": "B1-52",
+"id": "B1_001-010-52",
+"group": "B1_001-010",
 "level": "B1",
+"num": 52,
 "text": "Which do you prefer, tea or juice?"
 },
 {
-"id": "B1-53",
+"id": "B1_001-010-53",
+"group": "B1_001-010",
 "level": "B1",
+"num": 53,
 "text": "What would you do if you won the lottery?"
 },
 {
-"id": "B1-54",
+"id": "B1_001-010-54",
+"group": "B1_001-010",
 "level": "B1",
+"num": 54,
 "text": "What would you do if you lost your passport abroad?"
 },
 {
-"id": "B1-55",
+"id": "B1_001-010-55",
+"group": "B1_001-010",
 "level": "B1",
-"text": "If you see someone drop their walletWhat would you do if you saw someone drop their wallet?"
+"num": 55,
+"text": "If you see someone drop their wallet"
 },
 {
-"id": "B1-56",
+"id": "B1_001-010-56",
+"group": "B1_001-010",
 "level": "B1",
+"num": 56,
+"text": "What would you do if you saw someone drop their wallet?"
+},
+{
+"id": "B1_001-010-57",
+"group": "B1_001-010",
+"level": "B1",
+"num": 57,
 "text": "If your flight was cancelled, what would you do?"
 },
 {
-"id": "B1-57",
+"id": "B1_001-010-58",
+"group": "B1_001-010",
 "level": "B1",
+"num": 58,
 "text": "What would you do if you got lost in a foreign city?"
 },
 {
-"id": "B1-58",
+"id": "B1_001-010-59",
+"group": "B1_001-010",
 "level": "B1",
+"num": 59,
 "text": "I think we should leave now"
 },
 {
-"id": "B1-59",
+"id": "B1_001-010-60",
+"group": "B1_001-010",
 "level": "B1",
+"num": 60,
 "text": "I think it would be better to wait"
 },
 {
-"id": "B1-60",
+"id": "B1_001-010-61",
+"group": "B1_001-010",
 "level": "B1",
+"num": 61,
 "text": "I think this restaurant is the best in town"
 },
 {
-"id": "B1-61",
+"id": "B1_001-010-62",
+"group": "B1_001-010",
 "level": "B1",
+"num": 62,
 "text": "I think he's still upset about the argument"
 },
 {
-"id": "B1-62",
+"id": "B1_001-010-63",
+"group": "B1_001-010",
 "level": "B1",
+"num": 63,
 "text": "I think we need to talk about this as soon as possible"
 },
 {
-"id": "B1-63",
+"id": "B1_001-010-64",
+"group": "B1_001-010",
 "level": "B1",
+"num": 64,
 "text": "I feel that we need to talk about this soon"
 },
 {
-"id": "B1-64",
+"id": "B1_011-020-1",
+"group": "B1_011-020",
 "level": "B1",
+"num": 1,
 "text": "I guess she's running late again"
 },
 {
-"id": "B1-65",
+"id": "B1_011-020-2",
+"group": "B1_011-020",
 "level": "B1",
+"num": 2,
 "text": "I'd say he's one of the best players on the team"
 },
 {
-"id": "B1-66",
+"id": "B1_011-020-3",
+"group": "B1_011-020",
 "level": "B1",
+"num": 3,
 "text": "I guess the meeting has been postponedI guess the meeting has been postponed"
 },
 {
-"id": "B1-67",
+"id": "B1_011-020-4",
+"group": "B1_011-020",
 "level": "B1",
+"num": 4,
 "text": "I'd say this is the hardest exam of the year"
 },
 {
-"id": "B1-68",
+"id": "B1_011-020-5",
+"group": "B1_011-020",
 "level": "B1",
+"num": 5,
 "text": "I guess he forgot to bring his laptop"
 },
 {
-"id": "B1-69",
+"id": "B1_011-020-6",
+"group": "B1_011-020",
 "level": "B1",
+"num": 6,
 "text": "To be honest, I didn't like the movie very much"
 },
 {
-"id": "B1-70",
+"id": "B1_011-020-7",
+"group": "B1_011-020",
 "level": "B1",
-"text": "To be honest, I was a little disappointedTo be honest, I was a little disappointed"
+"num": 7,
+"text": "To be honest, I was a little disappointed"
 },
 {
-"id": "B1-71",
+"id": "B1_011-020-8",
+"group": "B1_011-020",
 "level": "B1",
-"text": "To be honest, I don't really enjoy spicy foodTo be honest, I forgot about our appointment"
+"num": 8,
+"text": "To be honest, I don't really enjoy spicy food"
 },
 {
-"id": "B1-72",
+"id": "B1_011-020-9",
+"group": "B1_011-020",
 "level": "B1",
+"num": 9,
+"text": "To be honest, I forgot about our appointment"
+},
+{
+"id": "B1_011-020-10",
+"group": "B1_011-020",
+"level": "B1",
+"num": 10,
 "text": "To be honest, the hotel was not as nice as the photos"
 },
 {
-"id": "B1-73",
+"id": "B1_011-020-11",
+"group": "B1_011-020",
 "level": "B1",
+"num": 11,
 "text": "It sounds like a great idea"
 },
 {
-"id": "B1-74",
+"id": "B1_011-020-12",
+"group": "B1_011-020",
 "level": "B1",
-"text": "You look tired"
-},
-{
-"id": "B1-75",
-"level": "B1",
+"num": 12,
 "text": "It seems like a reasonable plan to me"
 },
 {
-"id": "B1-76",
+"id": "B1_011-020-13",
+"group": "B1_011-020",
 "level": "B1",
+"num": 13,
 "text": "It looks like it's going to rain soon"
 },
 {
-"id": "B1-77",
+"id": "B1_011-020-14",
+"group": "B1_011-020",
 "level": "B1",
+"num": 14,
 "text": "It sounds like you had a busy week"
 },
 {
-"id": "B1-78",
+"id": "B1_011-020-15",
+"group": "B1_011-020",
 "level": "B1",
+"num": 15,
 "text": "It seems a bit expensive to me"
 },
 {
-"id": "B1-79",
+"id": "B1_011-020-16",
+"group": "B1_011-020",
 "level": "B1",
+"num": 16,
 "text": "I'd love to come, but the thing is, I have another meeting"
 },
 {
-"id": "B1-80",
+"id": "B1_011-020-17",
+"group": "B1_011-020",
 "level": "B1",
+"num": 17,
 "text": "The thing is, we don't have enough time to finish"
 },
 {
-"id": "B1-81",
+"id": "B1_011-020-18",
+"group": "B1_011-020",
 "level": "B1",
-"text": "The thing is, I can't drive at nightThe thing is, I can't drive at night"
+"num": 18,
+"text": "The thing is, I can't drive at night"
 },
 {
-"id": "B1-82",
+"id": "B1_011-020-19",
+"group": "B1_011-020",
 "level": "B1",
+"num": 19,
 "text": "I'd love to help, but the thing is, I'm not free tomorrow"
 },
 {
-"id": "B1-83",
+"id": "B1_011-020-20",
+"group": "B1_011-020",
 "level": "B1",
+"num": 20,
 "text": "The thing is, nobody told me about the changeI feel like going out for dinner tonight"
 },
 {
-"id": "B1-84",
+"id": "B1_011-020-21",
+"group": "B1_011-020",
 "level": "B1",
+"num": 21,
 "text": "I this weekend want to watch aI feel like watching a movie this weekend"
 },
 {
-"id": "B1-85",
+"id": "B1_011-020-22",
+"group": "B1_011-020",
 "level": "B1",
+"num": 22,
 "text": "I feel like taking a walk in the parkI feel like taking a walk in the park"
 },
 {
-"id": "B1-86",
+"id": "B1_011-020-23",
+"group": "B1_011-020",
 "level": "B1",
+"num": 23,
 "text": "I feel like ordering pizza tonight"
 },
 {
-"id": "B1-87",
+"id": "B1_011-020-24",
+"group": "B1_011-020",
 "level": "B1",
+"num": 24,
 "text": "He feels like quitting his job and traveling"
 },
 {
-"id": "B1-88",
+"id": "B1_011-020-25",
+"group": "B1_011-020",
 "level": "B1",
+"num": 25,
 "text": "I agree with you on this point"
 },
 {
-"id": "B1-89",
+"id": "B1_011-020-26",
+"group": "B1_011-020",
 "level": "B1",
+"num": 26,
 "text": "I agree that we need to change our strategy"
 },
 {
-"id": "B1-90",
+"id": "B1_011-020-27",
+"group": "B1_011-020",
 "level": "B1",
+"num": 27,
 "text": "About the homework, I agree with the teacher about the homework"
 },
 {
-"id": "B1-91",
+"id": "B1_011-020-28",
+"group": "B1_011-020",
 "level": "B1",
+"num": 28,
 "text": "I agree that exercise is good for your health"
 },
 {
-"id": "B1-92",
+"id": "B1_011-020-29",
+"group": "B1_011-020",
 "level": "B1",
+"num": 29,
 "text": "I agree with my brother on this matter"
 },
 {
-"id": "B1-93",
+"id": "B1_011-020-30",
+"group": "B1_011-020",
 "level": "B1",
+"num": 30,
 "text": "Is he a good teacher?"
 },
 {
-"id": "B1-94",
+"id": "B1_011-020-31",
+"group": "B1_011-020",
 "level": "B1",
+"num": 31,
 "text": "The plan will work"
 },
 {
-"id": "B1-95",
+"id": "B1_011-020-32",
+"group": "B1_011-020",
 "level": "B1",
+"num": 32,
 "text": "I don't agree"
 },
 {
-"id": "B1-96",
+"id": "B1_011-020-33",
+"group": "B1_011-020",
 "level": "B1",
+"num": 33,
 "text": "a This is the cheapest option"
 },
 {
-"id": "B1-97",
+"id": "B1_011-020-34",
+"group": "B1_011-020",
 "level": "B1",
+"num": 34,
 "text": "a This is the cheapest optionb I don't think so"
 },
 {
-"id": "B1-98",
+"id": "B1_011-020-35",
+"group": "B1_011-020",
 "level": "B1",
+"num": 35,
 "text": "a We should cancel the trip"
 },
 {
-"id": "B1-99",
+"id": "B1_011-020-36",
+"group": "B1_011-020",
 "level": "B1",
+"num": 36,
 "text": "b I don't agree"
 },
 {
-"id": "B1-100",
+"id": "B1_011-020-37",
+"group": "B1_011-020",
 "level": "B1",
+"num": 37,
 "text": "We should cancel the trip"
 },
 {
-"id": "B1-101",
+"id": "B1_011-020-38",
+"group": "B1_011-020",
 "level": "B1",
+"num": 38,
 "text": "She'll be here soon"
 },
 {
-"id": "B1-102",
+"id": "B1_011-020-39",
+"group": "B1_011-020",
 "level": "B1",
+"num": 39,
 "text": "That's true, but it's not the whole story"
 },
 {
-"id": "B1-103",
+"id": "B1_011-020-40",
+"group": "B1_011-020",
 "level": "B1",
+"num": 40,
 "text": "That's true, but we should also consider the cost"
 },
 {
-"id": "B1-104",
+"id": "B1_011-020-41",
+"group": "B1_011-020",
 "level": "B1",
+"num": 41,
 "text": "That's true, but it takes too much time"
 },
 {
-"id": "B1-105",
+"id": "B1_011-020-42",
+"group": "B1_011-020",
 "level": "B1",
+"num": 42,
 "text": "That's true, but not everyone agrees"
 },
 {
-"id": "B1-106",
+"id": "B1_011-020-43",
+"group": "B1_011-020",
 "level": "B1",
+"num": 43,
 "text": "That's true, but we still need a backup plan"
 },
 {
-"id": "B1-107",
+"id": "B1_011-020-44",
+"group": "B1_011-020",
 "level": "B1",
+"num": 44,
 "text": "I see what you mean, but I still have my doubts"
 },
 {
-"id": "B1-108",
+"id": "B1_011-020-45",
+"group": "B1_011-020",
 "level": "B1",
+"num": 45,
 "text": "I see what you mean, but this approach might be risky"
 },
 {
-"id": "B1-109",
+"id": "B1_011-020-46",
+"group": "B1_011-020",
 "level": "B1",
+"num": 46,
 "text": "I see what you mean, but it's too expensive for us"
 },
 {
-"id": "B1-110",
+"id": "B1_011-020-47",
+"group": "B1_011-020",
 "level": "B1",
+"num": 47,
 "text": "I see what you mean, but we can't finish by Friday"
 },
 {
-"id": "B1-111",
+"id": "B1_011-020-48",
+"group": "B1_011-020",
 "level": "B1",
+"num": 48,
 "text": "I see what you mean, but he's not ready yet"
 },
 {
-"id": "B1-112",
+"id": "B1_011-020-49",
+"group": "B1_011-020",
 "level": "B1",
+"num": 49,
 "text": "Ah, that makes sense now"
 },
 {
-"id": "B1-113",
+"id": "B1_011-020-50",
+"group": "B1_011-020",
 "level": "B1",
+"num": 50,
 "text": "That explanation makes sense to me"
 },
 {
-"id": "B1-114",
+"id": "B1_011-020-51",
+"group": "B1_011-020",
 "level": "B1",
+"num": 51,
 "text": "No wonder you were tired"
 },
 {
-"id": "B1-115",
+"id": "B1_011-020-52",
+"group": "B1_011-020",
 "level": "B1",
+"num": 52,
 "text": "Oh, now I understand"
 },
 {
-"id": "B1-116",
+"id": "B1_011-020-53",
+"group": "B1_011-020",
 "level": "B1",
+"num": 53,
 "text": "Oh, that makes sense to me now"
 },
 {
-"id": "B1-117",
+"id": "B1_011-020-54",
+"group": "B1_011-020",
 "level": "B1",
-"text": "His reason makes sense to meHis reason makes sense to me"
+"num": 54,
+"text": "His reason makes sense to me"
 },
 {
-"id": "B1-118",
+"id": "B1_021-030-1",
+"group": "B1_021-030",
 "level": "B1",
+"num": 1,
 "text": "Why don't you take a break?"
 },
 {
-"id": "B1-119",
+"id": "B1_021-030-2",
+"group": "B1_021-030",
 "level": "B1",
-"text": "Why don't we go to that new cafeWhy don't we go to that new cafe?"
+"num": 2,
+"text": "Why don't we go to that new cafe"
 },
 {
-"id": "B1-120",
+"id": "B1_021-030-3",
+"group": "B1_021-030",
 "level": "B1",
+"num": 3,
+"text": "Why don't we go to that new cafe?"
+},
+{
+"id": "B1_021-030-4",
+"group": "B1_021-030",
+"level": "B1",
+"num": 4,
 "text": "Why don't we ask someone for directions?"
 },
 {
-"id": "B1-121",
+"id": "B1_021-030-5",
+"group": "B1_021-030",
 "level": "B1",
+"num": 5,
 "text": "Why don't you try the soup?"
 },
 {
-"id": "B1-122",
+"id": "B1_021-030-6",
+"group": "B1_021-030",
 "level": "B1",
+"num": 6,
 "text": "Why don't we leave a bit earlier?"
 },
 {
-"id": "B1-123",
+"id": "B1_021-030-7",
+"group": "B1_021-030",
 "level": "B1",
+"num": 7,
 "text": "Go have a coffee, how about grabbing a coffee?"
 },
 {
-"id": "B1-124",
+"id": "B1_021-030-8",
+"group": "B1_021-030",
 "level": "B1",
+"num": 8,
 "text": "How about grabbing a coffee?"
 },
 {
-"id": "B1-125",
+"id": "B1_021-030-9",
+"group": "B1_021-030",
 "level": "B1",
+"num": 9,
 "text": "How about meeting at the park instead?"
 },
 {
-"id": "B1-126",
+"id": "B1_021-030-10",
+"group": "B1_021-030",
 "level": "B1",
+"num": 10,
 "text": "How about taking the train instead of driving?"
 },
 {
-"id": "B1-127",
+"id": "B1_021-030-11",
+"group": "B1_021-030",
 "level": "B1",
+"num": 11,
 "text": "We'll share a dessert"
 },
 {
-"id": "B1-128",
+"id": "B1_021-030-12",
+"group": "B1_021-030",
 "level": "B1",
+"num": 12,
 "text": "How about sharing a dessert?"
 },
 {
-"id": "B1-129",
+"id": "B1_021-030-13",
+"group": "B1_021-030",
 "level": "B1",
+"num": 13,
 "text": "Call him to confirm"
 },
 {
-"id": "B1-130",
+"id": "B1_021-030-14",
+"group": "B1_021-030",
 "level": "B1",
+"num": 14,
 "text": "You'd better hurry up, or we'll miss the train"
 },
 {
-"id": "B1-131",
+"id": "B1_021-030-15",
+"group": "B1_021-030",
 "level": "B1",
+"num": 15,
 "text": "You'd better arrive early to get a good seat"
 },
 {
-"id": "B1-132",
+"id": "B1_021-030-16",
+"group": "B1_021-030",
 "level": "B1",
-"text": "You'd better arrive early to get a good seat"
-},
-{
-"id": "B1-133",
-"level": "B1",
+"num": 16,
 "text": "You'd better bring an umbrella"
 },
 {
-"id": "B1-134",
+"id": "B1_021-030-17",
+"group": "B1_021-030",
 "level": "B1",
+"num": 17,
 "text": "It might rain"
 },
 {
-"id": "B1-135",
+"id": "B1_021-030-18",
+"group": "B1_021-030",
 "level": "B1",
+"num": 18,
 "text": "You'd better save your work often"
 },
 {
-"id": "B1-136",
+"id": "B1_021-030-19",
+"group": "B1_021-030",
 "level": "B1",
+"num": 19,
 "text": "You'd better tell him the truth soon"
 },
 {
-"id": "B1-137",
+"id": "B1_021-030-20",
+"group": "B1_021-030",
 "level": "B1",
+"num": 20,
 "text": "We'll start, shall we?"
 },
 {
-"id": "B1-138",
+"id": "B1_021-030-21",
+"group": "B1_021-030",
 "level": "B1",
+"num": 21,
 "text": "Let's start, shall we?"
 },
 {
-"id": "B1-139",
+"id": "B1_021-030-22",
+"group": "B1_021-030",
 "level": "B1",
+"num": 22,
 "text": "Let's take a break, shall we?"
 },
 {
-"id": "B1-140",
+"id": "B1_021-030-23",
+"group": "B1_021-030",
 "level": "B1",
+"num": 23,
 "text": "Let's order some food, shall we?"
 },
 {
-"id": "B1-141",
+"id": "B1_021-030-24",
+"group": "B1_021-030",
 "level": "B1",
+"num": 24,
 "text": "Let's walk home together, shall we?"
 },
 {
-"id": "B1-142",
+"id": "B1_021-030-25",
+"group": "B1_021-030",
 "level": "B1",
+"num": 25,
 "text": "Let's check the map again, shall we?"
 },
 {
-"id": "B1-143",
+"id": "B1_021-030-26",
+"group": "B1_021-030",
 "level": "B1",
+"num": 26,
 "text": "It's a good idea to book tickets in advance"
 },
 {
-"id": "B1-144",
+"id": "B1_021-030-27",
+"group": "B1_021-030",
 "level": "B1",
+"num": 27,
 "text": "It's a good idea to arrive early for the interview"
 },
 {
-"id": "B1-145",
+"id": "B1_021-030-28",
+"group": "B1_021-030",
 "level": "B1",
-"text": "It's a good idea to arrive early for the interview"
+"num": 28,
+"text": "Write a shopping list"
 },
 {
-"id": "B1-146",
+"id": "B1_021-030-29",
+"group": "B1_021-030",
 "level": "B1",
-"text": "Write a shopping listIt's a good idea to write a shopping list"
+"num": 29,
+"text": "It's a good idea to write a shopping list"
 },
 {
-"id": "B1-147",
+"id": "B1_021-030-30",
+"group": "B1_021-030",
 "level": "B1",
+"num": 30,
 "text": "It's a good idea to learn some local words"
 },
 {
-"id": "B1-148",
+"id": "B1_021-030-31",
+"group": "B1_021-030",
 "level": "B1",
+"num": 31,
 "text": "Backup your photos is a good idea"
 },
 {
-"id": "B1-149",
+"id": "B1_021-030-32",
+"group": "B1_021-030",
 "level": "B1",
+"num": 32,
 "text": "Could you please turn down the music?"
 },
 {
-"id": "B1-150",
+"id": "B1_021-030-33",
+"group": "B1_021-030",
 "level": "B1",
+"num": 33,
 "text": "Could you please send me the report by Friday?"
 },
 {
-"id": "B1-151",
+"id": "B1_021-030-34",
+"group": "B1_021-030",
 "level": "B1",
+"num": 34,
 "text": "Could you please open the door for me?"
 },
 {
-"id": "B1-152",
+"id": "B1_021-030-35",
+"group": "B1_021-030",
 "level": "B1",
+"num": 35,
 "text": "Could you please repeat your name?"
 },
 {
-"id": "B1-153",
+"id": "B1_021-030-36",
+"group": "B1_021-030",
 "level": "B1",
+"num": 36,
 "text": "Can you please help me carry this bag?"
 },
 {
-"id": "B1-154",
+"id": "B1_021-030-37",
+"group": "B1_021-030",
 "level": "B1",
+"num": 37,
 "text": "Could you please help me carry this bag?"
 },
 {
-"id": "B1-155",
+"id": "B1_021-030-38",
+"group": "B1_021-030",
 "level": "B1",
+"num": 38,
 "text": "Would you mind closing the window?"
 },
 {
-"id": "B1-156",
+"id": "B1_021-030-39",
+"group": "B1_021-030",
 "level": "B1",
+"num": 39,
 "text": "Would you mind waiting here for a moment?"
 },
 {
-"id": "B1-157",
+"id": "B1_021-030-40",
+"group": "B1_021-030",
 "level": "B1",
+"num": 40,
 "text": "Would you mind turning off the light?"
 },
 {
-"id": "B1-158",
+"id": "B1_021-030-41",
+"group": "B1_021-030",
 "level": "B1",
+"num": 41,
 "text": "Would you mind speaking more slowly?"
 },
 {
-"id": "B1-159",
+"id": "B1_021-030-42",
+"group": "B1_021-030",
 "level": "B1",
+"num": 42,
 "text": "Would you mind moving your bag?"
 },
 {
-"id": "B1-160",
+"id": "B1_021-030-43",
+"group": "B1_021-030",
 "level": "B1",
+"num": 43,
 "text": "Do you mind if I open the window?"
 },
 {
-"id": "B1-161",
+"id": "B1_021-030-44",
+"group": "B1_021-030",
 "level": "B1",
+"num": 44,
 "text": "Do you mind if I take a photo here?"
 },
 {
-"id": "B1-162",
+"id": "B1_021-030-45",
+"group": "B1_021-030",
 "level": "B1",
+"num": 45,
 "text": "Do you mind if I turn on the TV?"
 },
 {
-"id": "B1-163",
+"id": "B1_021-030-46",
+"group": "B1_021-030",
 "level": "B1",
+"num": 46,
 "text": "Do you mind if we sit here?"
 },
 {
-"id": "B1-164",
+"id": "B1_021-030-47",
+"group": "B1_021-030",
 "level": "B1",
+"num": 47,
 "text": "Do you mind if I use your charger?"
 },
 {
-"id": "B1-165",
+"id": "B1_021-030-48",
+"group": "B1_021-030",
 "level": "B1",
-"text": "Would you like to join us for dinner?"
-},
-{
-"id": "B1-166",
-"level": "B1",
+"num": 48,
 "text": "Would you like to come to the party this Saturday?"
 },
 {
-"id": "B1-167",
+"id": "B1_021-030-49",
+"group": "B1_021-030",
 "level": "B1",
+"num": 49,
 "text": "Would you like to try this cake?"
 },
 {
-"id": "B1-168",
+"id": "B1_021-030-50",
+"group": "B1_021-030",
 "level": "B1",
+"num": 50,
 "text": "Would you like to visit the museum with us?"
 },
 {
-"id": "B1-169",
+"id": "B1_021-030-51",
+"group": "B1_021-030",
 "level": "B1",
+"num": 51,
 "text": "Would you like to leave a message?"
 },
 {
-"id": "B1-170",
+"id": "B1_021-030-52",
+"group": "B1_021-030",
 "level": "B1",
+"num": 52,
 "text": "I'd like to make a reservation"
 },
 {
-"id": "B1-171",
+"id": "B1_021-030-53",
+"group": "B1_021-030",
 "level": "B1",
+"num": 53,
 "text": "I'd like to change my appointment, please"
 },
 {
-"id": "B1-172",
+"id": "B1_021-030-54",
+"group": "B1_021-030",
 "level": "B1",
+"num": 54,
 "text": "I'd like to order a coffee, please"
 },
 {
-"id": "B1-173",
+"id": "B1_021-030-55",
+"group": "B1_021-030",
 "level": "B1",
+"num": 55,
 "text": "I'd like to speak to the manager"
 },
 {
-"id": "B1-174",
+"id": "B1_021-030-56",
+"group": "B1_021-030",
 "level": "B1",
+"num": 56,
 "text": "I'd like to return this shirt"
 },
 {
-"id": "B1-175",
+"id": "B1_031-040-1",
+"group": "B1_031-040",
 "level": "B1",
+"num": 1,
 "text": "Can I ask you a question?"
 },
 {
-"id": "B1-176",
+"id": "B1_031-040-2",
+"group": "B1_031-040",
 "level": "B1",
+"num": 2,
 "text": "May I borrow your pen for a moment?"
 },
 {
-"id": "B1-177",
+"id": "B1_031-040-3",
+"group": "B1_031-040",
 "level": "B1",
+"num": 3,
 "text": "Can I sit here?"
 },
 {
-"id": "B1-178",
+"id": "B1_031-040-4",
+"group": "B1_031-040",
 "level": "B1",
+"num": 4,
 "text": "Can I use the restroom?"
 },
 {
-"id": "B1-179",
+"id": "B1_031-040-5",
+"group": "B1_031-040",
 "level": "B1",
+"num": 5,
 "text": "Can I have a look at the menu?"
 },
 {
-"id": "B1-180",
+"id": "B1_031-040-6",
+"group": "B1_031-040",
 "level": "B1",
+"num": 6,
 "text": "May I have a look at the menu?"
 },
 {
-"id": "B1-181",
+"id": "B1_031-040-7",
+"group": "B1_031-040",
 "level": "B1",
+"num": 7,
 "text": "If it rains tomorrow, we'll stay home"
 },
 {
-"id": "B1-182",
+"id": "B1_031-040-8",
+"group": "B1_031-040",
 "level": "B1",
+"num": 8,
 "text": "If you finish early, you can leave first"
 },
 {
-"id": "B1-183",
+"id": "B1_031-040-9",
+"group": "B1_031-040",
 "level": "B1",
+"num": 9,
 "text": "If you study hard, you'll pass the exam"
 },
 {
-"id": "B1-184",
+"id": "B1_031-040-10",
+"group": "B1_031-040",
 "level": "B1",
+"num": 10,
 "text": "If the traffic is bad, we'll be late"
 },
 {
-"id": "B1-185",
+"id": "B1_031-040-11",
+"group": "B1_031-040",
 "level": "B1",
-"text": "If I save enough money, I'll buy a bikeUnless you hurry, you'll be late"
+"num": 11,
+"text": "If I save enough money, I'll buy a bike"
 },
 {
-"id": "B1-186",
+"id": "B1_031-040-12",
+"group": "B1_031-040",
 "level": "B1",
+"num": 12,
+"text": "Unless you hurry, you'll be late"
+},
+{
+"id": "B1_031-040-13",
+"group": "B1_031-040",
+"level": "B1",
+"num": 13,
 "text": "Unless you practice, you won't improve"
 },
 {
-"id": "B1-187",
+"id": "B1_031-040-14",
+"group": "B1_031-040",
 "level": "B1",
+"num": 14,
 "text": "Unless it stops raining, we'll stay inside"
 },
 {
-"id": "B1-188",
+"id": "B1_031-040-15",
+"group": "B1_031-040",
 "level": "B1",
+"num": 15,
 "text": "Unless you book early, there won't be seats"
 },
 {
-"id": "B1-189",
+"id": "B1_031-040-16",
+"group": "B1_031-040",
 "level": "B1",
+"num": 16,
 "text": "Unless we leave now, we'll miss the show"
 },
 {
-"id": "B1-190",
+"id": "B1_031-040-17",
+"group": "B1_031-040",
 "level": "B1",
+"num": 17,
 "text": "As long as you practice every day, you'll improve"
 },
 {
-"id": "B1-191",
+"id": "B1_031-040-18",
+"group": "B1_031-040",
 "level": "B1",
+"num": 18,
 "text": "As long as you're happy, that's what matters"
 },
 {
-"id": "B1-192",
+"id": "B1_031-040-19",
+"group": "B1_031-040",
 "level": "B1",
+"num": 19,
 "text": "As long as we leave by six, we'll arrive on time"
 },
 {
-"id": "B1-193",
+"id": "B1_031-040-20",
+"group": "B1_031-040",
 "level": "B1",
-"text": "As long as the weather is good, we'll go hikingAs long as the weather is good, we'll go hiking"
+"num": 20,
+"text": "As long as the weather is good, we'll go hiking"
 },
 {
-"id": "B1-194",
+"id": "B1_031-040-21",
+"group": "B1_031-040",
 "level": "B1",
+"num": 21,
 "text": "As long as you follow the recipe, it'll taste good"
 },
 {
-"id": "B1-195",
+"id": "B1_031-040-22",
+"group": "B1_031-040",
 "level": "B1",
+"num": 22,
 "text": "Even if it rains, we'll still go hiking"
 },
 {
-"id": "B1-196",
+"id": "B1_031-040-23",
+"group": "B1_031-040",
 "level": "B1",
+"num": 23,
 "text": "Even if it's expensive, I'll buy it"
 },
 {
-"id": "B1-197",
+"id": "B1_031-040-24",
+"group": "B1_031-040",
 "level": "B1",
+"num": 24,
 "text": "Even if he's busy, he'll call you back"
 },
 {
-"id": "B1-198",
+"id": "B1_031-040-25",
+"group": "B1_031-040",
 "level": "B1",
+"num": 25,
 "text": "Even if we're tired, we should finish this"
 },
 {
-"id": "B1-199",
+"id": "B1_031-040-26",
+"group": "B1_031-040",
 "level": "B1",
+"num": 26,
 "text": "Even if it's cold, we'll go for a walk"
 },
 {
-"id": "B1-200",
+"id": "B1_031-040-27",
+"group": "B1_031-040",
 "level": "B1",
+"num": 27,
 "text": "If I were you, I would apologize to her"
 },
 {
-"id": "B1-201",
+"id": "B1_031-040-28",
+"group": "B1_031-040",
 "level": "B1",
+"num": 28,
 "text": "If I were you, I would take that job offer"
 },
 {
-"id": "B1-202",
+"id": "B1_031-040-29",
+"group": "B1_031-040",
 "level": "B1",
+"num": 29,
 "text": "If I were you, I would see a doctor"
 },
 {
-"id": "B1-203",
+"id": "B1_031-040-30",
+"group": "B1_031-040",
 "level": "B1",
-"text": "If I were you, I would save more moneyIf I were you, I would save more money"
+"num": 30,
+"text": "If I were you, I would save more money"
 },
 {
-"id": "B1-204",
+"id": "B1_031-040-31",
+"group": "B1_031-040",
 "level": "B1",
+"num": 31,
 "text": "If I were you, I would talk to him directly"
 },
 {
-"id": "B1-205",
+"id": "B1_031-040-32",
+"group": "B1_031-040",
 "level": "B1",
+"num": 32,
 "text": "What if we miss the last bus?"
 },
 {
-"id": "B1-206",
+"id": "B1_031-040-33",
+"group": "B1_031-040",
 "level": "B1",
+"num": 33,
 "text": "What if he doesn't show up on time?"
 },
 {
-"id": "B1-207",
+"id": "B1_031-040-34",
+"group": "B1_031-040",
 "level": "B1",
+"num": 34,
 "text": "What if the restaurant is full?"
 },
 {
-"id": "B1-208",
+"id": "B1_031-040-35",
+"group": "B1_031-040",
 "level": "B1",
+"num": 35,
 "text": "What if it snows tomorrow?"
 },
 {
-"id": "B1-209",
+"id": "B1_031-040-36",
+"group": "B1_031-040",
 "level": "B1",
+"num": 36,
 "text": "What if we can't find a parking spot?"
 },
 {
-"id": "B1-210",
+"id": "B1_031-040-37",
+"group": "B1_031-040",
 "level": "B1",
+"num": 37,
 "text": "I wish I had more free timeI wish I had more free time"
 },
 {
-"id": "B1-211",
+"id": "B1_031-040-38",
+"group": "B1_031-040",
 "level": "B1",
+"num": 38,
 "text": "I wish I had studied harder when I was in school"
 },
 {
-"id": "B1-212",
+"id": "B1_031-040-39",
+"group": "B1_031-040",
 "level": "B1",
+"num": 39,
 "text": "I wish I lived closer to the sea"
 },
 {
-"id": "B1-213",
+"id": "B1_031-040-40",
+"group": "B1_031-040",
 "level": "B1",
+"num": 40,
 "text": "I wish I had learned to play guitar"
 },
 {
-"id": "B1-214",
+"id": "B1_031-040-41",
+"group": "B1_031-040",
 "level": "B1",
+"num": 41,
 "text": "I wish it were the weekend already"
 },
 {
-"id": "B1-215",
+"id": "B1_031-040-42",
+"group": "B1_031-040",
 "level": "B1",
+"num": 42,
 "text": "I've been learning English for three years"
 },
 {
-"id": "B1-216",
+"id": "B1_031-040-43",
+"group": "B1_031-040",
 "level": "B1",
+"num": 43,
 "text": "She's been working at this company for five years"
 },
 {
-"id": "B1-217",
+"id": "B1_031-040-44",
+"group": "B1_031-040",
 "level": "B1",
-"text": "They've been waiting for the bus for an hourThey've been waiting for the bus for an hour"
+"num": 44,
+"text": "They've been waiting for the bus for an hour"
 },
 {
-"id": "B1-218",
+"id": "B1_031-040-45",
+"group": "B1_031-040",
 "level": "B1",
+"num": 45,
 "text": "He's been studying for the test all night"
 },
 {
-"id": "B1-219",
+"id": "B1_031-040-46",
+"group": "B1_031-040",
 "level": "B1",
+"num": 46,
 "text": "I've been thinking about changing jobs"
 },
 {
-"id": "B1-220",
+"id": "B1_031-040-47",
+"group": "B1_031-040",
 "level": "B1",
+"num": 47,
 "text": "I used to play the piano when I was a kid"
 },
 {
-"id": "B1-221",
+"id": "B1_031-040-48",
+"group": "B1_031-040",
 "level": "B1",
+"num": 48,
 "text": "He used to smoke, but he quit last year"
 },
 {
-"id": "B1-222",
+"id": "B1_031-040-49",
+"group": "B1_031-040",
 "level": "B1",
+"num": 49,
 "text": "We used to go camping every summer"
 },
 {
-"id": "B1-223",
+"id": "B1_031-040-50",
+"group": "B1_031-040",
 "level": "B1",
+"num": 50,
 "text": "She used to live in London"
 },
 {
-"id": "B1-224",
+"id": "B1_031-040-51",
+"group": "B1_031-040",
 "level": "B1",
+"num": 51,
 "text": "I used to hate vegetables, but now I loveI used to hate vegetables, but now I love them"
 },
 {
-"id": "B1-225",
+"id": "B1_041-050-1",
+"group": "B1_041-050",
 "level": "B1",
+"num": 1,
 "text": "I'm used to getting up early"
 },
 {
-"id": "B1-226",
+"id": "B1_041-050-2",
+"group": "B1_041-050",
 "level": "B1",
+"num": 2,
 "text": "She's used to working night shifts"
 },
 {
-"id": "B1-227",
+"id": "B1_041-050-3",
+"group": "B1_041-050",
 "level": "B1",
+"num": 3,
 "text": "He's used to eating spicy food"
 },
 {
-"id": "B1-228",
+"id": "B1_041-050-4",
+"group": "B1_041-050",
 "level": "B1",
-"text": "We're used to light travelWe're used to traveling light"
+"num": 4,
+"text": "We're used to light travel"
 },
 {
-"id": "B1-229",
+"id": "B1_041-050-5",
+"group": "B1_041-050",
 "level": "B1",
+"num": 5,
+"text": "We're used to traveling light"
+},
+{
+"id": "B1_041-050-6",
+"group": "B1_041-050",
+"level": "B1",
+"num": 6,
 "text": "I'm used to studying in the library"
 },
 {
-"id": "B1-230",
+"id": "B1_041-050-7",
+"group": "B1_041-050",
 "level": "B1",
+"num": 7,
 "text": "I'm supposed to call him back at six"
 },
 {
-"id": "B1-231",
+"id": "B1_041-050-8",
+"group": "B1_041-050",
 "level": "B1",
+"num": 8,
 "text": "He should tomorrow|He's supposed to submit the report tomorrow"
 },
 {
-"id": "B1-232",
+"id": "B1_041-050-9",
+"group": "B1_041-050",
 "level": "B1",
+"num": 9,
 "text": "He's supposed to submit the report tomorrow"
 },
 {
-"id": "B1-233",
+"id": "B1_041-050-10",
+"group": "B1_041-050",
 "level": "B1",
+"num": 10,
 "text": "We should meet them at eight"
 },
 {
-"id": "B1-234",
+"id": "B1_041-050-11",
+"group": "B1_041-050",
 "level": "B1",
+"num": 11,
 "text": "We're supposed to meet them at eight"
 },
 {
-"id": "B1-235",
+"id": "B1_041-050-12",
+"group": "B1_041-050",
 "level": "B1",
+"num": 12,
 "text": "I should take this medicine after meals"
 },
 {
-"id": "B1-236",
+"id": "B1_041-050-13",
+"group": "B1_041-050",
 "level": "B1",
+"num": 13,
 "text": "I'm supposed to take this medicine after meals"
 },
 {
-"id": "B1-237",
+"id": "B1_041-050-14",
+"group": "B1_041-050",
 "level": "B1",
+"num": 14,
 "text": "She's supposed to arrive at noon"
 },
 {
-"id": "B1-238",
+"id": "B1_041-050-15",
+"group": "B1_041-050",
 "level": "B1",
+"num": 15,
 "text": "I'm looking forward to seeing you again"
 },
 {
-"id": "B1-239",
+"id": "B1_041-050-16",
+"group": "B1_041-050",
 "level": "B1",
+"num": 16,
 "text": "We're looking forward to the summer vacation"
 },
 {
-"id": "B1-240",
+"id": "B1_041-050-17",
+"group": "B1_041-050",
 "level": "B1",
+"num": 17,
 "text": "I'm looking forward to hearing from you"
 },
 {
-"id": "B1-241",
+"id": "B1_041-050-18",
+"group": "B1_041-050",
 "level": "B1",
+"num": 18,
 "text": "We're looking forward to trying the new restaurant"
 },
 {
-"id": "B1-242",
+"id": "B1_041-050-19",
+"group": "B1_041-050",
 "level": "B1",
+"num": 19,
 "text": "She's looking forward to graduating next month"
 },
 {
-"id": "B1-243",
+"id": "B1_041-050-20",
+"group": "B1_041-050",
 "level": "B1",
+"num": 20,
 "text": "I work"
 },
 {
-"id": "B1-244",
+"id": "B1_041-050-21",
+"group": "B1_041-050",
 "level": "B1",
+"num": 21,
 "text": "It takes me about 30 minutes to get to work"
 },
 {
-"id": "B1-245",
+"id": "B1_041-050-22",
+"group": "B1_041-050",
 "level": "B1",
+"num": 22,
 "text": "Driving to the beach takes about two hours"
 },
 {
-"id": "B1-246",
+"id": "B1_041-050-23",
+"group": "B1_041-050",
 "level": "B1",
+"num": 23,
 "text": "It takes him an hour to walk to school"
 },
 {
-"id": "B1-247",
+"id": "B1_041-050-24",
+"group": "B1_041-050",
 "level": "B1",
+"num": 24,
 "text": "It takes about 10 minutes to boil the water"
 },
 {
-"id": "B1-248",
+"id": "B1_041-050-25",
+"group": "B1_041-050",
 "level": "B1",
+"num": 25,
 "text": "It took us three days to finish the project"
 },
 {
-"id": "B1-249",
+"id": "B1_041-050-26",
+"group": "B1_041-050",
 "level": "B1",
+"num": 26,
 "text": "I can't stand waiting in long lines"
 },
 {
-"id": "B1-250",
+"id": "B1_041-050-27",
+"group": "B1_041-050",
 "level": "B1",
+"num": 27,
 "text": "He can't stand working with rude customers"
 },
 {
-"id": "B1-251",
+"id": "B1_041-050-28",
+"group": "B1_041-050",
 "level": "B1",
+"num": 28,
 "text": "I can't stand loud music at night"
 },
 {
-"id": "B1-252",
+"id": "B1_041-050-29",
+"group": "B1_041-050",
 "level": "B1",
+"num": 29,
 "text": "She can't stand being late for class"
 },
 {
-"id": "B1-253",
+"id": "B1_041-050-30",
+"group": "B1_041-050",
 "level": "B1",
+"num": 30,
 "text": "I can't stand doing the same thing every day"
 },
 {
-"id": "B1-254",
+"id": "B1_041-050-31",
+"group": "B1_041-050",
 "level": "B1",
+"num": 31,
 "text": "This book is as interesting as that one"
 },
 {
-"id": "B1-255",
+"id": "B1_041-050-32",
+"group": "B1_041-050",
 "level": "B1",
+"num": 32,
 "text": "It's not as expensive as I thought"
 },
 {
-"id": "B1-256",
+"id": "B1_041-050-33",
+"group": "B1_041-050",
 "level": "B1",
+"num": 33,
 "text": "He runs as fast as his brother"
 },
 {
-"id": "B1-257",
+"id": "B1_041-050-34",
+"group": "B1_041-050",
 "level": "B1",
+"num": 34,
 "text": "It's not as cold today as yesterday"
 },
 {
-"id": "B1-258",
+"id": "B1_041-050-35",
+"group": "B1_041-050",
 "level": "B1",
+"num": 35,
 "text": "He and his mother are the same height"
 },
 {
-"id": "B1-259",
+"id": "B1_041-050-36",
+"group": "B1_041-050",
 "level": "B1",
+"num": 36,
 "text": "She is as tall as her mother"
 },
 {
-"id": "B1-260",
+"id": "B1_041-050-37",
+"group": "B1_041-050",
 "level": "B1",
+"num": 37,
 "text": "This bag is not as heavy as it looks"
 },
 {
-"id": "B1-261",
+"id": "B1_041-050-38",
+"group": "B1_041-050",
 "level": "B1",
+"num": 38,
 "text": "He speaks English as well as his teacher"
 },
 {
-"id": "B1-262",
+"id": "B1_041-050-39",
+"group": "B1_041-050",
 "level": "B1",
+"num": 39,
 "text": "This box is too heavy to carry"
 },
 {
-"id": "B1-263",
+"id": "B1_041-050-40",
+"group": "B1_041-050",
 "level": "B1",
+"num": 40,
 "text": "The box is too heavy to carry"
 },
 {
-"id": "B1-264",
+"id": "B1_041-050-41",
+"group": "B1_041-050",
 "level": "B1",
+"num": 41,
 "text": "He is too tired to continue working"
 },
 {
-"id": "B1-265",
+"id": "B1_041-050-42",
+"group": "B1_041-050",
 "level": "B1",
+"num": 42,
 "text": "Coffee is too hot to drink"
 },
 {
-"id": "B1-266",
+"id": "B1_041-050-43",
+"group": "B1_041-050",
 "level": "B1",
+"num": 43,
 "text": "She was too shy to say anything"
 },
 {
-"id": "B1-267",
+"id": "B1_041-050-44",
+"group": "B1_041-050",
 "level": "B1",
+"num": 44,
 "text": "Too dark to see the path"
 },
 {
-"id": "B1-268",
+"id": "B1_041-050-45",
+"group": "B1_041-050",
 "level": "B1",
+"num": 45,
 "text": "It's too dark to see the path"
 },
 {
-"id": "B1-269",
+"id": "B1_041-050-46",
+"group": "B1_041-050",
 "level": "B1",
+"num": 46,
 "text": "He's old enough to make his own decisions"
 },
 {
-"id": "B1-270",
+"id": "B1_041-050-47",
+"group": "B1_041-050",
 "level": "B1",
+"num": 47,
 "text": "This room is big enough to hold 50 people"
 },
 {
-"id": "B1-271",
+"id": "B1_041-050-48",
+"group": "B1_041-050",
 "level": "B1",
+"num": 48,
 "text": "She's strong enough to lift the box"
 },
 {
-"id": "B1-272",
+"id": "B1_041-050-49",
+"group": "B1_041-050",
 "level": "B1",
-"text": "We arrived enough early to grab a good seatWe arrived early enough to get good seats"
+"num": 49,
+"text": "We arrived enough early to grab a good seat"
 },
 {
-"id": "B1-273",
+"id": "B1_041-050-50",
+"group": "B1_041-050",
 "level": "B1",
+"num": 50,
+"text": "We arrived early enough to get good seats"
+},
+{
+"id": "B1_041-050-51",
+"group": "B1_041-050",
+"level": "B1",
+"num": 51,
 "text": "He's experienced enough to lead the team"
 },
 {
-"id": "B1-274",
+"id": "B1_041-050-52",
+"group": "B1_041-050",
 "level": "B1",
+"num": 52,
 "text": "You practice the"
 },
 {
-"id": "B1-275",
+"id": "B1_041-050-53",
+"group": "B1_041-050",
 "level": "B1",
+"num": 53,
 "text": "The more you practice, the better you get"
 },
 {
-"id": "B1-276",
+"id": "B1_041-050-54",
+"group": "B1_041-050",
 "level": "B1",
+"num": 54,
 "text": "You save the more you'll have"
 },
 {
-"id": "B1-277",
+"id": "B1_041-050-55",
+"group": "B1_041-050",
 "level": "B1",
+"num": 55,
 "text": "The earlier you leave, the less traffic there is"
 },
 {
-"id": "B1-278",
+"id": "B1_041-050-56",
+"group": "B1_041-050",
 "level": "B1",
+"num": 56,
 "text": "The more you read, the more you learn"
 },
 {
-"id": "B1-279",
+"id": "B1_041-050-57",
+"group": "B1_041-050",
 "level": "B1",
+"num": 57,
 "text": "The colder it gets, the more I want tea"
 },
 {
-"id": "B1-280",
+"id": "B1_041-050-58",
+"group": "B1_041-050",
 "level": "B1",
-"text": "I'd rather stay home than go out tonight"
-},
-{
-"id": "B1-281",
-"level": "B1",
+"num": 58,
 "text": "I prefer tea to coffee"
 },
 {
-"id": "B1-282",
+"id": "B1_041-050-59",
+"group": "B1_041-050",
 "level": "B1",
+"num": 59,
 "text": "She'd rather read than watch TV"
 },
 {
-"id": "B1-283",
+"id": "B1_041-050-60",
+"group": "B1_041-050",
 "level": "B1",
+"num": 60,
 "text": "He prefers jogging to swimming"
 },
 {
-"id": "B1-284",
+"id": "B1_041-050-61",
+"group": "B1_041-050",
 "level": "B1",
+"num": 61,
 "text": "I'd rather walk than take the bus"
 },
 {
-"id": "B1-285",
+"id": "B1_041-050-62",
+"group": "B1_041-050",
 "level": "B1",
+"num": 62,
 "text": "He'd rather cook at home than eat out"
 },
 {
-"id": "B1-286",
+"id": "B1_051-060-1",
+"group": "B1_051-060",
 "level": "B1",
+"num": 1,
 "text": "Are you free this Saturday?"
 },
 {
-"id": "B1-287",
+"id": "B1_051-060-2",
+"group": "B1_051-060",
 "level": "B1",
+"num": 2,
 "text": "Are you free tomorrow evening for dinner?"
 },
 {
-"id": "B1-288",
+"id": "B1_051-060-3",
+"group": "B1_051-060",
 "level": "B1",
+"num": 3,
 "text": "Are you free after the meeting?"
 },
 {
-"id": "B1-289",
+"id": "B1_051-060-4",
+"group": "B1_051-060",
 "level": "B1",
+"num": 4,
 "text": "You today"
 },
 {
-"id": "B1-290",
+"id": "B1_051-060-5",
+"group": "B1_051-060",
 "level": "B1",
+"num": 5,
 "text": "Do you have time to help me this afternoon?"
 },
 {
-"id": "B1-291",
+"id": "B1_051-060-6",
+"group": "B1_051-060",
 "level": "B1",
+"num": 6,
 "text": "Are you free next week for a chat?"
 },
 {
-"id": "B1-292",
+"id": "B1_051-060-7",
+"group": "B1_051-060",
 "level": "B1",
-"text": "In the coffee shopHow about meeting at the coffee shop?"
+"num": 7,
+"text": "In the coffee shop"
 },
 {
-"id": "B1-293",
+"id": "B1_051-060-8",
+"group": "B1_051-060",
 "level": "B1",
-"text": "Tonight,"
+"num": 8,
+"text": "How about meeting at the coffee shop?"
 },
 {
-"id": "B1-294",
+"id": "B1_051-060-9",
+"group": "B1_051-060",
 "level": "B1",
+"num": 9,
+"text": "Tonight"
+},
+{
+"id": "B1_051-060-10",
+"group": "B1_051-060",
+"level": "B1",
+"num": 10,
 "text": "How about a pizza for dinner tonight?"
 },
 {
-"id": "B1-295",
+"id": "B1_051-060-11",
+"group": "B1_051-060",
 "level": "B1",
+"num": 11,
 "text": "How about a walk after dinner?"
 },
 {
-"id": "B1-296",
+"id": "B1_051-060-12",
+"group": "B1_051-060",
 "level": "B1",
+"num": 12,
 "text": "How about watching a film at home?"
 },
 {
-"id": "B1-297",
+"id": "B1_051-060-13",
+"group": "B1_051-060",
 "level": "B1",
+"num": 13,
 "text": "How about some fruit for dessert?"
 },
 {
-"id": "B1-298",
+"id": "B1_051-060-14",
+"group": "B1_051-060",
 "level": "B1",
+"num": 14,
 "text": "I'm available after 5 p"
 },
 {
-"id": "B1-299",
+"id": "B1_051-060-15",
+"group": "B1_051-060",
 "level": "B1",
+"num": 15,
 "text": "on weekdays"
 },
 {
-"id": "B1-300",
+"id": "B1_051-060-16",
+"group": "B1_051-060",
 "level": "B1",
+"num": 16,
 "text": "He's available on Monday and Wednesday mornings"
 },
 {
-"id": "B1-301",
+"id": "B1_051-060-17",
+"group": "B1_051-060",
 "level": "B1",
+"num": 17,
 "text": "I'm available all day on Sunday"
 },
 {
-"id": "B1-302",
+"id": "B1_051-060-18",
+"group": "B1_051-060",
 "level": "B1",
+"num": 18,
 "text": "She's available at the office tomorrow"
 },
 {
-"id": "B1-303",
+"id": "B1_051-060-19",
+"group": "B1_051-060",
 "level": "B1",
+"num": 19,
 "text": "We're available from 10 to 12"
 },
 {
-"id": "B1-304",
+"id": "B1_051-060-20",
+"group": "B1_051-060",
 "level": "B1",
+"num": 20,
 "text": "Three points, can I?"
 },
 {
-"id": "B1-305",
+"id": "B1_051-060-21",
+"group": "B1_051-060",
 "level": "B1",
+"num": 21,
 "text": "How about three o'clockb That works for me"
 },
 {
-"id": "B1-306",
+"id": "B1_051-060-22",
+"group": "B1_051-060",
 "level": "B1",
+"num": 22,
 "text": "a Let's meet at the station"
 },
 {
-"id": "B1-307",
+"id": "B1_051-060-23",
+"group": "B1_051-060",
 "level": "B1",
+"num": 23,
 "text": "b That sounds good"
 },
 {
-"id": "B1-308",
+"id": "B1_051-060-24",
+"group": "B1_051-060",
 "level": "B1",
+"num": 24,
 "text": "A, let's meet at the station"
 },
 {
-"id": "B1-309",
+"id": "B1_051-060-25",
+"group": "B1_051-060",
 "level": "B1",
+"num": 25,
 "text": "B, that sounds good"
 },
 {
-"id": "B1-310",
+"id": "B1_051-060-26",
+"group": "B1_051-060",
 "level": "B1",
+"num": 26,
 "text": "A, should we split the billB, that works for me"
 },
 {
-"id": "B1-311",
+"id": "B1_051-060-27",
+"group": "B1_051-060",
 "level": "B1",
+"num": 27,
 "text": "How about the blue one?"
 },
 {
-"id": "B1-312",
+"id": "B1_051-060-28",
+"group": "B1_051-060",
 "level": "B1",
+"num": 28,
 "text": "That sounds good"
 },
 {
-"id": "B1-313",
+"id": "B1_051-060-29",
+"group": "B1_051-060",
 "level": "B1",
+"num": 29,
 "text": "We'll do this on ThursdayB, I can"
 },
 {
-"id": "B1-314",
+"id": "B1_051-060-30",
+"group": "B1_051-060",
 "level": "B1",
+"num": 30,
 "text": "A, let's do it on Thursday"
 },
 {
-"id": "B1-315",
+"id": "B1_051-060-31",
+"group": "B1_051-060",
 "level": "B1",
+"num": 31,
 "text": "Let's make it 7 p"
 },
 {
-"id": "B1-316",
+"id": "B1_051-060-32",
+"group": "B1_051-060",
 "level": "B1",
+"num": 32,
 "text": "at the restaurant"
 },
 {
-"id": "B1-317",
+"id": "B1_051-060-33",
+"group": "B1_051-060",
 "level": "B1",
+"num": 33,
 "text": "Let's make it next Friday for the presentation"
 },
 {
-"id": "B1-318",
+"id": "B1_051-060-34",
+"group": "B1_051-060",
 "level": "B1",
+"num": 34,
 "text": "Let's make it half past two"
 },
 {
-"id": "B1-319",
+"id": "B1_051-060-35",
+"group": "B1_051-060",
 "level": "B1",
-"text": "Let's make it Saturday morningLet's make it the corner cafe"
+"num": 35,
+"text": "Let's make it Saturday morning"
 },
 {
-"id": "B1-320",
+"id": "B1_051-060-36",
+"group": "B1_051-060",
 "level": "B1",
+"num": 36,
+"text": "Let's make it the corner cafe"
+},
+{
+"id": "B1_051-060-37",
+"group": "B1_051-060",
+"level": "B1",
+"num": 37,
 "text": "Please give me a glass of water"
 },
 {
-"id": "B1-321",
+"id": "B1_051-060-38",
+"group": "B1_051-060",
 "level": "B1",
-"text": "Can I have a glass of water, please?"
-},
-{
-"id": "B1-322",
-"level": "B1",
+"num": 38,
 "text": "Please give me a bowl of soup"
 },
 {
-"id": "B1-323",
+"id": "B1_051-060-39",
+"group": "B1_051-060",
 "level": "B1",
+"num": 39,
 "text": "I'd like a bowl of soup, please"
 },
 {
-"id": "B1-324",
+"id": "B1_051-060-40",
+"group": "B1_051-060",
 "level": "B1",
-"text": "Can I have the menu, please?"
-},
-{
-"id": "B1-325",
-"level": "B1",
+"num": 40,
 "text": "I'd like two tickets to the museum"
 },
 {
-"id": "B1-326",
+"id": "B1_051-060-41",
+"group": "B1_051-060",
 "level": "B1",
+"num": 41,
 "text": "Please give me a small coffee"
 },
 {
-"id": "B1-327",
+"id": "B1_051-060-42",
+"group": "B1_051-060",
 "level": "B1",
+"num": 42,
 "text": "Can I have a small coffee, please?"
 },
 {
-"id": "B1-328",
+"id": "B1_051-060-43",
+"group": "B1_051-060",
 "level": "B1",
+"num": 43,
 "text": "Can I get the bill, please?"
 },
 {
-"id": "B1-329",
+"id": "B1_051-060-44",
+"group": "B1_051-060",
 "level": "B1",
+"num": 44,
 "text": "Please can I get another cup of coffee, please?"
 },
 {
-"id": "B1-330",
+"id": "B1_051-060-45",
+"group": "B1_051-060",
 "level": "B1",
+"num": 45,
 "text": "Can I get another cup of coffee, please?"
 },
 {
-"id": "B1-331",
+"id": "B1_051-060-46",
+"group": "B1_051-060",
 "level": "B1",
+"num": 46,
 "text": "Can I get a bottle of water?"
 },
 {
-"id": "B1-332",
+"id": "B1_051-060-47",
+"group": "B1_051-060",
 "level": "B1",
+"num": 47,
 "text": "Can I get a refill, please?"
 },
 {
-"id": "B1-333",
+"id": "B1_051-060-48",
+"group": "B1_051-060",
 "level": "B1",
+"num": 48,
 "text": "Can I get a bag for this, please?"
 },
 {
-"id": "B1-334",
+"id": "B1_051-060-49",
+"group": "B1_051-060",
 "level": "B1",
+"num": 49,
 "text": "This soup has what?"
 },
 {
-"id": "B1-335",
+"id": "B1_051-060-50",
+"group": "B1_051-060",
 "level": "B1",
+"num": 50,
 "text": "What's in this soup?"
 },
 {
-"id": "B1-336",
+"id": "B1_051-060-51",
+"group": "B1_051-060",
 "level": "B1",
+"num": 51,
 "text": "Is it spicy?"
 },
 {
-"id": "B1-337",
+"id": "B1_051-060-52",
+"group": "B1_051-060",
 "level": "B1",
+"num": 52,
 "text": "What comes with the set meal?"
 },
 {
-"id": "B1-338",
+"id": "B1_051-060-53",
+"group": "B1_051-060",
 "level": "B1",
+"num": 53,
 "text": "What's in this sandwich?"
 },
 {
-"id": "B1-339",
+"id": "B1_051-060-54",
+"group": "B1_051-060",
 "level": "B1",
+"num": 54,
 "text": "This hamburger with what?"
 },
 {
-"id": "B1-340",
+"id": "B1_051-060-55",
+"group": "B1_051-060",
 "level": "B1",
+"num": 55,
 "text": "What comes with the burger?"
 },
 {
-"id": "B1-341",
+"id": "B1_051-060-56",
+"group": "B1_051-060",
 "level": "B1",
+"num": 56,
 "text": "What's in the gift box?"
 },
 {
-"id": "B1-342",
+"id": "B1_051-060-57",
+"group": "B1_051-060",
 "level": "B1",
+"num": 57,
 "text": "Do you have any vegetarian options?"
 },
 {
-"id": "B1-343",
+"id": "B1_051-060-58",
+"group": "B1_051-060",
 "level": "B1",
+"num": 58,
 "text": "Do you have any recommendations?"
 },
 {
-"id": "B1-344",
+"id": "B1_051-060-59",
+"group": "B1_051-060",
 "level": "B1",
+"num": 59,
 "text": "Do you have any sugar-free drinks?"
 },
 {
-"id": "B1-345",
+"id": "B1_051-060-60",
+"group": "B1_051-060",
 "level": "B1",
+"num": 60,
 "text": "Do you have any questions about the task?"
 },
 {
-"id": "B1-346",
+"id": "B1_051-060-61",
+"group": "B1_051-060",
 "level": "B1",
+"num": 61,
 "text": "Do you have any spare chairs?"
 },
 {
-"id": "B1-347",
+"id": "B1_051-060-62",
+"group": "B1_051-060",
 "level": "B1",
+"num": 62,
 "text": "I want"
 },
 {
-"id": "B1-348",
+"id": "B1_051-060-63",
+"group": "B1_051-060",
 "level": "B1",
+"num": 63,
 "text": "I'll take the grilled chicken with salad"
 },
 {
-"id": "B1-349",
+"id": "B1_051-060-64",
+"group": "B1_051-060",
 "level": "B1",
+"num": 64,
 "text": "Please give me seafood pasta"
 },
 {
-"id": "B1-350",
+"id": "B1_051-060-65",
+"group": "B1_051-060",
 "level": "B1",
+"num": 65,
 "text": "I'll have the seafood pasta, please"
 },
 {
-"id": "B1-351",
+"id": "B1_051-060-66",
+"group": "B1_051-060",
 "level": "B1",
+"num": 66,
 "text": "I'll take the red one, please"
 },
 {
-"id": "B1-352",
+"id": "B1_051-060-67",
+"group": "B1_051-060",
 "level": "B1",
+"num": 67,
 "text": "I'll have a green tea, thanks"
 },
 {
-"id": "B1-353",
+"id": "B1_051-060-68",
+"group": "B1_051-060",
 "level": "B1",
+"num": 68,
 "text": "That I'll take two of those, please"
 },
 {
-"id": "B1-354",
+"id": "B1_051-060-69",
+"group": "B1_051-060",
 "level": "B1",
+"num": 69,
 "text": "I'll take two of those, please"
 },
 {
-"id": "B1-355",
+"id": "B1_061-070-1",
+"group": "B1_061-070",
 "level": "B1",
+"num": 1,
 "text": "How much is this coffee?"
 },
 {
-"id": "B1-356",
+"id": "B1_061-070-2",
+"group": "B1_061-070",
 "level": "B1",
+"num": 2,
 "text": "How much is the steak set meal?"
 },
 {
-"id": "B1-357",
+"id": "B1_061-070-3",
+"group": "B1_061-070",
 "level": "B1",
+"num": 3,
 "text": "How much is a ticket to the museum?"
 },
 {
-"id": "B1-358",
+"id": "B1_061-070-4",
+"group": "B1_061-070",
 "level": "B1",
+"num": 4,
 "text": "How much is this t-shirt?"
 },
 {
-"id": "B1-359",
+"id": "B1_061-070-5",
+"group": "B1_061-070",
 "level": "B1",
+"num": 5,
 "text": "How much is the delivery fee?"
 },
 {
-"id": "B1-360",
+"id": "B1_061-070-6",
+"group": "B1_061-070",
 "level": "B1",
+"num": 6,
 "text": "Where is the nearest subway station?"
 },
 {
-"id": "B1-361",
+"id": "B1_061-070-7",
+"group": "B1_061-070",
 "level": "B1",
+"num": 7,
 "text": "Where is the nearest hospital in this area?"
 },
 {
-"id": "B1-362",
+"id": "B1_061-070-8",
+"group": "B1_061-070",
 "level": "B1",
+"num": 8,
 "text": "Please, where is the restroom?"
 },
 {
-"id": "B1-363",
+"id": "B1_061-070-9",
+"group": "B1_061-070",
 "level": "B1",
+"num": 9,
 "text": "Where is the restroom, please?"
 },
 {
-"id": "B1-364",
+"id": "B1_061-070-10",
+"group": "B1_061-070",
 "level": "B1",
+"num": 10,
 "text": "Public bus stop"
 },
 {
-"id": "B1-365",
+"id": "B1_061-070-11",
+"group": "B1_061-070",
 "level": "B1",
-"text": "Where is the bus stop?"
+"num": 11,
+"text": "Mistake handling office"
 },
 {
-"id": "B1-366",
+"id": "B1_061-070-12",
+"group": "B1_061-070",
 "level": "B1",
-"text": "Mistake handling officeWhere is the lost and found?"
+"num": 12,
+"text": "Where is the lost and found?"
 },
 {
-"id": "B1-367",
+"id": "B1_061-070-13",
+"group": "B1_061-070",
 "level": "B1",
+"num": 13,
 "text": "From here, to museum how do I get to the museum from here?"
 },
 {
-"id": "B1-368",
+"id": "B1_061-070-14",
+"group": "B1_061-070",
 "level": "B1",
+"num": 14,
 "text": "How do I get to the museum from here?"
 },
 {
-"id": "B1-369",
+"id": "B1_061-070-15",
+"group": "B1_061-070",
 "level": "B1",
+"num": 15,
 "text": "From here to the train station how do I get to the train station from here?"
 },
 {
-"id": "B1-370",
+"id": "B1_061-070-16",
+"group": "B1_061-070",
 "level": "B1",
+"num": 16,
 "text": "How do I get to the airport by bus?"
 },
 {
-"id": "B1-371",
+"id": "B1_061-070-17",
+"group": "B1_061-070",
 "level": "B1",
+"num": 17,
 "text": "How do I get to your office?"
 },
 {
-"id": "B1-372",
+"id": "B1_061-070-18",
+"group": "B1_061-070",
 "level": "B1",
+"num": 18,
 "text": "Walk how do I get to the hotel on foot?"
 },
 {
-"id": "B1-373",
+"id": "B1_061-070-19",
+"group": "B1_061-070",
 "level": "B1",
+"num": 19,
 "text": "How do I get to the hotel on foot?"
 },
 {
-"id": "B1-374",
+"id": "B1_061-070-20",
+"group": "B1_061-070",
 "level": "B1",
-"text": "Is it far from here?"
-},
-{
-"id": "B1-375",
-"level": "B1",
+"num": 20,
 "text": "Is it far from the city center?"
 },
 {
-"id": "B1-376",
+"id": "B1_061-070-21",
+"group": "B1_061-070",
 "level": "B1",
+"num": 21,
 "text": "Is it far from the station?"
 },
 {
-"id": "B1-377",
+"id": "B1_061-070-22",
+"group": "B1_061-070",
 "level": "B1",
+"num": 22,
 "text": "Is the beach far from here?"
 },
 {
-"id": "B1-378",
+"id": "B1_061-070-23",
+"group": "B1_061-070",
 "level": "B1",
-"text": "Is it far from your house?"
-},
-{
-"id": "B1-379",
-"level": "B1",
+"num": 23,
 "text": "Go straight for two blocks, then turn left"
 },
 {
-"id": "B1-380",
+"id": "B1_061-070-24",
+"group": "B1_061-070",
 "level": "B1",
+"num": 24,
 "text": "At the traffic light, and the bank is on your left"
 },
 {
-"id": "B1-381",
+"id": "B1_061-070-25",
+"group": "B1_061-070",
 "level": "B1",
+"num": 25,
 "text": "Turn right at the traffic light, and the bank is on your left"
 },
 {
-"id": "B1-382",
+"id": "B1_061-070-26",
+"group": "B1_061-070",
 "level": "B1",
+"num": 26,
 "text": "Go straight ahead and turn right at the corner"
 },
 {
-"id": "B1-383",
+"id": "B1_061-070-27",
+"group": "B1_061-070",
 "level": "B1",
-"text": "Go straight ahead and turn right at the corner"
-},
-{
-"id": "B1-384",
-"level": "B1",
+"num": 27,
 "text": "Turn left at the second crossing"
 },
 {
-"id": "B1-385",
+"id": "B1_061-070-28",
+"group": "B1_061-070",
 "level": "B1",
+"num": 28,
 "text": "Go straight until you see the post office"
 },
 {
-"id": "B1-386",
+"id": "B1_061-070-29",
+"group": "B1_061-070",
 "level": "B1",
+"num": 29,
 "text": "Sorry, can you show me on the map?"
 },
 {
-"id": "B1-387",
+"id": "B1_061-070-30",
+"group": "B1_061-070",
 "level": "B1",
+"num": 30,
 "text": "Can you show me on the map where the hotel is?"
 },
 {
-"id": "B1-388",
+"id": "B1_061-070-31",
+"group": "B1_061-070",
 "level": "B1",
+"num": 31,
 "text": "Can you show me on the map how to get there?"
 },
 {
-"id": "B1-389",
+"id": "B1_061-070-32",
+"group": "B1_061-070",
 "level": "B1",
-"text": "Can you show me the location on the mapCould you show me the location on the map?"
+"num": 32,
+"text": "Can you show me the location on the map"
 },
 {
-"id": "B1-390",
+"id": "B1_061-070-33",
+"group": "B1_061-070",
 "level": "B1",
+"num": 33,
+"text": "Could you show me the location on the map?"
+},
+{
+"id": "B1_061-070-34",
+"group": "B1_061-070",
+"level": "B1",
+"num": 34,
 "text": "You can in the map on the map where we are now"
 },
 {
-"id": "B1-391",
+"id": "B1_061-070-35",
+"group": "B1_061-070",
 "level": "B1",
+"num": 35,
 "text": "How long does it take to get to the airport?"
 },
 {
-"id": "B1-392",
+"id": "B1_061-070-36",
+"group": "B1_061-070",
 "level": "B1",
+"num": 36,
 "text": "How long does it take to get to the beach by bus?"
 },
 {
-"id": "B1-393",
+"id": "B1_061-070-37",
+"group": "B1_061-070",
 "level": "B1",
-"text": "How long does it take to get to the city centerHow long does it take to get to the city center?"
+"num": 37,
+"text": "How long does it take to get to the city center"
 },
 {
-"id": "B1-394",
+"id": "B1_061-070-38",
+"group": "B1_061-070",
 "level": "B1",
+"num": 38,
+"text": "How long does it take to get to the city center?"
+},
+{
+"id": "B1_061-070-39",
+"group": "B1_061-070",
+"level": "B1",
+"num": 39,
 "text": "How long does it take to get to your house?"
 },
 {
-"id": "B1-395",
+"id": "B1_061-070-40",
+"group": "B1_061-070",
 "level": "B1",
+"num": 40,
 "text": "How long does it take to get to the top?"
 },
 {
-"id": "B1-396",
+"id": "B1_061-070-41",
+"group": "B1_061-070",
 "level": "B1",
+"num": 41,
 "text": "There's something wrong with my laptop"
 },
 {
-"id": "B1-397",
+"id": "B1_061-070-42",
+"group": "B1_061-070",
 "level": "B1",
+"num": 42,
 "text": "There's something wrong with my stomach"
 },
 {
-"id": "B1-398",
+"id": "B1_061-070-43",
+"group": "B1_061-070",
 "level": "B1",
+"num": 43,
 "text": "Heating has a problem"
 },
 {
-"id": "B1-399",
+"id": "B1_061-070-44",
+"group": "B1_061-070",
 "level": "B1",
+"num": 44,
 "text": "There's something wrong with the heater"
 },
 {
-"id": "B1-400",
+"id": "B1_061-070-45",
+"group": "B1_061-070",
 "level": "B1",
+"num": 45,
 "text": "The door lock has a problem"
 },
 {
-"id": "B1-401",
+"id": "B1_061-070-46",
+"group": "B1_061-070",
 "level": "B1",
+"num": 46,
 "text": "There's something wrong with the door lock"
 },
 {
-"id": "B1-402",
+"id": "B1_061-070-47",
+"group": "B1_061-070",
 "level": "B1",
+"num": 47,
 "text": "My phone screen has a problem"
 },
 {
-"id": "B1-403",
+"id": "B1_061-070-48",
+"group": "B1_061-070",
 "level": "B1",
+"num": 48,
 "text": "I have a complaint about the service here"
 },
 {
-"id": "B1-404",
+"id": "B1_061-070-49",
+"group": "B1_061-070",
 "level": "B1",
+"num": 49,
 "text": "I have a complaint about the product quality"
 },
 {
-"id": "B1-405",
+"id": "B1_061-070-50",
+"group": "B1_061-070",
 "level": "B1",
+"num": 50,
 "text": "I have a complaint about the noise next door"
 },
 {
-"id": "B1-406",
+"id": "B1_061-070-51",
+"group": "B1_061-070",
 "level": "B1",
+"num": 51,
 "text": "I have a complaint about my hotel room"
 },
 {
-"id": "B1-407",
+"id": "B1_061-070-52",
+"group": "B1_061-070",
 "level": "B1",
+"num": 52,
 "text": "I have a complaint about the delivery delay"
 },
 {
-"id": "B1-408",
+"id": "B1_061-070-53",
+"group": "B1_061-070",
 "level": "B1",
+"num": 53,
 "text": "Sorry, I'm late"
 },
 {
-"id": "B1-409",
+"id": "B1_061-070-54",
+"group": "B1_061-070",
 "level": "B1",
+"num": 54,
 "text": "I'm sorry for the misunderstanding"
 },
 {
-"id": "B1-410",
+"id": "B1_061-070-55",
+"group": "B1_061-070",
 "level": "B1",
+"num": 55,
 "text": "I'm sorry for breaking your cup"
 },
 {
-"id": "B1-411",
+"id": "B1_061-070-56",
+"group": "B1_061-070",
 "level": "B1",
+"num": 56,
 "text": "I'm sorry for the mess"
 },
 {
-"id": "B1-412",
+"id": "B1_061-070-57",
+"group": "B1_061-070",
 "level": "B1",
+"num": 57,
 "text": "I'm sorry for forgetting your birthday"
 },
 {
-"id": "B1-413",
+"id": "B1_071-080-1",
+"group": "B1_071-080",
 "level": "B1",
+"num": 1,
 "text": "I'm so sorry"
 },
 {
-"id": "B1-414",
+"id": "B1_071-080-2",
+"group": "B1_071-080",
 "level": "B1",
+"num": 2,
 "text": "No worries, it happens"
 },
 {
-"id": "B1-415",
+"id": "B1_071-080-3",
+"group": "B1_071-080",
 "level": "B1",
-"text": "Sorry,"
+"num": 3,
+"text": "Sorry"
 },
 {
-"id": "B1-416",
+"id": "B1_071-080-4",
+"group": "B1_071-080",
 "level": "B1",
+"num": 4,
 "text": "Sorry for the delay"
 },
 {
-"id": "B1-417",
+"id": "B1_071-080-5",
+"group": "B1_071-080",
 "level": "B1",
+"num": 5,
 "text": "Don't worry about it"
 },
 {
-"id": "B1-418",
+"id": "B1_071-080-6",
+"group": "B1_071-080",
 "level": "B1",
+"num": 6,
 "text": "I broke your pen"
 },
 {
-"id": "B1-419",
+"id": "B1_071-080-7",
+"group": "B1_071-080",
 "level": "B1",
+"num": 7,
 "text": "b No worries, I have another"
 },
 {
-"id": "B1-420",
+"id": "B1_071-080-8",
+"group": "B1_071-080",
 "level": "B1",
+"num": 8,
 "text": "a I broke your pen"
 },
 {
-"id": "B1-421",
+"id": "B1_071-080-9",
+"group": "B1_071-080",
 "level": "B1",
+"num": 9,
 "text": "A, sorry I'm late"
 },
 {
-"id": "B1-422",
+"id": "B1_071-080-10",
+"group": "B1_071-080",
 "level": "B1",
+"num": 10,
 "text": "B, don't worry about it"
 },
 {
-"id": "B1-423",
+"id": "B1_071-080-11",
+"group": "B1_071-080",
 "level": "B1",
+"num": 11,
 "text": "I spilled some water"
 },
 {
-"id": "B1-424",
+"id": "B1_071-080-12",
+"group": "B1_071-080",
 "level": "B1",
+"num": 12,
 "text": "No worries at all"
 },
 {
-"id": "B1-425",
+"id": "B1_071-080-13",
+"group": "B1_071-080",
 "level": "B1",
+"num": 13,
 "text": "I didn't mean to offend you"
 },
 {
-"id": "B1-426",
+"id": "B1_071-080-14",
+"group": "B1_071-080",
 "level": "B1",
+"num": 14,
 "text": "I didn't mean to interrupt your meeting"
 },
 {
-"id": "B1-427",
+"id": "B1_071-080-15",
+"group": "B1_071-080",
 "level": "B1",
+"num": 15,
 "text": "I didn't mean to step on your foot"
 },
 {
-"id": "B1-428",
+"id": "B1_071-080-16",
+"group": "B1_071-080",
 "level": "B1",
+"num": 16,
 "text": "I didn't mean to wake you up"
 },
 {
-"id": "B1-429",
+"id": "B1_071-080-17",
+"group": "B1_071-080",
 "level": "B1",
+"num": 17,
 "text": "I didn't mean to leave the door open"
 },
 {
-"id": "B1-430",
+"id": "B1_071-080-18",
+"group": "B1_071-080",
 "level": "B1",
+"num": 18,
 "text": "Relax, it's not your fault at all"
 },
 {
-"id": "B1-431",
+"id": "B1_071-080-19",
+"group": "B1_071-080",
 "level": "B1",
+"num": 19,
 "text": "Don't blame yourself, you couldn't have known"
 },
 {
-"id": "B1-432",
+"id": "B1_071-080-20",
+"group": "B1_071-080",
 "level": "B1",
+"num": 20,
 "text": "It's not your fault that the train was late"
 },
 {
-"id": "B1-433",
+"id": "B1_071-080-21",
+"group": "B1_071-080",
 "level": "B1",
-"text": "You can't help it if you're tiredYou can't help it if you're tired"
+"num": 21,
+"text": "You can't help it if you're tired"
 },
 {
-"id": "B1-434",
+"id": "B1_071-080-22",
+"group": "B1_071-080",
 "level": "B1",
+"num": 22,
 "text": "Don't worry, it's not your fault the printer broke"
 },
 {
-"id": "B1-435",
+"id": "B1_071-080-23",
+"group": "B1_071-080",
 "level": "B1",
-"text": "Have you ever been to Japan?"
+"num": 23,
+"text": "Have you ever ridden a horse"
 },
 {
-"id": "B1-436",
+"id": "B1_071-080-24",
+"group": "B1_071-080",
 "level": "B1",
-"text": "Have you ever tried Thai food?"
+"num": 24,
+"text": "Have you ever lived abroad?"
 },
 {
-"id": "B1-437",
+"id": "B1_071-080-25",
+"group": "B1_071-080",
 "level": "B1",
-"text": "Have you ever ridden a horseHave you ever lived abroad?"
+"num": 25,
+"text": "Have you ever seen the northern lights"
 },
 {
-"id": "B1-438",
+"id": "B1_071-080-26",
+"group": "B1_071-080",
 "level": "B1",
-"text": "Have you ever seen the northern lightsHave you ever seen the Northern Lights?"
+"num": 26,
+"text": "Have you ever seen the Northern Lights?"
 },
 {
-"id": "B1-439",
+"id": "B1_071-080-27",
+"group": "B1_071-080",
 "level": "B1",
+"num": 27,
 "text": "I've never tried sushi before"
 },
 {
-"id": "B1-440",
+"id": "B1_071-080-28",
+"group": "B1_071-080",
 "level": "B1",
+"num": 28,
 "text": "I've never been skydiving before"
 },
 {
-"id": "B1-441",
+"id": "B1_071-080-29",
+"group": "B1_071-080",
 "level": "B1",
+"num": 29,
 "text": "I've never driven a truck before"
 },
 {
-"id": "B1-442",
+"id": "B1_071-080-30",
+"group": "B1_071-080",
 "level": "B1",
+"num": 30,
 "text": "I've never met anyone from Chile"
 },
 {
-"id": "B1-443",
+"id": "B1_071-080-31",
+"group": "B1_071-080",
 "level": "B1",
+"num": 31,
 "text": "I've never cooked a whole meal myself"
 },
 {
-"id": "B1-444",
+"id": "B1_071-080-32",
+"group": "B1_071-080",
 "level": "B1",
+"num": 32,
 "text": "This is the first time I've ridden a motorcycle"
 },
 {
-"id": "B1-445",
+"id": "B1_071-080-33",
+"group": "B1_071-080",
 "level": "B1",
+"num": 33,
 "text": "This is the first time I've given a speech in public"
 },
 {
-"id": "B1-446",
+"id": "B1_071-080-34",
+"group": "B1_071-080",
 "level": "B1",
+"num": 34,
 "text": "This is the first time I've eaten octopus"
 },
 {
-"id": "B1-447",
+"id": "B1_071-080-35",
+"group": "B1_071-080",
 "level": "B1",
+"num": 35,
 "text": "This is the first time I visited this city"
 },
 {
-"id": "B1-448",
+"id": "B1_071-080-36",
+"group": "B1_071-080",
 "level": "B1",
+"num": 36,
 "text": "This is the first time I've baked a cake"
 },
 {
-"id": "B1-449",
+"id": "B1_071-080-37",
+"group": "B1_071-080",
 "level": "B1",
+"num": 37,
 "text": "I was really impressed by their hospitality"
 },
 {
-"id": "B1-450",
+"id": "B1_071-080-38",
+"group": "B1_071-080",
 "level": "B1",
+"num": 38,
 "text": "I was amazed by the beautiful sceneryI was amazed by the beautiful scenery"
 },
 {
-"id": "B1-451",
+"id": "B1_071-080-39",
+"group": "B1_071-080",
 "level": "B1",
+"num": 39,
 "text": "I was impressed by her English"
 },
 {
-"id": "B1-452",
+"id": "B1_071-080-40",
+"group": "B1_071-080",
 "level": "B1",
+"num": 40,
 "text": "I was amazed by the size of the building"
 },
 {
-"id": "B1-453",
+"id": "B1_071-080-41",
+"group": "B1_071-080",
 "level": "B1",
+"num": 41,
 "text": "We were amazed by the size of the building"
 },
 {
-"id": "B1-454",
+"id": "B1_071-080-42",
+"group": "B1_071-080",
 "level": "B1",
+"num": 42,
 "text": "We were impressed by the local food"
 },
 {
-"id": "B1-455",
+"id": "B1_071-080-43",
+"group": "B1_071-080",
 "level": "B1",
+"num": 43,
 "text": "It was great to meet you in person"
 },
 {
-"id": "B1-456",
+"id": "B1_071-080-44",
+"group": "B1_071-080",
 "level": "B1",
+"num": 44,
 "text": "It was nice to finally talk face to face"
 },
 {
-"id": "B1-457",
+"id": "B1_071-080-45",
+"group": "B1_071-080",
 "level": "B1",
+"num": 45,
 "text": "It was fun to learn how to surf"
 },
 {
-"id": "B1-458",
+"id": "B1_071-080-46",
+"group": "B1_071-080",
 "level": "B1",
+"num": 46,
 "text": "It was hard to say goodbye"
 },
 {
-"id": "B1-459",
+"id": "B1_071-080-47",
+"group": "B1_071-080",
 "level": "B1",
-"text": "It was easy to find the placeIt was easy to find the place"
+"num": 47,
+"text": "It was easy to find the place"
 },
 {
-"id": "B1-460",
+"id": "B1_071-080-48",
+"group": "B1_071-080",
 "level": "B1",
-"text": "I'm sure she'll pass the examI'm sure he will understand the situation"
+"num": 48,
+"text": "I'm sure she'll pass the exam"
 },
 {
-"id": "B1-461",
+"id": "B1_071-080-49",
+"group": "B1_071-080",
 "level": "B1",
+"num": 49,
+"text": "I'm sure he will understand the situation"
+},
+{
+"id": "B1_071-080-50",
+"group": "B1_071-080",
+"level": "B1",
+"num": 50,
 "text": "I'm sure they'll love the present"
 },
 {
-"id": "B1-462",
+"id": "B1_071-080-51",
+"group": "B1_071-080",
 "level": "B1",
+"num": 51,
 "text": "I'm sure the train is on time"
 },
 {
-"id": "B1-463",
+"id": "B1_071-080-52",
+"group": "B1_071-080",
 "level": "B1",
+"num": 52,
 "text": "I'm sure you'll enjoy the trip"
 },
 {
-"id": "B1-464",
+"id": "B1_071-080-53",
+"group": "B1_071-080",
 "level": "B1",
+"num": 53,
 "text": "I'm not sure if the store is open today"
 },
 {
-"id": "B1-465",
+"id": "B1_071-080-54",
+"group": "B1_071-080",
 "level": "B1",
+"num": 54,
 "text": "I'm not sure whether he will come to the meeting"
 },
 {
-"id": "B1-466",
+"id": "B1_071-080-55",
+"group": "B1_071-080",
 "level": "B1",
-"text": "I'm not sure if this bus stops at the museumI'm not sure whether we brought the keys"
+"num": 55,
+"text": "I'm not sure if this bus stops at the museum"
 },
 {
-"id": "B1-467",
+"id": "B1_071-080-56",
+"group": "B1_071-080",
 "level": "B1",
+"num": 56,
+"text": "I'm not sure whether we brought the keys"
+},
+{
+"id": "B1_071-080-57",
+"group": "B1_071-080",
+"level": "B1",
+"num": 57,
 "text": "I'm not sure if she likes spicy food"
 },
 {
-"id": "B1-468",
+"id": "B1_081-090-1",
+"group": "B1_081-090",
 "level": "B1",
+"num": 1,
 "text": "It might rain this afternoon"
 },
 {
-"id": "B1-469",
+"id": "B1_081-090-2",
+"group": "B1_081-090",
 "level": "B1",
+"num": 2,
 "text": "It could be a good opportunity for us"
 },
 {
-"id": "B1-470",
+"id": "B1_081-090-3",
+"group": "B1_081-090",
 "level": "B1",
+"num": 3,
 "text": "It might snow tonight"
 },
 {
-"id": "B1-471",
+"id": "B1_081-090-4",
+"group": "B1_081-090",
 "level": "B1",
+"num": 4,
 "text": "This could take longer than we think"
 },
 {
-"id": "B1-472",
+"id": "B1_081-090-5",
+"group": "B1_081-090",
 "level": "B1",
+"num": 5,
 "text": "It could take longer than we think"
 },
 {
-"id": "B1-473",
+"id": "B1_081-090-6",
+"group": "B1_081-090",
 "level": "B1",
+"num": 6,
 "text": "In online, it might be cheaper to book online"
 },
 {
-"id": "B1-474",
+"id": "B1_081-090-7",
+"group": "B1_081-090",
 "level": "B1",
+"num": 7,
 "text": "It might be cheaper to book online"
 },
 {
-"id": "B1-475",
+"id": "B1_081-090-8",
+"group": "B1_081-090",
 "level": "B1",
+"num": 8,
 "text": "I'm not sure where I left my keys"
 },
 {
-"id": "B1-476",
+"id": "B1_081-090-9",
+"group": "B1_081-090",
 "level": "B1",
+"num": 9,
 "text": "I'm not sure what time the train arrives"
 },
 {
-"id": "B1-477",
+"id": "B1_081-090-10",
+"group": "B1_081-090",
 "level": "B1",
+"num": 10,
 "text": "I'm not sure who sent this message"
 },
 {
-"id": "B1-478",
+"id": "B1_081-090-11",
+"group": "B1_081-090",
 "level": "B1",
+"num": 11,
 "text": "I'm not sure what to do next"
 },
 {
-"id": "B1-479",
+"id": "B1_081-090-12",
+"group": "B1_081-090",
 "level": "B1",
+"num": 12,
 "text": "I'm not sure where to park the car"
 },
 {
-"id": "B1-480",
+"id": "B1_081-090-13",
+"group": "B1_081-090",
 "level": "B1",
+"num": 13,
 "text": "There's a chance the flight will be delayed"
 },
 {
-"id": "B1-481",
+"id": "B1_081-090-14",
+"group": "B1_081-090",
 "level": "B1",
+"num": 14,
 "text": "He possibly forgot about the appointment"
 },
 {
-"id": "B1-482",
+"id": "B1_081-090-15",
+"group": "B1_081-090",
 "level": "B1",
+"num": 15,
 "text": "There's a chance that he forgot about the appointment"
 },
 {
-"id": "B1-483",
+"id": "B1_081-090-16",
+"group": "B1_081-090",
 "level": "B1",
+"num": 16,
 "text": "There's a chance it will sell out"
 },
 {
-"id": "B1-484",
+"id": "B1_081-090-17",
+"group": "B1_081-090",
 "level": "B1",
-"text": "They may cancel this classThere's a chance they'll cancel the class"
+"num": 17,
+"text": "They may cancel this class"
 },
 {
-"id": "B1-485",
+"id": "B1_081-090-18",
+"group": "B1_081-090",
 "level": "B1",
+"num": 18,
 "text": "There's a chance they'll cancel the class"
 },
 {
-"id": "B1-486",
+"id": "B1_081-090-19",
+"group": "B1_081-090",
 "level": "B1",
+"num": 19,
 "text": "We have a chance to get a refund"
 },
 {
-"id": "B1-487",
+"id": "B1_081-090-20",
+"group": "B1_081-090",
 "level": "B1",
+"num": 20,
 "text": "There's a chance we'll get a refund"
 },
 {
-"id": "B1-488",
+"id": "B1_081-090-21",
+"group": "B1_081-090",
 "level": "B1",
+"num": 21,
 "text": "I'm late because I missed the bus"
 },
 {
-"id": "B1-489",
+"id": "B1_081-090-22",
+"group": "B1_081-090",
 "level": "B1",
+"num": 22,
 "text": "She resigned because she wanted a career change"
 },
 {
-"id": "B1-490",
+"id": "B1_081-090-23",
+"group": "B1_081-090",
 "level": "B1",
+"num": 23,
 "text": "We left early because it started to rain"
 },
 {
-"id": "B1-491",
+"id": "B1_081-090-24",
+"group": "B1_081-090",
 "level": "B1",
+"num": 24,
 "text": "The reason we left early is that it started to rain"
 },
 {
-"id": "B1-492",
+"id": "B1_081-090-25",
+"group": "B1_081-090",
 "level": "B1",
+"num": 25,
 "text": "He is tired because he didn't sleep well"
 },
 {
-"id": "B1-493",
+"id": "B1_081-090-26",
+"group": "B1_081-090",
 "level": "B1",
+"num": 26,
 "text": "The reason he's tired is that he didn't sleep well"
 },
 {
-"id": "B1-494",
+"id": "B1_081-090-27",
+"group": "B1_081-090",
 "level": "B1",
+"num": 27,
 "text": "I called because I need your help"
 },
 {
-"id": "B1-495",
+"id": "B1_081-090-28",
+"group": "B1_081-090",
 "level": "B1",
+"num": 28,
 "text": "Because of the heavy rain, the game was cancelled"
 },
 {
-"id": "B1-496",
+"id": "B1_081-090-29",
+"group": "B1_081-090",
 "level": "B1",
+"num": 29,
 "text": "Because traffic jam, we were late for the movie"
 },
 {
-"id": "B1-497",
+"id": "B1_081-090-30",
+"group": "B1_081-090",
 "level": "B1",
-"text": "Because storm, the ferry was cancelledBecause of the storm, the ferry was cancelled"
+"num": 30,
+"text": "Because storm, the ferry was cancelled"
 },
 {
-"id": "B1-498",
+"id": "B1_081-090-31",
+"group": "B1_081-090",
 "level": "B1",
+"num": 31,
+"text": "Because of the storm, the ferry was cancelled"
+},
+{
+"id": "B1_081-090-32",
+"group": "B1_081-090",
+"level": "B1",
+"num": 32,
 "text": "Because of illness, she stayed home"
 },
 {
-"id": "B1-499",
+"id": "B1_081-090-33",
+"group": "B1_081-090",
 "level": "B1",
+"num": 33,
 "text": "Due to illness, she stayed home"
 },
 {
-"id": "B1-500",
+"id": "B1_081-090-34",
+"group": "B1_081-090",
 "level": "B1",
-"text": "Because of the holiday, the shop was closed"
-},
-{
-"id": "B1-501",
-"level": "B1",
+"num": 34,
 "text": "I missed the bus, so I was late for work"
 },
 {
-"id": "B1-502",
+"id": "B1_081-090-35",
+"group": "B1_081-090",
 "level": "B1",
+"num": 35,
 "text": "The road was closed, so we had to take a detour"
 },
 {
-"id": "B1-503",
+"id": "B1_081-090-36",
+"group": "B1_081-090",
 "level": "B1",
+"num": 36,
 "text": "It was raining, so we stayed home"
 },
 {
-"id": "B1-504",
+"id": "B1_081-090-37",
+"group": "B1_081-090",
 "level": "B1",
+"num": 37,
 "text": "He was hungry, so he made a sandwich"
 },
 {
-"id": "B1-505",
+"id": "B1_081-090-38",
+"group": "B1_081-090",
 "level": "B1",
+"num": 38,
 "text": "The shop was full, so we went elsewhere"
 },
 {
-"id": "B1-506",
+"id": "B1_081-090-39",
+"group": "B1_081-090",
 "level": "B1",
+"num": 39,
 "text": "She studied hard in order to get into a good university"
 },
 {
-"id": "B1-507",
+"id": "B1_081-090-40",
+"group": "B1_081-090",
 "level": "B1",
+"num": 40,
 "text": "He saved money in order to buy a car"
 },
 {
-"id": "B1-508",
+"id": "B1_081-090-41",
+"group": "B1_081-090",
 "level": "B1",
+"num": 41,
 "text": "They early"
 },
 {
-"id": "B1-509",
+"id": "B1_081-090-42",
+"group": "B1_081-090",
 "level": "B1",
+"num": 42,
 "text": "They left early in order to catch the train"
 },
 {
-"id": "B1-510",
+"id": "B1_081-090-43",
+"group": "B1_081-090",
 "level": "B1",
+"num": 43,
 "text": "I'm writing this down so as to remember it"
 },
 {
-"id": "B1-511",
+"id": "B1_081-090-44",
+"group": "B1_081-090",
 "level": "B1",
-"text": "We practiced every day in order to win the matchHe did it on purpose, not by accident"
+"num": 44,
+"text": "We practiced every day in order to win the match"
 },
 {
-"id": "B1-512",
+"id": "B1_081-090-45",
+"group": "B1_081-090",
 "level": "B1",
+"num": 45,
+"text": "He did it on purpose, not by accident"
+},
+{
+"id": "B1_081-090-46",
+"group": "B1_081-090",
+"level": "B1",
+"num": 46,
 "text": "She deleted the file by mistake"
 },
 {
-"id": "B1-513",
+"id": "B1_081-090-47",
+"group": "B1_081-090",
 "level": "B1",
+"num": 47,
 "text": "I spilled the coffee by accident"
 },
 {
-"id": "B1-514",
+"id": "B1_081-090-48",
+"group": "B1_081-090",
 "level": "B1",
+"num": 48,
 "text": "He broke the window on purpose"
 },
 {
-"id": "B1-515",
+"id": "B1_081-090-49",
+"group": "B1_081-090",
 "level": "B1",
+"num": 49,
 "text": "I took your umbrella by mistake"
 },
 {
-"id": "B1-516",
+"id": "B1_081-090-50",
+"group": "B1_081-090",
 "level": "B1",
+"num": 50,
 "text": "You look pale"
 },
 {
-"id": "B1-517",
+"id": "B1_081-090-51",
+"group": "B1_081-090",
 "level": "B1",
+"num": 51,
 "text": "Are you feeling okay?"
 },
 {
-"id": "B1-518",
+"id": "B1_081-090-52",
+"group": "B1_081-090",
 "level": "B1",
-"text": "You look tired"
-},
-{
-"id": "B1-519",
-"level": "B1",
-"text": "How do you feel today?"
-},
-{
-"id": "B1-520",
-"level": "B1",
+"num": 52,
 "text": "Rest after you have any better?"
 },
 {
-"id": "B1-521",
+"id": "B1_081-090-53",
+"group": "B1_081-090",
 "level": "B1",
+"num": 53,
 "text": "How do you feel about the news?"
 },
 {
-"id": "B1-522",
+"id": "B1_081-090-54",
+"group": "B1_081-090",
 "level": "B1",
-"text": "You look sickAre you feeling okay?"
+"num": 54,
+"text": "You look sick"
 },
 {
-"id": "B1-523",
+"id": "B1_081-090-55",
+"group": "B1_081-090",
 "level": "B1",
+"num": 55,
 "text": "I have a headache and a sore throat"
 },
 {
-"id": "B1-524",
+"id": "B1_081-090-56",
+"group": "B1_081-090",
 "level": "B1",
+"num": 56,
 "text": "She has a fever and a cough"
 },
 {
-"id": "B1-525",
+"id": "B1_081-090-57",
+"group": "B1_081-090",
 "level": "B1",
+"num": 57,
 "text": "I have a stomachache after lunch"
 },
 {
-"id": "B1-526",
+"id": "B1_081-090-58",
+"group": "B1_081-090",
 "level": "B1",
+"num": 58,
 "text": "He has a cold and feels dizzy"
 },
 {
-"id": "B1-527",
+"id": "B1_081-090-59",
+"group": "B1_081-090",
 "level": "B1",
+"num": 59,
 "text": "I have a backache from sitting too long"
 },
 {
-"id": "B1-528",
+"id": "B1_091-100-1",
+"group": "B1_091-100",
 "level": "B1",
+"num": 1,
 "text": "You should drink more water and get some rest"
 },
 {
-"id": "B1-529",
+"id": "B1_091-100-2",
+"group": "B1_091-100",
 "level": "B1",
+"num": 2,
 "text": "You should see a doctor if it doesn't get better"
 },
 {
-"id": "B1-530",
+"id": "B1_091-100-3",
+"group": "B1_091-100",
 "level": "B1",
+"num": 3,
 "text": "You should try the local food"
 },
 {
-"id": "B1-531",
+"id": "B1_091-100-4",
+"group": "B1_091-100",
 "level": "B1",
+"num": 4,
 "text": "You shouldn't stay up so late"
 },
 {
-"id": "B1-532",
+"id": "B1_091-100-5",
+"group": "B1_091-100",
 "level": "B1",
-"text": "emailYou should check your email before the meeting"
+"num": 5,
+"text": "email"
 },
 {
-"id": "B1-533",
+"id": "B1_091-100-6",
+"group": "B1_091-100",
 "level": "B1",
+"num": 6,
 "text": "You should check your email before the meeting"
 },
 {
-"id": "B1-534",
+"id": "B1_091-100-7",
+"group": "B1_091-100",
 "level": "B1",
+"num": 7,
 "text": "I must complete this report before tomorrow"
 },
 {
-"id": "B1-535",
+"id": "B1_091-100-8",
+"group": "B1_091-100",
 "level": "B1",
+"num": 8,
 "text": "I have to finish this report by tomorrow"
 },
 {
-"id": "B1-536",
+"id": "B1_091-100-9",
+"group": "B1_091-100",
 "level": "B1",
+"num": 9,
 "text": "He's got to leave early today to pick up his kids"
 },
 {
-"id": "B1-537",
+"id": "B1_091-100-10",
+"group": "B1_091-100",
 "level": "B1",
-"text": "I have to catch the eight o'clock trainShe's got to study for her exam"
+"num": 10,
+"text": "I have to catch the eight o'clock train"
 },
 {
-"id": "B1-538",
+"id": "B1_091-100-11",
+"group": "B1_091-100",
 "level": "B1",
+"num": 11,
+"text": "She's got to study for her exam"
+},
+{
+"id": "B1_091-100-12",
+"group": "B1_091-100",
+"level": "B1",
+"num": 12,
 "text": "We have to be quiet in the library"
 },
 {
-"id": "B1-539",
+"id": "B1_091-100-13",
+"group": "B1_091-100",
 "level": "B1",
+"num": 13,
 "text": "Is it worth buying the expensive version?"
 },
 {
-"id": "B1-540",
+"id": "B1_091-100-14",
+"group": "B1_091-100",
 "level": "B1",
+"num": 14,
 "text": "Is it worth buying the expensive|If you have time, that museum is worth visiting"
 },
 {
-"id": "B1-541",
+"id": "B1_091-100-15",
+"group": "B1_091-100",
 "level": "B1",
+"num": 15,
 "text": "It's not worth waiting in the rain"
 },
 {
-"id": "B1-542",
+"id": "B1_091-100-16",
+"group": "B1_091-100",
 "level": "B1",
+"num": 16,
 "text": "This book is worth reading"
 },
 {
-"id": "B1-543",
+"id": "B1_091-100-17",
+"group": "B1_091-100",
 "level": "B1",
+"num": 17,
 "text": "This price worth?"
 },
 {
-"id": "B1-544",
+"id": "B1_091-100-18",
+"group": "B1_091-100",
 "level": "B1",
+"num": 18,
 "text": "Is it worth the price?"
 },
 {
-"id": "B1-545",
+"id": "B1_091-100-19",
+"group": "B1_091-100",
 "level": "B1",
+"num": 19,
 "text": "Have you tried that new language app?"
 },
 {
-"id": "B1-546",
+"id": "B1_091-100-20",
+"group": "B1_091-100",
 "level": "B1",
-"text": "Have you tried this restaurantIt's really good"
+"num": 20,
+"text": "Have you tried this restaurant"
 },
 {
-"id": "B1-547",
+"id": "B1_091-100-21",
+"group": "B1_091-100",
 "level": "B1",
+"num": 21,
+"text": "It's really good"
+},
+{
+"id": "B1_091-100-22",
+"group": "B1_091-100",
+"level": "B1",
+"num": 22,
 "text": "Have you tried this restaurant?"
 },
 {
-"id": "B1-548",
+"id": "B1_091-100-23",
+"group": "B1_091-100",
 "level": "B1",
+"num": 23,
 "text": "You tried turning it off and on again?"
 },
 {
-"id": "B1-549",
+"id": "B1_091-100-24",
+"group": "B1_091-100",
 "level": "B1",
+"num": 24,
 "text": "Have you tried turning it off and on again?"
 },
 {
-"id": "B1-550",
+"id": "B1_091-100-25",
+"group": "B1_091-100",
 "level": "B1",
+"num": 25,
 "text": "Have you tried walking instead of driving?"
 },
 {
-"id": "B1-551",
+"id": "B1_091-100-26",
+"group": "B1_091-100",
 "level": "B1",
+"num": 26,
 "text": "Have you tried calling her number?"
 },
 {
-"id": "B1-552",
+"id": "B1_091-100-27",
+"group": "B1_091-100",
 "level": "B1",
+"num": 27,
 "text": "It's easy to learn if you practice every day"
 },
 {
-"id": "B1-553",
+"id": "B1_091-100-28",
+"group": "B1_091-100",
 "level": "B1",
+"num": 28,
 "text": "In this city, finding a job is difficult"
 },
 {
-"id": "B1-554",
+"id": "B1_091-100-29",
+"group": "B1_091-100",
 "level": "B1",
+"num": 29,
 "text": "It's difficult to find a job in this city"
 },
 {
-"id": "B1-555",
+"id": "B1_091-100-30",
+"group": "B1_091-100",
 "level": "B1",
+"num": 30,
 "text": "Received old friend's message, it's nice to hear from an old friend"
 },
 {
-"id": "B1-556",
+"id": "B1_091-100-31",
+"group": "B1_091-100",
 "level": "B1",
+"num": 31,
 "text": "Eat breakfast is important"
 },
 {
-"id": "B1-557",
+"id": "B1_091-100-32",
+"group": "B1_091-100",
 "level": "B1",
+"num": 32,
 "text": "It's important to eat breakfast"
 },
 {
-"id": "B1-558",
+"id": "B1_091-100-33",
+"group": "B1_091-100",
 "level": "B1",
-"text": "InIt's hard to park near the station"
+"num": 33,
+"text": "In"
 },
 {
-"id": "B1-559",
+"id": "B1_091-100-34",
+"group": "B1_091-100",
 "level": "B1",
-"text": "I rely on my phone for navigationMany students rely on the library for studying"
+"num": 34,
+"text": "It's hard to park near the station"
 },
 {
-"id": "B1-560",
+"id": "B1_091-100-35",
+"group": "B1_091-100",
 "level": "B1",
-"text": "He relies on Zizi to help with the childShe relies on her sister for help with the kids"
+"num": 35,
+"text": "I rely on my phone for navigation"
 },
 {
-"id": "B1-561",
+"id": "B1_091-100-36",
+"group": "B1_091-100",
 "level": "B1",
+"num": 36,
+"text": "Many students rely on the library for studying"
+},
+{
+"id": "B1_091-100-37",
+"group": "B1_091-100",
+"level": "B1",
+"num": 37,
+"text": "He relies on Zizi to help with the child"
+},
+{
+"id": "B1_091-100-38",
+"group": "B1_091-100",
+"level": "B1",
+"num": 38,
+"text": "She relies on her sister for help with the kids"
+},
+{
+"id": "B1_091-100-39",
+"group": "B1_091-100",
+"level": "B1",
+"num": 39,
 "text": "We rely on the bus for getting to work"
 },
 {
-"id": "B1-562",
+"id": "B1_091-100-40",
+"group": "B1_091-100",
 "level": "B1",
+"num": 40,
 "text": "He relies on coffee for staying awake"
 },
 {
-"id": "B1-563",
+"id": "B1_091-100-41",
+"group": "B1_091-100",
 "level": "B1",
+"num": 41,
 "text": "How do you like the new phone?"
 },
 {
-"id": "B1-564",
+"id": "B1_091-100-42",
+"group": "B1_091-100",
 "level": "B1",
+"num": 42,
 "text": "How do you like the new teachers so far?"
 },
 {
-"id": "B1-565",
+"id": "B1_091-100-43",
+"group": "B1_091-100",
 "level": "B1",
+"num": 43,
 "text": "How do you like the weather here?"
 },
 {
-"id": "B1-566",
+"id": "B1_091-100-44",
+"group": "B1_091-100",
 "level": "B1",
+"num": 44,
 "text": "How do you like the new coffee machine?"
 },
 {
-"id": "B1-567",
+"id": "B1_091-100-45",
+"group": "B1_091-100",
 "level": "B1",
+"num": 45,
 "text": "How do you like your new glasses?"
 },
 {
-"id": "B1-568",
+"id": "B1_091-100-46",
+"group": "B1_091-100",
 "level": "B1",
+"num": 46,
 "text": "I'm really into photography lately"
 },
 {
-"id": "B1-569",
+"id": "B1_091-100-47",
+"group": "B1_091-100",
 "level": "B1",
+"num": 47,
 "text": "He's really into fitness and working out"
 },
 {
-"id": "B1-570",
+"id": "B1_091-100-48",
+"group": "B1_091-100",
 "level": "B1",
+"num": 48,
 "text": "She's into painting and drawing"
 },
 {
-"id": "B1-571",
+"id": "B1_091-100-49",
+"group": "B1_091-100",
 "level": "B1",
+"num": 49,
 "text": "I'm into healthy eating these days"
 },
 {
-"id": "B1-572",
+"id": "B1_091-100-50",
+"group": "B1_091-100",
 "level": "B1",
+"num": 50,
 "text": "They're into board games"
 },
 {
-"id": "B1-573",
+"id": "B1_091-100-51",
+"group": "B1_091-100",
 "level": "B1",
+"num": 51,
 "text": "I was wondering if you could help me with this"
 },
 {
-"id": "B1-574",
+"id": "B1_091-100-52",
+"group": "B1_091-100",
 "level": "B1",
+"num": 52,
 "text": "I was wondering if you could recommend a good restaurant"
 },
 {
-"id": "B1-575",
+"id": "B1_091-100-53",
+"group": "B1_091-100",
 "level": "B1",
+"num": 53,
 "text": "I was wondering if we could meet a bit earlierI was wondering if we could meet a bit earlier"
 },
 {
-"id": "B1-576",
+"id": "B1_091-100-54",
+"group": "B1_091-100",
 "level": "B1",
+"num": 54,
 "text": "I was wondering if you could lend me your bookI was wondering if she could join us"
 },
 {
-"id": "B1-577",
+"id": "B1_091-100-55",
+"group": "B1_091-100",
 "level": "B1",
+"num": 55,
 "text": "To be fair, he did try his best"
 },
 {
-"id": "B1-578",
+"id": "B1_091-100-56",
+"group": "B1_091-100",
 "level": "B1",
-"text": "To be fair, he did try his best"
-},
-{
-"id": "B1-579",
-"level": "B1",
+"num": 56,
 "text": "To be fair, the weather wasn't great during our trip"
 },
 {
-"id": "B1-580",
+"id": "B1_091-100-57",
+"group": "B1_091-100",
 "level": "B1",
+"num": 57,
 "text": "To be fair, the test was quite hard"
 },
 {
-"id": "B1-581",
+"id": "B1_091-100-58",
+"group": "B1_091-100",
 "level": "B1",
+"num": 58,
 "text": "Fair, she didn't know the rule"
 },
 {
-"id": "B1-582",
+"id": "B1_091-100-59",
+"group": "B1_091-100",
 "level": "B1",
+"num": 59,
 "text": "To be fair, she didn't know the rule"
 },
 {
-"id": "B1-583",
+"id": "B1_091-100-60",
+"group": "B1_091-100",
 "level": "B1",
+"num": 60,
 "text": "To be fair, the food was not bad"
 },
 {
-"id": "B1-584",
+"id": "B1_101-104-1",
+"group": "B1_101-104",
 "level": "B1",
+"num": 1,
 "text": "Long story short, we got lost and missed the concert"
 },
 {
-"id": "B1-585",
+"id": "B1_101-104-2",
+"group": "B1_101-104",
 "level": "B1",
+"num": 2,
 "text": "Long story short, we decided to go with the cheaper option"
 },
 {
-"id": "B1-586",
+"id": "B1_101-104-3",
+"group": "B1_101-104",
 "level": "B1",
+"num": 3,
 "text": "Long story short, the flight was cancelled"
 },
 {
-"id": "B1-587",
+"id": "B1_101-104-4",
+"group": "B1_101-104",
 "level": "B1",
+"num": 4,
 "text": "Long story short, I missed the deadline"
 },
 {
-"id": "B1-588",
+"id": "B1_101-104-5",
+"group": "B1_101-104",
 "level": "B1",
-"text": "Long story short, I missed the deadline"
-},
-{
-"id": "B1-589",
-"level": "B1",
+"num": 5,
 "text": "Long story short, they got married"
 },
 {
-"id": "B1-590",
+"id": "B1_101-104-6",
+"group": "B1_101-104",
 "level": "B1",
+"num": 6,
 "text": "He's a bit hard to understand, you know what I mean?"
 },
 {
-"id": "B1-591",
+"id": "B1_101-104-7",
+"group": "B1_101-104",
 "level": "B1",
+"num": 7,
 "text": "She's very particular about details, you know what I mean?"
 },
 {
-"id": "B1-592",
+"id": "B1_101-104-8",
+"group": "B1_101-104",
 "level": "B1",
+"num": 8,
 "text": "She's very particular about details"
 },
 {
-"id": "B1-593",
+"id": "B1_101-104-9",
+"group": "B1_101-104",
 "level": "B1",
+"num": 9,
 "text": "That place was super crowded"
 },
 {
-"id": "B1-594",
+"id": "B1_101-104-10",
+"group": "B1_101-104",
 "level": "B1",
+"num": 10,
 "text": "The place was super crowded"
 },
 {
-"id": "B1-595",
+"id": "B1_101-104-11",
+"group": "B1_101-104",
 "level": "B1",
+"num": 11,
 "text": "It was a total disaster"
 },
 {
-"id": "B1-596",
+"id": "B1_101-104-12",
+"group": "B1_101-104",
 "level": "B1",
+"num": 12,
 "text": "He always late"
 },
 {
-"id": "B1-597",
+"id": "B1_101-104-13",
+"group": "B1_101-104",
 "level": "B1",
-"text": "You know what I meanHe's always late"
+"num": 13,
+"text": "You know what I mean"
 },
 {
-"id": "B1-598",
+"id": "B1_101-104-14",
+"group": "B1_101-104",
 "level": "B1",
+"num": 14,
+"text": "He's always late"
+},
+{
+"id": "B1_101-104-15",
+"group": "B1_101-104",
+"level": "B1",
+"num": 15,
 "text": "No offense, but I think your plan needs more work"
 },
 {
-"id": "B1-599",
+"id": "B1_101-104-16",
+"group": "B1_101-104",
 "level": "B1",
-"text": "No offense, but I think that color doesn't suit youNo offense, but I think that color doesn't suit you"
+"num": 16,
+"text": "No offense, but I think that color doesn't suit you"
 },
 {
-"id": "B1-600",
+"id": "B1_101-104-17",
+"group": "B1_101-104",
 "level": "B1",
+"num": 17,
 "text": "No offense, but I think you're wrong about this"
 },
 {
-"id": "B1-601",
+"id": "B1_101-104-18",
+"group": "B1_101-104",
 "level": "B1",
+"num": 18,
 "text": "No offense, but the food was a bit salty"
 },
 {
-"id": "B1-602",
+"id": "B1_101-104-19",
+"group": "B1_101-104",
 "level": "B1",
-"text": "No offense, but I'll choose anotherNo offense, but I'd choose the other one"
+"num": 19,
+"text": "No offense, but I'll choose another"
 },
 {
-"id": "B1-603",
+"id": "B1_101-104-20",
+"group": "B1_101-104",
 "level": "B1",
+"num": 20,
+"text": "No offense, but I'd choose the other one"
+},
+{
+"id": "B1_101-104-21",
+"group": "B1_101-104",
+"level": "B1",
+"num": 21,
 "text": "Bottom line, we need more time to finish this"
 },
 {
-"id": "B1-604",
+"id": "B1_101-104-22",
+"group": "B1_101-104",
 "level": "B1",
+"num": 22,
 "text": "Bottom line, we can't afford to wait any longer"
 },
 {
-"id": "B1-605",
+"id": "B1_101-104-23",
+"group": "B1_101-104",
 "level": "B1",
+"num": 23,
 "text": "Bottom line, the project is too expensive"
 },
 {
-"id": "B1-606",
+"id": "B1_101-104-24",
+"group": "B1_101-104",
 "level": "B1",
+"num": 24,
 "text": "Bottom line, we should cancel the trip"
 },
 {
-"id": "B1-607",
+"id": "B1_101-104-25",
+"group": "B1_101-104",
 "level": "B1",
+"num": 25,
 "text": "Bottom line, he's the best person for the job"
 },
 {
-"id": "B2-1",
+"id": "B2_001-010-1",
+"group": "B2_001-010",
 "level": "B2",
+"num": 1,
 "text": "If I had studied harder, I would have passed the exam"
 },
 {
-"id": "B2-2",
+"id": "B2_001-010-2",
+"group": "B2_001-010",
 "level": "B2",
+"num": 2,
 "text": "If she had left earlier, she would have caught the train"
 },
 {
-"id": "B2-3",
+"id": "B2_001-010-3",
+"group": "B2_001-010",
 "level": "B2",
+"num": 3,
 "text": "If we had left on time, we would not have missed the opening"
 },
 {
-"id": "B2-4",
+"id": "B2_001-010-4",
+"group": "B2_001-010",
 "level": "B2",
-"text": "If he had taken the medicine, he would have recoveredIf he had taken the medicine, he would have recovered faster"
+"num": 4,
+"text": "If he had taken the medicine, he would have recovered"
 },
 {
-"id": "B2-5",
+"id": "B2_001-010-5",
+"group": "B2_001-010",
 "level": "B2",
-"text": "If they had booked the ticket earlier, they would have got a better seatIf they had booked earlier, they would have gotten better seats"
+"num": 5,
+"text": "If he had taken the medicine, he would have recovered faster"
 },
 {
-"id": "B2-6",
+"id": "B2_001-010-6",
+"group": "B2_001-010",
 "level": "B2",
-"text": "If I were you, I would have apologizedIf I were you, I would have apologized right away"
+"num": 6,
+"text": "If they had booked the ticket earlier, they would have got a better seat"
 },
 {
-"id": "B2-7",
+"id": "B2_001-010-7",
+"group": "B2_001-010",
 "level": "B2",
-"text": "If I were you, I would have taken that job offerIf I were you, I would have taken that job offer"
+"num": 7,
+"text": "If they had booked earlier, they would have gotten better seats"
 },
 {
-"id": "B2-8",
+"id": "B2_001-010-8",
+"group": "B2_001-010",
 "level": "B2",
+"num": 8,
+"text": "If I were you, I would have apologized"
+},
+{
+"id": "B2_001-010-9",
+"group": "B2_001-010",
+"level": "B2",
+"num": 9,
+"text": "If I were you, I would have apologized right away"
+},
+{
+"id": "B2_001-010-10",
+"group": "B2_001-010",
+"level": "B2",
+"num": 10,
+"text": "If I were you, I would have taken that job offer"
+},
+{
+"id": "B2_001-010-11",
+"group": "B2_001-010",
+"level": "B2",
+"num": 11,
 "text": "If I were you, I would have double checked the figures"
 },
 {
-"id": "B2-9",
+"id": "B2_001-010-12",
+"group": "B2_001-010",
 "level": "B2",
+"num": 12,
 "text": "If I were you, I would have asked for a raise long ago"
 },
 {
-"id": "B2-10",
+"id": "B2_001-010-13",
+"group": "B2_001-010",
 "level": "B2",
+"num": 13,
 "text": "If I were you, I would have read the contract more carefully"
 },
 {
-"id": "B2-11",
+"id": "B2_001-010-14",
+"group": "B2_001-010",
 "level": "B2",
+"num": 14,
 "text": "I wish I had not missed that flight"
 },
 {
-"id": "B2-12",
+"id": "B2_001-010-15",
+"group": "B2_001-010",
 "level": "B2",
+"num": 15,
 "text": "I wish I had listened to your advice"
 },
 {
-"id": "B2-13",
+"id": "B2_001-010-16",
+"group": "B2_001-010",
 "level": "B2",
+"num": 16,
 "text": "I wish I had saved more money when I was younger"
 },
 {
-"id": "B2-14",
+"id": "B2_001-010-17",
+"group": "B2_001-010",
 "level": "B2",
+"num": 17,
 "text": "I wish we had taken that trip together"
 },
 {
-"id": "B2-15",
+"id": "B2_001-010-18",
+"group": "B2_001-010",
 "level": "B2",
+"num": 18,
 "text": "I wish he had told me the truth earlier"
 },
 {
-"id": "B2-16",
+"id": "B2_001-010-19",
+"group": "B2_001-010",
 "level": "B2",
+"num": 19,
 "text": "If I had known there would be a traffic jam, I would have left earlier"
 },
 {
-"id": "B2-17",
+"id": "B2_001-010-20",
+"group": "B2_001-010",
 "level": "B2",
+"num": 20,
 "text": "Had I known about the traffic, I would have left earlier"
 },
 {
-"id": "B2-18",
+"id": "B2_001-010-21",
+"group": "B2_001-010",
 "level": "B2",
+"num": 21,
 "text": "If it rained, we would have canceled the trip"
 },
 {
-"id": "B2-19",
+"id": "B2_001-010-22",
+"group": "B2_001-010",
 "level": "B2",
+"num": 22,
 "text": "Had it rained, we would have cancelled the trip"
 },
 {
-"id": "B2-20",
+"id": "B2_001-010-23",
+"group": "B2_001-010",
 "level": "B2",
+"num": 23,
 "text": "If she had studied abroad, she would have learned a second language"
 },
 {
-"id": "B2-21",
+"id": "B2_001-010-24",
+"group": "B2_001-010",
 "level": "B2",
+"num": 24,
 "text": "Had she studied abroad, she would have learned a second language"
 },
 {
-"id": "B2-22",
+"id": "B2_001-010-25",
+"group": "B2_001-010",
 "level": "B2",
+"num": 25,
 "text": "If they had invested early, they would have made a fortune"
 },
 {
-"id": "B2-23",
+"id": "B2_001-010-26",
+"group": "B2_001-010",
 "level": "B2",
+"num": 26,
 "text": "If I saw that sign, I would have turned left"
 },
 {
-"id": "B2-24",
+"id": "B2_001-010-27",
+"group": "B2_001-010",
 "level": "B2",
+"num": 27,
 "text": "It's high time we made a decision on this"
 },
 {
-"id": "B2-25",
+"id": "B2_001-010-28",
+"group": "B2_001-010",
 "level": "B2",
+"num": 28,
 "text": "It's high time he stopped procrastinating"
 },
 {
-"id": "B2-26",
+"id": "B2_001-010-29",
+"group": "B2_001-010",
 "level": "B2",
-"text": "It's high time the government addressed the housing crisisIt's high time the government addressed the housing crisis"
+"num": 29,
+"text": "It's high time the government addressed the housing crisis"
 },
 {
-"id": "B2-27",
+"id": "B2_001-010-30",
+"group": "B2_001-010",
 "level": "B2",
+"num": 30,
 "text": "We've"
 },
 {
-"id": "B2-28",
+"id": "B2_001-010-31",
+"group": "B2_001-010",
 "level": "B2",
+"num": 31,
 "text": "It's time we stopped making excuses"
 },
 {
-"id": "B2-29",
+"id": "B2_001-010-32",
+"group": "B2_001-010",
 "level": "B2",
-"text": "It's time we stopped making excusesYou"
+"num": 32,
+"text": "You"
 },
 {
-"id": "B2-30",
+"id": "B2_001-010-33",
+"group": "B2_001-010",
 "level": "B2",
+"num": 33,
 "text": "It's high time you found a job you actually enjoy"
 },
 {
-"id": "B2-31",
+"id": "B2_001-010-34",
+"group": "B2_001-010",
 "level": "B2",
+"num": 34,
 "text": "He must have been exhausted after the marathon"
 },
 {
-"id": "B2-32",
+"id": "B2_001-010-35",
+"group": "B2_001-010",
 "level": "B2",
+"num": 35,
 "text": "She must have forgotten about our meeting"
 },
 {
-"id": "B2-33",
+"id": "B2_001-010-36",
+"group": "B2_001-010",
 "level": "B2",
+"num": 36,
 "text": "They must have spent a fortune on that wedding"
 },
 {
-"id": "B2-34",
+"id": "B2_001-010-37",
+"group": "B2_001-010",
 "level": "B2",
+"num": 37,
 "text": "She must have misunderstood my instructions"
 },
 {
-"id": "B2-35",
+"id": "B2_001-010-38",
+"group": "B2_001-010",
 "level": "B2",
+"num": 38,
 "text": "The team must have practiced for weeks to perform like that"
 },
 {
-"id": "B2-36",
+"id": "B2_001-010-39",
+"group": "B2_001-010",
 "level": "B2",
+"num": 39,
 "text": "She can't have forgotten our appointment"
 },
 {
-"id": "B2-37",
+"id": "B2_001-010-40",
+"group": "B2_001-010",
 "level": "B2",
-"text": "He cannot have forgotten ourHe can't have finished the project already"
+"num": 40,
+"text": "He cannot have forgotten our"
 },
 {
-"id": "B2-38",
+"id": "B2_001-010-41",
+"group": "B2_001-010",
 "level": "B2",
+"num": 41,
 "text": "He can't have finished the project already"
 },
 {
-"id": "B2-39",
+"id": "B2_001-010-42",
+"group": "B2_001-010",
 "level": "B2",
+"num": 42,
 "text": "He can't have written this report in one night"
 },
 {
-"id": "B2-40",
+"id": "B2_001-010-43",
+"group": "B2_001-010",
 "level": "B2",
+"num": 43,
 "text": "They can't have sold all the tickets already"
 },
 {
-"id": "B2-41",
+"id": "B2_001-010-44",
+"group": "B2_001-010",
 "level": "B2",
+"num": 44,
 "text": "She can't have known about the surprise party"
 },
 {
-"id": "B2-42",
+"id": "B2_001-010-45",
+"group": "B2_001-010",
 "level": "B2",
+"num": 45,
 "text": "He could have taken the wrong train"
 },
 {
-"id": "B2-43",
+"id": "B2_001-010-46",
+"group": "B2_001-010",
 "level": "B2",
+"num": 46,
 "text": "She could have missed the announcement"
 },
 {
-"id": "B2-44",
+"id": "B2_001-010-47",
+"group": "B2_001-010",
 "level": "B2",
+"num": 47,
 "text": "They could have taken the wrong exit"
 },
 {
-"id": "B2-45",
+"id": "B2_001-010-48",
+"group": "B2_001-010",
 "level": "B2",
+"num": 48,
 "text": "I probably left the key in the office"
 },
 {
-"id": "B2-46",
+"id": "B2_001-010-49",
+"group": "B2_001-010",
 "level": "B2",
+"num": 49,
 "text": "I could have left my keys at the office"
 },
 {
-"id": "B2-47",
+"id": "B2_001-010-50",
+"group": "B2_001-010",
 "level": "B2",
+"num": 50,
 "text": "He could have misunderstood what I said"
 },
 {
-"id": "B2-48",
+"id": "B2_001-010-51",
+"group": "B2_001-010",
 "level": "B2",
+"num": 51,
 "text": "They may have already left by now"
 },
 {
-"id": "B2-49",
+"id": "B2_001-010-52",
+"group": "B2_001-010",
 "level": "B2",
+"num": 52,
 "text": "He might have gotten lost on the way"
 },
 {
-"id": "B2-50",
+"id": "B2_001-010-53",
+"group": "B2_001-010",
 "level": "B2",
+"num": 53,
 "text": "He might have already heard the news"
 },
 {
-"id": "B2-51",
+"id": "B2_001-010-54",
+"group": "B2_001-010",
 "level": "B2",
+"num": 54,
 "text": "She may have already heard the news"
 },
 {
-"id": "B2-52",
+"id": "B2_001-010-55",
+"group": "B2_001-010",
 "level": "B2",
+"num": 55,
 "text": "They might have gone to the wrong restaurant"
 },
 {
-"id": "B2-53",
+"id": "B2_001-010-56",
+"group": "B2_001-010",
 "level": "B2",
+"num": 56,
 "text": "He may have forgotten to charge his phone"
 },
 {
-"id": "B2-54",
+"id": "B2_001-010-57",
+"group": "B2_001-010",
 "level": "B2",
-"text": "Package now should have already arrivedThe package should have arrived by now"
+"num": 57,
+"text": "Package now should have already arrived"
 },
 {
-"id": "B2-55",
+"id": "B2_001-010-58",
+"group": "B2_001-010",
 "level": "B2",
+"num": 58,
+"text": "The package should have arrived by now"
+},
+{
+"id": "B2_001-010-59",
+"group": "B2_001-010",
+"level": "B2",
+"num": 59,
 "text": "The result should have been published by now"
 },
 {
-"id": "B2-56",
+"id": "B2_001-010-60",
+"group": "B2_001-010",
 "level": "B2",
+"num": 60,
 "text": "The results should have been published by now"
 },
 {
-"id": "B2-57",
+"id": "B2_001-010-61",
+"group": "B2_001-010",
 "level": "B2",
-"text": "The train should have departed by nowYour order should have been shipped by now"
+"num": 61,
+"text": "The train should have departed by now"
 },
 {
-"id": "B2-58",
+"id": "B2_001-010-62",
+"group": "B2_001-010",
 "level": "B2",
+"num": 62,
+"text": "Your order should have been shipped by now"
+},
+{
+"id": "B2_001-010-63",
+"group": "B2_001-010",
+"level": "B2",
+"num": 63,
 "text": "The documents should have been signed by now"
 },
 {
-"id": "B2-59",
+"id": "B2_011-020-1",
+"group": "B2_011-020",
 "level": "B2",
-"text": "The documents should have been signed by now"
-},
-{
-"id": "B2-60",
-"level": "B2",
+"num": 1,
 "text": "It is commonly believed that social media influences teenagers"
 },
 {
-"id": "B2-61",
+"id": "B2_011-020-2",
+"group": "B2_011-020",
 "level": "B2",
+"num": 2,
 "text": "It is widely believed that regular exercise improves mental health"
 },
 {
-"id": "B2-62",
+"id": "B2_011-020-3",
+"group": "B2_011-020",
 "level": "B2",
+"num": 3,
 "text": "It is generally believed that honesty is the best policy"
 },
 {
-"id": "B2-63",
+"id": "B2_011-020-4",
+"group": "B2_011-020",
 "level": "B2",
+"num": 4,
 "text": "It is commonly believed that breakfast is the most important meal"
 },
 {
-"id": "B2-64",
+"id": "B2_011-020-5",
+"group": "B2_011-020",
 "level": "B2",
+"num": 5,
 "text": "It is widely believed that reading broadens the mind"
 },
 {
-"id": "B2-65",
+"id": "B2_011-020-6",
+"group": "B2_011-020",
 "level": "B2",
+"num": 6,
 "text": "This article is worth reading twice"
 },
 {
-"id": "B2-66",
+"id": "B2_011-020-7",
+"group": "B2_011-020",
 "level": "B2",
+"num": 7,
 "text": "This museum is definitely worth visiting"
 },
 {
-"id": "B2-67",
+"id": "B2_011-020-8",
+"group": "B2_011-020",
 "level": "B2",
+"num": 8,
 "text": "If you care about history, this documentary is worth watching"
 },
 {
-"id": "B2-68",
+"id": "B2_011-020-9",
+"group": "B2_011-020",
 "level": "B2",
+"num": 9,
 "text": "This documentary is worth watching if you care about history"
 },
 {
-"id": "B2-69",
+"id": "B2_011-020-10",
+"group": "B2_011-020",
 "level": "B2",
+"num": 10,
 "text": "This old town is worth exploring on foot"
 },
 {
-"id": "B2-70",
+"id": "B2_011-020-11",
+"group": "B2_011-020",
 "level": "B2",
+"num": 11,
 "text": "The old town is worth exploring on foot"
 },
 {
-"id": "B2-71",
+"id": "B2_011-020-12",
+"group": "B2_011-020",
 "level": "B2",
+"num": 12,
 "text": "That idea is worth considering seriously"
 },
 {
-"id": "B2-72",
+"id": "B2_011-020-13",
+"group": "B2_011-020",
 "level": "B2",
+"num": 13,
 "text": "There is a growing body of evidence that exercise improves memory"
 },
 {
-"id": "B2-73",
+"id": "B2_011-020-14",
+"group": "B2_011-020",
 "level": "B2",
+"num": 14,
 "text": "There is a growing body of evidence that climate change affects migration patterns"
 },
 {
-"id": "B2-74",
+"id": "B2_011-020-15",
+"group": "B2_011-020",
 "level": "B2",
+"num": 15,
 "text": "There is a growing body of evidence that stress affects sleep quality"
 },
 {
-"id": "B2-75",
+"id": "B2_011-020-16",
+"group": "B2_011-020",
 "level": "B2",
+"num": 16,
 "text": "There is a growing body of evidence that remote work boosts productivity"
 },
 {
-"id": "B2-76",
+"id": "B2_011-020-17",
+"group": "B2_011-020",
 "level": "B2",
+"num": 17,
 "text": "There is a growing body of evidence that diets high in sugar harm the heart"
 },
 {
-"id": "B2-77",
+"id": "B2_011-020-18",
+"group": "B2_011-020",
 "level": "B2",
-"text": "Here, spring's weather is unpredictableYoung people tend to be more open to new ideas"
+"num": 18,
+"text": "Here, spring's weather is unpredictable"
 },
 {
-"id": "B2-78",
+"id": "B2_011-020-19",
+"group": "B2_011-020",
 "level": "B2",
+"num": 19,
+"text": "Young people tend to be more open to new ideas"
+},
+{
+"id": "B2_011-020-20",
+"group": "B2_011-020",
+"level": "B2",
+"num": 20,
 "text": "Children tend to imitate their parents' behavior"
 },
 {
-"id": "B2-79",
+"id": "B2_011-020-21",
+"group": "B2_011-020",
 "level": "B2",
+"num": 21,
 "text": "Prices tend to rise before the holidays"
 },
 {
-"id": "B2-80",
+"id": "B2_011-020-22",
+"group": "B2_011-020",
 "level": "B2",
+"num": 22,
 "text": "She tends to overthink small decisions"
 },
 {
-"id": "B2-81",
+"id": "B2_011-020-23",
+"group": "B2_011-020",
 "level": "B2",
+"num": 23,
 "text": "Having finished the report, she submitted it to her manager"
 },
 {
-"id": "B2-82",
+"id": "B2_011-020-24",
+"group": "B2_011-020",
 "level": "B2",
+"num": 24,
 "text": "Having waited for two hours, we decided to leave"
 },
 {
-"id": "B2-83",
+"id": "B2_011-020-25",
+"group": "B2_011-020",
 "level": "B2",
+"num": 25,
 "text": "Having completed the training, he was ready for the challenge"
 },
 {
-"id": "B2-84",
+"id": "B2_011-020-26",
+"group": "B2_011-020",
 "level": "B2",
+"num": 26,
 "text": "Having read the reviews, we decided to book the hotel"
 },
 {
-"id": "B2-85",
+"id": "B2_011-020-27",
+"group": "B2_011-020",
 "level": "B2",
+"num": 27,
 "text": "Lost his passport, he had to cancel the trip"
 },
 {
-"id": "B2-86",
+"id": "B2_011-020-28",
+"group": "B2_011-020",
 "level": "B2",
+"num": 28,
 "text": "Having lost his passport, he had to cancel the trip"
 },
 {
-"id": "B2-87",
+"id": "B2_011-020-29",
+"group": "B2_011-020",
 "level": "B2",
+"num": 29,
 "text": "The project was delayed, therefore we missed the deadline"
 },
 {
-"id": "B2-88",
+"id": "B2_011-020-30",
+"group": "B2_011-020",
 "level": "B2",
+"num": 30,
 "text": "As a result, we missed the deadline"
 },
 {
-"id": "B2-89",
+"id": "B2_011-020-31",
+"group": "B2_011-020",
 "level": "B2",
-"text": "He was late"
-},
-{
-"id": "B2-90",
-"level": "B2",
+"num": 31,
 "text": "As a result, he missed his flight"
 },
 {
-"id": "B2-91",
+"id": "B2_011-020-32",
+"group": "B2_011-020",
 "level": "B2",
-"text": "The factory closed,"
-},
-{
-"id": "B2-92",
-"level": "B2",
-"text": "As a result, hundreds lost their jobs"
-},
-{
-"id": "B2-93",
-"level": "B2",
+"num": 32,
 "text": "The factory closed"
 },
 {
-"id": "B2-94",
+"id": "B2_011-020-33",
+"group": "B2_011-020",
 "level": "B2",
+"num": 33,
+"text": "As a result, hundreds lost their jobs"
+},
+{
+"id": "B2_011-020-34",
+"group": "B2_011-020",
+"level": "B2",
+"num": 34,
 "text": "He practiced every day, therefore he won the competition"
 },
 {
-"id": "B2-95",
+"id": "B2_011-020-35",
+"group": "B2_011-020",
 "level": "B2",
+"num": 35,
 "text": "She practiced every day"
 },
 {
-"id": "B2-96",
+"id": "B2_011-020-36",
+"group": "B2_011-020",
 "level": "B2",
+"num": 36,
 "text": "As a result, she won the competition"
 },
 {
-"id": "B2-97",
+"id": "B2_011-020-37",
+"group": "B2_011-020",
 "level": "B2",
-"text": "The bridge was damaged, therefore traffic was forced to changeThe bridge was damaged"
+"num": 37,
+"text": "The bridge was damaged, therefore traffic was forced to change"
 },
 {
-"id": "B2-98",
+"id": "B2_011-020-38",
+"group": "B2_011-020",
 "level": "B2",
+"num": 38,
+"text": "The bridge was damaged"
+},
+{
+"id": "B2_011-020-39",
+"group": "B2_011-020",
+"level": "B2",
+"num": 39,
 "text": "As a result, traffic was diverted"
 },
 {
-"id": "B2-99",
+"id": "B2_011-020-40",
+"group": "B2_011-020",
 "level": "B2",
+"num": 40,
 "text": "Despite having a busy schedule, she managed to exercise daily"
 },
 {
-"id": "B2-100",
+"id": "B2_011-020-41",
+"group": "B2_011-020",
 "level": "B2",
+"num": 41,
 "text": "Despite the high cost, many people still travel abroad"
 },
 {
-"id": "B2-101",
+"id": "B2_011-020-42",
+"group": "B2_011-020",
 "level": "B2",
+"num": 42,
 "text": "Despite the heavy rain, the match continued"
 },
 {
-"id": "B2-102",
+"id": "B2_011-020-43",
+"group": "B2_011-020",
 "level": "B2",
+"num": 43,
 "text": "Despite being exhausted, he stayed up to finish the report"
 },
 {
-"id": "B2-103",
+"id": "B2_011-020-44",
+"group": "B2_011-020",
 "level": "B2",
+"num": 44,
 "text": "Despite repeated warnings, they ignored the safety rules"
 },
 {
-"id": "B2-104",
+"id": "B2_011-020-45",
+"group": "B2_011-020",
 "level": "B2",
+"num": 45,
 "text": "Although the ticket was expensive, it was worth every penny"
 },
 {
-"id": "B2-105",
+"id": "B2_011-020-46",
+"group": "B2_011-020",
 "level": "B2",
+"num": 46,
 "text": "Although he was tired, he finished the work on time"
 },
 {
-"id": "B2-106",
+"id": "B2_011-020-47",
+"group": "B2_011-020",
 "level": "B2",
+"num": 47,
 "text": "Although she had little experience, she handled the project well"
 },
 {
-"id": "B2-107",
+"id": "B2_011-020-48",
+"group": "B2_011-020",
 "level": "B2",
+"num": 48,
 "text": "Although the hotel was basic, the service was excellent"
 },
 {
-"id": "B2-108",
+"id": "B2_011-020-49",
+"group": "B2_011-020",
 "level": "B2",
+"num": 49,
 "text": "Although it rained all week, we still enjoyed the holiday"
 },
 {
-"id": "B2-109",
+"id": "B2_011-020-50",
+"group": "B2_011-020",
 "level": "B2",
+"num": 50,
 "text": "Storm too"
 },
 {
-"id": "B2-110",
+"id": "B2_011-020-51",
+"group": "B2_011-020",
 "level": "B2",
+"num": 51,
 "text": "It was such a heavy storm that all flights were cancelled"
 },
 {
-"id": "B2-111",
+"id": "B2_011-020-52",
+"group": "B2_011-020",
 "level": "B2",
+"num": 52,
 "text": "It was such a heavy storm that all flights were canceled"
 },
 {
-"id": "B2-112",
+"id": "B2_011-020-53",
+"group": "B2_011-020",
 "level": "B2",
+"num": 53,
 "text": "This story was too moving, everyone cried"
 },
 {
-"id": "B2-113",
+"id": "B2_011-020-54",
+"group": "B2_011-020",
 "level": "B2",
+"num": 54,
 "text": "It was such a touching story that everyone cried"
 },
 {
-"id": "B2-114",
+"id": "B2_011-020-55",
+"group": "B2_011-020",
 "level": "B2",
+"num": 55,
 "text": "She had such a strong accent that I could barely understand her"
 },
 {
-"id": "B2-115",
+"id": "B2_011-020-56",
+"group": "B2_011-020",
 "level": "B2",
+"num": 56,
 "text": "That speech was so boring that half the class fell asleep"
 },
 {
-"id": "B2-116",
+"id": "B2_011-020-57",
+"group": "B2_011-020",
 "level": "B2",
+"num": 57,
 "text": "He made such rapid progress that everyone was impressed"
 },
 {
-"id": "B2-117",
+"id": "B2_011-020-58",
+"group": "B2_011-020",
 "level": "B2",
+"num": 58,
 "text": "She not only finished on time, but she also exceeded expectations"
 },
 {
-"id": "B2-118",
+"id": "B2_011-020-59",
+"group": "B2_011-020",
 "level": "B2",
+"num": 59,
 "text": "Not only is the book informative, but it is also entertaining"
 },
 {
-"id": "B2-119",
+"id": "B2_011-020-60",
+"group": "B2_011-020",
 "level": "B2",
-"text": "Not only is the book informative, but it is alsoHe not only did he apologize, but he also offered to pay for the damage"
+"num": 60,
+"text": "Not only is the book informative, but it is also"
 },
 {
-"id": "B2-120",
+"id": "B2_011-020-61",
+"group": "B2_011-020",
 "level": "B2",
+"num": 61,
+"text": "He not only did he apologize, but he also offered to pay for the damage"
+},
+{
+"id": "B2_011-020-62",
+"group": "B2_011-020",
+"level": "B2",
+"num": 62,
 "text": "She not only does she speak three languages, but she also plays the piano"
 },
 {
-"id": "B2-121",
+"id": "B2_011-020-63",
+"group": "B2_011-020",
 "level": "B2",
+"num": 63,
 "text": "Team not only did the team win, but they also broke a record"
 },
 {
-"id": "B2-122",
+"id": "B2_021-030-1",
+"group": "B2_021-030",
 "level": "B2",
-"text": "It was not until I lost my job that I realized what matteredIt was not until the rain stopped that we could go outside"
+"num": 1,
+"text": "It was not until I lost my job that I realized what mattered"
 },
 {
-"id": "B2-123",
+"id": "B2_021-030-2",
+"group": "B2_021-030",
 "level": "B2",
+"num": 2,
+"text": "It was not until the rain stopped that we could go outside"
+},
+{
+"id": "B2_021-030-3",
+"group": "B2_021-030",
+"level": "B2",
+"num": 3,
 "text": "Until midnight, he"
 },
 {
-"id": "B2-124",
+"id": "B2_021-030-4",
+"group": "B2_021-030",
 "level": "B2",
+"num": 4,
 "text": "It was not until midnight that he finally finished the essay"
 },
 {
-"id": "B2-125",
+"id": "B2_021-030-5",
+"group": "B2_021-030",
 "level": "B2",
+"num": 5,
 "text": "It was not until the accident that they fixed the road"
 },
 {
-"id": "B2-126",
+"id": "B2_021-030-6",
+"group": "B2_021-030",
 "level": "B2",
-"text": "Until I moved abroad,"
+"num": 6,
+"text": "Until I moved abroad"
 },
 {
-"id": "B2-127",
+"id": "B2_021-030-7",
+"group": "B2_021-030",
 "level": "B2",
-"text": "It was not until I moved abroad that I appreciated my hometownIt was not until I moved abroad that I appreciated my hometown"
+"num": 7,
+"text": "It was not until I moved abroad that I appreciated my hometown"
 },
 {
-"id": "B2-128",
+"id": "B2_021-030-8",
+"group": "B2_021-030",
 "level": "B2",
+"num": 8,
 "text": "What impressed me most was her dedication to the team"
 },
 {
-"id": "B2-129",
+"id": "B2_021-030-9",
+"group": "B2_021-030",
 "level": "B2",
+"num": 9,
 "text": "What matters most in life is your health"
 },
 {
-"id": "B2-130",
+"id": "B2_021-030-10",
+"group": "B2_021-030",
 "level": "B2",
+"num": 10,
 "text": "What I enjoy most about the job is the freedom it gives me"
 },
 {
-"id": "B2-131",
+"id": "B2_021-030-11",
+"group": "B2_021-030",
 "level": "B2",
+"num": 11,
 "text": "Let everyone"
 },
 {
-"id": "B2-132",
+"id": "B2_021-030-12",
+"group": "B2_021-030",
 "level": "B2",
+"num": 12,
 "text": "What surprised everyone was how calm she remained"
 },
 {
-"id": "B2-133",
+"id": "B2_021-030-13",
+"group": "B2_021-030",
 "level": "B2",
+"num": 13,
 "text": "What the company needs right now is a clear strategy"
 },
 {
-"id": "B2-134",
+"id": "B2_021-030-14",
+"group": "B2_021-030",
 "level": "B2",
-"text": "I've never seen such a beautiful sunsetNever in my life have I seen such a beautiful sunset"
+"num": 14,
+"text": "I've never seen such a beautiful sunset"
 },
 {
-"id": "B2-135",
+"id": "B2_021-030-15",
+"group": "B2_021-030",
 "level": "B2",
+"num": 15,
+"text": "Never in my life have I seen such a beautiful sunset"
+},
+{
+"id": "B2_021-030-16",
+"group": "B2_021-030",
+"level": "B2",
+"num": 16,
 "text": "I've never heard such a powerful speech"
 },
 {
-"id": "B2-136",
+"id": "B2_021-030-17",
+"group": "B2_021-030",
 "level": "B2",
+"num": 17,
 "text": "Never have I heard such a powerful speech"
 },
 {
-"id": "B2-137",
+"id": "B2_021-030-18",
+"group": "B2_021-030",
 "level": "B2",
+"num": 18,
 "text": "I've never eaten such delicious food"
 },
 {
-"id": "B2-138",
+"id": "B2_021-030-19",
+"group": "B2_021-030",
 "level": "B2",
+"num": 19,
 "text": "Never in my life have I met such a generous person"
 },
 {
-"id": "B2-139",
+"id": "B2_021-030-20",
+"group": "B2_021-030",
 "level": "B2",
+"num": 20,
 "text": "I never in my life have I met such a generous person"
 },
 {
-"id": "B2-140",
+"id": "B2_021-030-21",
+"group": "B2_021-030",
 "level": "B2",
+"num": 21,
 "text": "Never have I felt so proud of my students"
 },
 {
-"id": "B2-141",
+"id": "B2_021-030-22",
+"group": "B2_021-030",
 "level": "B2",
+"num": 22,
 "text": "Seldom do we get a chance to travel abroad for work"
 },
 {
-"id": "B2-142",
+"id": "B2_021-030-23",
+"group": "B2_021-030",
 "level": "B2",
-"text": "He rarely does she complain about anythingRarely does she complain about anything"
+"num": 23,
+"text": "He rarely does she complain about anything"
 },
 {
-"id": "B2-143",
+"id": "B2_021-030-24",
+"group": "B2_021-030",
 "level": "B2",
+"num": 24,
+"text": "Rarely does she complain about anything"
+},
+{
+"id": "B2_021-030-25",
+"group": "B2_021-030",
+"level": "B2",
+"num": 25,
 "text": "He rarely arrives late for a meeting"
 },
 {
-"id": "B2-144",
+"id": "B2_021-030-26",
+"group": "B2_021-030",
 "level": "B2",
+"num": 26,
 "text": "We rarely do we see such dedication in young employees"
 },
 {
-"id": "B2-145",
+"id": "B2_021-030-27",
+"group": "B2_021-030",
 "level": "B2",
+"num": 27,
 "text": "Seldom do I eat out during the week"
 },
 {
-"id": "B2-146",
+"id": "B2_021-030-28",
+"group": "B2_021-030",
 "level": "B2",
+"num": 28,
 "text": "Had it not been for your help, I would not have succeeded"
 },
 {
-"id": "B2-147",
+"id": "B2_021-030-29",
+"group": "B2_021-030",
 "level": "B2",
+"num": 29,
 "text": "Had it not been for the invention of the internet, life would be very different"
 },
 {
-"id": "B2-148",
+"id": "B2_021-030-30",
+"group": "B2_021-030",
 "level": "B2",
+"num": 30,
 "text": "Had it not been for the doctor's quick decision, the patient would not have survived"
 },
 {
-"id": "B2-149",
+"id": "B2_021-030-31",
+"group": "B2_021-030",
 "level": "B2",
+"num": 31,
 "text": "Had it not been for the scholarship, she would not have studied abroad"
 },
 {
-"id": "B2-150",
+"id": "B2_021-030-32",
+"group": "B2_021-030",
 "level": "B2",
+"num": 32,
 "text": "Had it not been for your encouragement, I would not have applied"
 },
 {
-"id": "B2-151",
+"id": "B2_021-030-33",
+"group": "B2_021-030",
 "level": "B2",
+"num": 33,
 "text": "I want to know if he received my emailI wonder if she has received my email yet"
 },
 {
-"id": "B2-152",
+"id": "B2_021-030-34",
+"group": "B2_021-030",
 "level": "B2",
+"num": 34,
 "text": "I wonder whether he will agree to our proposal"
 },
 {
-"id": "B2-153",
+"id": "B2_021-030-35",
+"group": "B2_021-030",
 "level": "B2",
+"num": 35,
 "text": "I wonder if they have finished the renovation yet"
 },
 {
-"id": "B2-154",
+"id": "B2_021-030-36",
+"group": "B2_021-030",
 "level": "B2",
+"num": 36,
 "text": "I wonder whether the train will be on time"
 },
 {
-"id": "B2-155",
+"id": "B2_021-030-37",
+"group": "B2_021-030",
 "level": "B2",
+"num": 37,
 "text": "I wonder if you could give me a hand with this"
 },
 {
-"id": "B2-156",
+"id": "B2_021-030-38",
+"group": "B2_021-030",
 "level": "B2",
+"num": 38,
 "text": "I don't know what happened to the original plan"
 },
 {
-"id": "B2-157",
+"id": "B2_021-030-39",
+"group": "B2_021-030",
 "level": "B2",
+"num": 39,
 "text": "I don't know where he went after the meeting"
 },
 {
-"id": "B2-158",
+"id": "B2_021-030-40",
+"group": "B2_021-030",
 "level": "B2",
+"num": 40,
 "text": "I don't know why she changed her mind so suddenly"
 },
 {
-"id": "B2-159",
+"id": "B2_021-030-41",
+"group": "B2_021-030",
 "level": "B2",
+"num": 41,
 "text": "I don't know how they managed to finish so quickly"
 },
 {
-"id": "B2-160",
+"id": "B2_021-030-42",
+"group": "B2_021-030",
 "level": "B2",
+"num": 42,
 "text": "I don't know who left this packageI don't know who left this package here"
 },
 {
-"id": "B2-161",
+"id": "B2_021-030-43",
+"group": "B2_021-030",
 "level": "B2",
+"num": 43,
 "text": "I have no idea where he got that information from"
 },
 {
-"id": "B2-162",
+"id": "B2_021-030-44",
+"group": "B2_021-030",
 "level": "B2",
+"num": 44,
 "text": "I have no idea what she's planning to do next"
 },
 {
-"id": "B2-163",
+"id": "B2_021-030-45",
+"group": "B2_021-030",
 "level": "B2",
+"num": 45,
 "text": "I have no idea why the system keeps crashing"
 },
 {
-"id": "B2-164",
+"id": "B2_021-030-46",
+"group": "B2_021-030",
 "level": "B2",
+"num": 46,
 "text": "I have no idea how much the repairs will cost"
 },
 {
-"id": "B2-165",
+"id": "B2_021-030-47",
+"group": "B2_021-030",
 "level": "B2",
+"num": 47,
 "text": "I have no idea when the results will be announced"
 },
 {
-"id": "B2-166",
+"id": "B2_021-030-48",
+"group": "B2_021-030",
 "level": "B2",
-"text": "If you need any help with this case, letTell me if you need any help with the project"
+"num": 48,
+"text": "If you need any help with this case, let"
 },
 {
-"id": "B2-167",
+"id": "B2_021-030-49",
+"group": "B2_021-030",
 "level": "B2",
+"num": 49,
+"text": "Tell me if you need any help with the project"
+},
+{
+"id": "B2_021-030-50",
+"group": "B2_021-030",
+"level": "B2",
+"num": 50,
 "text": "Tell me whether you agree with this approach"
 },
 {
-"id": "B2-168",
+"id": "B2_021-030-51",
+"group": "B2_021-030",
 "level": "B2",
+"num": 51,
 "text": "If the schedule changes, tell me if the schedule changes"
 },
 {
-"id": "B2-169",
+"id": "B2_021-030-52",
+"group": "B2_021-030",
 "level": "B2",
+"num": 52,
 "text": "Tell me whether you'd prefer tea or coffee"
 },
 {
-"id": "B2-170",
+"id": "B2_021-030-53",
+"group": "B2_021-030",
 "level": "B2",
-"text": "If there's anything I can help you with, tellTell me if there's anything I can do"
+"num": 53,
+"text": "If there's anything I can help you with, tell"
 },
 {
-"id": "B2-171",
+"id": "B2_021-030-54",
+"group": "B2_021-030",
 "level": "B2",
+"num": 54,
+"text": "Tell me if there's anything I can do"
+},
+{
+"id": "B2_021-030-55",
+"group": "B2_021-030",
+"level": "B2",
+"num": 55,
 "text": "The question is whether we can afford to wait any longer"
 },
 {
-"id": "B2-172",
+"id": "B2_021-030-56",
+"group": "B2_021-030",
 "level": "B2",
+"num": 56,
 "text": "The question is where we should hold the next meeting"
 },
 {
-"id": "B2-173",
+"id": "B2_021-030-57",
+"group": "B2_021-030",
 "level": "B2",
+"num": 57,
 "text": "The question is how we can cut costs without losing quality"
 },
 {
-"id": "B2-174",
+"id": "B2_021-030-58",
+"group": "B2_021-030",
 "level": "B2",
+"num": 58,
 "text": "The question is why nobody noticed the mistake earlier"
 },
 {
-"id": "B2-175",
+"id": "B2_021-030-59",
+"group": "B2_021-030",
 "level": "B2",
+"num": 59,
 "text": "The question is who will take responsibility for the delay"
 },
 {
-"id": "B2-176",
+"id": "B2_031-040-1",
+"group": "B2_031-040",
 "level": "B2",
+"num": 1,
 "text": "He is said to have left the country last month"
 },
 {
-"id": "B2-177",
+"id": "B2_031-040-2",
+"group": "B2_031-040",
 "level": "B2",
+"num": 2,
 "text": "She is believed to have discovered the cure"
 },
 {
-"id": "B2-178",
+"id": "B2_031-040-3",
+"group": "B2_031-040",
 "level": "B2",
+"num": 3,
 "text": "The painting is said to be worth millions"
 },
 {
-"id": "B2-179",
+"id": "B2_031-040-4",
+"group": "B2_031-040",
 "level": "B2",
+"num": 4,
 "text": "He is reported to have resigned last Friday"
 },
 {
-"id": "B2-180",
+"id": "B2_031-040-5",
+"group": "B2_031-040",
 "level": "B2",
+"num": 5,
 "text": "This medicine is believed to have few side effects"
 },
 {
-"id": "B2-181",
+"id": "B2_031-040-6",
+"group": "B2_031-040",
 "level": "B2",
+"num": 6,
 "text": "Expected that the new policy will take effect next year"
 },
 {
-"id": "B2-182",
+"id": "B2_031-040-7",
+"group": "B2_031-040",
 "level": "B2",
+"num": 7,
 "text": "It is estimated that the population will reach 10 million by 2030"
 },
 {
-"id": "B2-183",
+"id": "B2_031-040-8",
+"group": "B2_031-040",
 "level": "B2",
+"num": 8,
 "text": "It is believed that the manuscript dates back to the 15th century"
 },
 {
-"id": "B2-184",
+"id": "B2_031-040-9",
+"group": "B2_031-040",
 "level": "B2",
+"num": 9,
 "text": "It is reported that the company will cut hundreds of jobs"
 },
 {
-"id": "B2-185",
+"id": "B2_031-040-10",
+"group": "B2_031-040",
 "level": "B2",
+"num": 10,
 "text": "It is said that the castle is haunted"
 },
 {
-"id": "B2-186",
+"id": "B2_031-040-11",
+"group": "B2_031-040",
 "level": "B2",
+"num": 11,
 "text": "Having been warned twice, he was fired after the third mistake"
 },
 {
-"id": "B2-187",
+"id": "B2_031-040-12",
+"group": "B2_031-040",
 "level": "B2",
+"num": 12,
 "text": "Delayed for hours, the plane finally took off"
 },
 {
-"id": "B2-188",
+"id": "B2_031-040-13",
+"group": "B2_031-040",
 "level": "B2",
+"num": 13,
 "text": "Having been delayed for hours, the flight finally took off"
 },
 {
-"id": "B2-189",
+"id": "B2_031-040-14",
+"group": "B2_031-040",
 "level": "B2",
+"num": 14,
 "text": "After the invited speech, she prepared carefully"
 },
 {
-"id": "B2-190",
+"id": "B2_031-040-15",
+"group": "B2_031-040",
 "level": "B2",
+"num": 15,
 "text": "Having been invited to speak, she prepared carefully"
 },
 {
-"id": "B2-191",
+"id": "B2_031-040-16",
+"group": "B2_031-040",
 "level": "B2",
+"num": 16,
 "text": "Having been rejected twice, he decided to try a different approach"
 },
 {
-"id": "B2-192",
+"id": "B2_031-040-17",
+"group": "B2_031-040",
 "level": "B2",
+"num": 17,
 "text": "After repair, the old bridge reopened to traffic"
 },
 {
-"id": "B2-193",
+"id": "B2_031-040-18",
+"group": "B2_031-040",
 "level": "B2",
+"num": 18,
 "text": "Having been repaired, the old bridge reopened to traffic"
 },
 {
-"id": "B2-194",
+"id": "B2_031-040-19",
+"group": "B2_031-040",
 "level": "B2",
+"num": 19,
 "text": "The temple is reported to have been damaged in the earthquake"
 },
 {
-"id": "B2-195",
+"id": "B2_031-040-20",
+"group": "B2_031-040",
 "level": "B2",
+"num": 20,
 "text": "The company is reported to have been sold last week"
 },
 {
-"id": "B2-196",
+"id": "B2_031-040-21",
+"group": "B2_031-040",
 "level": "B2",
+"num": 21,
 "text": "The stadium is reported to have been renovated last year"
 },
 {
-"id": "B2-197",
+"id": "B2_031-040-22",
+"group": "B2_031-040",
 "level": "B2",
+"num": 22,
 "text": "The bridge is reported to have been closed for safety reasons"
 },
 {
-"id": "B2-198",
+"id": "B2_031-040-23",
+"group": "B2_031-040",
 "level": "B2",
+"num": 23,
 "text": "The famous library is reported to have been destroyed in the fire"
 },
 {
-"id": "B2-199",
+"id": "B2_031-040-24",
+"group": "B2_031-040",
 "level": "B2",
+"num": 24,
 "text": "It remains to be seen whether the talks will be successful"
 },
 {
-"id": "B2-200",
+"id": "B2_031-040-25",
+"group": "B2_031-040",
 "level": "B2",
+"num": 25,
 "text": "It remains to be decided who will lead the project"
 },
 {
-"id": "B2-201",
+"id": "B2_031-040-26",
+"group": "B2_031-040",
 "level": "B2",
+"num": 26,
 "text": "It remains to be confirmed whether the event will be postponed"
 },
 {
-"id": "B2-202",
+"id": "B2_031-040-27",
+"group": "B2_031-040",
 "level": "B2",
-"text": "Market will how respond still to be observedIt remains to be seen how the market will react"
+"num": 27,
+"text": "Market will how respond still to be observed"
 },
 {
-"id": "B2-203",
+"id": "B2_031-040-28",
+"group": "B2_031-040",
 "level": "B2",
+"num": 28,
+"text": "It remains to be seen how the market will react"
+},
+{
+"id": "B2_031-040-29",
+"group": "B2_031-040",
+"level": "B2",
+"num": 29,
 "text": "It remains to be determined who will chair the committee"
 },
 {
-"id": "B2-204",
+"id": "B2_031-040-30",
+"group": "B2_031-040",
 "level": "B2",
+"num": 30,
 "text": "I'm having my car repaired this weekend"
 },
 {
-"id": "B2-205",
+"id": "B2_031-040-31",
+"group": "B2_031-040",
 "level": "B2",
+"num": 31,
 "text": "She's having her hair cut tomorrow afternoon"
 },
 {
-"id": "B2-206",
+"id": "B2_031-040-32",
+"group": "B2_031-040",
 "level": "B2",
+"num": 32,
 "text": "He's having his suit cleaned before the wedding"
 },
 {
-"id": "B2-207",
+"id": "B2_031-040-33",
+"group": "B2_031-040",
 "level": "B2",
+"num": 33,
 "text": "We had the air conditioner installed last summer"
 },
 {
-"id": "B2-208",
+"id": "B2_031-040-34",
+"group": "B2_031-040",
 "level": "B2",
-"text": "We had the air conditioner installed last summer"
-},
-{
-"id": "B2-209",
-"level": "B2",
+"num": 34,
 "text": "I need to have my eyes tested this week"
 },
 {
-"id": "B2-210",
+"id": "B2_031-040-35",
+"group": "B2_031-040",
 "level": "B2",
+"num": 35,
 "text": "We got him to agree to our terms"
 },
 {
-"id": "B2-211",
+"id": "B2_031-040-36",
+"group": "B2_031-040",
 "level": "B2",
+"num": 36,
 "text": "They got her to change her mind about leaving"
 },
 {
-"id": "B2-212",
+"id": "B2_031-040-37",
+"group": "B2_031-040",
 "level": "B2",
+"num": 37,
 "text": "I finally got my brother to lend me his car"
 },
 {
-"id": "B2-213",
+"id": "B2_031-040-38",
+"group": "B2_031-040",
 "level": "B2",
+"num": 38,
 "text": "Can you get the printer to work again?"
 },
 {
-"id": "B2-214",
+"id": "B2_031-040-39",
+"group": "B2_031-040",
 "level": "B2",
+"num": 39,
 "text": "She let the whole team to stay late"
 },
 {
-"id": "B2-215",
+"id": "B2_031-040-40",
+"group": "B2_031-040",
 "level": "B2",
-"text": "The teacher made every student submit the assignment on timeNoise made it impossible for us to concentrate"
+"num": 40,
+"text": "The teacher made every student submit the assignment on time"
 },
 {
-"id": "B2-216",
+"id": "B2_031-040-41",
+"group": "B2_031-040",
 "level": "B2",
+"num": 41,
+"text": "Noise made it impossible for us to concentrate"
+},
+{
+"id": "B2_031-040-42",
+"group": "B2_031-040",
+"level": "B2",
+"num": 42,
 "text": "The noise made it impossible for us to concentrate"
 },
 {
-"id": "B2-217",
+"id": "B2_031-040-43",
+"group": "B2_031-040",
 "level": "B2",
+"num": 43,
 "text": "The rain made us cancel the picnic"
 },
 {
-"id": "B2-218",
+"id": "B2_031-040-44",
+"group": "B2_031-040",
 "level": "B2",
+"num": 44,
 "text": "Her story made everyone laugh"
 },
 {
-"id": "B2-219",
+"id": "B2_031-040-45",
+"group": "B2_031-040",
 "level": "B2",
+"num": 45,
 "text": "The new rules made it harder to enter the country"
 },
 {
-"id": "B2-220",
+"id": "B2_031-040-46",
+"group": "B2_031-040",
 "level": "B2",
+"num": 46,
 "text": "Don't let this opportunity pass you by"
 },
 {
-"id": "B2-221",
+"id": "B2_031-040-47",
+"group": "B2_031-040",
 "level": "B2",
+"num": 47,
 "text": "Let him finish his sentence before you interrupt"
 },
 {
-"id": "B2-222",
+"id": "B2_031-040-48",
+"group": "B2_031-040",
 "level": "B2",
-"text": "If you need anything else,Let me know if you need anything else"
+"num": 48,
+"text": "If you need anything else"
 },
 {
-"id": "B2-223",
+"id": "B2_031-040-49",
+"group": "B2_031-040",
 "level": "B2",
+"num": 49,
+"text": "Let me know if you need anything else"
+},
+{
+"id": "B2_031-040-50",
+"group": "B2_031-040",
+"level": "B2",
+"num": 50,
 "text": "Please let the children play outside for a while"
 },
 {
-"id": "B2-224",
+"id": "B2_031-040-51",
+"group": "B2_031-040",
 "level": "B2",
+"num": 51,
 "text": "Don't let fear stop you from trying"
 },
 {
-"id": "B2-225",
+"id": "B2_031-040-52",
+"group": "B2_031-040",
 "level": "B2",
+"num": 52,
 "text": "He got his wallet stolen on the subway"
 },
 {
-"id": "B2-226",
+"id": "B2_031-040-53",
+"group": "B2_031-040",
 "level": "B2",
+"num": 53,
 "text": "She got her car broken into last night"
 },
 {
-"id": "B2-227",
+"id": "B2_031-040-54",
+"group": "B2_031-040",
 "level": "B2",
+"num": 54,
 "text": "Their house was flooded in the storm"
 },
 {
-"id": "B2-228",
+"id": "B2_031-040-55",
+"group": "B2_031-040",
 "level": "B2",
+"num": 55,
 "text": "They got their house flooded during the storm"
 },
 {
-"id": "B2-229",
+"id": "B2_031-040-56",
+"group": "B2_031-040",
 "level": "B2",
+"num": 56,
 "text": "I got my phone stolen at the concert"
 },
 {
-"id": "B2-230",
+"id": "B2_031-040-57",
+"group": "B2_031-040",
 "level": "B2",
+"num": 57,
 "text": "He got his leg broken in the game"
 },
 {
-"id": "B2-231",
+"id": "B2_041-050-1",
+"group": "B2_041-050",
 "level": "B2",
+"num": 1,
 "text": "Provided that everyone agrees, we can start the project next week"
 },
 {
-"id": "B2-232",
+"id": "B2_041-050-2",
+"group": "B2_041-050",
 "level": "B2",
+"num": 2,
 "text": "Provided that the weather is good, we'll go camping"
 },
 {
-"id": "B2-233",
+"id": "B2_041-050-3",
+"group": "B2_041-050",
 "level": "B2",
+"num": 3,
 "text": "Provided that you follow the instructions, the setup will be easy"
 },
 {
-"id": "B2-234",
+"id": "B2_041-050-4",
+"group": "B2_041-050",
 "level": "B2",
+"num": 4,
 "text": "Provided that we get enough funding, we'll expand the program"
 },
 {
-"id": "B2-235",
+"id": "B2_041-050-5",
+"group": "B2_041-050",
 "level": "B2",
+"num": 5,
 "text": "You may leave early provided that you finish your work"
 },
 {
-"id": "B2-236",
+"id": "B2_041-050-6",
+"group": "B2_041-050",
 "level": "B2",
+"num": 6,
 "text": "Assuming the weather is nice, we'll go hiking on Saturday"
 },
 {
-"id": "B2-237",
+"id": "B2_041-050-7",
+"group": "B2_041-050",
 "level": "B2",
+"num": 7,
 "text": "Assuming everything goes well, the project will be finished next month"
 },
 {
-"id": "B2-238",
+"id": "B2_041-050-8",
+"group": "B2_041-050",
 "level": "B2",
+"num": 8,
 "text": "Assuming the flight is on time, we'll arrive by noon"
 },
 {
-"id": "B2-239",
+"id": "B2_041-050-9",
+"group": "B2_041-050",
 "level": "B2",
-"text": "Assuming the flight is on time, we'll arrive by noon"
-},
-{
-"id": "B2-240",
-"level": "B2",
+"num": 9,
 "text": "Assuming that she accepts the offer, we can start in May"
 },
 {
-"id": "B2-241",
+"id": "B2_041-050-10",
+"group": "B2_041-050",
 "level": "B2",
+"num": 10,
 "text": "Assuming there are no delays, the shipment will arrive on Friday"
 },
 {
-"id": "B2-242",
+"id": "B2_041-050-11",
+"group": "B2_041-050",
 "level": "B2",
+"num": 11,
 "text": "You can borrow my car, condition is you"
 },
 {
-"id": "B2-243",
+"id": "B2_041-050-12",
+"group": "B2_041-050",
 "level": "B2",
+"num": 12,
 "text": "You can borrow my car on condition that you return it by tonight"
 },
 {
-"id": "B2-244",
+"id": "B2_041-050-13",
+"group": "B2_041-050",
 "level": "B2",
+"num": 13,
 "text": "I will help you"
 },
 {
-"id": "B2-245",
+"id": "B2_041-050-14",
+"group": "B2_041-050",
 "level": "B2",
+"num": 14,
 "text": "Condition is you have to keep it a secret"
 },
 {
-"id": "B2-246",
+"id": "B2_041-050-15",
+"group": "B2_041-050",
 "level": "B2",
+"num": 15,
 "text": "I'll help you on condition that you keep it a secret"
 },
 {
-"id": "B2-247",
+"id": "B2_041-050-16",
+"group": "B2_041-050",
 "level": "B2",
+"num": 16,
 "text": "You can use my laptop on condition that you don't install anything"
 },
 {
-"id": "B2-248",
+"id": "B2_041-050-17",
+"group": "B2_041-050",
 "level": "B2",
+"num": 17,
 "text": "They agreed to the plan on condition that the deadline be extended"
 },
 {
-"id": "B2-249",
+"id": "B2_041-050-18",
+"group": "B2_041-050",
 "level": "B2",
+"num": 18,
 "text": "I'll lend you the money on condition that you pay it back next month"
 },
 {
-"id": "B2-250",
+"id": "B2_041-050-19",
+"group": "B2_041-050",
 "level": "B2",
+"num": 19,
 "text": "Suppose you won a million dollars, what would you do first?"
 },
 {
-"id": "B2-251",
+"id": "B2_041-050-20",
+"group": "B2_041-050",
 "level": "B2",
+"num": 20,
 "text": "Supposing you won a million dollars, what would you do first?"
 },
 {
-"id": "B2-252",
+"id": "B2_041-050-21",
+"group": "B2_041-050",
 "level": "B2",
+"num": 21,
 "text": "Suppose she failed the exam, what would she do?"
 },
 {
-"id": "B2-253",
+"id": "B2_041-050-22",
+"group": "B2_041-050",
 "level": "B2",
+"num": 22,
 "text": "Supposing she failed the exam, what would she do?"
 },
 {
-"id": "B2-254",
+"id": "B2_041-050-23",
+"group": "B2_041-050",
 "level": "B2",
+"num": 23,
 "text": "Suppose you lost your passport abroad, what would you do?"
 },
 {
-"id": "B2-255",
+"id": "B2_041-050-24",
+"group": "B2_041-050",
 "level": "B2",
+"num": 24,
 "text": "Supposing the meeting were cancelled, would we still need to come?"
 },
 {
-"id": "B2-256",
+"id": "B2_041-050-25",
+"group": "B2_041-050",
 "level": "B2",
+"num": 25,
 "text": "Supposing he forgot your birthday, how would you feel?"
 },
 {
-"id": "B2-257",
+"id": "B2_041-050-26",
+"group": "B2_041-050",
 "level": "B2",
+"num": 26,
 "text": "Whether or not you agree, the plan will proceed is scheduled"
 },
 {
-"id": "B2-258",
+"id": "B2_041-050-27",
+"group": "B2_041-050",
 "level": "B2",
+"num": 27,
 "text": "Whether or not it rains, the event will go ahead"
 },
 {
-"id": "B2-259",
+"id": "B2_041-050-28",
+"group": "B2_041-050",
 "level": "B2",
+"num": 28,
 "text": "Whether or not she apologizes, I'm moving on"
 },
 {
-"id": "B2-260",
+"id": "B2_041-050-29",
+"group": "B2_041-050",
 "level": "B2",
+"num": 29,
 "text": "Whether or not we get the contract, we've learned a lot"
 },
 {
-"id": "B2-261",
+"id": "B2_041-050-30",
+"group": "B2_041-050",
 "level": "B2",
+"num": 30,
 "text": "Whether or not you like it, the rule applies to everyone"
 },
 {
-"id": "B2-262",
+"id": "B2_041-050-31",
+"group": "B2_041-050",
 "level": "B2",
+"num": 31,
 "text": "If you can send me the report by FridayI would appreciate it if you could send me the report by Friday"
 },
 {
-"id": "B2-263",
+"id": "B2_041-050-32",
+"group": "B2_041-050",
 "level": "B2",
+"num": 32,
 "text": "If you could review this document by tomorrowI would appreciate it if you could review this document by tomorrow"
 },
 {
-"id": "B2-264",
+"id": "B2_041-050-33",
+"group": "B2_041-050",
 "level": "B2",
+"num": 33,
 "text": "If you can confirm your attendance by Monday,I would appreciate it if you would confirm your attendance by Monday"
 },
 {
-"id": "B2-265",
+"id": "B2_041-050-34",
+"group": "B2_041-050",
 "level": "B2",
+"num": 34,
 "text": "I would appreciate it if you could keep this matter confidential"
 },
 {
-"id": "B2-266",
+"id": "B2_041-050-35",
+"group": "B2_041-050",
 "level": "B2",
+"num": 35,
 "text": "If you can reply as soon as possible, I would appreciate it if you could reply at your earliest convenience"
 },
 {
-"id": "B2-267",
+"id": "B2_041-050-36",
+"group": "B2_041-050",
 "level": "B2",
+"num": 36,
 "text": "I would appreciate it if you could reply at your earliest convenience"
 },
 {
-"id": "B2-268",
+"id": "B2_041-050-37",
+"group": "B2_041-050",
 "level": "B2",
+"num": 37,
 "text": "Please do not hesitate to contact me if you have any questions"
 },
 {
-"id": "B2-269",
+"id": "B2_041-050-38",
+"group": "B2_041-050",
 "level": "B2",
+"num": 38,
 "text": "If need further"
 },
 {
-"id": "B2-270",
+"id": "B2_041-050-39",
+"group": "B2_041-050",
 "level": "B2",
+"num": 39,
 "text": "Please do not hesitate to reach out if you need further clarification"
 },
 {
-"id": "B2-271",
+"id": "B2_041-050-40",
+"group": "B2_041-050",
 "level": "B2",
+"num": 40,
 "text": "If there is any unclear part, please do not hesitate to ask if anything is unclear"
 },
 {
-"id": "B2-272",
+"id": "B2_041-050-41",
+"group": "B2_041-050",
 "level": "B2",
+"num": 41,
 "text": "Please do not hesitate to ask if anything is unclear"
 },
 {
-"id": "B2-273",
+"id": "B2_041-050-42",
+"group": "B2_041-050",
 "level": "B2",
+"num": 42,
 "text": "If you need assistance, please do not hesitate to call us for assistance"
 },
 {
-"id": "B2-274",
+"id": "B2_041-050-43",
+"group": "B2_041-050",
 "level": "B2",
+"num": 43,
 "text": "Please do not hesitate to call us for assistance"
 },
 {
-"id": "B2-275",
+"id": "B2_041-050-44",
+"group": "B2_041-050",
 "level": "B2",
+"num": 44,
 "text": "Please do not hesitate to share your feedback with us"
 },
 {
-"id": "B2-276",
+"id": "B2_041-050-45",
+"group": "B2_041-050",
 "level": "B2",
+"num": 45,
 "text": "I am writing to express my interest in the position advertised on your website"
 },
 {
-"id": "B2-277",
+"id": "B2_041-050-46",
+"group": "B2_041-050",
 "level": "B2",
+"num": 46,
 "text": "I am writing to request more information about your services"
 },
 {
-"id": "B2-278",
+"id": "B2_041-050-47",
+"group": "B2_041-050",
 "level": "B2",
+"num": 47,
 "text": "I am writing to complain about the poor service I received"
 },
 {
-"id": "B2-279",
+"id": "B2_041-050-48",
+"group": "B2_041-050",
 "level": "B2",
+"num": 48,
 "text": "I am writing to confirm the details of our meeting"
 },
 {
-"id": "B2-280",
+"id": "B2_041-050-49",
+"group": "B2_041-050",
 "level": "B2",
+"num": 49,
 "text": "I write to confirm the details of our meeting"
 },
 {
-"id": "B2-281",
+"id": "B2_041-050-50",
+"group": "B2_041-050",
 "level": "B2",
+"num": 50,
 "text": "I am writing to apply for the scholarship program"
 },
 {
-"id": "B2-282",
+"id": "B2_041-050-51",
+"group": "B2_041-050",
 "level": "B2",
+"num": 51,
 "text": "I look forward to your response at your earliest convenience"
 },
 {
-"id": "B2-283",
+"id": "B2_041-050-52",
+"group": "B2_041-050",
 "level": "B2",
+"num": 52,
 "text": "Thank you for your time, and I look forward to hearing from you soon"
 },
 {
-"id": "B2-284",
+"id": "B2_041-050-53",
+"group": "B2_041-050",
 "level": "B2",
+"num": 53,
 "text": "Expect to receive your response soon"
 },
 {
-"id": "B2-285",
+"id": "B2_041-050-54",
+"group": "B2_041-050",
 "level": "B2",
+"num": 54,
 "text": "I look forward to hearing from you soon regarding the interview"
 },
 {
-"id": "B2-286",
+"id": "B2_041-050-55",
+"group": "B2_041-050",
 "level": "B2",
+"num": 55,
 "text": "I look forward to hearing from you soon so we can move forward"
 },
 {
-"id": "B2-287",
+"id": "B2_041-050-56",
+"group": "B2_041-050",
 "level": "B2",
+"num": 56,
 "text": "With all due respect, I disagree with the proposed approach"
 },
 {
-"id": "B2-288",
+"id": "B2_041-050-57",
+"group": "B2_041-050",
 "level": "B2",
+"num": 57,
 "text": "With all due respect, I believe the data is incomplete"
 },
 {
-"id": "B2-289",
+"id": "B2_041-050-58",
+"group": "B2_041-050",
 "level": "B2",
+"num": 58,
 "text": "With all due respect, I think we are overlooking a key risk"
 },
 {
-"id": "B2-290",
+"id": "B2_041-050-59",
+"group": "B2_041-050",
 "level": "B2",
+"num": 59,
 "text": "With all due respect, your conclusion doesn't match the evidence"
 },
 {
-"id": "B2-291",
+"id": "B2_041-050-60",
+"group": "B2_041-050",
 "level": "B2",
+"num": 60,
 "text": "With all due respect, I'd like to suggest another option"
 },
 {
-"id": "B2-292",
+"id": "B2_051-060-1",
+"group": "B2_051-060",
 "level": "B2",
+"num": 1,
 "text": "Do you want Italian or Japanese food?"
 },
 {
-"id": "B2-293",
+"id": "B2_051-060-2",
+"group": "B2_051-060",
 "level": "B2",
+"num": 2,
 "text": "It's up to you"
 },
 {
-"id": "B2-294",
+"id": "B2_051-060-3",
+"group": "B2_051-060",
 "level": "B2",
+"num": 3,
 "text": "Should we go tonight or tomorrow?"
 },
 {
-"id": "B2-295",
+"id": "B2_051-060-4",
+"group": "B2_051-060",
 "level": "B2",
-"text": "We shouldYou decide where should we meet"
+"num": 4,
+"text": "We should"
 },
 {
-"id": "B2-296",
+"id": "B2_051-060-5",
+"group": "B2_051-060",
 "level": "B2",
+"num": 5,
+"text": "You decide where should we meet"
+},
+{
+"id": "B2_051-060-6",
+"group": "B2_051-060",
+"level": "B2",
+"num": 6,
 "text": "Which design do you prefer?"
 },
 {
-"id": "B2-297",
+"id": "B2_051-060-7",
+"group": "B2_051-060",
 "level": "B2",
-"text": "We take a train or a car, you decideDo we take the train or drive?"
+"num": 7,
+"text": "We take a train or a car, you decide"
 },
 {
-"id": "B2-298",
+"id": "B2_051-060-8",
+"group": "B2_051-060",
 "level": "B2",
+"num": 8,
+"text": "Do we take the train or drive?"
+},
+{
+"id": "B2_051-060-9",
+"group": "B2_051-060",
+"level": "B2",
+"num": 9,
 "text": "Just submit what you have"
 },
 {
-"id": "B2-299",
+"id": "B2_051-060-10",
+"group": "B2_051-060",
 "level": "B2",
+"num": 10,
 "text": "That'll do for now"
 },
 {
-"id": "B2-300",
+"id": "B2_051-060-11",
+"group": "B2_051-060",
 "level": "B2",
+"num": 11,
 "text": "Don't worry about the details"
 },
 {
-"id": "B2-301",
+"id": "B2_051-060-12",
+"group": "B2_051-060",
 "level": "B2",
+"num": 12,
 "text": "We don't need a perfect draft"
 },
 {
-"id": "B2-302",
+"id": "B2_051-060-13",
+"group": "B2_051-060",
 "level": "B2",
+"num": 13,
 "text": "Give me a rough estimate, just give me a rough estimate"
 },
 {
-"id": "B2-303",
+"id": "B2_051-060-14",
+"group": "B2_051-060",
 "level": "B2",
-"text": "That'll doJust give me a rough estimate"
+"num": 14,
+"text": "That'll do"
 },
 {
-"id": "B2-304",
+"id": "B2_051-060-15",
+"group": "B2_051-060",
 "level": "B2",
+"num": 15,
+"text": "Just give me a rough estimate"
+},
+{
+"id": "B2_051-060-16",
+"group": "B2_051-060",
+"level": "B2",
+"num": 16,
 "text": "Stop polishing it"
 },
 {
-"id": "B2-305",
+"id": "B2_051-060-17",
+"group": "B2_051-060",
 "level": "B2",
+"num": 17,
 "text": "Don't get me wrong, I like him, but his ideas are impractical"
 },
 {
-"id": "B2-306",
+"id": "B2_051-060-18",
+"group": "B2_051-060",
 "level": "B2",
+"num": 18,
 "text": "Don't get me wrong, I appreciate your effort, but it's not working"
 },
 {
-"id": "B2-307",
+"id": "B2_051-060-19",
+"group": "B2_051-060",
 "level": "B2",
+"num": 19,
 "text": "Don't get me wrong, I support the plan, but the timing is bad"
 },
 {
-"id": "B2-308",
+"id": "B2_051-060-20",
+"group": "B2_051-060",
 "level": "B2",
+"num": 20,
 "text": "Don't get me wrong, I'm grateful, but I can't accept it"
 },
 {
-"id": "B2-309",
+"id": "B2_051-060-21",
+"group": "B2_051-060",
 "level": "B2",
+"num": 21,
 "text": "Don't get me wrong, the food was good, just overpriced"
 },
 {
-"id": "B2-310",
+"id": "B2_051-060-22",
+"group": "B2_051-060",
 "level": "B2",
+"num": 22,
 "text": "I completely agree with your analysis"
 },
 {
-"id": "B2-311",
+"id": "B2_051-060-23",
+"group": "B2_051-060",
 "level": "B2",
+"num": 23,
 "text": "I couldn't agree more with your analysis"
 },
 {
-"id": "B2-312",
+"id": "B2_051-060-24",
+"group": "B2_051-060",
 "level": "B2",
+"num": 24,
 "text": "I couldn't agree more that we need to change our strategy"
 },
 {
-"id": "B2-313",
+"id": "B2_051-060-25",
+"group": "B2_051-060",
 "level": "B2",
+"num": 25,
 "text": "I couldn't agree more with your point about teamwork"
 },
 {
-"id": "B2-314",
+"id": "B2_051-060-26",
+"group": "B2_051-060",
 "level": "B2",
+"num": 26,
 "text": "I couldn't agree more that we should invest in training"
 },
 {
-"id": "B2-315",
+"id": "B2_051-060-27",
+"group": "B2_051-060",
 "level": "B2",
+"num": 27,
 "text": "That's exactly how I feel"
 },
 {
-"id": "B2-316",
+"id": "B2_051-060-28",
+"group": "B2_051-060",
 "level": "B2",
+"num": 28,
 "text": "We on the same page about the deadline?"
 },
 {
-"id": "B2-317",
+"id": "B2_051-060-29",
+"group": "B2_051-060",
 "level": "B2",
+"num": 29,
 "text": "Are we on the same page about the deadline?"
 },
 {
-"id": "B2-318",
+"id": "B2_051-060-30",
+"group": "B2_051-060",
 "level": "B2",
+"num": 30,
 "text": "I want to make sure we're on the same page before we start"
 },
 {
-"id": "B2-319",
+"id": "B2_051-060-31",
+"group": "B2_051-060",
 "level": "B2",
+"num": 31,
 "text": "Let's make sure we're on the same page about the budget"
 },
 {
-"id": "B2-320",
+"id": "B2_051-060-32",
+"group": "B2_051-060",
 "level": "B2",
+"num": 32,
 "text": "I think we finally reached a consensus"
 },
 {
-"id": "B2-321",
+"id": "B2_051-060-33",
+"group": "B2_051-060",
 "level": "B2",
+"num": 33,
 "text": "I think we're finally on the same page"
 },
 {
-"id": "B2-322",
+"id": "B2_051-060-34",
+"group": "B2_051-060",
 "level": "B2",
-"text": "You and team other people's ideas are you on the same page as the rest of the teamAre you on the same page as the rest of the team?"
+"num": 34,
+"text": "You and team other people's ideas are you on the same page as the rest of the team"
 },
 {
-"id": "B2-323",
+"id": "B2_051-060-35",
+"group": "B2_051-060",
 "level": "B2",
+"num": 35,
+"text": "Are you on the same page as the rest of the team?"
+},
+{
+"id": "B2_051-060-36",
+"group": "B2_051-060",
+"level": "B2",
+"num": 36,
 "text": "She gets along well with her teammates"
 },
 {
-"id": "B2-324",
+"id": "B2_051-060-37",
+"group": "B2_051-060",
 "level": "B2",
+"num": 37,
 "text": "He doesn't get along with his new manager"
 },
 {
-"id": "B2-325",
+"id": "B2_051-060-38",
+"group": "B2_051-060",
 "level": "B2",
+"num": 38,
 "text": "Do you get along with your neighbors?"
 },
 {
-"id": "B2-326",
+"id": "B2_051-060-39",
+"group": "B2_051-060",
 "level": "B2",
+"num": 39,
 "text": "These two departments don't get along very well"
 },
 {
-"id": "B2-327",
+"id": "B2_051-060-40",
+"group": "B2_051-060",
 "level": "B2",
+"num": 40,
 "text": "The two departments don't get along very well"
 },
 {
-"id": "B2-328",
+"id": "B2_051-060-41",
+"group": "B2_051-060",
 "level": "B2",
+"num": 41,
 "text": "I get on well with my colleagues"
 },
 {
-"id": "B2-329",
+"id": "B2_051-060-42",
+"group": "B2_051-060",
 "level": "B2",
+"num": 42,
 "text": "I still haven't gotten over the disappointment"
 },
 {
-"id": "B2-330",
+"id": "B2_051-060-43",
+"group": "B2_051-060",
 "level": "B2",
+"num": 43,
 "text": "It took her months to get over the breakup"
 },
 {
-"id": "B2-331",
+"id": "B2_051-060-44",
+"group": "B2_051-060",
 "level": "B2",
+"num": 44,
 "text": "He's still trying to get over his fear of flying"
 },
 {
-"id": "B2-332",
+"id": "B2_051-060-45",
+"group": "B2_051-060",
 "level": "B2",
-"text": "It took me a while to get over the fluShe seems to get over the loss of her dog"
+"num": 45,
+"text": "It took me a while to get over the flu"
 },
 {
-"id": "B2-333",
+"id": "B2_051-060-46",
+"group": "B2_051-060",
 "level": "B2",
+"num": 46,
+"text": "She seems to get over the loss of her dog"
+},
+{
+"id": "B2_051-060-47",
+"group": "B2_051-060",
+"level": "B2",
+"num": 47,
 "text": "We'll get through this crisis together"
 },
 {
-"id": "B2-334",
+"id": "B2_051-060-48",
+"group": "B2_051-060",
 "level": "B2",
-"text": "He managed to get through this crisisShe managed to get through the difficult exam"
+"num": 48,
+"text": "He managed to get through this crisis"
 },
 {
-"id": "B2-335",
+"id": "B2_051-060-49",
+"group": "B2_051-060",
 "level": "B2",
+"num": 49,
+"text": "She managed to get through the difficult exam"
+},
+{
+"id": "B2_051-060-50",
+"group": "B2_051-060",
+"level": "B2",
+"num": 50,
 "text": ", he still passed the interview"
 },
 {
-"id": "B2-336",
+"id": "B2_051-060-51",
+"group": "B2_051-060",
 "level": "B2",
-"text": "He got through the interview despite his nervesHe got through the interview despite his nerves"
+"num": 51,
+"text": "He got through the interview despite his nerves"
 },
 {
-"id": "B2-337",
+"id": "B2_051-060-52",
+"group": "B2_051-060",
 "level": "B2",
+"num": 52,
 "text": "How did you get through such a difficult year?"
 },
 {
-"id": "B2-338",
+"id": "B2_051-060-53",
+"group": "B2_051-060",
 "level": "B2",
+"num": 53,
 "text": "We need to get through the paperwork before Friday"
 },
 {
-"id": "B2-339",
+"id": "B2_051-060-54",
+"group": "B2_051-060",
 "level": "B2",
+"num": 54,
 "text": "You should get rid of that old printer"
 },
 {
-"id": "B2-340",
+"id": "B2_051-060-55",
+"group": "B2_051-060",
 "level": "B2",
+"num": 55,
 "text": "We need to get rid of all the unnecessary clutter in the office"
 },
 {
-"id": "B2-341",
+"id": "B2_051-060-56",
+"group": "B2_051-060",
 "level": "B2",
+"num": 56,
 "text": "It's time to get rid of these bad habits"
 },
 {
-"id": "B2-342",
+"id": "B2_051-060-57",
+"group": "B2_051-060",
 "level": "B2",
-"text": "We finally got rid of the old furnitureHow do I get rid of the smell in the kitchen?"
+"num": 57,
+"text": "We finally got rid of the old furniture"
 },
 {
-"id": "B2-343",
+"id": "B2_051-060-58",
+"group": "B2_051-060",
 "level": "B2",
+"num": 58,
+"text": "How do I get rid of the smell in the kitchen?"
+},
+{
+"id": "B2_051-060-59",
+"group": "B2_051-060",
+"level": "B2",
+"num": 59,
 "text": "He always gets away with being late"
 },
 {
-"id": "B2-344",
+"id": "B2_051-060-60",
+"group": "B2_051-060",
 "level": "B2",
+"num": 60,
 "text": "She got away with not paying the fine"
 },
 {
-"id": "B2-345",
+"id": "B2_051-060-61",
+"group": "B2_051-060",
 "level": "B2",
+"num": 61,
 "text": "You won't get away with cheating on the test"
 },
 {
-"id": "B2-346",
+"id": "B2_051-060-62",
+"group": "B2_051-060",
 "level": "B2",
+"num": 62,
 "text": "He got away with breaking the rules again"
 },
 {
-"id": "B2-347",
+"id": "B2_051-060-63",
+"group": "B2_051-060",
 "level": "B2",
+"num": 63,
 "text": "They got away with selling fake products for years"
 },
 {
-"id": "B2-348",
+"id": "B2_061-070-1",
+"group": "B2_061-070",
 "level": "B2",
+"num": 1,
 "text": "New product really took off last month"
 },
 {
-"id": "B2-349",
+"id": "B2_061-070-2",
+"group": "B2_061-070",
 "level": "B2",
-"text": "His career in virus film went red after really took offHer career really took off after the viral video"
+"num": 2,
+"text": "His career in virus film went red after really took off"
 },
 {
-"id": "B2-350",
+"id": "B2_061-070-3",
+"group": "B2_061-070",
 "level": "B2",
+"num": 3,
+"text": "Her career really took off after the viral video"
+},
+{
+"id": "B2_061-070-4",
+"group": "B2_061-070",
+"level": "B2",
+"num": 4,
 "text": "The business took off after the rebranding"
 },
 {
-"id": "B2-351",
+"id": "B2_061-070-5",
+"group": "B2_061-070",
 "level": "B2",
+"num": 5,
 "text": "Comments"
 },
 {
-"id": "B2-352",
+"id": "B2_061-070-6",
+"group": "B2_061-070",
 "level": "B2",
+"num": 6,
 "text": "Ticket sales took off once the reviews came out"
 },
 {
-"id": "B2-353",
+"id": "B2_061-070-7",
+"group": "B2_061-070",
 "level": "B2",
+"num": 7,
 "text": "Her singing career took off overnight"
 },
 {
-"id": "B2-354",
+"id": "B2_061-070-8",
+"group": "B2_061-070",
 "level": "B2",
+"num": 8,
 "text": "She took up yoga to manage her stress"
 },
 {
-"id": "B2-355",
+"id": "B2_061-070-9",
+"group": "B2_061-070",
 "level": "B2",
+"num": 9,
 "text": "He retired and started painting"
 },
 {
-"id": "B2-356",
+"id": "B2_061-070-10",
+"group": "B2_061-070",
 "level": "B2",
+"num": 10,
 "text": "He took up painting after he retired"
 },
 {
-"id": "B2-357",
+"id": "B2_061-070-11",
+"group": "B2_061-070",
 "level": "B2",
+"num": 11,
 "text": "I'm thinking of taking up golf this summer"
 },
 {
-"id": "B2-358",
+"id": "B2_061-070-12",
+"group": "B2_061-070",
 "level": "B2",
+"num": 12,
 "text": "She took up running to stay fit"
 },
 {
-"id": "B2-359",
+"id": "B2_061-070-13",
+"group": "B2_061-070",
 "level": "B2",
+"num": 13,
 "text": "He took up photography as a hobby"
 },
 {
-"id": "B2-360",
+"id": "B2_061-070-14",
+"group": "B2_061-070",
 "level": "B2",
+"num": 14,
 "text": "Report covered all the latest data"
 },
 {
-"id": "B2-361",
+"id": "B2_061-070-15",
+"group": "B2_061-070",
 "level": "B2",
+"num": 15,
 "text": "The report takes in all the latest data"
 },
 {
-"id": "B2-362",
+"id": "B2_061-070-16",
+"group": "B2_061-070",
 "level": "B2",
+"num": 16,
 "text": "This book takes in all the major philosophical schools of thought"
 },
 {
-"id": "B2-363",
+"id": "B2_061-070-17",
+"group": "B2_061-070",
 "level": "B2",
-"text": "The course takes in both theory and practiceHis speech took in a wide range of topics"
+"num": 17,
+"text": "The course takes in both theory and practice"
 },
 {
-"id": "B2-364",
+"id": "B2_061-070-18",
+"group": "B2_061-070",
 "level": "B2",
+"num": 18,
+"text": "His speech took in a wide range of topics"
+},
+{
+"id": "B2_061-070-19",
+"group": "B2_061-070",
+"level": "B2",
+"num": 19,
 "text": "This exhibition covered fifty"
 },
 {
-"id": "B2-365",
+"id": "B2_061-070-20",
+"group": "B2_061-070",
 "level": "B2",
+"num": 20,
 "text": "The exhibition takes in works from over 50 artists"
 },
 {
-"id": "B2-366",
+"id": "B2_061-070-21",
+"group": "B2_061-070",
 "level": "B2",
+"num": 21,
 "text": "The company is taking on more staff this year"
 },
 {
-"id": "B2-367",
+"id": "B2_061-070-22",
+"group": "B2_061-070",
 "level": "B2",
+"num": 22,
 "text": "She's taking on too many responsibilities at once"
 },
 {
-"id": "B2-368",
+"id": "B2_061-070-23",
+"group": "B2_061-070",
 "level": "B2",
+"num": 23,
 "text": "We're taking on a new challenge this year"
 },
 {
-"id": "B2-369",
+"id": "B2_061-070-24",
+"group": "B2_061-070",
 "level": "B2",
+"num": 24,
 "text": "She took on the role of team leader"
 },
 {
-"id": "B2-370",
+"id": "B2_061-070-25",
+"group": "B2_061-070",
 "level": "B2",
+"num": 25,
 "text": "Don't take on more than you can handle"
 },
 {
-"id": "B2-371",
+"id": "B2_061-070-26",
+"group": "B2_061-070",
 "level": "B2",
+"num": 26,
 "text": "Our team will take over the project next quarter"
 },
 {
-"id": "B2-372",
+"id": "B2_061-070-27",
+"group": "B2_061-070",
 "level": "B2",
+"num": 27,
 "text": "The new CEO will take over the company next month"
 },
 {
-"id": "B2-373",
+"id": "B2_061-070-28",
+"group": "B2_061-070",
 "level": "B2",
+"num": 28,
 "text": "A larger firm took over the startup"
 },
 {
-"id": "B2-374",
+"id": "B2_061-070-29",
+"group": "B2_061-070",
 "level": "B2",
+"num": 29,
 "text": "He retired and he will take over as manager"
 },
 {
-"id": "B2-375",
+"id": "B2_061-070-30",
+"group": "B2_061-070",
 "level": "B2",
+"num": 30,
 "text": "She will take over as manager when he retires"
 },
 {
-"id": "B2-376",
+"id": "B2_061-070-31",
+"group": "B2_061-070",
 "level": "B2",
+"num": 31,
 "text": "Can you take over for me while I'm on leave?"
 },
 {
-"id": "B2-377",
+"id": "B2_061-070-32",
+"group": "B2_061-070",
 "level": "B2",
+"num": 32,
 "text": "I came across this old photo yesterday"
 },
 {
-"id": "B2-378",
+"id": "B2_061-070-33",
+"group": "B2_061-070",
 "level": "B2",
+"num": 33,
 "text": "I came across an interesting article online today"
 },
 {
-"id": "B2-379",
+"id": "B2_061-070-34",
+"group": "B2_061-070",
 "level": "B2",
+"num": 34,
 "text": "I came across an interesting article online|I came across a great restaurant near the office"
 },
 {
-"id": "B2-380",
+"id": "B2_061-070-35",
+"group": "B2_061-070",
 "level": "B2",
+"num": 35,
 "text": "She came across some old letters in the attic"
 },
 {
-"id": "B2-381",
+"id": "B2_061-070-36",
+"group": "B2_061-070",
 "level": "B2",
+"num": 36,
 "text": "We came across a small village on our hike"
 },
 {
-"id": "B2-382",
+"id": "B2_061-070-37",
+"group": "B2_061-070",
 "level": "B2",
+"num": 37,
 "text": "She always comes up with creative solutions"
 },
 {
-"id": "B2-383",
+"id": "B2_061-070-38",
+"group": "B2_061-070",
 "level": "B2",
-"text": "He came up with a brilliant idea during the meetingWe need to come up with a better plan"
+"num": 38,
+"text": "He came up with a brilliant idea during the meeting"
 },
 {
-"id": "B2-384",
+"id": "B2_061-070-39",
+"group": "B2_061-070",
 "level": "B2",
+"num": 39,
+"text": "We need to come up with a better plan"
+},
+{
+"id": "B2_061-070-40",
+"group": "B2_061-070",
+"level": "B2",
+"num": 40,
 "text": "They think out a"
 },
 {
-"id": "B2-385",
+"id": "B2_061-070-41",
+"group": "B2_061-070",
 "level": "B2",
+"num": 41,
 "text": "They came up with a clever way to save money"
 },
 {
-"id": "B2-386",
+"id": "B2_061-070-42",
+"group": "B2_061-070",
 "level": "B2",
+"num": 42,
 "text": "Can you come up with a name for the new product?"
 },
 {
-"id": "B2-387",
+"id": "B2_061-070-43",
+"group": "B2_061-070",
 "level": "B2",
+"num": 43,
 "text": "He brought up the budget issue in the meeting"
 },
 {
-"id": "B2-388",
+"id": "B2_061-070-44",
+"group": "B2_061-070",
 "level": "B2",
-"text": "She brought up an important point about safety regulationsShe brought up the issue of staff shortages"
+"num": 44,
+"text": "She brought up an important point about safety regulations"
 },
 {
-"id": "B2-389",
+"id": "B2_061-070-45",
+"group": "B2_061-070",
 "level": "B2",
+"num": 45,
+"text": "She brought up the issue of staff shortages"
+},
+{
+"id": "B2_061-070-46",
+"group": "B2_061-070",
+"level": "B2",
+"num": 46,
 "text": "Don't bring up politics at the dinner table"
 },
 {
-"id": "B2-390",
+"id": "B2_061-070-47",
+"group": "B2_061-070",
 "level": "B2",
+"num": 47,
 "text": "He brought up an interesting idea about recycling"
 },
 {
-"id": "B2-391",
+"id": "B2_061-070-48",
+"group": "B2_061-070",
 "level": "B2",
+"num": 48,
 "text": "Our car broke down on the highway"
 },
 {
-"id": "B2-392",
+"id": "B2_061-070-49",
+"group": "B2_061-070",
 "level": "B2",
+"num": 49,
 "text": "Negotiations broke down after three hours"
 },
 {
-"id": "B2-393",
+"id": "B2_061-070-50",
+"group": "B2_061-070",
 "level": "B2",
+"num": 50,
 "text": "The negotiations broke down over pay"
 },
 {
-"id": "B2-394",
+"id": "B2_061-070-51",
+"group": "B2_061-070",
 "level": "B2",
+"num": 51,
 "text": "He in the interview broke down and cried"
 },
 {
-"id": "B2-395",
+"id": "B2_061-070-52",
+"group": "B2_061-070",
 "level": "B2",
+"num": 52,
 "text": "She broke down in tears during the interview"
 },
 {
-"id": "B2-396",
+"id": "B2_061-070-53",
+"group": "B2_061-070",
 "level": "B2",
+"num": 53,
 "text": "The machine broke down twice this week"
 },
 {
-"id": "B2-397",
+"id": "B2_061-070-54",
+"group": "B2_061-070",
 "level": "B2",
+"num": 54,
 "text": "They broke up last year after a long relationship"
 },
 {
-"id": "B2-398",
+"id": "B2_061-070-55",
+"group": "B2_061-070",
 "level": "B2",
+"num": 55,
 "text": "The partnership broke off due to disagreements"
 },
 {
-"id": "B2-399",
+"id": "B2_061-070-56",
+"group": "B2_061-070",
 "level": "B2",
+"num": 56,
 "text": "The band broke up after ten years together"
 },
 {
-"id": "B2-400",
+"id": "B2_061-070-57",
+"group": "B2_061-070",
 "level": "B2",
+"num": 57,
 "text": "They broke up after ten years together"
 },
 {
-"id": "B2-401",
+"id": "B2_061-070-58",
+"group": "B2_061-070",
 "level": "B2",
+"num": 58,
 "text": "They broke off their engagement last month"
 },
 {
-"id": "B2-402",
+"id": "B2_061-070-59",
+"group": "B2_061-070",
 "level": "B2",
-"text": "The talks broke off without any agreementThe talks broke off without any agreement"
+"num": 59,
+"text": "The talks broke off without any agreement"
 },
 {
-"id": "B2-403",
+"id": "B2_071-080-1",
+"group": "B2_071-080",
 "level": "B2",
+"num": 1,
 "text": "The meeting was called off due to bad weather"
 },
 {
-"id": "B2-404",
+"id": "B2_071-080-2",
+"group": "B2_071-080",
 "level": "B2",
+"num": 2,
 "text": "They called off the wedding at the last minute"
 },
 {
-"id": "B2-405",
+"id": "B2_071-080-3",
+"group": "B2_071-080",
 "level": "B2",
+"num": 3,
 "text": "The concert was called off at the last minute"
 },
 {
-"id": "B2-406",
+"id": "B2_071-080-4",
+"group": "B2_071-080",
 "level": "B2",
+"num": 4,
 "text": "They called off the search after two days"
 },
 {
-"id": "B2-407",
+"id": "B2_071-080-5",
+"group": "B2_071-080",
 "level": "B2",
+"num": 5,
 "text": "We had to call off the picnic because of the storm"
 },
 {
-"id": "B2-408",
+"id": "B2_071-080-6",
+"group": "B2_071-080",
 "level": "B2",
+"num": 6,
 "text": "I'd like to call on Dr"
 },
 {
-"id": "B2-409",
+"id": "B2_071-080-7",
+"group": "B2_071-080",
 "level": "B2",
+"num": 7,
 "text": "Chen to share her insights"
 },
 {
-"id": "B2-410",
+"id": "B2_071-080-8",
+"group": "B2_071-080",
 "level": "B2",
+"num": 8,
 "text": "Teacher called on the shy student to answer the question"
 },
 {
-"id": "B2-411",
+"id": "B2_071-080-9",
+"group": "B2_071-080",
 "level": "B2",
+"num": 9,
 "text": "The teacher called on the shy student to answer the question"
 },
 {
-"id": "B2-412",
+"id": "B2_071-080-10",
+"group": "B2_071-080",
 "level": "B2",
+"num": 10,
 "text": "The mayor called on residents to save water"
 },
 {
-"id": "B2-413",
+"id": "B2_071-080-11",
+"group": "B2_071-080",
 "level": "B2",
+"num": 11,
 "text": "I'd like to call on our guest speaker to begin"
 },
 {
-"id": "B2-414",
+"id": "B2_071-080-12",
+"group": "B2_071-080",
 "level": "B2",
+"num": 12,
 "text": "Chairman, please report the research results"
 },
 {
-"id": "B2-415",
+"id": "B2_071-080-13",
+"group": "B2_071-080",
 "level": "B2",
+"num": 13,
 "text": "The chairman called on her to present the findings"
 },
 {
-"id": "B2-416",
+"id": "B2_071-080-14",
+"group": "B2_071-080",
 "level": "B2",
-"text": "He because of the low salaryShe turned up the volume because the music was too quiet"
+"num": 14,
+"text": "He because of the low salary"
 },
 {
-"id": "B2-417",
+"id": "B2_071-080-15",
+"group": "B2_071-080",
 "level": "B2",
+"num": 15,
+"text": "She turned up the volume because the music was too quiet"
+},
+{
+"id": "B2_071-080-16",
+"group": "B2_071-080",
+"level": "B2",
+"num": 16,
 "text": "She turned down the invitation politely"
 },
 {
-"id": "B2-418",
+"id": "B2_071-080-17",
+"group": "B2_071-080",
 "level": "B2",
+"num": 17,
 "text": "Please turn up the heating, it's freezing"
 },
 {
-"id": "B2-419",
+"id": "B2_071-080-18",
+"group": "B2_071-080",
 "level": "B2",
+"num": 18,
 "text": "Please turn up the heating; it's freezing"
 },
 {
-"id": "B2-420",
+"id": "B2_071-080-19",
+"group": "B2_071-080",
 "level": "B2",
+"num": 19,
 "text": "He turned down the offer without hesitation"
 },
 {
-"id": "B2-421",
+"id": "B2_071-080-20",
+"group": "B2_071-080",
 "level": "B2",
+"num": 20,
 "text": "The weather turned out to be perfect for the trip"
 },
 {
-"id": "B2-422",
+"id": "B2_071-080-21",
+"group": "B2_071-080",
 "level": "B2",
+"num": 21,
 "text": "Everything turned out well in the end"
 },
 {
-"id": "B2-423",
+"id": "B2_071-080-22",
+"group": "B2_071-080",
 "level": "B2",
+"num": 22,
 "text": "The rumor turned out to be false"
 },
 {
-"id": "B2-424",
+"id": "B2_071-080-23",
+"group": "B2_071-080",
 "level": "B2",
+"num": 23,
 "text": "The new employee turned out to be a great asset"
 },
 {
-"id": "B2-425",
+"id": "B2_071-080-24",
+"group": "B2_071-080",
 "level": "B2",
+"num": 24,
 "text": "It turned out to be the best decision I ever made"
 },
 {
-"id": "B2-426",
+"id": "B2_071-080-25",
+"group": "B2_071-080",
 "level": "B2",
+"num": 25,
 "text": "The police are looking into the matter"
 },
 {
-"id": "B2-427",
+"id": "B2_071-080-26",
+"group": "B2_071-080",
 "level": "B2",
+"num": 26,
 "text": "We'll look into your complaint and get back to you"
 },
 {
-"id": "B2-428",
+"id": "B2_071-080-27",
+"group": "B2_071-080",
 "level": "B2",
+"num": 27,
 "text": "We're looking into ways to reduce costs"
 },
 {
-"id": "B2-429",
+"id": "B2_071-080-28",
+"group": "B2_071-080",
 "level": "B2",
+"num": 28,
 "text": "She looked into the company's background before investing"
 },
 {
-"id": "B2-430",
+"id": "B2_071-080-29",
+"group": "B2_071-080",
 "level": "B2",
+"num": 29,
 "text": "The committee will look into the allegations"
 },
 {
-"id": "B2-431",
+"id": "B2_071-080-30",
+"group": "B2_071-080",
 "level": "B2",
+"num": 30,
 "text": "According to recent surveys, most people prefer remote work"
 },
 {
-"id": "B2-432",
+"id": "B2_071-080-31",
+"group": "B2_071-080",
 "level": "B2",
+"num": 31,
 "text": "According to the weather forecast, it will rain tomorrow"
 },
 {
-"id": "B2-433",
+"id": "B2_071-080-32",
+"group": "B2_071-080",
 "level": "B2",
+"num": 32,
 "text": "According to the manual, you should change the filter monthly"
 },
 {
-"id": "B2-434",
+"id": "B2_071-080-33",
+"group": "B2_071-080",
 "level": "B2",
+"num": 33,
 "text": "According to experts, the economy will recover slowly"
 },
 {
-"id": "B2-435",
+"id": "B2_071-080-34",
+"group": "B2_071-080",
 "level": "B2",
+"num": 34,
 "text": "According to the report, sales rose by 20%"
 },
 {
-"id": "B2-436",
+"id": "B2_071-080-35",
+"group": "B2_071-080",
 "level": "B2",
+"num": 35,
 "text": "It has been reported that several stores have closed downtown"
 },
 {
-"id": "B2-437",
+"id": "B2_071-080-36",
+"group": "B2_071-080",
 "level": "B2",
+"num": 36,
 "text": "It has been reported that the president will visit next week"
 },
 {
-"id": "B2-438",
+"id": "B2_071-080-37",
+"group": "B2_071-080",
 "level": "B2",
+"num": 37,
 "text": "It has been reported that the factory will close next year"
 },
 {
-"id": "B2-439",
+"id": "B2_071-080-38",
+"group": "B2_071-080",
 "level": "B2",
+"num": 38,
 "text": "It has been reported that several flights were delayed"
 },
 {
-"id": "B2-440",
+"id": "B2_071-080-39",
+"group": "B2_071-080",
 "level": "B2",
+"num": 39,
 "text": "It has been reported that the actor is retiring"
 },
 {
-"id": "B2-441",
+"id": "B2_071-080-40",
+"group": "B2_071-080",
 "level": "B2",
+"num": 40,
 "text": "As a response to public complaints, the city raised the minimum wage"
 },
 {
-"id": "B2-442",
+"id": "B2_071-080-41",
+"group": "B2_071-080",
 "level": "B2",
+"num": 41,
 "text": "As a response to the crisis, the government announced new policies"
 },
 {
-"id": "B2-443",
+"id": "B2_071-080-42",
+"group": "B2_071-080",
 "level": "B2",
+"num": 42,
 "text": "In response to the drought, farmers changed their crops"
 },
 {
-"id": "B2-444",
+"id": "B2_071-080-43",
+"group": "B2_071-080",
 "level": "B2",
+"num": 43,
 "text": "To respond to customer feedback, the store extended its hours"
 },
 {
-"id": "B2-445",
+"id": "B2_071-080-44",
+"group": "B2_071-080",
 "level": "B2",
+"num": 44,
 "text": "In response to the outbreak, schools moved classes online"
 },
 {
-"id": "B2-446",
+"id": "B2_071-080-45",
+"group": "B2_071-080",
 "level": "B2",
+"num": 45,
 "text": "It remains to be seen whether the new policy will reduce pollution"
 },
 {
-"id": "B2-447",
+"id": "B2_071-080-46",
+"group": "B2_071-080",
 "level": "B2",
+"num": 46,
 "text": "It remains to be seen whether the merger will benefit consumers"
 },
 {
-"id": "B2-448",
+"id": "B2_071-080-47",
+"group": "B2_071-080",
 "level": "B2",
+"num": 47,
 "text": "This treatment will work"
 },
 {
-"id": "B2-449",
+"id": "B2_071-080-48",
+"group": "B2_071-080",
 "level": "B2",
+"num": 48,
 "text": "This team"
 },
 {
-"id": "B2-450",
+"id": "B2_071-080-49",
+"group": "B2_071-080",
 "level": "B2",
+"num": 49,
 "text": "It remains to be seen whether the team can defend the title"
 },
 {
-"id": "B2-451",
+"id": "B2_071-080-50",
+"group": "B2_071-080",
 "level": "B2",
-"text": "It remains to be seen whether the peace deal will holdIt remains to be seen whether the peace deal will hold"
+"num": 50,
+"text": "It remains to be seen whether the peace deal will hold"
 },
 {
-"id": "B2-452",
+"id": "B2_071-080-51",
+"group": "B2_071-080",
 "level": "B2",
+"num": 51,
 "text": "People are increasingly concerned that AI will replace many jobs"
 },
 {
-"id": "B2-453",
+"id": "B2_071-080-52",
+"group": "B2_071-080",
 "level": "B2",
+"num": 52,
 "text": "There is growing concern that AI will replace many jobs"
 },
 {
-"id": "B2-454",
+"id": "B2_071-080-53",
+"group": "B2_071-080",
 "level": "B2",
+"num": 53,
 "text": "People are increasingly concerned that air quality is deteriorating"
 },
 {
-"id": "B2-455",
+"id": "B2_071-080-54",
+"group": "B2_071-080",
 "level": "B2",
+"num": 54,
 "text": "There is growing concern that air quality is deteriorating"
 },
 {
-"id": "B2-456",
+"id": "B2_071-080-55",
+"group": "B2_071-080",
 "level": "B2",
+"num": 55,
 "text": "People are increasingly concerned that social media harms young people"
 },
 {
-"id": "B2-457",
+"id": "B2_071-080-56",
+"group": "B2_071-080",
 "level": "B2",
+"num": 56,
 "text": "There is growing concern that social media harms young people"
 },
 {
-"id": "B2-458",
+"id": "B2_071-080-57",
+"group": "B2_071-080",
 "level": "B2",
+"num": 57,
 "text": "There is growing concern that the disease is spreading"
 },
 {
-"id": "B2-459",
+"id": "B2_071-080-58",
+"group": "B2_071-080",
 "level": "B2",
+"num": 58,
 "text": "People are increasingly worried that housing is becoming unaffordable"
 },
 {
-"id": "B2-460",
+"id": "B2_071-080-59",
+"group": "B2_071-080",
 "level": "B2",
+"num": 59,
 "text": "There is growing concern that housing is becoming unaffordable"
 },
 {
-"id": "B2-461",
+"id": "B2_081-090-1",
+"group": "B2_081-090",
 "level": "B2",
+"num": 1,
 "text": "To reduce waste, the university bans single-use plastics"
 },
 {
-"id": "B2-462",
+"id": "B2_081-090-2",
+"group": "B2_081-090",
 "level": "B2",
+"num": 2,
 "text": "To improve health, the company started a wellness program"
 },
 {
-"id": "B2-463",
+"id": "B2_081-090-3",
+"group": "B2_081-090",
 "level": "B2",
+"num": 3,
 "text": "To reduce emissions, the city promoted cycling"
 },
 {
-"id": "B2-464",
+"id": "B2_081-090-4",
+"group": "B2_081-090",
 "level": "B2",
+"num": 4,
 "text": "To boost morale, the manager organized a team trip"
 },
 {
-"id": "B2-465",
+"id": "B2_081-090-5",
+"group": "B2_081-090",
 "level": "B2",
+"num": 5,
 "text": "To save energy, the office turned off the lights early"
 },
 {
-"id": "B2-466",
+"id": "B2_081-090-6",
+"group": "B2_081-090",
 "level": "B2",
+"num": 6,
 "text": "The key to solving the climate crisis is transitioning to renewable energy"
 },
 {
-"id": "B2-467",
+"id": "B2_081-090-7",
+"group": "B2_081-090",
 "level": "B2",
+"num": 7,
 "text": "The key to success is perseverance and hard work"
 },
 {
-"id": "B2-468",
+"id": "B2_081-090-8",
+"group": "B2_081-090",
 "level": "B2",
+"num": 8,
 "text": "The key to learning a language is daily practice"
 },
 {
-"id": "B2-469",
+"id": "B2_081-090-9",
+"group": "B2_081-090",
 "level": "B2",
-"text": "The key to a healthy diet is balanceThe key to a healthy diet is balance"
+"num": 9,
+"text": "The key to a healthy diet is balance"
 },
 {
-"id": "B2-470",
+"id": "B2_081-090-10",
+"group": "B2_081-090",
 "level": "B2",
+"num": 10,
 "text": "Winning the negotiation is preparation"
 },
 {
-"id": "B2-471",
+"id": "B2_081-090-11",
+"group": "B2_081-090",
 "level": "B2",
+"num": 11,
 "text": "The key to winning the negotiation is preparation"
 },
 {
-"id": "B2-472",
+"id": "B2_081-090-12",
+"group": "B2_081-090",
 "level": "B2",
+"num": 12,
 "text": "Strict measures have been taken to protect endangered species"
 },
 {
-"id": "B2-473",
+"id": "B2_081-090-13",
+"group": "B2_081-090",
 "level": "B2",
+"num": 13,
 "text": "Emergency measures have been taken to address the food shortage"
 },
 {
-"id": "B2-474",
+"id": "B2_081-090-14",
+"group": "B2_081-090",
 "level": "B2",
+"num": 14,
 "text": "To take new measures to reduce traffic congestion"
 },
 {
-"id": "B2-475",
+"id": "B2_081-090-15",
+"group": "B2_081-090",
 "level": "B2",
+"num": 15,
 "text": "Additional measures have been taken to ensure safety"
 },
 {
-"id": "B2-476",
+"id": "B2_081-090-16",
+"group": "B2_081-090",
 "level": "B2",
-"text": "To take measures to ensureTough measures have been taken to tackle corruption"
+"num": 16,
+"text": "To take measures to ensure"
 },
 {
-"id": "B2-477",
+"id": "B2_081-090-17",
+"group": "B2_081-090",
 "level": "B2",
+"num": 17,
 "text": "Tough measures have been taken to tackle corruption"
 },
 {
-"id": "B2-478",
+"id": "B2_081-090-18",
+"group": "B2_081-090",
 "level": "B2",
+"num": 18,
 "text": "It is essential that we act now before it's too late"
 },
 {
-"id": "B2-479",
+"id": "B2_081-090-19",
+"group": "B2_081-090",
 "level": "B2",
-"text": "Every employee understands new regulationsIt is essential that every employee understand the new regulations"
+"num": 19,
+"text": "Every employee understands new regulations"
 },
 {
-"id": "B2-480",
+"id": "B2_081-090-20",
+"group": "B2_081-090",
 "level": "B2",
+"num": 20,
+"text": "It is essential that every employee understand the new regulations"
+},
+{
+"id": "B2_081-090-21",
+"group": "B2_081-090",
+"level": "B2",
+"num": 21,
 "text": "It is essential that the data be backed up regularly"
 },
 {
-"id": "B2-481",
+"id": "B2_081-090-22",
+"group": "B2_081-090",
 "level": "B2",
+"num": 22,
 "text": "It is essential that everyone arrive on time tomorrow"
 },
 {
-"id": "B2-482",
+"id": "B2_081-090-23",
+"group": "B2_081-090",
 "level": "B2",
+"num": 23,
 "text": "We protect personal information is essential"
 },
 {
-"id": "B2-483",
+"id": "B2_081-090-24",
+"group": "B2_081-090",
 "level": "B2",
+"num": 24,
 "text": "It is essential that we protect our personal information"
 },
 {
-"id": "B2-484",
+"id": "B2_081-090-25",
+"group": "B2_081-090",
 "level": "B2",
+"num": 25,
 "text": "Activists are calling for stronger environmental regulations"
 },
 {
-"id": "B2-485",
+"id": "B2_081-090-26",
+"group": "B2_081-090",
 "level": "B2",
+"num": 26,
 "text": "The UN called on all nations to reduce carbon emissions"
 },
 {
-"id": "B2-486",
+"id": "B2_081-090-27",
+"group": "B2_081-090",
 "level": "B2",
+"num": 27,
 "text": "Residents are calling for better public transport"
 },
 {
-"id": "B2-487",
+"id": "B2_081-090-28",
+"group": "B2_081-090",
 "level": "B2",
+"num": 28,
 "text": "The report calls for immediate action on climate change"
 },
 {
-"id": "B2-488",
+"id": "B2_081-090-29",
+"group": "B2_081-090",
 "level": "B2",
-"text": "Teachers called on the government to increase fundingTeachers called on the government to increase funding"
+"num": 29,
+"text": "Teachers called on the government to increase funding"
 },
 {
-"id": "B2-489",
+"id": "B2_081-090-30",
+"group": "B2_081-090",
 "level": "B2",
+"num": 30,
 "text": "I can't help feeling anxious about the interview"
 },
 {
-"id": "B2-490",
+"id": "B2_081-090-31",
+"group": "B2_081-090",
 "level": "B2",
+"num": 31,
 "text": "She can't help worrying about her childrenI can't help wondering what might have been"
 },
 {
-"id": "B2-491",
+"id": "B2_081-090-32",
+"group": "B2_081-090",
 "level": "B2",
+"num": 32,
 "text": "He can't help laughing whenever he sees that video"
 },
 {
-"id": "B2-492",
+"id": "B2_081-090-33",
+"group": "B2_081-090",
 "level": "B2",
-"text": "He can't help laughing whenever he sees that video"
-},
-{
-"id": "B2-493",
-"level": "B2",
+"num": 33,
 "text": "I can't help thinking we made the wrong choice"
 },
 {
-"id": "B2-494",
+"id": "B2_081-090-34",
+"group": "B2_081-090",
 "level": "B2",
+"num": 34,
 "text": "I'm fed up with the constant delays"
 },
 {
-"id": "B2-495",
+"id": "B2_081-090-35",
+"group": "B2_081-090",
 "level": "B2",
+"num": 35,
 "text": "He's fed up with waiting in long queues"
 },
 {
-"id": "B2-496",
+"id": "B2_081-090-36",
+"group": "B2_081-090",
 "level": "B2",
+"num": 36,
 "text": "I'm fed up with these endless complaints"
 },
 {
-"id": "B2-497",
+"id": "B2_081-090-37",
+"group": "B2_081-090",
 "level": "B2",
+"num": 37,
 "text": "I'm fed up with the constant complaints"
 },
 {
-"id": "B2-498",
+"id": "B2_081-090-38",
+"group": "B2_081-090",
 "level": "B2",
+"num": 38,
 "text": "She's fed up with doing everyone else's work"
 },
 {
-"id": "B2-499",
+"id": "B2_081-090-39",
+"group": "B2_081-090",
 "level": "B2",
+"num": 39,
 "text": "We're fed up with the poor service here"
 },
 {
-"id": "B2-500",
+"id": "B2_081-090-40",
+"group": "B2_081-090",
 "level": "B2",
+"num": 40,
 "text": "It drives me crazy when people talk during movies"
 },
 {
-"id": "B2-501",
+"id": "B2_081-090-41",
+"group": "B2_081-090",
 "level": "B2",
+"num": 41,
 "text": "It drives me crazy when the Wi-Fi keeps disconnecting"
 },
 {
-"id": "B2-502",
+"id": "B2_081-090-42",
+"group": "B2_081-090",
 "level": "B2",
+"num": 42,
 "text": "It drives me crazy when people interrupt me"
 },
 {
-"id": "B2-503",
+"id": "B2_081-090-43",
+"group": "B2_081-090",
 "level": "B2",
+"num": 43,
 "text": "It drives me crazy when the printer jams again"
 },
 {
-"id": "B2-504",
+"id": "B2_081-090-44",
+"group": "B2_081-090",
 "level": "B2",
-"text": "He forgot to replyIt drives me crazy when he forgets to reply"
+"num": 44,
+"text": "He forgot to reply"
 },
 {
-"id": "B2-505",
+"id": "B2_081-090-45",
+"group": "B2_081-090",
 "level": "B2",
+"num": 45,
+"text": "It drives me crazy when he forgets to reply"
+},
+{
+"id": "B2_081-090-46",
+"group": "B2_081-090",
+"level": "B2",
+"num": 46,
 "text": "I'm on the edge of losing my patience with this project"
 },
 {
-"id": "B2-506",
+"id": "B2_081-090-47",
+"group": "B2_081-090",
 "level": "B2",
-"text": "She's on the edge of giving up on her dreamI'm on the edge of quitting this job"
+"num": 47,
+"text": "She's on the edge of giving up on her dream"
 },
 {
-"id": "B2-507",
+"id": "B2_081-090-48",
+"group": "B2_081-090",
 "level": "B2",
+"num": 48,
+"text": "I'm on the edge of quitting this job"
+},
+{
+"id": "B2_081-090-49",
+"group": "B2_081-090",
+"level": "B2",
+"num": 49,
 "text": "She's on the edge of tears after that argument"
 },
 {
-"id": "B2-508",
+"id": "B2_081-090-50",
+"group": "B2_081-090",
 "level": "B2",
+"num": 50,
 "text": "We're on the edge of a major breakthrough"
 },
 {
-"id": "B2-509",
+"id": "B2_081-090-51",
+"group": "B2_081-090",
 "level": "B2",
+"num": 51,
 "text": "Long time work hours, took a toll on his health"
 },
 {
-"id": "B2-510",
+"id": "B2_081-090-52",
+"group": "B2_081-090",
 "level": "B2",
+"num": 52,
 "text": "The long work hours took a toll on his health"
 },
 {
-"id": "B2-511",
+"id": "B2_081-090-53",
+"group": "B2_081-090",
 "level": "B2",
+"num": 53,
 "text": "Continuous pressure on mental health"
 },
 {
-"id": "B2-512",
+"id": "B2_081-090-54",
+"group": "B2_081-090",
 "level": "B2",
+"num": 54,
 "text": "Late night studying took a toll on her focus"
 },
 {
-"id": "B2-513",
+"id": "B2_081-090-55",
+"group": "B2_081-090",
 "level": "B2",
+"num": 55,
 "text": "The constant travel takes a toll on family life"
 },
 {
-"id": "B2-514",
+"id": "B2_081-090-56",
+"group": "B2_081-090",
 "level": "B2",
+"num": 56,
 "text": "Financial worries take a toll on relationships"
 },
 {
-"id": "B2-515",
+"id": "B2_091-100-1",
+"group": "B2_091-100",
 "level": "B2",
+"num": 1,
 "text": "To cut a long story short, we agreed on a 10% discount"
 },
 {
-"id": "B2-516",
+"id": "B2_091-100-2",
+"group": "B2_091-100",
 "level": "B2",
-"text": "To cut a long story short, we agreed on a 10% discountLong"
+"num": 2,
+"text": "Long"
 },
 {
-"id": "B2-517",
+"id": "B2_091-100-3",
+"group": "B2_091-100",
 "level": "B2",
+"num": 3,
 "text": "To cut a long story short, we decided not to pursue the deal"
 },
 {
-"id": "B2-518",
+"id": "B2_091-100-4",
+"group": "B2_091-100",
 "level": "B2",
+"num": 4,
 "text": "To cut a long story short, we missed the flight and stayed an extra day"
 },
 {
-"id": "B2-519",
+"id": "B2_091-100-5",
+"group": "B2_091-100",
 "level": "B2",
+"num": 5,
 "text": "To cut a long story short, the project was approved"
 },
 {
-"id": "B2-520",
+"id": "B2_091-100-6",
+"group": "B2_091-100",
 "level": "B2",
+"num": 6,
 "text": "To cut a long story short, he apologized and we moved on"
 },
 {
-"id": "B2-521",
+"id": "B2_091-100-7",
+"group": "B2_091-100",
 "level": "B2",
+"num": 7,
 "text": "At this stage, it's too early to make a final decision"
 },
 {
-"id": "B2-522",
+"id": "B2_091-100-8",
+"group": "B2_091-100",
 "level": "B2",
+"num": 8,
 "text": "At this point in time, we cannot confirm the exact date"
 },
 {
-"id": "B2-523",
+"id": "B2_091-100-9",
+"group": "B2_091-100",
 "level": "B2",
+"num": 9,
 "text": "At this stage, we're still gathering information"
 },
 {
-"id": "B2-524",
+"id": "B2_091-100-10",
+"group": "B2_091-100",
 "level": "B2",
+"num": 10,
 "text": "At this point in time, no decision has been made"
 },
 {
-"id": "B2-525",
+"id": "B2_091-100-11",
+"group": "B2_091-100",
 "level": "B2",
-"text": "At this point in time, no decision has been made"
-},
-{
-"id": "B2-526",
-"level": "B2",
+"num": 11,
 "text": "At this stage, it's hard to predict the outcome"
 },
 {
-"id": "B2-527",
+"id": "B2_091-100-12",
+"group": "B2_091-100",
 "level": "B2",
+"num": 12,
 "text": "We're running against the clock to meet the deadline"
 },
 {
-"id": "B2-528",
+"id": "B2_091-100-13",
+"group": "B2_091-100",
 "level": "B2",
+"num": 13,
 "text": "The medical team is running against the clock to save the patient"
 },
 {
-"id": "B2-529",
+"id": "B2_091-100-14",
+"group": "B2_091-100",
 "level": "B2",
+"num": 14,
 "text": "The rescue team is running against the clock to find survivors"
 },
 {
-"id": "B2-530",
+"id": "B2_091-100-15",
+"group": "B2_091-100",
 "level": "B2",
+"num": 15,
 "text": "We're running against the clock to finish before the deadline"
 },
 {
-"id": "B2-531",
+"id": "B2_091-100-16",
+"group": "B2_091-100",
 "level": "B2",
+"num": 16,
 "text": "Engineers are running against the clock to restore power"
 },
 {
-"id": "B2-532",
+"id": "B2_091-100-17",
+"group": "B2_091-100",
 "level": "B2",
+"num": 17,
 "text": "Before launching, we need to get our ducks in a row"
 },
 {
-"id": "B2-533",
+"id": "B2_091-100-18",
+"group": "B2_091-100",
 "level": "B2",
+"num": 18,
 "text": "Before reporting, let's get our ducks in a row before the presentation"
 },
 {
-"id": "B2-534",
+"id": "B2_091-100-19",
+"group": "B2_091-100",
 "level": "B2",
+"num": 19,
 "text": "Let's get our ducks in a row before the presentation"
 },
 {
-"id": "B2-535",
+"id": "B2_091-100-20",
+"group": "B2_091-100",
 "level": "B2",
+"num": 20,
 "text": "We need to get our ducks in a row before the audit"
 },
 {
-"id": "B2-536",
+"id": "B2_091-100-21",
+"group": "B2_091-100",
 "level": "B2",
+"num": 21,
 "text": "Let's get our ducks in a row before we approach investors"
 },
 {
-"id": "B2-537",
+"id": "B2_091-100-22",
+"group": "B2_091-100",
 "level": "B2",
+"num": 22,
 "text": "It's time to get our ducks in a row for the new quarter"
 },
 {
-"id": "B2-538",
+"id": "B2_091-100-23",
+"group": "B2_091-100",
 "level": "B2",
-"text": "This topic is too controversial, so we'll put it on the backburnerThis item is too controversial"
+"num": 23,
+"text": "This topic is too controversial, so we'll put it on the backburner"
 },
 {
-"id": "B2-539",
+"id": "B2_091-100-24",
+"group": "B2_091-100",
 "level": "B2",
+"num": 24,
+"text": "This item is too controversial"
+},
+{
+"id": "B2_091-100-25",
+"group": "B2_091-100",
+"level": "B2",
+"num": 25,
 "text": "Let's table this discussion for now"
 },
 {
-"id": "B2-540",
+"id": "B2_091-100-26",
+"group": "B2_091-100",
 "level": "B2",
+"num": 26,
 "text": "That question is too complicated"
 },
 {
-"id": "B2-541",
+"id": "B2_091-100-27",
+"group": "B2_091-100",
 "level": "B2",
+"num": 27,
 "text": "Let's put it aside for now"
 },
 {
-"id": "B2-542",
+"id": "B2_091-100-28",
+"group": "B2_091-100",
 "level": "B2",
+"num": 28,
 "text": "That issue is too complex"
 },
 {
-"id": "B2-543",
+"id": "B2_091-100-29",
+"group": "B2_091-100",
 "level": "B2",
+"num": 29,
 "text": "Let's table it for now"
 },
 {
-"id": "B2-544",
+"id": "B2_091-100-30",
+"group": "B2_091-100",
 "level": "B2",
+"num": 30,
 "text": "We don't have all the facts yet"
 },
 {
-"id": "B2-545",
+"id": "B2_091-100-31",
+"group": "B2_091-100",
 "level": "B2",
+"num": 31,
 "text": "The budget isn't ready, so let's table this for now"
 },
 {
-"id": "B2-546",
+"id": "B2_091-100-32",
+"group": "B2_091-100",
 "level": "B2",
+"num": 32,
 "text": "This can wait until the next meeting"
 },
 {
-"id": "B2-547",
+"id": "B2_091-100-33",
+"group": "B2_091-100",
 "level": "B2",
+"num": 33,
 "text": "I make it a rule to read for 30 minutes every night"
 },
 {
-"id": "B2-548",
+"id": "B2_091-100-34",
+"group": "B2_091-100",
 "level": "B2",
+"num": 34,
 "text": "He makes it a rule to arrive at least 15 minutes early"
 },
 {
-"id": "B2-549",
+"id": "B2_091-100-35",
+"group": "B2_091-100",
 "level": "B2",
+"num": 35,
 "text": "I make it a rule to never check email before breakfast"
 },
 {
-"id": "B2-550",
+"id": "B2_091-100-36",
+"group": "B2_091-100",
 "level": "B2",
+"num": 36,
 "text": "She makes it a rule to exercise three times a week"
 },
 {
-"id": "B2-551",
+"id": "B2_091-100-37",
+"group": "B2_091-100",
 "level": "B2",
+"num": 37,
 "text": "They make it a rule to review the plan every Friday"
 },
 {
-"id": "B2-552",
+"id": "B2_091-100-38",
+"group": "B2_091-100",
 "level": "B2",
+"num": 38,
 "text": "It's a matter of finding the right balance between work and life"
 },
 {
-"id": "B2-553",
+"id": "B2_091-100-39",
+"group": "B2_091-100",
 "level": "B2",
-"text": "This is prioritizing the most important thingsIt's a matter of prioritizing what matters most"
+"num": 39,
+"text": "This is prioritizing the most important things"
 },
 {
-"id": "B2-554",
+"id": "B2_091-100-40",
+"group": "B2_091-100",
 "level": "B2",
+"num": 40,
+"text": "It's a matter of prioritizing what matters most"
+},
+{
+"id": "B2_091-100-41",
+"group": "B2_091-100",
+"level": "B2",
+"num": 41,
 "text": "It's a matter of trusting your instincts"
 },
 {
-"id": "B2-555",
+"id": "B2_091-100-42",
+"group": "B2_091-100",
 "level": "B2",
+"num": 42,
 "text": "They find just time"
 },
 {
-"id": "B2-556",
+"id": "B2_091-100-43",
+"group": "B2_091-100",
 "level": "B2",
+"num": 43,
 "text": "It's a matter of time before they find out"
 },
 {
-"id": "B2-557",
+"id": "B2_091-100-44",
+"group": "B2_091-100",
 "level": "B2",
+"num": 44,
 "text": "This is for work"
 },
 {
-"id": "B2-558",
+"id": "B2_091-100-45",
+"group": "B2_091-100",
 "level": "B2",
+"num": 45,
 "text": "Choosing the correct tool is a matter of choosing the right tool for the job"
 },
 {
-"id": "B2-559",
+"id": "B2_091-100-46",
+"group": "B2_091-100",
 "level": "B2",
+"num": 46,
 "text": "There's no point in worrying about things you can't control"
 },
 {
-"id": "B2-560",
+"id": "B2_091-100-47",
+"group": "B2_091-100",
 "level": "B2",
+"num": 47,
 "text": "There's no point in arguing about this any longer"
 },
 {
-"id": "B2-561",
+"id": "B2_091-100-48",
+"group": "B2_091-100",
 "level": "B2",
+"num": 48,
 "text": "There's no point in blaming others for your mistakes"
 },
 {
-"id": "B2-562",
+"id": "B2_091-100-49",
+"group": "B2_091-100",
 "level": "B2",
-"text": "There's no point in buying cheap shoes that fall apartThere's no point in buying cheap shoes that fall apart"
+"num": 49,
+"text": "There's no point in buying cheap shoes that fall apart"
 },
 {
-"id": "B2-563",
+"id": "B2_091-100-50",
+"group": "B2_091-100",
 "level": "B2",
+"num": 50,
 "text": "There's no point in rushing a decision this important"
 },
 {
-"id": "B2-564",
+"id": "B2_091-100-51",
+"group": "B2_091-100",
 "level": "B2",
+"num": 51,
 "text": "I never thought he was so talented"
 },
 {
-"id": "B2-565",
+"id": "B2_091-100-52",
+"group": "B2_091-100",
 "level": "B2",
+"num": 52,
 "text": "I never thought that the project would become so successful"
 },
 {
-"id": "B2-566",
+"id": "B2_091-100-53",
+"group": "B2_091-100",
 "level": "B2",
+"num": 53,
 "text": "I never occurred to me that she might be upset"
 },
 {
-"id": "B2-567",
+"id": "B2_091-100-54",
+"group": "B2_091-100",
 "level": "B2",
+"num": 54,
 "text": "It never occurred to me to check the fine print"
 },
 {
-"id": "B2-568",
+"id": "B2_091-100-55",
+"group": "B2_091-100",
 "level": "B2",
+"num": 55,
 "text": "I never thought he had been lying"
 },
 {
-"id": "B2-569",
+"id": "B2_091-100-56",
+"group": "B2_091-100",
 "level": "B2",
+"num": 56,
 "text": "It never occurred to me that he had been lying"
 },
 {
-"id": "B2-570",
+"id": "B2_091-100-57",
+"group": "B2_091-100",
 "level": "B2",
+"num": 57,
 "text": "Overall, this was a successful event"
 },
 {
-"id": "B2-571",
+"id": "B2_091-100-58",
+"group": "B2_091-100",
 "level": "B2",
+"num": 58,
 "text": "All things considered, it was a successful event"
 },
 {
-"id": "B2-572",
+"id": "B2_091-100-59",
+"group": "B2_091-100",
 "level": "B2",
+"num": 59,
 "text": "All things considered, the results were better than expected"
 },
 {
-"id": "B2-573",
+"id": "B2_091-100-60",
+"group": "B2_091-100",
 "level": "B2",
+"num": 60,
 "text": "All things considered, we made the right choice"
 },
 {
-"id": "B2-574",
+"id": "B2_091-100-61",
+"group": "B2_091-100",
 "level": "B2",
+"num": 61,
 "text": "All things considered, she handled the situation well"
 },
 {
-"id": "B2-575",
+"id": "B2_091-100-62",
+"group": "B2_091-100",
 "level": "B2",
+"num": 62,
 "text": "All things considered, the trip was worth the money"
 },
 {
-"id": "B2-576",
+"id": "B2_101-110-1",
+"group": "B2_101-110",
 "level": "B2",
+"num": 1,
 "text": "I tried the local dish even though it was unusual"
 },
 {
-"id": "B2-577",
+"id": "B2_101-110-2",
+"group": "B2_101-110",
 "level": "B2",
+"num": 2,
 "text": "He removed his shoes before entering the temple"
 },
 {
-"id": "B2-578",
+"id": "B2_101-110-3",
+"group": "B2_101-110",
 "level": "B2",
+"num": 3,
 "text": "I bowed when I met them"
 },
 {
-"id": "B2-579",
+"id": "B2_101-110-4",
+"group": "B2_101-110",
 "level": "B2",
+"num": 4,
 "text": "He learned to use chopsticks to eat"
 },
 {
-"id": "B2-580",
+"id": "B2_101-110-5",
+"group": "B2_101-110",
 "level": "B2",
+"num": 5,
 "text": "Into custom, she learned to eat with chopsticks"
 },
 {
-"id": "B2-581",
+"id": "B2_101-110-6",
+"group": "B2_101-110",
 "level": "B2",
+"num": 6,
 "text": "She learned to eat with chopsticks"
 },
 {
-"id": "B2-582",
+"id": "B2_101-110-7",
+"group": "B2_101-110",
 "level": "B2",
-"text": "He adjusted to the local customs quicklyWhen in Rome, do as the Romans do"
+"num": 7,
+"text": "He adjusted to the local customs quickly"
 },
 {
-"id": "B2-583",
+"id": "B2_101-110-8",
+"group": "B2_101-110",
 "level": "B2",
+"num": 8,
+"text": "When in Rome, do as the Romans do"
+},
+{
+"id": "B2_101-110-9",
+"group": "B2_101-110",
+"level": "B2",
+"num": 9,
 "text": "I made it a point to visit the museum during my trip"
 },
 {
-"id": "B2-584",
+"id": "B2_101-110-10",
+"group": "B2_101-110",
 "level": "B2",
+"num": 10,
 "text": "She made it a point to learn a few phrases in the local language"
 },
 {
-"id": "B2-585",
+"id": "B2_101-110-11",
+"group": "B2_101-110",
 "level": "B2",
+"num": 11,
 "text": "I made it a point to thank everyone who helped"
 },
 {
-"id": "B2-586",
+"id": "B2_101-110-12",
+"group": "B2_101-110",
 "level": "B2",
+"num": 12,
 "text": "He made it a point to arrive before his boss"
 },
 {
-"id": "B2-587",
+"id": "B2_101-110-13",
+"group": "B2_101-110",
 "level": "B2",
+"num": 13,
 "text": "We made it a point to try the local food"
 },
 {
-"id": "B2-588",
+"id": "B2_101-110-14",
+"group": "B2_101-110",
 "level": "B2",
-"text": "It's not uncommon to be homesick when you live abroadIt's not uncommon to be homesick when you live abroad"
+"num": 14,
+"text": "It's not uncommon to be homesick when you live abroad"
 },
 {
-"id": "B2-589",
+"id": "B2_101-110-15",
+"group": "B2_101-110",
 "level": "B2",
+"num": 15,
 "text": "It's not uncommon to feel nervous before an important exam"
 },
 {
-"id": "B2-590",
+"id": "B2_101-110-16",
+"group": "B2_101-110",
 "level": "B2",
+"num": 16,
 "text": "It's not uncommon to face rejection when you start a business"
 },
 {
-"id": "B2-591",
+"id": "B2_101-110-17",
+"group": "B2_101-110",
 "level": "B2",
+"num": 17,
 "text": "It's not uncommon to feel tired after a long flight"
 },
 {
-"id": "B2-592",
+"id": "B2_101-110-18",
+"group": "B2_101-110",
 "level": "B2",
+"num": 18,
 "text": "It's not uncommon for prices to rise during the holidays"
 },
 {
-"id": "B2-593",
+"id": "B2_101-110-19",
+"group": "B2_101-110",
 "level": "B2",
+"num": 19,
 "text": "They have every sport you name it, tennis, swimming, you name it"
 },
 {
-"id": "B2-594",
+"id": "B2_101-110-20",
+"group": "B2_101-110",
 "level": "B2",
+"num": 20,
 "text": "She can do everything: cook, sing, dance, you name it"
 },
 {
-"id": "B2-595",
+"id": "B2_101-110-21",
+"group": "B2_101-110",
 "level": "B2",
+"num": 21,
 "text": "They sell everything: phones, laptops, cameras, you name it"
 },
 {
-"id": "B2-596",
+"id": "B2_101-110-22",
+"group": "B2_101-110",
 "level": "B2",
+"num": 22,
 "text": "He's tried every diet you name it"
 },
 {
-"id": "B2-597",
+"id": "B2_101-110-23",
+"group": "B2_101-110",
 "level": "B2",
+"num": 23,
 "text": "We can arrange any activity: hiking, diving, sailing, you name it"
 },
 {
-"id": "B2-598",
+"id": "B2_101-110-24",
+"group": "B2_101-110",
 "level": "B2",
+"num": 24,
 "text": "This city is expensive"
 },
 {
-"id": "B2-599",
+"id": "B2_101-110-25",
+"group": "B2_101-110",
 "level": "B2",
+"num": 25,
 "text": "That said, the quality of life is excellent"
 },
 {
-"id": "B2-600",
+"id": "B2_101-110-26",
+"group": "B2_101-110",
 "level": "B2",
-"text": "The city is expensiveThat said, the quality of life is excellent"
+"num": 26,
+"text": "The city is expensive"
 },
 {
-"id": "B2-601",
+"id": "B2_101-110-27",
+"group": "B2_101-110",
 "level": "B2",
+"num": 27,
 "text": "This job requires high, but then again, the salary is very competitive"
 },
 {
-"id": "B2-602",
+"id": "B2_101-110-28",
+"group": "B2_101-110",
 "level": "B2",
-"text": "That said, the salary is very competitiveThe job is demanding"
-},
-{
-"id": "B2-603",
-"level": "B2",
+"num": 28,
 "text": "That said, the salary is very competitive"
 },
 {
-"id": "B2-604",
+"id": "B2_101-110-29",
+"group": "B2_101-110",
 "level": "B2",
-"text": "This hotel is a bit far from the centerThat said, it's very quiet"
+"num": 29,
+"text": "The job is demanding"
 },
 {
-"id": "B2-605",
+"id": "B2_101-110-30",
+"group": "B2_101-110",
 "level": "B2",
+"num": 30,
+"text": "This hotel is a bit far from the center"
+},
+{
+"id": "B2_101-110-31",
+"group": "B2_101-110",
+"level": "B2",
+"num": 31,
+"text": "That said, it's very quiet"
+},
+{
+"id": "B2_101-110-32",
+"group": "B2_101-110",
+"level": "B2",
+"num": 32,
 "text": "The hotel is a bit far from the center"
 },
 {
-"id": "B2-606",
+"id": "B2_101-110-33",
+"group": "B2_101-110",
 "level": "B2",
-"text": "This software is very powerful, but speaking of, it takes time to learnThe software is powerful"
+"num": 33,
+"text": "This software is very powerful, but speaking of, it takes time to learn"
 },
 {
-"id": "B2-607",
+"id": "B2_101-110-34",
+"group": "B2_101-110",
 "level": "B2",
+"num": 34,
+"text": "The software is powerful"
+},
+{
+"id": "B2_101-110-35",
+"group": "B2_101-110",
+"level": "B2",
+"num": 35,
 "text": "That said, it takes time to learn"
 },
 {
-"id": "B2-608",
+"id": "B2_101-110-36",
+"group": "B2_101-110",
 "level": "B2",
+"num": 36,
 "text": "This plan has shortcomings"
 },
 {
-"id": "B2-609",
+"id": "B2_101-110-37",
+"group": "B2_101-110",
 "level": "B2",
+"num": 37,
 "text": "The plan has flaws"
 },
 {
-"id": "B2-610",
+"id": "B2_101-110-38",
+"group": "B2_101-110",
 "level": "B2",
+"num": 38,
 "text": "That said, it's the best we have"
 },
 {
-"id": "B2-611",
+"id": "B2_101-110-39",
+"group": "B2_101-110",
 "level": "B2",
+"num": 39,
 "text": "Once you finish the course, you'll receive a certificate"
 },
 {
-"id": "B2-612",
+"id": "B2_101-110-40",
+"group": "B2_101-110",
 "level": "B2",
+"num": 40,
 "text": "Once the rain stops, we'll be able to go outside"
 },
 {
-"id": "B2-613",
+"id": "B2_101-110-41",
+"group": "B2_101-110",
 "level": "B2",
+"num": 41,
 "text": "Once you get used to it, the job will feel easy"
 },
 {
-"id": "B2-614",
+"id": "B2_101-110-42",
+"group": "B2_101-110",
 "level": "B2",
-"text": "Once you get used to it, the job will feel easy"
-},
-{
-"id": "B2-615",
-"level": "B2",
+"num": 42,
 "text": "Once the contract is signed, we'll start hiring"
 },
 {
-"id": "B2-616",
+"id": "B2_101-110-43",
+"group": "B2_101-110",
 "level": "B2",
+"num": 43,
 "text": "Once she makes up her mind, nothing will change it"
 },
 {
-"id": "B2-617",
+"id": "B2_101-110-44",
+"group": "B2_101-110",
 "level": "B2",
+"num": 44,
 "text": "By the time I arrived, the meeting had already started"
 },
 {
-"id": "B2-618",
+"id": "B2_101-110-45",
+"group": "B2_101-110",
 "level": "B2",
+"num": 45,
 "text": "By the time she finished cooking, the guests had already arrived"
 },
 {
-"id": "B2-619",
+"id": "B2_101-110-46",
+"group": "B2_101-110",
 "level": "B2",
+"num": 46,
 "text": "By the time we arrived, the concert had already begun"
 },
 {
-"id": "B2-620",
+"id": "B2_101-110-47",
+"group": "B2_101-110",
 "level": "B2",
+"num": 47,
 "text": "By the time he graduated, he had published two papers"
 },
 {
-"id": "B2-621",
+"id": "B2_101-110-48",
+"group": "B2_101-110",
 "level": "B2",
+"num": 48,
 "text": "By the time the police arrived, the thief had escaped"
 },
 {
-"id": "B2-622",
+"id": "B2_101-110-49",
+"group": "B2_101-110",
 "level": "B2",
+"num": 49,
 "text": "In the meantime, we're using the backup system"
 },
 {
-"id": "B2-623",
+"id": "B2_101-110-50",
+"group": "B2_101-110",
 "level": "B2",
-"text": "The repairs are underwayIn the meantime, we're using the backup system"
+"num": 50,
+"text": "The repairs are underway"
 },
 {
-"id": "B2-624",
+"id": "B2_101-110-51",
+"group": "B2_101-110",
 "level": "B2",
+"num": 51,
 "text": "Meanwhile, the team is working on a temporary solution"
 },
 {
-"id": "B2-625",
+"id": "B2_101-110-52",
+"group": "B2_101-110",
 "level": "B2",
-"text": "The new office is being builtIn the meantime, we're working from home"
+"num": 52,
+"text": "The new office is being built"
 },
 {
-"id": "B2-626",
+"id": "B2_101-110-53",
+"group": "B2_101-110",
 "level": "B2",
+"num": 53,
+"text": "In the meantime, we're working from home"
+},
+{
+"id": "B2_101-110-54",
+"group": "B2_101-110",
+"level": "B2",
+"num": 54,
 "text": "Meanwhile, the search for a replacement continues"
 },
 {
-"id": "B2-627",
+"id": "B2_101-110-55",
+"group": "B2_101-110",
 "level": "B2",
+"num": 55,
 "text": "The bridge is closed for repairs"
 },
 {
-"id": "B2-628",
+"id": "B2_101-110-56",
+"group": "B2_101-110",
 "level": "B2",
+"num": 56,
 "text": "In the meantime, take the tunnel"
 },
 {
-"id": "B2-629",
+"id": "B2_101-110-57",
+"group": "B2_101-110",
 "level": "B2",
+"num": 57,
 "text": "Speaking of cooking, I'm a complete beginner"
 },
 {
-"id": "B2-630",
+"id": "B2_101-110-58",
+"group": "B2_101-110",
 "level": "B2",
+"num": 58,
 "text": "When it comes to cooking, I'm a complete beginner"
 },
 {
-"id": "B2-631",
+"id": "B2_101-110-59",
+"group": "B2_101-110",
 "level": "B2",
+"num": 59,
 "text": "When it comes to problem solving, she is truly exceptional"
 },
 {
-"id": "B2-632",
+"id": "B2_101-110-60",
+"group": "B2_101-110",
 "level": "B2",
+"num": 60,
 "text": "When it comes to technology, he's an expert"
 },
 {
-"id": "B2-633",
+"id": "B2_101-110-61",
+"group": "B2_101-110",
 "level": "B2",
+"num": 61,
 "text": "When it comes to saving money, she's very disciplined"
 },
 {
-"id": "B2-634",
+"id": "B2_101-110-62",
+"group": "B2_101-110",
 "level": "B2",
-"text": "When it comes to saving money, she's very disciplined"
-},
-{
-"id": "B2-635",
-"level": "B2",
+"num": 62,
 "text": "When it comes to public speaking, I get nervous"
 },
 {
-"id": "B2-636",
+"id": "B2_101-110-63",
+"group": "B2_101-110",
 "level": "B2",
+"num": 63,
 "text": "For the time being, I'll stay at my friend's place"
 },
 {
-"id": "B2-637",
+"id": "B2_101-110-64",
+"group": "B2_101-110",
 "level": "B2",
+"num": 64,
 "text": "For the time being, we will use the old system while the new one is set up"
 },
 {
-"id": "B2-638",
+"id": "B2_101-110-65",
+"group": "B2_101-110",
 "level": "B2",
-"text": "For the time being, we'll keep the old logoFor the time being, he's working part time"
+"num": 65,
+"text": "For the time being, we'll keep the old logo"
 },
 {
-"id": "B2-639",
+"id": "B2_101-110-66",
+"group": "B2_101-110",
 "level": "B2",
+"num": 66,
+"text": "For the time being, he's working part time"
+},
+{
+"id": "B2_101-110-67",
+"group": "B2_101-110",
+"level": "B2",
+"num": 67,
 "text": "For the time being, please don't share this information"
 },
 {
-"id": "B2-640",
+"id": "B2_111-120-1",
+"group": "B2_111-120",
 "level": "B2",
+"num": 1,
 "text": "There's no harm in asking for a second opinion"
 },
 {
-"id": "B2-641",
+"id": "B2_111-120-2",
+"group": "B2_111-120",
 "level": "B2",
+"num": 2,
 "text": "There's no harm in trying something new"
 },
 {
-"id": "B2-642",
+"id": "B2_111-120-3",
+"group": "B2_111-120",
 "level": "B2",
-"text": "There's no harm in trying something new"
-},
-{
-"id": "B2-643",
-"level": "B2",
+"num": 3,
 "text": "There's no harm in double checking the figures"
 },
 {
-"id": "B2-644",
+"id": "B2_111-120-4",
+"group": "B2_111-120",
 "level": "B2",
+"num": 4,
 "text": "There's no harm in asking for a discount"
 },
 {
-"id": "B2-645",
+"id": "B2_111-120-5",
+"group": "B2_111-120",
 "level": "B2",
+"num": 5,
 "text": "There's no harm in practicing a little more"
 },
 {
-"id": "B2-646",
+"id": "B2_111-120-6",
+"group": "B2_111-120",
 "level": "B2",
+"num": 6,
 "text": "The opportunity is rare, you should take your chances"
 },
 {
-"id": "B2-647",
+"id": "B2_111-120-7",
+"group": "B2_111-120",
 "level": "B2",
+"num": 7,
 "text": "It might be risky, but let's take a chance on this deal"
 },
 {
-"id": "B2-648",
+"id": "B2_111-120-8",
+"group": "B2_111-120",
 "level": "B2",
+"num": 8,
 "text": "The market is uncertain, but I'll take my chances"
 },
 {
-"id": "B2-649",
+"id": "B2_111-120-9",
+"group": "B2_111-120",
 "level": "B2",
+"num": 9,
 "text": "Sometimes you have to take a chance on yourself"
 },
 {
-"id": "B2-650",
+"id": "B2_111-120-10",
+"group": "B2_111-120",
 "level": "B2",
+"num": 10,
 "text": "She decided to take a chance on the new restaurant"
 },
 {
-"id": "B2-651",
+"id": "B2_111-120-11",
+"group": "B2_111-120",
 "level": "B2",
+"num": 11,
 "text": "Long hours are part of the job that comes with the territory"
 },
 {
-"id": "B2-652",
+"id": "B2_111-120-12",
+"group": "B2_111-120",
 "level": "B2",
+"num": 12,
 "text": "High pressure and tight deadlines that comes with the territory in this industry"
 },
 {
-"id": "B2-653",
+"id": "B2_111-120-13",
+"group": "B2_111-120",
 "level": "B2",
+"num": 13,
 "text": "Dealing with complaints that comes with the territory"
 },
 {
-"id": "B2-654",
+"id": "B2_111-120-14",
+"group": "B2_111-120",
 "level": "B2",
+"num": 14,
 "text": "Unpredictable hours come with the territory in journalism"
 },
 {
-"id": "B2-655",
+"id": "B2_111-120-15",
+"group": "B2_111-120",
 "level": "B2",
+"num": 15,
 "text": "If you manage people, difficult conversations come with the territory"
 },
 {
-"id": "B2-656",
+"id": "B2_111-120-16",
+"group": "B2_111-120",
 "level": "B2",
+"num": 16,
 "text": "You're expecting the deal to close next week?"
 },
 {
-"id": "B2-657",
+"id": "B2_111-120-17",
+"group": "B2_111-120",
 "level": "B2",
+"num": 17,
 "text": "You've only had one interview"
 },
 {
-"id": "B2-658",
+"id": "B2_111-120-18",
+"group": "B2_111-120",
 "level": "B2",
+"num": 18,
 "text": "You haven't signed the contract yet"
 },
 {
-"id": "B2-659",
+"id": "B2_111-120-19",
+"group": "B2_111-120",
 "level": "B2",
+"num": 19,
 "text": "This proposal could still fall through, so don't count your chickens before they hatch"
 },
 {
-"id": "B2-660",
+"id": "B2_111-120-20",
+"group": "B2_111-120",
 "level": "B2",
+"num": 20,
 "text": "The offer could still fall through, so don't count your chickens before they hatch"
 },
 {
-"id": "B2-661",
+"id": "B2_111-120-21",
+"group": "B2_111-120",
 "level": "B2",
+"num": 21,
 "text": "He's already planning the celebration, but don't count your chickens before they hatch"
 },
 {
-"id": "B2-662",
+"id": "B2_111-120-22",
+"group": "B2_111-120",
 "level": "B2",
+"num": 22,
 "text": "Before accepting the job offer, weigh the pros and cons carefully"
 },
 {
-"id": "B2-663",
+"id": "B2_111-120-23",
+"group": "B2_111-120",
 "level": "B2",
+"num": 23,
 "text": "In making a decision, let's weigh the pros and cons of each option before deciding"
 },
 {
-"id": "B2-664",
+"id": "B2_111-120-24",
+"group": "B2_111-120",
 "level": "B2",
+"num": 24,
 "text": "Let's weigh the pros and cons of each option before deciding"
 },
 {
-"id": "B2-665",
+"id": "B2_111-120-25",
+"group": "B2_111-120",
 "level": "B2",
+"num": 25,
 "text": "This is a"
 },
 {
-"id": "B2-666",
+"id": "B2_111-120-26",
+"group": "B2_111-120",
 "level": "B2",
+"num": 26,
 "text": ", in"
 },
 {
-"id": "B2-667",
+"id": "B2_111-120-27",
+"group": "B2_111-120",
 "level": "B2",
+"num": 27,
 "text": "It's a big move"
 },
 {
-"id": "B2-668",
+"id": "B2_111-120-28",
+"group": "B2_111-120",
 "level": "B2",
+"num": 28,
 "text": "Weigh the pros and cons before committing"
 },
 {
-"id": "B2-669",
+"id": "B2_111-120-29",
+"group": "B2_111-120",
 "level": "B2",
+"num": 29,
 "text": "We weighed the pros and cons and chose the cheaper option"
 },
 {
-"id": "B2-670",
+"id": "B2_111-120-30",
+"group": "B2_111-120",
 "level": "B2",
+"num": 30,
 "text": "Take a moment to weigh the pros and cons of each candidate"
 },
 {
-"id": "B2-671",
+"id": "B2_111-120-31",
+"group": "B2_111-120",
 "level": "B2",
+"num": 31,
 "text": "This plan has risks"
 },
 {
-"id": "B2-672",
+"id": "B2_111-120-32",
+"group": "B2_111-120",
 "level": "B2",
+"num": 32,
 "text": "That being said, the potential reward is huge"
 },
 {
-"id": "B2-673",
+"id": "B2_111-120-33",
+"group": "B2_111-120",
 "level": "B2",
+"num": 33,
 "text": "The plan has risks"
 },
 {
-"id": "B2-674",
+"id": "B2_111-120-34",
+"group": "B2_111-120",
 "level": "B2",
-"text": "The process is complicatedThat being said, it's worth the effort"
+"num": 34,
+"text": "The process is complicated"
 },
 {
-"id": "B2-675",
+"id": "B2_111-120-35",
+"group": "B2_111-120",
 "level": "B2",
+"num": 35,
+"text": "That being said, it's worth the effort"
+},
+{
+"id": "B2_111-120-36",
+"group": "B2_111-120",
+"level": "B2",
+"num": 36,
 "text": "This restaurant is very popular"
 },
 {
-"id": "B2-676",
+"id": "B2_111-120-37",
+"group": "B2_111-120",
 "level": "B2",
-"text": "That being said, the service is sometimes slowThe restaurant is popular"
+"num": 37,
+"text": "That being said, the service is sometimes slow"
 },
 {
-"id": "B2-677",
+"id": "B2_111-120-38",
+"group": "B2_111-120",
 "level": "B2",
+"num": 38,
+"text": "The restaurant is popular"
+},
+{
+"id": "B2_111-120-39",
+"group": "B2_111-120",
+"level": "B2",
+"num": 39,
 "text": "That being said, the service can be slow"
 },
 {
-"id": "B2-678",
+"id": "B2_111-120-40",
+"group": "B2_111-120",
 "level": "B2",
+"num": 40,
 "text": "This theory is elegant"
 },
 {
-"id": "B2-679",
+"id": "B2_111-120-41",
+"group": "B2_111-120",
 "level": "B2",
+"num": 41,
 "text": "That being said, it's unproven"
 },
 {
-"id": "B2-680",
+"id": "B2_111-120-42",
+"group": "B2_111-120",
 "level": "B2",
+"num": 42,
 "text": "It's an expensive course"
 },
 {
-"id": "B2-681",
+"id": "B2_111-120-43",
+"group": "B2_111-120",
 "level": "B2",
+"num": 43,
 "text": "That being said, it's worth it"
 },
 {
-"id": "B2-682",
+"id": "B2_111-120-44",
+"group": "B2_111-120",
 "level": "B2",
+"num": 44,
 "text": "Apart from the weather, the trip was perfect"
 },
 {
-"id": "B2-683",
+"id": "B2_111-120-45",
+"group": "B2_111-120",
 "level": "B2",
+"num": 45,
 "text": "Aside from the high price, the product is excellent"
 },
 {
-"id": "B2-684",
+"id": "B2_111-120-46",
+"group": "B2_111-120",
 "level": "B2",
+"num": 46,
 "text": "Aside from a few typos, the essay was flawless"
 },
 {
-"id": "B2-685",
+"id": "B2_111-120-47",
+"group": "B2_111-120",
 "level": "B2",
+"num": 47,
 "text": "Apart from one late arrival, everyone was punctual"
 },
 {
-"id": "B2-686",
+"id": "B2_111-120-48",
+"group": "B2_111-120",
 "level": "B2",
+"num": 48,
 "text": "Aside from the noise, the neighborhood is lovely"
 },
 {
-"id": "B2-687",
+"id": "B2_111-120-49",
+"group": "B2_111-120",
 "level": "B2",
+"num": 49,
 "text": "He was extremely ambitious"
 },
 {
-"id": "B2-688",
+"id": "B2_111-120-50",
+"group": "B2_111-120",
 "level": "B2",
+"num": 50,
 "text": "In other words, he wanted to run the entire department"
 },
 {
-"id": "B2-689",
+"id": "B2_111-120-51",
+"group": "B2_111-120",
 "level": "B2",
+"num": 51,
 "text": "The case failed to reach its goal"
 },
 {
-"id": "B2-690",
+"id": "B2_111-120-52",
+"group": "B2_111-120",
 "level": "B2",
+"num": 52,
 "text": "In other words, we need to try again"
 },
 {
-"id": "B2-691",
+"id": "B2_111-120-53",
+"group": "B2_111-120",
 "level": "B2",
+"num": 53,
 "text": "The project failed to meet its targets"
 },
 {
-"id": "B2-692",
+"id": "B2_111-120-54",
+"group": "B2_111-120",
 "level": "B2",
+"num": 54,
 "text": "Sales dropped sharply"
 },
 {
-"id": "B2-693",
+"id": "B2_111-120-55",
+"group": "B2_111-120",
 "level": "B2",
+"num": 55,
 "text": "In other words, we need a new strategy"
 },
 {
-"id": "B2-694",
+"id": "B2_111-120-56",
+"group": "B2_111-120",
 "level": "B2",
+"num": 56,
 "text": "He is frugal"
 },
 {
-"id": "B2-695",
+"id": "B2_111-120-57",
+"group": "B2_111-120",
 "level": "B2",
-"text": "In other words, he hates to waste moneyHe's very frugal"
+"num": 57,
+"text": "In other words, he hates to waste money"
 },
 {
-"id": "B2-696",
+"id": "B2_111-120-58",
+"group": "B2_111-120",
 "level": "B2",
+"num": 58,
+"text": "He's very frugal"
+},
+{
+"id": "B2_111-120-59",
+"group": "B2_111-120",
+"level": "B2",
+"num": 59,
 "text": "In other words, he hates wasting money"
 },
 {
-"id": "B2-697",
+"id": "B2_111-120-60",
+"group": "B2_111-120",
 "level": "B2",
+"num": 60,
 "text": "The deadline was moved up"
 },
 {
-"id": "B2-698",
+"id": "B2_111-120-61",
+"group": "B2_111-120",
 "level": "B2",
+"num": 61,
 "text": "In other words, we have less time"
 },
 {
-"id": "B2-699",
+"id": "B2_111-120-62",
+"group": "B2_111-120",
 "level": "B2",
-"text": "This apartment is beautiful, let alone convenientThe apartment is beautiful, not to mention conveniently located"
+"num": 62,
+"text": "This apartment is beautiful, let alone convenient"
 },
 {
-"id": "B2-700",
+"id": "B2_111-120-63",
+"group": "B2_111-120",
 "level": "B2",
-"text": "This job provides good experience, not to mention competitive salaryThe job offers great experience, not to mention a competitive salary"
+"num": 63,
+"text": "The apartment is beautiful, not to mention conveniently located"
 },
 {
-"id": "B2-701",
+"id": "B2_111-120-64",
+"group": "B2_111-120",
 "level": "B2",
-"text": "This hotel is spotless, not to mention the price is very affordableThe hotel was spotless, not to mention affordable"
+"num": 64,
+"text": "This job provides good experience, not to mention competitive salary"
 },
 {
-"id": "B2-702",
+"id": "B2_111-120-65",
+"group": "B2_111-120",
 "level": "B2",
+"num": 65,
+"text": "The job offers great experience, not to mention a competitive salary"
+},
+{
+"id": "B2_111-120-66",
+"group": "B2_111-120",
+"level": "B2",
+"num": 66,
+"text": "This hotel is spotless, not to mention the price is very affordable"
+},
+{
+"id": "B2_111-120-67",
+"group": "B2_111-120",
+"level": "B2",
+"num": 67,
+"text": "The hotel was spotless, not to mention affordable"
+},
+{
+"id": "B2_111-120-68",
+"group": "B2_111-120",
+"level": "B2",
+"num": 68,
 "text": "He speaks fluent French, not to mention Japanese"
 },
 {
-"id": "B2-703",
+"id": "B2_111-120-69",
+"group": "B2_111-120",
 "level": "B2",
+"num": 69,
 "text": "This hike was exhausting, not to mention dangerous"
 },
 {
-"id": "B2-704",
+"id": "B2_111-120-70",
+"group": "B2_111-120",
 "level": "B2",
+"num": 70,
 "text": "The hike was exhausting, not to mention dangerous"
 },
 {
-"id": "B2-705",
+"id": "B2_111-120-71",
+"group": "B2_111-120",
 "level": "B2",
+"num": 71,
 "text": "What with the traffic and the rain, we arrived two hours late"
 },
 {
-"id": "B2-706",
+"id": "B2_111-120-72",
+"group": "B2_111-120",
 "level": "B2",
+"num": 72,
 "text": "What with the workload and the deadlines, she's under a lot of pressure"
 },
 {
-"id": "B2-707",
+"id": "B2_111-120-73",
+"group": "B2_111-120",
 "level": "B2",
+"num": 73,
 "text": "What with the noise and the heat, I couldn't sleep"
 },
 {
-"id": "B2-708",
+"id": "B2_111-120-74",
+"group": "B2_111-120",
 "level": "B2",
+"num": 74,
 "text": "What with the exams and the competition, he's exhausted"
 },
 {
-"id": "B2-709",
+"id": "B2_111-120-75",
+"group": "B2_111-120",
 "level": "B2",
+"num": 75,
 "text": "What with the price and the quality, we chose a different brand"
 },
 {
-"id": "B2-710",
+"id": "B2_121-130-1",
+"group": "B2_121-130",
 "level": "B2",
+"num": 1,
 "text": "Little did I know that the interview was just the first step"
 },
 {
-"id": "B2-711",
+"id": "B2_121-130-2",
+"group": "B2_121-130",
 "level": "B2",
+"num": 2,
 "text": "Little did I know that the opportunity would change my life"
 },
 {
-"id": "B2-712",
+"id": "B2_121-130-3",
+"group": "B2_121-130",
 "level": "B2",
+"num": 3,
 "text": "Little did I know that she was already planning to leave"
 },
 {
-"id": "B2-713",
+"id": "B2_121-130-4",
+"group": "B2_121-130",
 "level": "B2",
+"num": 4,
 "text": "Little did I know that the delay would save my life"
 },
 {
-"id": "B2-714",
+"id": "B2_121-130-5",
+"group": "B2_121-130",
 "level": "B2",
-"text": "Little did I know that the delay would save my life"
-},
-{
-"id": "B2-715",
-"level": "B2",
+"num": 5,
 "text": "Little did I know how much this decision would cost me"
 },
 {
-"id": "B2-716",
+"id": "B2_121-130-6",
+"group": "B2_121-130",
 "level": "B2",
-"text": "Concert canceled,"
+"num": 6,
+"text": "Concert canceled"
 },
 {
-"id": "B2-717",
+"id": "B2_121-130-7",
+"group": "B2_121-130",
 "level": "B2",
+"num": 7,
 "text": "The concert was cancelled"
 },
 {
-"id": "B2-718",
+"id": "B2_121-130-8",
+"group": "B2_121-130",
 "level": "B2",
+"num": 8,
 "text": "What a pity"
 },
 {
-"id": "B2-719",
+"id": "B2_121-130-9",
+"group": "B2_121-130",
 "level": "B2",
+"num": 9,
 "text": "He didn't get that job"
 },
 {
-"id": "B2-720",
+"id": "B2_121-130-10",
+"group": "B2_121-130",
 "level": "B2",
+"num": 10,
 "text": "She didn't get the job"
 },
 {
-"id": "B2-721",
+"id": "B2_121-130-11",
+"group": "B2_121-130",
 "level": "B2",
+"num": 11,
 "text": "The museum is closed on Mondays"
 },
 {
-"id": "B2-722",
+"id": "B2_121-130-12",
+"group": "B2_121-130",
 "level": "B2",
-"text": "You couldn't make it to the weddingWhat a shame you couldn't make it to the wedding"
+"num": 12,
+"text": "You couldn't make it to the wedding"
 },
 {
-"id": "B2-723",
+"id": "B2_121-130-13",
+"group": "B2_121-130",
 "level": "B2",
+"num": 13,
+"text": "What a shame you couldn't make it to the wedding"
+},
+{
+"id": "B2_121-130-14",
+"group": "B2_121-130",
+"level": "B2",
+"num": 14,
 "text": "We just missed the last bus"
 },
 {
-"id": "B2-724",
+"id": "B2_121-130-15",
+"group": "B2_121-130",
 "level": "B2",
-"text": "Speak of the devilWe were just talking about you"
+"num": 15,
+"text": "Speak of the devil"
 },
 {
-"id": "B2-725",
+"id": "B2_121-130-16",
+"group": "B2_121-130",
 "level": "B2",
+"num": 16,
 "text": "We were just talking about you"
 },
 {
-"id": "B2-726",
+"id": "B2_121-130-17",
+"group": "B2_121-130",
 "level": "B2",
+"num": 17,
 "text": "Say"
 },
 {
-"id": "B2-727",
+"id": "B2_121-130-18",
+"group": "B2_121-130",
 "level": "B2",
-"text": "Speak of the devilOur boss just walked in"
+"num": 18,
+"text": "Our boss just walked in"
 },
 {
-"id": "B2-728",
+"id": "B2_121-130-19",
+"group": "B2_121-130",
 "level": "B2",
+"num": 19,
 "text": "Speak of the devil, our boss just walked in"
 },
 {
-"id": "B2-729",
+"id": "B2_121-130-20",
+"group": "B2_121-130",
 "level": "B2",
+"num": 20,
 "text": "Speak of the devilI was just about to call you"
 },
 {
-"id": "B2-730",
+"id": "B2_121-130-21",
+"group": "B2_121-130",
 "level": "B2",
+"num": 21,
 "text": "I was just about to call you"
 },
 {
-"id": "B2-731",
+"id": "B2_121-130-22",
+"group": "B2_121-130",
 "level": "B2",
-"text": "Speak of the devilHere she comes now"
+"num": 22,
+"text": "Here she comes now"
 },
 {
-"id": "B2-732",
+"id": "B2_121-130-23",
+"group": "B2_121-130",
 "level": "B2",
-"text": "Speak of the devilWe were just discussing your proposal"
-},
-{
-"id": "B2-733",
-"level": "B2",
+"num": 23,
 "text": "We were just discussing your proposal"
 },
 {
-"id": "B2-734",
+"id": "B2_121-130-24",
+"group": "B2_121-130",
 "level": "B2",
+"num": 24,
 "text": "Talk about bad luck"
 },
 {
-"id": "B2-735",
+"id": "B2_121-130-25",
+"group": "B2_121-130",
 "level": "B2",
+"num": 25,
 "text": "The flight was delayed again"
 },
 {
-"id": "B2-736",
+"id": "B2_121-130-26",
+"group": "B2_121-130",
 "level": "B2",
+"num": 26,
 "text": "Talk about a surprise"
 },
 {
-"id": "B2-737",
+"id": "B2_121-130-27",
+"group": "B2_121-130",
 "level": "B2",
+"num": 27,
 "text": "She didn't expect to see him there"
 },
 {
-"id": "B2-738",
+"id": "B2_121-130-28",
+"group": "B2_121-130",
 "level": "B2",
-"text": "Talk about a surprise"
-},
-{
-"id": "B2-739",
-"level": "B2",
+"num": 28,
 "text": "Talk about timing"
 },
 {
-"id": "B2-740",
+"id": "B2_121-130-29",
+"group": "B2_121-130",
 "level": "B2",
+"num": 29,
 "text": "The rain stopped right before the ceremony"
 },
 {
-"id": "B2-741",
+"id": "B2_121-130-30",
+"group": "B2_121-130",
 "level": "B2",
+"num": 30,
 "text": "Talk about pressure"
 },
 {
-"id": "B2-742",
+"id": "B2_121-130-31",
+"group": "B2_121-130",
 "level": "B2",
+"num": 31,
 "text": "The whole company was watching"
 },
 {
-"id": "B2-743",
+"id": "B2_121-130-32",
+"group": "B2_121-130",
 "level": "B2",
+"num": 32,
 "text": "World, we met again in Tokyo"
 },
 {
-"id": "B2-744",
+"id": "B2_121-130-33",
+"group": "B2_121-130",
 "level": "B2",
+"num": 33,
 "text": "Talk about a small world, we met again inI warned him not to do it"
 },
 {
-"id": "B2-745",
+"id": "B2_121-130-34",
+"group": "B2_121-130",
 "level": "B2",
+"num": 34,
 "text": "He asked for it"
 },
 {
-"id": "B2-746",
+"id": "B2_121-130-35",
+"group": "B2_121-130",
 "level": "B2",
+"num": 35,
 "text": "She ignored all the warnings"
 },
 {
-"id": "B2-747",
+"id": "B2_121-130-36",
+"group": "B2_121-130",
 "level": "B2",
+"num": 36,
 "text": "She asked for it"
 },
 {
-"id": "B2-748",
+"id": "B2_121-130-37",
+"group": "B2_121-130",
 "level": "B2",
+"num": 37,
 "text": "He ignored the doctor's advice"
 },
 {
-"id": "B2-749",
+"id": "B2_121-130-38",
+"group": "B2_121-130",
 "level": "B2",
+"num": 38,
 "text": "He spent all her savings on shoes"
 },
 {
-"id": "B2-750",
+"id": "B2_121-130-39",
+"group": "B2_121-130",
 "level": "B2",
+"num": 39,
 "text": "She spent all her savings on shoes"
 },
 {
-"id": "B2-751",
+"id": "B2_121-130-40",
+"group": "B2_121-130",
 "level": "B2",
+"num": 40,
 "text": "They skipped practice and lost the game"
 },
 {
-"id": "B2-752",
+"id": "B2_121-130-41",
+"group": "B2_121-130",
 "level": "B2",
+"num": 41,
 "text": "They asked for it"
 },
 {
-"id": "B2-753",
+"id": "B2_121-130-42",
+"group": "B2_121-130",
 "level": "B2",
-"text": "I go to the gym every other dayShe visits her parents every few weeks"
+"num": 42,
+"text": "I go to the gym every other day"
 },
 {
-"id": "B2-754",
+"id": "B2_121-130-43",
+"group": "B2_121-130",
 "level": "B2",
+"num": 43,
+"text": "She visits her parents every few weeks"
+},
+{
+"id": "B2_121-130-44",
+"group": "B2_121-130",
+"level": "B2",
+"num": 44,
 "text": "He takes his medicine every other day"
 },
 {
-"id": "B2-755",
+"id": "B2_121-130-45",
+"group": "B2_121-130",
 "level": "B2",
+"num": 45,
 "text": "The bus comes every few minutes"
 },
 {
-"id": "B2-756",
+"id": "B2_121-130-46",
+"group": "B2_121-130",
 "level": "B2",
+"num": 46,
 "text": "We hold a team meeting every other Monday"
 },
 {
-"id": "B2-757",
+"id": "B2_121-130-47",
+"group": "B2_121-130",
 "level": "B2",
+"num": 47,
 "text": "She once again proved herself as a reliable leader"
 },
 {
-"id": "B2-758",
+"id": "B2_121-130-48",
+"group": "B2_121-130",
 "level": "B2",
+"num": 48,
 "text": "Team once"
 },
 {
-"id": "B2-759",
+"id": "B2_121-130-49",
+"group": "B2_121-130",
 "level": "B2",
+"num": 49,
 "text": "Time and again, the team faced the same challenges"
 },
 {
-"id": "B2-760",
+"id": "B2_121-130-50",
+"group": "B2_121-130",
 "level": "B2",
+"num": 50,
 "text": "He once again proved that hard work pays off"
 },
 {
-"id": "B2-761",
+"id": "B2_121-130-51",
+"group": "B2_121-130",
 "level": "B2",
+"num": 51,
 "text": "Company once again proved that hard work pays off"
 },
 {
-"id": "B2-762",
+"id": "B2_121-130-52",
+"group": "B2_121-130",
 "level": "B2",
+"num": 52,
 "text": "Time and again, the company ignored the warning signs"
 },
 {
-"id": "B2-763",
+"id": "B2_121-130-53",
+"group": "B2_121-130",
 "level": "B2",
-"text": "He once again shows extraordinary courageTime and again, she has shown remarkable courage"
+"num": 53,
+"text": "He once again shows extraordinary courage"
 },
 {
-"id": "B2-764",
+"id": "B2_121-130-54",
+"group": "B2_121-130",
 "level": "B2",
+"num": 54,
+"text": "Time and again, she has shown remarkable courage"
+},
+{
+"id": "B2_121-130-55",
+"group": "B2_121-130",
+"level": "B2",
+"num": 55,
 "text": "I meant to call you yesterday, but it slipped my mind"
 },
 {
-"id": "B2-765",
+"id": "B2_121-130-56",
+"group": "B2_121-130",
 "level": "B2",
+"num": 56,
 "text": "I completely forgot to send the email"
 },
 {
-"id": "B2-766",
+"id": "B2_121-130-57",
+"group": "B2_121-130",
 "level": "B2",
+"num": 57,
 "text": "It slipped my mindI completely forgot to send the email"
 },
 {
-"id": "B2-767",
+"id": "B2_121-130-58",
+"group": "B2_121-130",
 "level": "B2",
+"num": 58,
 "text": "I was supposed to book the tickets, but it slipped my mind"
 },
 {
-"id": "B2-768",
+"id": "B2_121-130-59",
+"group": "B2_121-130",
 "level": "B2",
+"num": 59,
 "text": "Tomorrow is your anniversary, don't let it slip your mind"
 },
 {
-"id": "B2-769",
+"id": "B2_121-130-60",
+"group": "B2_121-130",
 "level": "B2",
+"num": 60,
 "text": "Your anniversary is tomorrow, don't let it slip your mind"
 },
 {
-"id": "B2-770",
+"id": "B2_121-130-61",
+"group": "B2_121-130",
 "level": "B2",
+"num": 61,
 "text": "Sorry, I didn't reply earlier"
 },
 {
-"id": "B2-771",
+"id": "B2_121-130-62",
+"group": "B2_121-130",
 "level": "B2",
+"num": 62,
 "text": "It completely slipped my mind"
 },
 {
-"id": "B2-772",
+"id": "B2_121-130-63",
+"group": "B2_121-130",
 "level": "B2",
+"num": 63,
 "text": "Last time I flew, the airline lost my luggage"
 },
 {
-"id": "B2-773",
+"id": "B2_121-130-64",
+"group": "B2_121-130",
 "level": "B2",
+"num": 64,
 "text": "The last time I visited the restaurant was closed"
 },
 {
-"id": "B2-774",
+"id": "B2_121-130-65",
+"group": "B2_121-130",
 "level": "B2",
+"num": 65,
 "text": "The last time I ate there, the food was terrible"
 },
 {
-"id": "B2-775",
+"id": "B2_121-130-66",
+"group": "B2_121-130",
 "level": "B2",
-"text": "The last time I ate there, the food was terrible"
-},
-{
-"id": "B2-776",
-"level": "B2",
+"num": 66,
 "text": "The last time I checked, the price was still the same"
 },
 {
-"id": "B2-777",
+"id": "B2_121-130-67",
+"group": "B2_121-130",
 "level": "B2",
+"num": 67,
 "text": "The last time we met, you were still living in Taipei"
 },
 {
-"id": "B2-778",
+"id": "B2_121-130-68",
+"group": "B2_121-130",
 "level": "B2",
+"num": 68,
 "text": "It's about time you started saving for retirement"
 },
 {
-"id": "B2-779",
+"id": "B2_121-130-69",
+"group": "B2_121-130",
 "level": "B2",
+"num": 69,
 "text": "It's about time he took his responsibilities more seriously"
 },
 {
-"id": "B2-780",
+"id": "B2_121-130-70",
+"group": "B2_121-130",
 "level": "B2",
+"num": 70,
 "text": "We've long since updated our software"
 },
 {
-"id": "B2-781",
+"id": "B2_121-130-71",
+"group": "B2_121-130",
 "level": "B2",
+"num": 71,
 "text": "It's about time we updated our software"
 },
 {
-"id": "B2-782",
+"id": "B2_121-130-72",
+"group": "B2_121-130",
 "level": "B2",
+"num": 72,
 "text": "It's about time she got the recognition she deserves"
 },
 {
-"id": "B2-783",
+"id": "B2_121-130-73",
+"group": "B2_121-130",
 "level": "B2",
+"num": 73,
 "text": "It's about time you learn to manage your money"
 },
 {
-"id": "B2-784",
+"id": "B2_131-140-1",
+"group": "B2_131-140",
 "level": "B2",
+"num": 1,
 "text": "Some people think I'm lazy, nothing could be further from the truth"
 },
 {
-"id": "B2-785",
+"id": "B2_131-140-2",
+"group": "B2_131-140",
 "level": "B2",
+"num": 2,
 "text": "People assume the project failed"
 },
 {
-"id": "B2-786",
+"id": "B2_131-140-3",
+"group": "B2_131-140",
 "level": "B2",
+"num": 3,
 "text": "Some say I don't care about the team, nothing could be further from the truth"
 },
 {
-"id": "B2-787",
+"id": "B2_131-140-4",
+"group": "B2_131-140",
 "level": "B2",
+"num": 4,
 "text": "People think success came easily for her"
 },
 {
-"id": "B2-788",
+"id": "B2_131-140-5",
+"group": "B2_131-140",
 "level": "B2",
+"num": 5,
 "text": "The rumor that we're closing nothing could be further from the truth"
 },
 {
-"id": "B2-789",
+"id": "B2_131-140-6",
+"group": "B2_131-140",
 "level": "B2",
+"num": 6,
 "text": "To make matters worse, my phone died"
 },
 {
-"id": "B2-790",
+"id": "B2_131-140-7",
+"group": "B2_131-140",
 "level": "B2",
+"num": 7,
 "text": "To make matters worse, we got a flat tire"
 },
 {
-"id": "B2-791",
+"id": "B2_131-140-8",
+"group": "B2_131-140",
 "level": "B2",
+"num": 8,
 "text": "To make matters worse, it started snowing heavily"
 },
 {
-"id": "B2-792",
+"id": "B2_131-140-9",
+"group": "B2_131-140",
 "level": "B2",
-"text": "To make matters worse, I had forgotten my umbrellaTo make matters worse, I had forgotten my umbrella"
+"num": 9,
+"text": "To make matters worse, I had forgotten my umbrella"
 },
 {
-"id": "B2-793",
+"id": "B2_131-140-10",
+"group": "B2_131-140",
 "level": "B2",
+"num": 10,
 "text": "To make matters worse, the client changed the requirements again"
 },
 {
-"id": "B2-794",
+"id": "B2_131-140-11",
+"group": "B2_131-140",
 "level": "B2",
+"num": 11,
 "text": "I'd rather have stayed home than gone to that party"
 },
 {
-"id": "B2-795",
+"id": "B2_131-140-12",
+"group": "B2_131-140",
 "level": "B2",
+"num": 12,
 "text": "I'd rather have taken the earlier flight than waited at the airport"
 },
 {
-"id": "B2-796",
+"id": "B2_131-140-13",
+"group": "B2_131-140",
 "level": "B2",
+"num": 13,
 "text": "I'd rather have kept quiet than said something I regret"
 },
 {
-"id": "B2-797",
+"id": "B2_131-140-14",
+"group": "B2_131-140",
 "level": "B2",
+"num": 14,
 "text": "I'd rather have taken the train than driven in that storm"
 },
 {
-"id": "B2-798",
+"id": "B2_131-140-15",
+"group": "B2_131-140",
 "level": "B2",
+"num": 15,
 "text": "I'd rather have apologized than let it ruin our friendship"
 },
 {
-"id": "B2-799",
+"id": "B2_131-140-16",
+"group": "B2_131-140",
 "level": "B2",
+"num": 16,
 "text": "If only I had listened to my parents' advice"
 },
 {
-"id": "B2-800",
+"id": "B2_131-140-17",
+"group": "B2_131-140",
 "level": "B2",
+"num": 17,
 "text": "If only she had arrived on time"
 },
 {
-"id": "B2-801",
+"id": "B2_131-140-18",
+"group": "B2_131-140",
 "level": "B2",
+"num": 18,
 "text": "If only we had booked the tickets earlier"
 },
 {
-"id": "B2-802",
+"id": "B2_131-140-19",
+"group": "B2_131-140",
 "level": "B2",
-"text": "If only he had told the truth from the startIf only I had taken that opportunity when I had the chance"
+"num": 19,
+"text": "If only he had told the truth from the start"
 },
 {
-"id": "B2-803",
+"id": "B2_131-140-20",
+"group": "B2_131-140",
 "level": "B2",
+"num": 20,
+"text": "If only I had taken that opportunity when I had the chance"
+},
+{
+"id": "B2_131-140-21",
+"group": "B2_131-140",
+"level": "B2",
+"num": 21,
 "text": "There's no way I would have guessed the answer"
 },
 {
-"id": "B2-804",
+"id": "B2_131-140-22",
+"group": "B2_131-140",
 "level": "B2",
+"num": 22,
 "text": "There's no way he would have agreed to that"
 },
 {
-"id": "B2-805",
+"id": "B2_131-140-23",
+"group": "B2_131-140",
 "level": "B2",
-"text": "There's no way she would have said something so rudeThere's no way she would have said something so rude"
+"num": 23,
+"text": "There's no way she would have said something so rude"
 },
 {
-"id": "B2-806",
+"id": "B2_131-140-24",
+"group": "B2_131-140",
 "level": "B2",
+"num": 24,
 "text": "Without your help, we"
 },
 {
-"id": "B2-807",
+"id": "B2_131-140-25",
+"group": "B2_131-140",
 "level": "B2",
+"num": 25,
 "text": "There's no way we would have finished without your help"
 },
 {
-"id": "B2-808",
+"id": "B2_131-140-26",
+"group": "B2_131-140",
 "level": "B2",
+"num": 26,
 "text": "There's no way he would have left without saying goodbye"
 },
 {
-"id": "B2-809",
+"id": "B2_131-140-27",
+"group": "B2_131-140",
 "level": "B2",
+"num": 27,
 "text": "The proposal is interesting, but that's not quite what I had in mind"
 },
 {
-"id": "B2-810",
+"id": "B2_131-140-28",
+"group": "B2_131-140",
 "level": "B2",
+"num": 28,
 "text": "Color is nice, but it's not quite what I had in mind"
 },
 {
-"id": "B2-811",
+"id": "B2_131-140-29",
+"group": "B2_131-140",
 "level": "B2",
+"num": 29,
 "text": "The venue is fine, but that's not quite what I had in mind"
 },
 {
-"id": "B2-812",
+"id": "B2_131-140-30",
+"group": "B2_131-140",
 "level": "B2",
+"num": 30,
 "text": "A simple dinner would be nice"
 },
 {
-"id": "B2-813",
+"id": "B2_131-140-31",
+"group": "B2_131-140",
 "level": "B2",
+"num": 31,
 "text": "A party is not quite what I had in mind"
 },
 {
-"id": "B2-814",
+"id": "B2_131-140-32",
+"group": "B2_131-140",
 "level": "B2",
+"num": 32,
 "text": "This design is creative, but that's not quite what I had in mind"
 },
 {
-"id": "B2-815",
+"id": "B2_131-140-33",
+"group": "B2_131-140",
 "level": "B2",
+"num": 33,
 "text": "I hate to say it, but I told you so"
 },
 {
-"id": "B2-816",
+"id": "B2_131-140-34",
+"group": "B2_131-140",
 "level": "B2",
+"num": 34,
 "text": "I hate to say it, but this plan is not going to work"
 },
 {
-"id": "B2-817",
+"id": "B2_131-140-35",
+"group": "B2_131-140",
 "level": "B2",
+"num": 35,
 "text": "I hate to say it, but we're going to miss the deadline"
 },
 {
-"id": "B2-818",
+"id": "B2_131-140-36",
+"group": "B2_131-140",
 "level": "B2",
+"num": 36,
 "text": "I hate to say it, but he's not ready for the promotion"
 },
 {
-"id": "B2-819",
+"id": "B2_131-140-37",
+"group": "B2_131-140",
 "level": "B2",
+"num": 37,
 "text": "I hate to say it, but you were right all along"
 },
 {
-"id": "B2-820",
+"id": "B2_131-140-38",
+"group": "B2_131-140",
 "level": "B2",
+"num": 38,
 "text": "Sorry, we"
 },
 {
-"id": "B2-821",
+"id": "B2_131-140-39",
+"group": "B2_131-140",
 "level": "B2",
+"num": 39,
 "text": "I'm afraid we can't accept your current offer"
 },
 {
-"id": "B2-822",
+"id": "B2_131-140-40",
+"group": "B2_131-140",
 "level": "B2",
+"num": 40,
 "text": "I'm afraid I can't join you for dinner tonight"
 },
 {
-"id": "B2-823",
+"id": "B2_131-140-41",
+"group": "B2_131-140",
 "level": "B2",
+"num": 41,
 "text": "I'm afraid the meeting may not be possible this week"
 },
 {
-"id": "B2-824",
+"id": "B2_131-140-42",
+"group": "B2_131-140",
 "level": "B2",
+"num": 42,
 "text": "I'm afraid I can't attend the conference next month"
 },
 {
-"id": "B2-825",
+"id": "B2_131-140-43",
+"group": "B2_131-140",
 "level": "B2",
-"text": "I'm afraid we can't extend the deadline any furtherI'm not going to lie, the process was much harder than I expected"
+"num": 43,
+"text": "I'm afraid we can't extend the deadline any further"
 },
 {
-"id": "B2-826",
+"id": "B2_131-140-44",
+"group": "B2_131-140",
 "level": "B2",
+"num": 44,
+"text": "I'm not going to lie, the process was much harder than I expected"
+},
+{
+"id": "B2_131-140-45",
+"group": "B2_131-140",
+"level": "B2",
+"num": 45,
 "text": "I'm not going to lie, the competition was extremely tough"
 },
 {
-"id": "B2-827",
+"id": "B2_131-140-46",
+"group": "B2_131-140",
 "level": "B2",
+"num": 46,
 "text": "I'm not going to lie, the exam was brutal"
 },
 {
-"id": "B2-828",
+"id": "B2_131-140-47",
+"group": "B2_131-140",
 "level": "B2",
+"num": 47,
 "text": "I'm not going to lie, I was nervous the whole time"
 },
 {
-"id": "B2-829",
+"id": "B2_131-140-48",
+"group": "B2_131-140",
 "level": "B2",
+"num": 48,
 "text": "I'm not going to lie, her performance blew me away"
 },
 {
-"id": "B2-830",
+"id": "B2_131-140-49",
+"group": "B2_131-140",
 "level": "B2",
+"num": 49,
 "text": "You've got to hand it to her; she's an incredible public speaker"
 },
 {
-"id": "B2-831",
+"id": "B2_131-140-50",
+"group": "B2_131-140",
 "level": "B2",
+"num": 50,
 "text": "You've got to hand it to him; he handled the crisis perfectly"
 },
 {
-"id": "B2-832",
+"id": "B2_131-140-51",
+"group": "B2_131-140",
 "level": "B2",
+"num": 51,
 "text": "You've got to hand it to the team; they never gave up"
 },
 {
-"id": "B2-833",
+"id": "B2_131-140-52",
+"group": "B2_131-140",
 "level": "B2",
+"num": 52,
 "text": "You've got to hand it to the team, they never gave up"
 },
 {
-"id": "B2-834",
+"id": "B2_131-140-53",
+"group": "B2_131-140",
 "level": "B2",
+"num": 53,
 "text": "You've got to hand it to him, he really knows his field"
 },
 {
-"id": "B2-835",
+"id": "B2_131-140-54",
+"group": "B2_131-140",
 "level": "B2",
+"num": 54,
 "text": "You've got to hand it to her; she turned the company around"
 },
 {
-"id": "B2-836",
+"id": "B2_141-150-1",
+"group": "B2_141-150",
 "level": "B2",
+"num": 1,
 "text": "Hope we'll have a good time"
 },
 {
-"id": "B2-837",
+"id": "B2_141-150-2",
+"group": "B2_141-150",
 "level": "B2",
+"num": 2,
 "text": "Here's hoping everything goes smoothly tomorrow"
 },
 {
-"id": "B2-838",
+"id": "B2_141-150-3",
+"group": "B2_141-150",
 "level": "B2",
-"text": "Here's hoping the flight isn't delayed againHere's hoping the flight isn't delayed again"
+"num": 3,
+"text": "Here's hoping the flight isn't delayed again"
 },
 {
-"id": "B2-839",
+"id": "B2_141-150-4",
+"group": "B2_141-150",
 "level": "B2",
+"num": 4,
 "text": "Here's hoping we get the funding we need"
 },
 {
-"id": "B2-840",
+"id": "B2_141-150-5",
+"group": "B2_141-150",
 "level": "B2",
-"text": "Hope new year brings you joyI've never been seriously injured"
+"num": 5,
+"text": "Hope new year brings you joy"
 },
 {
-"id": "B2-841",
+"id": "B2_141-150-6",
+"group": "B2_141-150",
 "level": "B2",
+"num": 6,
+"text": "I've never been seriously injured"
+},
+{
+"id": "B2_141-150-7",
+"group": "B2_141-150",
+"level": "B2",
+"num": 7,
 "text": "No accidents so far this year"
 },
 {
-"id": "B2-842",
+"id": "B2_141-150-8",
+"group": "B2_141-150",
 "level": "B2",
+"num": 8,
 "text": "This month we haven't had a single complaint this month"
 },
 {
-"id": "B2-843",
+"id": "B2_141-150-9",
+"group": "B2_141-150",
 "level": "B2",
-"text": "Touch woodWe haven't had a single complaint this month"
+"num": 9,
+"text": "Touch wood"
 },
 {
-"id": "B2-844",
+"id": "B2_141-150-10",
+"group": "B2_141-150",
 "level": "B2",
+"num": 10,
+"text": "We haven't had a single complaint this month"
+},
+{
+"id": "B2_141-150-11",
+"group": "B2_141-150",
+"level": "B2",
+"num": 11,
 "text": "Everything's going smoothly so far"
 },
 {
-"id": "B2-845",
+"id": "B2_141-150-12",
+"group": "B2_141-150",
 "level": "B2",
+"num": 12,
 "text": "Knock on wood"
 },
 {
-"id": "B2-846",
+"id": "B2_141-150-13",
+"group": "B2_141-150",
 "level": "B2",
+"num": 13,
 "text": "I've never missed a deadline"
 },
 {
-"id": "B2-847",
+"id": "B2_141-150-14",
+"group": "B2_141-150",
 "level": "B2",
+"num": 14,
 "text": "You have your performance tomorrow"
 },
 {
-"id": "B2-848",
+"id": "B2_141-150-15",
+"group": "B2_141-150",
 "level": "B2",
+"num": 15,
 "text": "Break a leg"
 },
 {
-"id": "B2-849",
+"id": "B2_141-150-16",
+"group": "B2_141-150",
 "level": "B2",
+"num": 16,
 "text": "Your exam is next week"
 },
 {
-"id": "B2-850",
+"id": "B2_141-150-17",
+"group": "B2_141-150",
 "level": "B2",
+"num": 17,
 "text": "You're presenting to the board today"
 },
 {
-"id": "B2-851",
+"id": "B2_141-150-18",
+"group": "B2_141-150",
 "level": "B2",
+"num": 18,
 "text": "This is your important interview"
 },
 {
-"id": "B2-852",
+"id": "B2_141-150-19",
+"group": "B2_141-150",
 "level": "B2",
+"num": 19,
 "text": "It's your big interview"
 },
 {
-"id": "B2-853",
+"id": "B2_141-150-20",
+"group": "B2_141-150",
 "level": "B2",
+"num": 20,
 "text": "You tonight's first concert is tonight"
 },
 {
-"id": "B2-854",
+"id": "B2_141-150-21",
+"group": "B2_141-150",
 "level": "B2",
+"num": 21,
 "text": "I'll keep my fingers crossed for your interview tomorrow"
 },
 {
-"id": "B2-855",
+"id": "B2_141-150-22",
+"group": "B2_141-150",
 "level": "B2",
+"num": 22,
 "text": "I'll keep my fingers crossed that the deal goes through"
 },
 {
-"id": "B2-856",
+"id": "B2_141-150-23",
+"group": "B2_141-150",
 "level": "B2",
+"num": 23,
 "text": "I'll keep my fingers crossed for your presentation"
 },
 {
-"id": "B2-857",
+"id": "B2_141-150-24",
+"group": "B2_141-150",
 "level": "B2",
+"num": 24,
 "text": "I'll keep my fingers crossed that you get the job"
 },
 {
-"id": "B2-858",
+"id": "B2_141-150-25",
+"group": "B2_141-150",
 "level": "B2",
+"num": 25,
 "text": "I'll keep my fingers crossed for good weather on your wedding day"
 },
 {
-"id": "B2-859",
+"id": "B2_141-150-26",
+"group": "B2_141-150",
 "level": "B2",
+"num": 26,
 "text": "May your new year be filled with health and happiness"
 },
 {
-"id": "B2-860",
+"id": "B2_141-150-27",
+"group": "B2_141-150",
 "level": "B2",
+"num": 27,
 "text": "May you find success in all your endeavors"
 },
 {
-"id": "B2-861",
+"id": "B2_141-150-28",
+"group": "B2_141-150",
 "level": "B2",
+"num": 28,
 "text": "May your business continue to grow"
 },
 {
-"id": "B2-862",
+"id": "B2_141-150-29",
+"group": "B2_141-150",
 "level": "B2",
+"num": 29,
 "text": "May all your wishes come true"
 },
 {
-"id": "B2-863",
+"id": "B2_141-150-30",
+"group": "B2_141-150",
 "level": "B2",
+"num": 30,
 "text": "May we meet again under happier circumstances"
 },
 {
-"id": "B2-864",
+"id": "B2_141-150-31",
+"group": "B2_141-150",
 "level": "B2",
+"num": 31,
 "text": "Not that I don't want to come, it's just that I'm busy"
 },
 {
-"id": "B2-865",
+"id": "B2_141-150-32",
+"group": "B2_141-150",
 "level": "B2",
+"num": 32,
 "text": "Not that I disagree, it's just that we need more time"
 },
 {
-"id": "B2-866",
+"id": "B2_141-150-33",
+"group": "B2_141-150",
 "level": "B2",
+"num": 33,
 "text": "It's not that I don't like him, it's just that we disagree a lot"
 },
 {
-"id": "B2-867",
+"id": "B2_141-150-34",
+"group": "B2_141-150",
 "level": "B2",
-"text": "Not this plan is bad, it's just thatIt's not that the plan is bad, it's just that it's too expensive"
+"num": 34,
+"text": "Not this plan is bad, it's just that"
 },
 {
-"id": "B2-868",
+"id": "B2_141-150-35",
+"group": "B2_141-150",
 "level": "B2",
+"num": 35,
 "text": "It's not that the plan is bad, it's just that it's too expensive"
 },
 {
-"id": "B2-869",
+"id": "B2_141-150-36",
+"group": "B2_141-150",
 "level": "B2",
+"num": 36,
 "text": "It's not that I'm not interested"
 },
 {
-"id": "B2-870",
+"id": "B2_141-150-37",
+"group": "B2_141-150",
 "level": "B2",
+"num": 37,
 "text": "It's just that I'm too busy"
 },
 {
-"id": "B2-871",
+"id": "B2_141-150-38",
+"group": "B2_141-150",
 "level": "B2",
-"text": "You have to fire your best friendYou'd have to fire your best friend"
+"num": 38,
+"text": "You have to fire your best friend"
 },
 {
-"id": "B2-872",
+"id": "B2_141-150-39",
+"group": "B2_141-150",
 "level": "B2",
-"text": "You have to make that decisionI'd hate to be in your shoes"
+"num": 39,
+"text": "You'd have to fire your best friend"
 },
 {
-"id": "B2-873",
+"id": "B2_141-150-40",
+"group": "B2_141-150",
 "level": "B2",
+"num": 40,
+"text": "You have to make that decision"
+},
+{
+"id": "B2_141-150-41",
+"group": "B2_141-150",
+"level": "B2",
+"num": 41,
+"text": "I'd hate to be in your shoes"
+},
+{
+"id": "B2_141-150-42",
+"group": "B2_141-150",
+"level": "B2",
+"num": 42,
 "text": "You have to choose between them"
 },
 {
-"id": "B2-874",
+"id": "B2_141-150-43",
+"group": "B2_141-150",
 "level": "B2",
+"num": 43,
 "text": "You have to tell him the bad news"
 },
 {
-"id": "B2-875",
+"id": "B2_141-150-44",
+"group": "B2_141-150",
 "level": "B2",
+"num": 44,
 "text": "You're managing both teams now"
 },
 {
-"id": "B2-876",
+"id": "B2_141-150-45",
+"group": "B2_141-150",
 "level": "B2",
+"num": 45,
 "text": "I'm not one to complain, but the service was really slow"
 },
 {
-"id": "B2-877",
+"id": "B2_141-150-46",
+"group": "B2_141-150",
 "level": "B2",
+"num": 46,
 "text": "I'm not one to gossip, but I heard something interesting"
 },
 {
-"id": "B2-878",
+"id": "B2_141-150-47",
+"group": "B2_141-150",
 "level": "B2",
+"num": 47,
 "text": "I'm not one to give up easily, but this is too much"
 },
 {
-"id": "B2-879",
+"id": "B2_141-150-48",
+"group": "B2_141-150",
 "level": "B2",
+"num": 48,
 "text": "I'm not one to brag, but I did win the contest"
 },
 {
-"id": "B2-880",
+"id": "B2_141-150-49",
+"group": "B2_141-150",
 "level": "B2",
+"num": 49,
 "text": "I'm not one to argue, but I think you're mistaken"
 },
 {
-"id": "B2-881",
+"id": "B2_141-150-50",
+"group": "B2_141-150",
 "level": "B2",
+"num": 50,
 "text": "We clearly see this differently"
 },
 {
-"id": "B2-882",
+"id": "B2_141-150-51",
+"group": "B2_141-150",
 "level": "B2",
+"num": 51,
 "text": "I respect your opinion, but let's agree to disagree"
 },
 {
-"id": "B2-883",
+"id": "B2_141-150-52",
+"group": "B2_141-150",
 "level": "B2",
+"num": 52,
 "text": "We'll never convince each other"
 },
 {
-"id": "B2-884",
+"id": "B2_141-150-53",
+"group": "B2_141-150",
 "level": "B2",
+"num": 53,
 "text": "This is a small problem"
 },
 {
-"id": "B2-885",
+"id": "B2_141-150-54",
+"group": "B2_141-150",
 "level": "B2",
+"num": 54,
 "text": "Then we'll each keep our own opinion"
 },
 {
-"id": "B2-886",
+"id": "B2_141-150-55",
+"group": "B2_141-150",
 "level": "B2",
+"num": 55,
 "text": "It's a minor point, so let's agree to disagree"
 },
 {
-"id": "B2-887",
+"id": "B2_141-150-56",
+"group": "B2_141-150",
 "level": "B2",
+"num": 56,
 "text": "We've discussed this enough"
 },
 {
-"id": "B2-888",
+"id": "B2_141-150-57",
+"group": "B2_141-150",
 "level": "B2",
+"num": 57,
 "text": "Your excuse for being late that takes the cake"
 },
 {
-"id": "B2-889",
+"id": "B2_141-150-58",
+"group": "B2_141-150",
 "level": "B2",
+"num": 58,
 "text": "Your excuse for being|That takes the cake"
 },
 {
-"id": "B2-890",
+"id": "B2_141-150-59",
+"group": "B2_141-150",
 "level": "B2",
+"num": 59,
 "text": "That lie you told, that really takes the cake"
 },
 {
-"id": "B2-891",
+"id": "B2_141-150-60",
+"group": "B2_141-150",
 "level": "B2",
-"text": "That lie you toldThat really takes the cake"
+"num": 60,
+"text": "That lie you told"
 },
 {
-"id": "B2-892",
+"id": "B2_141-150-61",
+"group": "B2_141-150",
 "level": "B2",
+"num": 61,
+"text": "That really takes the cake"
+},
+{
+"id": "B2_141-150-62",
+"group": "B2_141-150",
+"level": "B2",
+"num": 62,
 "text": "He blamed the delay on the traffic again"
 },
 {
-"id": "B2-893",
+"id": "B2_141-150-63",
+"group": "B2_141-150",
 "level": "B2",
-"text": "He blamed the delay on the traffic againThat takes the cake"
+"num": 63,
+"text": "That takes the cake"
 },
 {
-"id": "B2-894",
+"id": "B2_141-150-64",
+"group": "B2_141-150",
 "level": "B2",
+"num": 64,
 "text": "They charged me twice and then asked for a tip"
 },
 {
-"id": "B2-895",
+"id": "B2_141-150-65",
+"group": "B2_141-150",
 "level": "B2",
-"text": "That takes the cakeYou forgot her birthday and the anniversary"
-},
-{
-"id": "B2-896",
-"level": "B2",
+"num": 65,
 "text": "You forgot her birthday and the anniversary"
 },
 {
-"id": "C1-1",
+"id": "C1_001-010-1",
+"group": "C1_001-010",
 "level": "C1",
+"num": 1,
 "text": "What he had overlooked was that the deadline had already passed"
 },
 {
-"id": "C1-2",
+"id": "C1_001-010-2",
+"group": "C1_001-010",
 "level": "C1",
+"num": 2,
 "text": "What surprised everyone was that the company made a huge profit"
 },
 {
-"id": "C1-3",
+"id": "C1_001-010-3",
+"group": "C1_001-010",
 "level": "C1",
+"num": 3,
 "text": "What she had forgotten was that the meeting had been rescheduled"
 },
 {
-"id": "C1-4",
+"id": "C1_001-010-4",
+"group": "C1_001-010",
 "level": "C1",
+"num": 4,
 "text": "What they had failed to appreciate was the scale of the challenge ahead"
 },
 {
-"id": "C1-5",
+"id": "C1_001-010-5",
+"group": "C1_001-010",
 "level": "C1",
+"num": 5,
 "text": "What the researchers had discovered was that the virus mutated rapidly"
 },
 {
-"id": "C1-6",
+"id": "C1_001-010-6",
+"group": "C1_001-010",
 "level": "C1",
-"text": "What the researchers had discovered was that the virus mutated rapidlyHe"
+"num": 6,
+"text": "He"
 },
 {
-"id": "C1-7",
+"id": "C1_001-010-7",
+"group": "C1_001-010",
 "level": "C1",
+"num": 7,
 "text": "The fact that she resigned came as a shock to everyone"
 },
 {
-"id": "C1-8",
+"id": "C1_001-010-8",
+"group": "C1_001-010",
 "level": "C1",
+"num": 8,
 "text": "The fact that he was promoted surprised no one"
 },
 {
-"id": "C1-9",
+"id": "C1_001-010-9",
+"group": "C1_001-010",
 "level": "C1",
+"num": 9,
 "text": "The fact that the project was cancelled disappointed the whole team"
 },
 {
-"id": "C1-10",
+"id": "C1_001-010-10",
+"group": "C1_001-010",
 "level": "C1",
+"num": 10,
 "text": "The fact that prices keep rising worries ordinary families"
 },
 {
-"id": "C1-11",
+"id": "C1_001-010-11",
+"group": "C1_001-010",
 "level": "C1",
-"text": "He never apologized, the fact that he never apologized,The fact that he never apologized made the situation worse"
+"num": 11,
+"text": "He never apologized, the fact that he never apologized"
 },
 {
-"id": "C1-12",
+"id": "C1_001-010-12",
+"group": "C1_001-010",
 "level": "C1",
+"num": 12,
+"text": "The fact that he never apologized made the situation worse"
+},
+{
+"id": "C1_001-010-13",
+"group": "C1_001-010",
+"level": "C1",
+"num": 13,
 "text": "Word came that the CEO would be stepping down next month"
 },
 {
-"id": "C1-13",
+"id": "C1_001-010-14",
+"group": "C1_001-010",
 "level": "C1",
+"num": 14,
 "text": "Word came that the treaty had been signed"
 },
 {
-"id": "C1-14",
+"id": "C1_001-010-15",
+"group": "C1_001-010",
 "level": "C1",
+"num": 15,
 "text": "Word came that the factory would close by the end of the year"
 },
 {
-"id": "C1-15",
+"id": "C1_001-010-16",
+"group": "C1_001-010",
 "level": "C1",
+"num": 16,
 "text": "Word came that the expedition had reached the summit"
 },
 {
-"id": "C1-16",
+"id": "C1_001-010-17",
+"group": "C1_001-010",
 "level": "C1",
+"num": 17,
 "text": "Word came that the new vaccine had passed clinical trials"
 },
 {
-"id": "C1-17",
+"id": "C1_001-010-18",
+"group": "C1_001-010",
 "level": "C1",
+"num": 18,
 "text": "It goes without saying that safety must be our top priority"
 },
 {
-"id": "C1-18",
+"id": "C1_001-010-19",
+"group": "C1_001-010",
 "level": "C1",
+"num": 19,
 "text": "It goes without saying that hard work leads to success"
 },
 {
-"id": "C1-19",
+"id": "C1_001-010-20",
+"group": "C1_001-010",
 "level": "C1",
+"num": 20,
 "text": "It goes without saying that honesty is essential in any relationship"
 },
 {
-"id": "C1-20",
+"id": "C1_001-010-21",
+"group": "C1_001-010",
 "level": "C1",
+"num": 21,
 "text": "It goes without saying that regular exercise benefits both body and mind"
 },
 {
-"id": "C1-21",
+"id": "C1_001-010-22",
+"group": "C1_001-010",
 "level": "C1",
-"text": "Don't saySay, strange to say, the weather was perfect throughout our entire trip"
+"num": 22,
+"text": "Don't say"
 },
 {
-"id": "C1-22",
+"id": "C1_001-010-23",
+"group": "C1_001-010",
 "level": "C1",
+"num": 23,
+"text": "Say, strange to say, the weather was perfect throughout our entire trip"
+},
+{
+"id": "C1_001-010-24",
+"group": "C1_001-010",
+"level": "C1",
+"num": 24,
 "text": "Strange to report, the usually busy street was completely empty"
 },
 {
-"id": "C1-23",
+"id": "C1_001-010-25",
+"group": "C1_001-010",
 "level": "C1",
-"text": "Strange to say, the cheapest option turned out to be the most reliableSayinSay, strange to say, the two rivals eventually became close friends"
+"num": 25,
+"text": "Strange to say, the cheapest option turned out to be the most reliable"
 },
 {
-"id": "C1-24",
+"id": "C1_001-010-26",
+"group": "C1_001-010",
 "level": "C1",
+"num": 26,
+"text": "Sayin"
+},
+{
+"id": "C1_001-010-27",
+"group": "C1_001-010",
+"level": "C1",
+"num": 27,
+"text": "Say, strange to say, the two rivals eventually became close friends"
+},
+{
+"id": "C1_001-010-28",
+"group": "C1_001-010",
+"level": "C1",
+"num": 28,
 "text": "If I had studied medicine, I would be a doctor now"
 },
 {
-"id": "C1-25",
+"id": "C1_001-010-29",
+"group": "C1_001-010",
 "level": "C1",
+"num": 29,
 "text": "If she had accepted the job, she would be working in London now"
 },
 {
-"id": "C1-26",
+"id": "C1_001-010-30",
+"group": "C1_001-010",
 "level": "C1",
+"num": 30,
 "text": "If he had invested in that startup, he would be a millionaire now"
 },
 {
-"id": "C1-27",
+"id": "C1_001-010-31",
+"group": "C1_001-010",
 "level": "C1",
+"num": 31,
 "text": "If we had bought the house five years ago, we would be living there now"
 },
 {
-"id": "C1-28",
+"id": "C1_001-010-32",
+"group": "C1_001-010",
 "level": "C1",
+"num": 32,
 "text": "If they had emigrated, their children would be growing up abroad now"
 },
 {
-"id": "C1-29",
+"id": "C1_001-010-33",
+"group": "C1_001-010",
 "level": "C1",
+"num": 33,
 "text": "If you were more careful, you wouldn't have made that mistake"
 },
 {
-"id": "C1-30",
+"id": "C1_001-010-34",
+"group": "C1_001-010",
 "level": "C1",
+"num": 34,
 "text": "If he were here, he would have helped us"
 },
 {
-"id": "C1-31",
+"id": "C1_001-010-35",
+"group": "C1_001-010",
 "level": "C1",
+"num": 35,
 "text": "If she were more organized, she wouldn't have missed the deadline"
 },
 {
-"id": "C1-32",
+"id": "C1_001-010-36",
+"group": "C1_001-010",
 "level": "C1",
+"num": 36,
 "text": "If I were you, I would accept that proposal"
 },
 {
-"id": "C1-33",
+"id": "C1_001-010-37",
+"group": "C1_001-010",
 "level": "C1",
+"num": 37,
 "text": "If I were you, I would have accepted the offer"
 },
 {
-"id": "C1-34",
+"id": "C1_001-010-38",
+"group": "C1_001-010",
 "level": "C1",
+"num": 38,
 "text": "If the system were more secure, the data breach would not have happened"
 },
 {
-"id": "C1-35",
+"id": "C1_001-010-39",
+"group": "C1_001-010",
 "level": "C1",
+"num": 39,
 "text": "If the government"
 },
 {
-"id": "C1-36",
+"id": "C1_001-010-40",
+"group": "C1_001-010",
 "level": "C1",
+"num": 40,
 "text": "Were the government to raise taxes, consumer spending would decline"
 },
 {
-"id": "C1-37",
+"id": "C1_001-010-41",
+"group": "C1_001-010",
 "level": "C1",
+"num": 41,
 "text": "If the company to merge, thousands of jobs would be at risk"
 },
 {
-"id": "C1-38",
+"id": "C1_001-010-42",
+"group": "C1_001-010",
 "level": "C1",
+"num": 42,
 "text": "Were the company to merge, thousands of jobs would be at risk"
 },
 {
-"id": "C1-39",
+"id": "C1_001-010-43",
+"group": "C1_001-010",
 "level": "C1",
+"num": 43,
 "text": "If the ban were lifted, the market would be flooded with cheap imports"
 },
 {
-"id": "C1-40",
+"id": "C1_001-010-44",
+"group": "C1_001-010",
 "level": "C1",
+"num": 44,
 "text": "Were the ban to be lifted, the market would be flooded with cheap imports"
 },
 {
-"id": "C1-41",
+"id": "C1_001-010-45",
+"group": "C1_001-010",
 "level": "C1",
+"num": 45,
 "text": "If she resigns, the party would struggle to find a replacement"
 },
 {
-"id": "C1-42",
+"id": "C1_001-010-46",
+"group": "C1_001-010",
 "level": "C1",
+"num": 46,
 "text": "Were she to resign, the party would struggle to find a replacement"
 },
 {
-"id": "C1-43",
+"id": "C1_001-010-47",
+"group": "C1_001-010",
 "level": "C1",
+"num": 47,
 "text": "If the treaty"
 },
 {
-"id": "C1-44",
+"id": "C1_001-010-48",
+"group": "C1_001-010",
 "level": "C1",
+"num": 48,
 "text": ", regional stability would be severely undermined"
 },
 {
-"id": "C1-45",
+"id": "C1_001-010-49",
+"group": "C1_001-010",
 "level": "C1",
+"num": 49,
 "text": "Were the treaty to collapse, regional stability would be severely undermined"
 },
 {
-"id": "C1-46",
+"id": "C1_001-010-50",
+"group": "C1_001-010",
 "level": "C1",
+"num": 50,
 "text": "Should the project fail, we will have to seek alternative funding"
 },
 {
-"id": "C1-47",
+"id": "C1_001-010-51",
+"group": "C1_001-010",
 "level": "C1",
+"num": 51,
 "text": "Should it rain tomorrow, the event will be postponed"
 },
 {
-"id": "C1-48",
+"id": "C1_001-010-52",
+"group": "C1_001-010",
 "level": "C1",
+"num": 52,
 "text": "If you need further assistance, please do not hesitate to contact us"
 },
 {
-"id": "C1-49",
+"id": "C1_001-010-53",
+"group": "C1_001-010",
 "level": "C1",
+"num": 53,
 "text": "Should you require further assistance, please do not hesitate to contact us"
 },
 {
-"id": "C1-50",
+"id": "C1_001-010-54",
+"group": "C1_001-010",
 "level": "C1",
+"num": 54,
 "text": "If demand continues to rise, we will expand production"
 },
 {
-"id": "C1-51",
+"id": "C1_001-010-55",
+"group": "C1_001-010",
 "level": "C1",
+"num": 55,
 "text": "Should demand continue to rise, we will expand production"
 },
 {
-"id": "C1-52",
+"id": "C1_001-010-56",
+"group": "C1_001-010",
 "level": "C1",
+"num": 56,
 "text": "If negotiations break down, the strike will go ahead as planned"
 },
 {
-"id": "C1-53",
+"id": "C1_001-010-57",
+"group": "C1_001-010",
 "level": "C1",
+"num": 57,
 "text": "Should the negotiations break down, the strike will go ahead as planned"
 },
 {
-"id": "C1-54",
+"id": "C1_001-010-58",
+"group": "C1_001-010",
 "level": "C1",
-"text": "If not, but for her encouragement, I would have given upBut for her encouragement, I would have given up"
+"num": 58,
+"text": "If not, but for her encouragement, I would have given up"
 },
 {
-"id": "C1-55",
+"id": "C1_001-010-59",
+"group": "C1_001-010",
 "level": "C1",
+"num": 59,
+"text": "But for her encouragement, I would have given up"
+},
+{
+"id": "C1_001-010-60",
+"group": "C1_001-010",
+"level": "C1",
+"num": 60,
 "text": "But for the emergency fund, the company would have gone bankrupt"
 },
 {
-"id": "C1-56",
+"id": "C1_001-010-61",
+"group": "C1_001-010",
 "level": "C1",
+"num": 61,
 "text": "But for your timely warning, we would have walked straight into the trap"
 },
 {
-"id": "C1-57",
+"id": "C1_001-010-62",
+"group": "C1_001-010",
 "level": "C1",
+"num": 62,
 "text": "If not for the swift response of the firefighters, the whole street would have burned down"
 },
 {
-"id": "C1-58",
+"id": "C1_001-010-63",
+"group": "C1_001-010",
 "level": "C1",
+"num": 63,
 "text": "But for the swift response of the firefighters, the whole street would have burned down"
 },
 {
-"id": "C1-59",
+"id": "C1_001-010-64",
+"group": "C1_001-010",
 "level": "C1",
+"num": 64,
 "text": "If not for luck, this team would have lost the championship"
 },
 {
-"id": "C1-60",
+"id": "C1_001-010-65",
+"group": "C1_001-010",
 "level": "C1",
+"num": 65,
 "text": "But for a single stroke of luck, the team would have lost the championship"
 },
 {
-"id": "C1-61",
+"id": "C1_011-020-1",
+"group": "C1_011-020",
 "level": "C1",
+"num": 1,
 "text": "The signing of the agreement took place at the city hall"
 },
 {
-"id": "C1-62",
+"id": "C1_011-020-2",
+"group": "C1_011-020",
 "level": "C1",
+"num": 2,
 "text": "The opening of the new museum attracted thousands of visitors"
 },
 {
-"id": "C1-63",
+"id": "C1_011-020-3",
+"group": "C1_011-020",
 "level": "C1",
+"num": 3,
 "text": "The passing of the new law sparked heated debate nationwide"
 },
 {
-"id": "C1-64",
+"id": "C1_011-020-4",
+"group": "C1_011-020",
 "level": "C1",
+"num": 4,
 "text": "The launching of the satellite marked a new era in space exploration"
 },
 {
-"id": "C1-65",
+"id": "C1_011-020-5",
+"group": "C1_011-020",
 "level": "C1",
+"num": 5,
 "text": "The closing of the factory left hundreds without work"
 },
 {
-"id": "C1-66",
+"id": "C1_011-020-6",
+"group": "C1_011-020",
 "level": "C1",
+"num": 6,
 "text": "Upon receiving the results, the committee immediately convened"
 },
 {
-"id": "C1-67",
+"id": "C1_011-020-7",
+"group": "C1_011-020",
 "level": "C1",
+"num": 7,
 "text": "Upon hearing the news, she burst into tears"
 },
 {
-"id": "C1-68",
+"id": "C1_011-020-8",
+"group": "C1_011-020",
 "level": "C1",
+"num": 8,
 "text": "Upon arriving at the airport, he realized he had forgotten his passport"
 },
 {
-"id": "C1-69",
+"id": "C1_011-020-9",
+"group": "C1_011-020",
 "level": "C1",
+"num": 9,
 "text": "Upon completing the course, students are awarded a certificate"
 },
 {
-"id": "C1-70",
+"id": "C1_011-020-10",
+"group": "C1_011-020",
 "level": "C1",
+"num": 10,
 "text": "Upon entering the room, the guests were greeted with applause"
 },
 {
-"id": "C1-71",
+"id": "C1_011-020-11",
+"group": "C1_011-020",
 "level": "C1",
+"num": 11,
 "text": "With the population aging rapidly, healthcare costs are soaring"
 },
 {
-"id": "C1-72",
+"id": "C1_011-020-12",
+"group": "C1_011-020",
 "level": "C1",
+"num": 12,
 "text": "With technology advancing quickly, many jobs become obsolete"
 },
 {
-"id": "C1-73",
+"id": "C1_011-020-13",
+"group": "C1_011-020",
 "level": "C1",
+"num": 13,
 "text": "With oil prices rising sharply, airlines are cutting costs"
 },
 {
-"id": "C1-74",
+"id": "C1_011-020-14",
+"group": "C1_011-020",
 "level": "C1",
+"num": 14,
 "text": "With the deadline approaching, the team worked through the night"
 },
 {
-"id": "C1-75",
+"id": "C1_011-020-15",
+"group": "C1_011-020",
 "level": "C1",
+"num": 15,
 "text": "With unemployment falling steadily, consumer confidence is recovering"
 },
 {
-"id": "C1-76",
+"id": "C1_011-020-16",
+"group": "C1_011-020",
 "level": "C1",
+"num": 16,
 "text": "There being no further business, the meeting was adjourned"
 },
 {
-"id": "C1-77",
+"id": "C1_011-020-17",
+"group": "C1_011-020",
 "level": "C1",
+"num": 17,
 "text": "There being no consensus, the vote was postponed"
 },
 {
-"id": "C1-78",
+"id": "C1_011-020-18",
+"group": "C1_011-020",
 "level": "C1",
+"num": 18,
 "text": "There being no alternative, we were forced to accept the terms"
 },
 {
-"id": "C1-79",
+"id": "C1_011-020-19",
+"group": "C1_011-020",
 "level": "C1",
+"num": 19,
 "text": "There being no witnesses, the case was difficult to prove"
 },
 {
-"id": "C1-80",
+"id": "C1_011-020-20",
+"group": "C1_011-020",
 "level": "C1",
+"num": 20,
 "text": "There being little time left, the discussion was cut short"
 },
 {
-"id": "C1-81",
+"id": "C1_011-020-21",
+"group": "C1_011-020",
 "level": "C1",
+"num": 21,
 "text": "There is nothing to be gained from further argument"
 },
 {
-"id": "C1-82",
+"id": "C1_011-020-22",
+"group": "C1_011-020",
 "level": "C1",
-"text": "There is everything to be gained from open dialogueThere is everything to be gained from open dialogue"
+"num": 22,
+"text": "There is everything to be gained from open dialogue"
 },
 {
-"id": "C1-83",
+"id": "C1_011-020-23",
+"group": "C1_011-020",
 "level": "C1",
+"num": 23,
 "text": "Mutual blame almost has no benefits"
 },
 {
-"id": "C1-84",
+"id": "C1_011-020-24",
+"group": "C1_011-020",
 "level": "C1",
+"num": 24,
 "text": "There is little to be gained from blaming one another"
 },
 {
-"id": "C1-85",
+"id": "C1_011-020-25",
+"group": "C1_011-020",
 "level": "C1",
+"num": 25,
 "text": "From past failures, there is much to be learned"
 },
 {
-"id": "C1-86",
+"id": "C1_011-020-26",
+"group": "C1_011-020",
 "level": "C1",
+"num": 26,
 "text": "There is nothing to be feared from honest criticism"
 },
 {
-"id": "C1-87",
+"id": "C1_011-020-27",
+"group": "C1_011-020",
 "level": "C1",
-"text": "There is nothing to be feared from honest criticism"
+"num": 27,
+"text": "The disease seems to affect mainly older"
 },
 {
-"id": "C1-88",
+"id": "C1_011-020-28",
+"group": "C1_011-020",
 "level": "C1",
-"text": "The disease seems to affect mainly olderThe disease appears to affect primarily older adults"
+"num": 28,
+"text": "The disease appears to affect primarily older adults"
 },
 {
-"id": "C1-89",
+"id": "C1_011-020-29",
+"group": "C1_011-020",
 "level": "C1",
+"num": 29,
 "text": "The situation appears to be improving slowly"
 },
 {
-"id": "C1-90",
+"id": "C1_011-020-30",
+"group": "C1_011-020",
 "level": "C1",
+"num": 30,
 "text": "The economy appears to have weathered the worst of the crisis"
 },
 {
-"id": "C1-91",
+"id": "C1_011-020-31",
+"group": "C1_011-020",
 "level": "C1",
+"num": 31,
 "text": "The two countries appear to be moving toward a compromise"
 },
 {
-"id": "C1-92",
+"id": "C1_011-020-32",
+"group": "C1_011-020",
 "level": "C1",
+"num": 32,
 "text": "This manuscript appears to have been written in the 15th century"
 },
 {
-"id": "C1-93",
+"id": "C1_011-020-33",
+"group": "C1_011-020",
 "level": "C1",
+"num": 33,
 "text": "These two events"
 },
 {
-"id": "C1-94",
+"id": "C1_011-020-34",
+"group": "C1_011-020",
 "level": "C1",
+"num": 34,
 "text": "It would appear that the two events are unrelated"
 },
 {
-"id": "C1-95",
+"id": "C1_011-020-35",
+"group": "C1_011-020",
 "level": "C1",
+"num": 35,
 "text": "It would appear that the data has been misinterpreted"
 },
 {
-"id": "C1-96",
+"id": "C1_011-020-36",
+"group": "C1_011-020",
 "level": "C1",
+"num": 36,
 "text": "It would appear that the company has underestimated the risks"
 },
 {
-"id": "C1-97",
+"id": "C1_011-020-37",
+"group": "C1_011-020",
 "level": "C1",
+"num": 37,
 "text": "It would appear that nobody informed the staff of the change"
 },
 {
-"id": "C1-98",
+"id": "C1_011-020-38",
+"group": "C1_011-020",
 "level": "C1",
+"num": 38,
 "text": "Negotiations appear to be progressing well"
 },
 {
-"id": "C1-99",
+"id": "C1_011-020-39",
+"group": "C1_011-020",
 "level": "C1",
+"num": 39,
 "text": "It would appear that the negotiations are progressing well"
 },
 {
-"id": "C1-100",
+"id": "C1_011-020-40",
+"group": "C1_011-020",
 "level": "C1",
+"num": 40,
 "text": "Younger workers tend to be more comfortable with technology"
 },
 {
-"id": "C1-101",
+"id": "C1_011-020-41",
+"group": "C1_011-020",
 "level": "C1",
+"num": 41,
 "text": "Traditional methods tend not to be as effective in modern contexts"
 },
 {
-"id": "C1-102",
+"id": "C1_011-020-42",
+"group": "C1_011-020",
 "level": "C1",
+"num": 42,
 "text": "Bilingual children tend to be more flexible in their thinking"
 },
 {
-"id": "C1-103",
+"id": "C1_011-020-43",
+"group": "C1_011-020",
 "level": "C1",
+"num": 43,
 "text": "Prices tend to rise during periods of high demand"
 },
 {
-"id": "C1-104",
+"id": "C1_011-020-44",
+"group": "C1_011-020",
 "level": "C1",
+"num": 44,
 "text": "Busy people tend not to notice small details"
 },
 {
-"id": "C1-105",
+"id": "C1_011-020-45",
+"group": "C1_011-020",
 "level": "C1",
+"num": 45,
 "text": "Very naturally, we draw the conclusion that hard work alone guarantees success, but this ignores structural barriers"
 },
 {
-"id": "C1-106",
+"id": "C1_011-020-46",
+"group": "C1_011-020",
 "level": "C1",
+"num": 46,
 "text": "It is tempting to conclude that hard work alone guarantees success, but this ignores structural barriers"
 },
 {
-"id": "C1-107",
+"id": "C1_011-020-47",
+"group": "C1_011-020",
 "level": "C1",
+"num": 47,
 "text": "It is tempting to dismiss the theory, but it has strong empirical support"
 },
 {
-"id": "C1-108",
+"id": "C1_011-020-48",
+"group": "C1_011-020",
 "level": "C1",
+"num": 48,
 "text": "It is tempting to blame the government, but the problem is far more complex"
 },
 {
-"id": "C1-109",
+"id": "C1_011-020-49",
+"group": "C1_011-020",
 "level": "C1",
-"text": "It is tempting to take shortcuts, but they often cost more in the long runIt is tempting to take shortcuts, but they often cost more in the long run"
+"num": 49,
+"text": "It is tempting to take shortcuts, but they often cost more in the long run"
 },
 {
-"id": "C1-110",
+"id": "C1_011-020-50",
+"group": "C1_011-020",
 "level": "C1",
+"num": 50,
 "text": "It is tempting to assume the trend will continue, but markets are unpredictable"
 },
 {
-"id": "C1-111",
+"id": "C1_011-020-51",
+"group": "C1_011-020",
 "level": "C1",
+"num": 51,
 "text": "One cannot help but wonder whether this policy truly serves the public interest"
 },
 {
-"id": "C1-112",
+"id": "C1_011-020-52",
+"group": "C1_011-020",
 "level": "C1",
-"text": "People cannot help but admire his dedication to this causeOne cannot help but admire her dedication to the cause"
+"num": 52,
+"text": "People cannot help but admire his dedication to this cause"
 },
 {
-"id": "C1-113",
+"id": "C1_011-020-53",
+"group": "C1_011-020",
 "level": "C1",
+"num": 53,
+"text": "One cannot help but admire her dedication to the cause"
+},
+{
+"id": "C1_011-020-54",
+"group": "C1_011-020",
+"level": "C1",
+"num": 54,
 "text": "One cannot help but feel a sense of loss at the old building's demolition"
 },
 {
-"id": "C1-114",
+"id": "C1_011-020-55",
+"group": "C1_011-020",
 "level": "C1",
+"num": 55,
 "text": "One cannot help but question the motives behind such a generous offer"
 },
 {
-"id": "C1-115",
+"id": "C1_011-020-56",
+"group": "C1_011-020",
 "level": "C1",
+"num": 56,
 "text": "One cannot help but be moved by the survivor's courage"
 },
 {
-"id": "C1-116",
+"id": "C1_021-030-1",
+"group": "C1_021-030",
 "level": "C1",
+"num": 1,
 "text": "In three months, the team published its findings"
 },
 {
-"id": "C1-117",
+"id": "C1_021-030-2",
+"group": "C1_021-030",
 "level": "C1",
+"num": 2,
 "text": "Having reviewed all the evidence, the jury reached a verdict"
 },
 {
-"id": "C1-118",
+"id": "C1_021-030-3",
+"group": "C1_021-030",
 "level": "C1",
+"num": 3,
 "text": "In this industry, after many years, she has a deep understanding of the market"
 },
 {
-"id": "C1-119",
+"id": "C1_021-030-4",
+"group": "C1_021-030",
 "level": "C1",
+"num": 4,
 "text": "Signing the contract, the parties agreed to keep its terms confidential"
 },
 {
-"id": "C1-120",
+"id": "C1_021-030-5",
+"group": "C1_021-030",
 "level": "C1",
+"num": 5,
 "text": "Having witnessed the disaster firsthand, he devoted his life to relief work"
 },
 {
-"id": "C1-121",
+"id": "C1_021-030-6",
+"group": "C1_021-030",
 "level": "C1",
+"num": 6,
 "text": "About the event"
 },
 {
-"id": "C1-122",
+"id": "C1_021-030-7",
+"group": "C1_021-030",
 "level": "C1",
+"num": 7,
 "text": "Much of what was promised was never delivered"
 },
 {
-"id": "C1-123",
+"id": "C1_021-030-8",
+"group": "C1_021-030",
 "level": "C1",
+"num": 8,
 "text": "Much of what was discussed in the meeting was later forgotten"
 },
 {
-"id": "C1-124",
+"id": "C1_021-030-9",
+"group": "C1_021-030",
 "level": "C1",
+"num": 9,
 "text": "School teaches most of the content that has little practical value"
 },
 {
-"id": "C1-125",
+"id": "C1_021-030-10",
+"group": "C1_021-030",
 "level": "C1",
+"num": 10,
 "text": "Much of what is taught in school has little practical value"
 },
 {
-"id": "C1-126",
+"id": "C1_021-030-11",
+"group": "C1_021-030",
 "level": "C1",
+"num": 11,
 "text": "Much of what was discovered has yet to be fully understood"
 },
 {
-"id": "C1-127",
+"id": "C1_021-030-12",
+"group": "C1_021-030",
 "level": "C1",
+"num": 12,
 "text": "All things considered, the performance exceeded expectations"
 },
 {
-"id": "C1-128",
+"id": "C1_021-030-13",
+"group": "C1_021-030",
 "level": "C1",
+"num": 13,
 "text": "All things considered, the policy change was beneficial"
 },
 {
-"id": "C1-129",
+"id": "C1_021-030-14",
+"group": "C1_021-030",
 "level": "C1",
+"num": 14,
 "text": "All things considered, the trip was a great success"
 },
 {
-"id": "C1-130",
+"id": "C1_021-030-15",
+"group": "C1_021-030",
 "level": "C1",
+"num": 15,
 "text": "All things considered, we made the right decision"
 },
 {
-"id": "C1-131",
+"id": "C1_021-030-16",
+"group": "C1_021-030",
 "level": "C1",
+"num": 16,
 "text": "All things considered, the candidate handled the crisis admirably"
 },
 {
-"id": "C1-132",
+"id": "C1_021-030-17",
+"group": "C1_021-030",
 "level": "C1",
+"num": 17,
 "text": "All measures were taken, however, the system still failed"
 },
 {
-"id": "C1-133",
+"id": "C1_021-030-18",
+"group": "C1_021-030",
 "level": "C1",
+"num": 18,
 "text": "All precautions were taken, however, the accident still occurred"
 },
 {
-"id": "C1-134",
+"id": "C1_021-030-19",
+"group": "C1_021-030",
 "level": "C1",
+"num": 19,
 "text": "All efforts were made, however, the goal was not achieved"
 },
 {
-"id": "C1-135",
+"id": "C1_021-030-20",
+"group": "C1_021-030",
 "level": "C1",
+"num": 20,
 "text": "All arguments were presented, however, the jury remained unconvinced"
 },
 {
-"id": "C1-136",
+"id": "C1_021-030-21",
+"group": "C1_021-030",
 "level": "C1",
+"num": 21,
 "text": "All options were considered, however, none seemed viable"
 },
 {
-"id": "C1-137",
+"id": "C1_021-030-22",
+"group": "C1_021-030",
 "level": "C1",
+"num": 22,
 "text": "Due to the pandemic and the supply chain crisis, production fell by 20%"
 },
 {
-"id": "C1-138",
+"id": "C1_021-030-23",
+"group": "C1_021-030",
 "level": "C1",
+"num": 23,
 "text": "What with the pandemic and the supply chain crisis, production fell by 20%"
 },
 {
-"id": "C1-139",
+"id": "C1_021-030-24",
+"group": "C1_021-030",
 "level": "C1",
+"num": 24,
 "text": "What with the traffic and the long queue, we waited for over an hour"
 },
 {
-"id": "C1-140",
+"id": "C1_021-030-25",
+"group": "C1_021-030",
 "level": "C1",
+"num": 25,
 "text": "Due to the rising prices and the falling wages, many families are struggling"
 },
 {
-"id": "C1-141",
+"id": "C1_021-030-26",
+"group": "C1_021-030",
 "level": "C1",
+"num": 26,
 "text": "What with the rising prices and the falling wages, many families are struggling"
 },
 {
-"id": "C1-142",
+"id": "C1_021-030-27",
+"group": "C1_021-030",
 "level": "C1",
+"num": 27,
 "text": "What with the exams and the part-time job, she hardly had time to sleep"
 },
 {
-"id": "C1-143",
+"id": "C1_021-030-28",
+"group": "C1_021-030",
 "level": "C1",
+"num": 28,
 "text": "What with the storm and the power outage, the whole town was in chaos"
 },
 {
-"id": "C1-144",
+"id": "C1_021-030-29",
+"group": "C1_021-030",
 "level": "C1",
+"num": 29,
 "text": "No matter how hard she tried, she couldn't change his mind"
 },
 {
-"id": "C1-145",
+"id": "C1_021-030-30",
+"group": "C1_021-030",
 "level": "C1",
+"num": 30,
 "text": "However hard she tried, she couldn't change his mind"
 },
 {
-"id": "C1-146",
+"id": "C1_021-030-31",
+"group": "C1_021-030",
 "level": "C1",
+"num": 31,
 "text": "No matter where you go, you'll find similar challenges"
 },
 {
-"id": "C1-147",
+"id": "C1_021-030-32",
+"group": "C1_021-030",
 "level": "C1",
+"num": 32,
 "text": "However far you travel, you'll encounter different cultures"
 },
 {
-"id": "C1-148",
+"id": "C1_021-030-33",
+"group": "C1_021-030",
 "level": "C1",
+"num": 33,
 "text": "No matter what they offered, he refused to compromise"
 },
 {
-"id": "C1-149",
+"id": "C1_021-030-34",
+"group": "C1_021-030",
 "level": "C1",
+"num": 34,
 "text": "However, carefully the plan was drafted, unforeseen problems still arose"
 },
 {
-"id": "C1-150",
+"id": "C1_021-030-35",
+"group": "C1_021-030",
 "level": "C1",
+"num": 35,
 "text": "No matter when you call, someone is always available"
 },
 {
-"id": "C1-151",
+"id": "C1_021-030-36",
+"group": "C1_021-030",
 "level": "C1",
+"num": 36,
 "text": "Granted, the salary is competitive, but the commute is brutal"
 },
 {
-"id": "C1-152",
+"id": "C1_021-030-37",
+"group": "C1_021-030",
 "level": "C1",
+"num": 37,
 "text": "Granted, the book is popular, but the arguments lack depth"
 },
 {
-"id": "C1-153",
+"id": "C1_021-030-38",
+"group": "C1_021-030",
 "level": "C1",
+"num": 38,
 "text": "Granted, the technology is impressive, but it is far too expensive"
 },
 {
-"id": "C1-154",
+"id": "C1_021-030-39",
+"group": "C1_021-030",
 "level": "C1",
+"num": 39,
 "text": "Granted, he is talented, but he lacks discipline"
 },
 {
-"id": "C1-155",
+"id": "C1_021-030-40",
+"group": "C1_021-030",
 "level": "C1",
+"num": 40,
 "text": "Granted, the plan has merits, but it is unlikely to succeed"
 },
 {
-"id": "C1-156",
+"id": "C1_021-030-41",
+"group": "C1_021-030",
 "level": "C1",
+"num": 41,
 "text": "Technology creates work opportunities, but it also replaces workers"
 },
 {
-"id": "C1-157",
+"id": "C1_021-030-42",
+"group": "C1_021-030",
 "level": "C1",
+"num": 42,
 "text": "While it is true that technology creates jobs, it also displaces workers"
 },
 {
-"id": "C1-158",
+"id": "C1_021-030-43",
+"group": "C1_021-030",
 "level": "C1",
+"num": 43,
 "text": "While it is true that exercise is good for health, overtraining can be harmful"
 },
 {
-"id": "C1-159",
+"id": "C1_021-030-44",
+"group": "C1_021-030",
 "level": "C1",
+"num": 44,
 "text": "This city is full of energy, but the cost of living is prohibitive"
 },
 {
-"id": "C1-160",
+"id": "C1_021-030-45",
+"group": "C1_021-030",
 "level": "C1",
+"num": 45,
 "text": "While it is true that the city is vibrant, the cost of living is prohibitive"
 },
 {
-"id": "C1-161",
+"id": "C1_021-030-46",
+"group": "C1_021-030",
 "level": "C1",
+"num": 46,
 "text": "While it is true that the law protects consumers, enforcement remains weak"
 },
 {
-"id": "C1-162",
+"id": "C1_021-030-47",
+"group": "C1_021-030",
 "level": "C1",
+"num": 47,
 "text": "Remote work provides flexibility, but it can blur work-life boundaries"
 },
 {
-"id": "C1-163",
+"id": "C1_021-030-48",
+"group": "C1_021-030",
 "level": "C1",
+"num": 48,
 "text": "While it is true that remote work offers flexibility, it can blur work-life boundaries"
 },
 {
-"id": "C1-164",
+"id": "C1_021-030-49",
+"group": "C1_021-030",
 "level": "C1",
+"num": 49,
 "text": "Given funds are limited, we must prioritize necessary cases"
 },
 {
-"id": "C1-165",
+"id": "C1_021-030-50",
+"group": "C1_021-030",
 "level": "C1",
+"num": 50,
 "text": "In view of the fact that funds are limited, we must prioritize essential projects"
 },
 {
-"id": "C1-166",
+"id": "C1_021-030-51",
+"group": "C1_021-030",
 "level": "C1",
-"text": "Given the deadline is approaching, we must act quicklyIn view of the fact that the deadline is approaching, we must act quickly"
+"num": 51,
+"text": "Given the deadline is approaching, we must act quickly"
 },
 {
-"id": "C1-167",
+"id": "C1_021-030-52",
+"group": "C1_021-030",
 "level": "C1",
-"text": "Given the evidence, the case was rejectedIn view of the fact that the evidence is inconclusive, the case was dismissed"
+"num": 52,
+"text": "In view of the fact that the deadline is approaching, we must act quickly"
 },
 {
-"id": "C1-168",
+"id": "C1_021-030-53",
+"group": "C1_021-030",
 "level": "C1",
+"num": 53,
+"text": "Given the evidence, the case was rejected"
+},
+{
+"id": "C1_021-030-54",
+"group": "C1_021-030",
+"level": "C1",
+"num": 54,
 "text": "In view of the fact that the evidence is inconclusive, the case was dismissed"
 },
 {
-"id": "C1-169",
+"id": "C1_021-030-55",
+"group": "C1_021-030",
 "level": "C1",
-"text": "Given the demand decline, we must reduceIn view of the fact that demand has fallen, we must cut production"
+"num": 55,
+"text": "Given the demand decline, we must reduce"
 },
 {
-"id": "C1-170",
+"id": "C1_021-030-56",
+"group": "C1_021-030",
 "level": "C1",
+"num": 56,
 "text": "In view of the fact that demand has fallen, we must cut production"
 },
 {
-"id": "C1-171",
+"id": "C1_021-030-57",
+"group": "C1_021-030",
 "level": "C1",
+"num": 57,
 "text": "In view of the fact that he is a first-time offender, the judge showed leniency"
 },
 {
-"id": "C1-172",
+"id": "C1_021-030-58",
+"group": "C1_021-030",
 "level": "C1",
+"num": 58,
 "text": "For all his wealth, he remains deeply unhappy"
 },
 {
-"id": "C1-173",
+"id": "C1_021-030-59",
+"group": "C1_021-030",
 "level": "C1",
+"num": 59,
 "text": "For all her academic achievements, she lacked practical experience"
 },
 {
-"id": "C1-174",
+"id": "C1_021-030-60",
+"group": "C1_021-030",
 "level": "C1",
+"num": 60,
 "text": "For all its sophistication, the software is surprisingly easy to use"
 },
 {
-"id": "C1-175",
+"id": "C1_021-030-61",
+"group": "C1_021-030",
 "level": "C1",
+"num": 61,
 "text": "For all his bravado, he was clearly terrified"
 },
 {
-"id": "C1-176",
+"id": "C1_021-030-62",
+"group": "C1_021-030",
 "level": "C1",
+"num": 62,
 "text": "For all the criticism, the policy has produced tangible results"
 },
 {
-"id": "C1-177",
+"id": "C1_031-040-1",
+"group": "C1_031-040",
 "level": "C1",
+"num": 1,
 "text": "According to Smith, 2022, as the author points out, remote work boosts productivity"
 },
 {
-"id": "C1-178",
+"id": "C1_031-040-2",
+"group": "C1_031-040",
 "level": "C1",
+"num": 2,
 "text": "According to recent studies, regular sleep improves cognitive performance"
 },
 {
-"id": "C1-179",
+"id": "C1_031-040-3",
+"group": "C1_031-040",
 "level": "C1",
+"num": 3,
 "text": "According to the World Health Organization, air pollution affects millions worldwide"
 },
 {
-"id": "C1-180",
+"id": "C1_031-040-4",
+"group": "C1_031-040",
 "level": "C1",
+"num": 4,
 "text": "According to the latest report, as the committee points out, reforms are urgently needed"
 },
 {
-"id": "C1-181",
+"id": "C1_031-040-5",
+"group": "C1_031-040",
 "level": "C1",
+"num": 5,
 "text": "According to official statistics, unemployment fell for the third consecutive month"
 },
 {
-"id": "C1-182",
+"id": "C1_031-040-6",
+"group": "C1_031-040",
 "level": "C1",
+"num": 6,
 "text": "The data suggests that customer satisfaction has declined over the past year"
 },
 {
-"id": "C1-183",
+"id": "C1_031-040-7",
+"group": "C1_031-040",
 "level": "C1",
+"num": 7,
 "text": "The evidence indicates that the treatment is effective"
 },
 {
-"id": "C1-184",
+"id": "C1_031-040-8",
+"group": "C1_031-040",
 "level": "C1",
+"num": 8,
 "text": "The survey results suggest that employees value flexibility over salary"
 },
 {
-"id": "C1-185",
+"id": "C1_031-040-9",
+"group": "C1_031-040",
 "level": "C1",
+"num": 9,
 "text": "The trend indicates that online shopping will soon dominate retail"
 },
 {
-"id": "C1-186",
+"id": "C1_031-040-10",
+"group": "C1_031-040",
 "level": "C1",
+"num": 10,
 "text": "His silence implies that he disagrees with the proposal"
 },
 {
-"id": "C1-187",
+"id": "C1_031-040-11",
+"group": "C1_031-040",
 "level": "C1",
+"num": 11,
 "text": "Social media's impact on consumer decision-making remains controversial"
 },
 {
-"id": "C1-188",
+"id": "C1_031-040-12",
+"group": "C1_031-040",
 "level": "C1",
+"num": 12,
 "text": "The extent to which social media influences purchasing decisions remains debated"
 },
 {
-"id": "C1-189",
+"id": "C1_031-040-13",
+"group": "C1_031-040",
 "level": "C1",
+"num": 13,
 "text": "The extent to which technology has reshaped education is remarkable"
 },
 {
-"id": "C1-190",
+"id": "C1_031-040-14",
+"group": "C1_031-040",
 "level": "C1",
+"num": 14,
 "text": "The extent to which climate change affects migration is still poorly understood"
 },
 {
-"id": "C1-191",
+"id": "C1_031-040-15",
+"group": "C1_031-040",
 "level": "C1",
+"num": 15,
 "text": "The extent to which parents shape their children's values cannot be overstated"
 },
 {
-"id": "C1-192",
+"id": "C1_031-040-16",
+"group": "C1_031-040",
 "level": "C1",
-"text": "The extent to which parents shape their children's values cannot be overstated"
-},
-{
-"id": "C1-193",
-"level": "C1",
+"num": 16,
 "text": "The extent to which the two phenomena are related has yet to be established"
 },
 {
-"id": "C1-194",
+"id": "C1_031-040-17",
+"group": "C1_031-040",
 "level": "C1",
+"num": 17,
 "text": "People widely acknowledge that climate change poses a serious threat to coastal cities"
 },
 {
-"id": "C1-195",
+"id": "C1_031-040-18",
+"group": "C1_031-040",
 "level": "C1",
+"num": 18,
 "text": "People widely acknowledge that education is the foundation of social mobility"
 },
 {
-"id": "C1-196",
+"id": "C1_031-040-19",
+"group": "C1_031-040",
 "level": "C1",
+"num": 19,
 "text": "People widely acknowledge that a healthy diet contributes to longevity"
 },
 {
-"id": "C1-197",
+"id": "C1_031-040-20",
+"group": "C1_031-040",
 "level": "C1",
+"num": 20,
 "text": "People widely acknowledge that corruption hinders economic development"
 },
 {
-"id": "C1-198",
+"id": "C1_031-040-21",
+"group": "C1_031-040",
 "level": "C1",
+"num": 21,
 "text": "People widely acknowledge that teamwork is essential to any successful organization"
 },
 {
-"id": "C1-199",
+"id": "C1_031-040-22",
+"group": "C1_031-040",
 "level": "C1",
-"text": "The question is whether the benefits of AI outweigh the risksThe question is whether we can sustain this growth long term"
+"num": 22,
+"text": "The question is whether the benefits of AI outweigh the risks"
 },
 {
-"id": "C1-200",
+"id": "C1_031-040-23",
+"group": "C1_031-040",
 "level": "C1",
+"num": 23,
+"text": "The question is whether we can sustain this growth long term"
+},
+{
+"id": "C1_031-040-24",
+"group": "C1_031-040",
+"level": "C1",
+"num": 24,
 "text": "The question is whether the treaty will actually be enforced"
 },
 {
-"id": "C1-201",
+"id": "C1_031-040-25",
+"group": "C1_031-040",
 "level": "C1",
+"num": 25,
 "text": "The question is whether the public will accept such drastic measures"
 },
 {
-"id": "C1-202",
+"id": "C1_031-040-26",
+"group": "C1_031-040",
 "level": "C1",
-"text": "How is how to balance economic growth with environmental protectionNothing is more important than maintaining public trust"
+"num": 26,
+"text": "How is how to balance economic growth with environmental protection"
 },
 {
-"id": "C1-203",
+"id": "C1_031-040-27",
+"group": "C1_031-040",
 "level": "C1",
-"text": "Nothing is more important than maintaining public trustNothing is more rewarding than helping others"
+"num": 27,
+"text": "Nothing is more important than maintaining public trust"
 },
 {
-"id": "C1-204",
+"id": "C1_031-040-28",
+"group": "C1_031-040",
 "level": "C1",
+"num": 28,
+"text": "Nothing is more rewarding than helping others"
+},
+{
+"id": "C1_031-040-29",
+"group": "C1_031-040",
+"level": "C1",
+"num": 29,
 "text": "Nothing is more frustrating than waiting for an answer that never comes"
 },
 {
-"id": "C1-205",
+"id": "C1_031-040-30",
+"group": "C1_031-040",
 "level": "C1",
+"num": 30,
 "text": "Nothing is more dangerous than a leader who refuses to listen"
 },
 {
-"id": "C1-206",
+"id": "C1_031-040-31",
+"group": "C1_031-040",
 "level": "C1",
+"num": 31,
 "text": "Nothing is less predictable than the stock market"
 },
 {
-"id": "C1-207",
+"id": "C1_031-040-32",
+"group": "C1_031-040",
 "level": "C1",
-"text": "Two candidates, Jane, is more competentOf the two candidates, Jane is the more qualified"
+"num": 32,
+"text": "Two candidates, Jane, is more competent"
 },
 {
-"id": "C1-208",
+"id": "C1_031-040-33",
+"group": "C1_031-040",
 "level": "C1",
-"text": "Of the two proposals, the second one is the more feasibleOf the two proposals, the second one is the more feasible"
+"num": 33,
+"text": "Of the two candidates, Jane is the more qualified"
 },
 {
-"id": "C1-209",
+"id": "C1_031-040-34",
+"group": "C1_031-040",
 "level": "C1",
+"num": 34,
+"text": "Of the two proposals, the second one is the more feasible"
+},
+{
+"id": "C1_031-040-35",
+"group": "C1_031-040",
+"level": "C1",
+"num": 35,
 "text": "Two plans, the first is the more economical"
 },
 {
-"id": "C1-210",
+"id": "C1_031-040-36",
+"group": "C1_031-040",
 "level": "C1",
+"num": 36,
 "text": "Of the two plans, the first is the more economical"
 },
 {
-"id": "C1-211",
+"id": "C1_031-040-37",
+"group": "C1_031-040",
 "level": "C1",
+"num": 37,
 "text": "Two roads, this one is the shorter"
 },
 {
-"id": "C1-212",
+"id": "C1_031-040-38",
+"group": "C1_031-040",
 "level": "C1",
+"num": 38,
 "text": "Two explanations, hers is the more convincing"
 },
 {
-"id": "C1-213",
+"id": "C1_031-040-39",
+"group": "C1_031-040",
 "level": "C1",
+"num": 39,
 "text": "This is by far the most challenging project I've ever worked on"
 },
 {
-"id": "C1-214",
+"id": "C1_031-040-40",
+"group": "C1_031-040",
 "level": "C1",
+"num": 40,
 "text": "That is easily the best restaurant in the city"
 },
 {
-"id": "C1-215",
+"id": "C1_031-040-41",
+"group": "C1_031-040",
 "level": "C1",
+"num": 41,
 "text": "He is undoubtedly the best musician in his generation"
 },
 {
-"id": "C1-216",
+"id": "C1_031-040-42",
+"group": "C1_031-040",
 "level": "C1",
+"num": 42,
 "text": "She is by far the most talented musician of her generation"
 },
 {
-"id": "C1-217",
+"id": "C1_031-040-43",
+"group": "C1_031-040",
 "level": "C1",
+"num": 43,
 "text": "This is undoubtedly the most difficult exam I have ever taken"
 },
 {
-"id": "C1-218",
+"id": "C1_031-040-44",
+"group": "C1_031-040",
 "level": "C1",
+"num": 44,
 "text": "This is easily the most difficult exam I have ever taken"
 },
 {
-"id": "C1-219",
+"id": "C1_031-040-45",
+"group": "C1_031-040",
 "level": "C1",
-"text": "This report is undoubtedly the most detailed analysisThe report is considerably the most thorough analysis on the subject"
+"num": 45,
+"text": "This report is undoubtedly the most detailed analysis"
 },
 {
-"id": "C1-220",
+"id": "C1_031-040-46",
+"group": "C1_031-040",
 "level": "C1",
-"text": "Oxygen for humans, like water forOxygen is to humans what water is to plants"
+"num": 46,
+"text": "The report is considerably the most thorough analysis on the subject"
 },
 {
-"id": "C1-221",
+"id": "C1_031-040-47",
+"group": "C1_031-040",
 "level": "C1",
+"num": 47,
+"text": "Oxygen for humans, like water for"
+},
+{
+"id": "C1_031-040-48",
+"group": "C1_031-040",
+"level": "C1",
+"num": 48,
+"text": "Oxygen is to humans what water is to plants"
+},
+{
+"id": "C1_031-040-49",
+"group": "C1_031-040",
+"level": "C1",
+"num": 49,
 "text": "Sun is to flowers what love is to life"
 },
 {
-"id": "C1-222",
+"id": "C1_031-040-50",
+"group": "C1_031-040",
 "level": "C1",
+"num": 50,
 "text": "Reading is to the mind what exercise is to the body"
 },
 {
-"id": "C1-223",
+"id": "C1_031-040-51",
+"group": "C1_031-040",
 "level": "C1",
+"num": 51,
 "text": "Teachers are to students what guides are to travelers"
 },
 {
-"id": "C1-224",
+"id": "C1_031-040-52",
+"group": "C1_031-040",
 "level": "C1",
+"num": 52,
 "text": "Trust is to friendship what a foundation is to a building"
 },
 {
-"id": "C1-225",
+"id": "C1_031-040-53",
+"group": "C1_031-040",
 "level": "C1",
+"num": 53,
 "text": "There are fewer job opportunities in rural areas than there were ten years ago"
 },
 {
-"id": "C1-226",
+"id": "C1_031-040-54",
+"group": "C1_031-040",
 "level": "C1",
-"text": "There are fewer job opportunities in rural areas than there were ten years agoForest"
+"num": 54,
+"text": "Forest"
 },
 {
-"id": "C1-227",
+"id": "C1_031-040-55",
+"group": "C1_031-040",
 "level": "C1",
+"num": 55,
 "text": "There are fewer trees in the forest than there were 50 years ago"
 },
 {
-"id": "C1-228",
+"id": "C1_031-040-56",
+"group": "C1_031-040",
 "level": "C1",
+"num": 56,
 "text": "Today's young"
 },
 {
-"id": "C1-229",
+"id": "C1_031-040-57",
+"group": "C1_031-040",
 "level": "C1",
+"num": 57,
 "text": "There are fewer young farmers today than there were a generation ago"
 },
 {
-"id": "C1-230",
+"id": "C1_031-040-58",
+"group": "C1_031-040",
 "level": "C1",
+"num": 58,
 "text": "Nowadays, there are far fewer bookshops now than there were before the internet age"
 },
 {
-"id": "C1-231",
+"id": "C1_031-040-59",
+"group": "C1_031-040",
 "level": "C1",
+"num": 59,
 "text": "Public trust in institutions than there was a decade ago"
 },
 {
-"id": "C1-232",
+"id": "C1_041-050-1",
+"group": "C1_041-050",
 "level": "C1",
+"num": 1,
 "text": "To a certain extent, the delay was due to poor planning"
 },
 {
-"id": "C1-233",
+"id": "C1_041-050-2",
+"group": "C1_041-050",
 "level": "C1",
+"num": 2,
 "text": "To some extent, the policy has achieved its intended goals"
 },
 {
-"id": "C1-234",
+"id": "C1_041-050-3",
+"group": "C1_041-050",
 "level": "C1",
+"num": 3,
 "text": "In a certain extent, success depends on luck as much as effort"
 },
 {
-"id": "C1-235",
+"id": "C1_041-050-4",
+"group": "C1_041-050",
 "level": "C1",
+"num": 4,
 "text": "To some extent, we are all products of our environment"
 },
 {
-"id": "C1-236",
+"id": "C1_041-050-5",
+"group": "C1_041-050",
 "level": "C1",
+"num": 5,
 "text": "To a certain extent, the criticism was justified"
 },
 {
-"id": "C1-237",
+"id": "C1_041-050-6",
+"group": "C1_041-050",
 "level": "C1",
+"num": 6,
 "text": "To all intents and purposes, this law has already been enforced"
 },
 {
-"id": "C1-238",
+"id": "C1_041-050-7",
+"group": "C1_041-050",
 "level": "C1",
+"num": 7,
 "text": "To all intents and purposes, the project is complete"
 },
 {
-"id": "C1-239",
+"id": "C1_041-050-8",
+"group": "C1_041-050",
 "level": "C1",
+"num": 8,
 "text": "To all intents and purposes, the two companies now operate as one"
 },
 {
-"id": "C1-240",
+"id": "C1_041-050-9",
+"group": "C1_041-050",
 "level": "C1",
+"num": 9,
 "text": "To all intents and purposes, the investigation has been abandoned"
 },
 {
-"id": "C1-241",
+"id": "C1_041-050-10",
+"group": "C1_041-050",
 "level": "C1",
+"num": 10,
 "text": "To all intents and purposes, the negotiations are over"
 },
 {
-"id": "C1-242",
+"id": "C1_041-050-11",
+"group": "C1_041-050",
 "level": "C1",
+"num": 11,
 "text": "Bigly, the new policy has been well received"
 },
 {
-"id": "C1-243",
+"id": "C1_041-050-12",
+"group": "C1_041-050",
 "level": "C1",
+"num": 12,
 "text": "By and large, the students found the course helpful"
 },
 {
-"id": "C1-244",
+"id": "C1_041-050-13",
+"group": "C1_041-050",
 "level": "C1",
+"num": 13,
 "text": "By and large, customers are satisfied with the service"
 },
 {
-"id": "C1-245",
+"id": "C1_041-050-14",
+"group": "C1_041-050",
 "level": "C1",
+"num": 14,
 "text": "Bigly, these reforms have improved living standards"
 },
 {
-"id": "C1-246",
+"id": "C1_041-050-15",
+"group": "C1_041-050",
 "level": "C1",
+"num": 15,
 "text": "By and large, the team performed well under pressure"
 },
 {
-"id": "C1-247",
+"id": "C1_041-050-16",
+"group": "C1_041-050",
 "level": "C1",
+"num": 16,
 "text": "In the vast majority of cases, early intervention leads to better outcomes"
 },
 {
-"id": "C1-248",
+"id": "C1_041-050-17",
+"group": "C1_041-050",
 "level": "C1",
+"num": 17,
 "text": "In the vast majority of cases, regular exercise prevents health issues"
 },
 {
-"id": "C1-249",
+"id": "C1_041-050-18",
+"group": "C1_041-050",
 "level": "C1",
+"num": 18,
 "text": "In the vast majority of cases, hard work pays off eventually"
 },
 {
-"id": "C1-250",
+"id": "C1_041-050-19",
+"group": "C1_041-050",
 "level": "C1",
+"num": 19,
 "text": "In the vast majority of cases, conflicts can be resolved through dialogue"
 },
 {
-"id": "C1-251",
+"id": "C1_041-050-20",
+"group": "C1_041-050",
 "level": "C1",
+"num": 20,
 "text": "In the vast majority of cases, the new system works as intended"
 },
 {
-"id": "C1-252",
+"id": "C1_041-050-21",
+"group": "C1_041-050",
 "level": "C1",
+"num": 21,
 "text": "This solution not only didn't solve the problem, but made it worse"
 },
 {
-"id": "C1-253",
+"id": "C1_041-050-22",
+"group": "C1_041-050",
 "level": "C1",
+"num": 22,
 "text": "Far from solving the problem, the solution only made things worse"
 },
 {
-"id": "C1-254",
+"id": "C1_041-050-23",
+"group": "C1_041-050",
 "level": "C1",
+"num": 23,
 "text": "This announcement, far from improving morale, the announcement lowered it"
 },
 {
-"id": "C1-255",
+"id": "C1_041-050-24",
+"group": "C1_041-050",
 "level": "C1",
+"num": 24,
 "text": "Far from improving morale, the announcement lowered it"
 },
 {
-"id": "C1-256",
+"id": "C1_041-050-25",
+"group": "C1_041-050",
 "level": "C1",
+"num": 25,
 "text": "This reform, far from reducing costs, the reform actually increased them"
 },
 {
-"id": "C1-257",
+"id": "C1_041-050-26",
+"group": "C1_041-050",
 "level": "C1",
+"num": 26,
 "text": "Far from reducing costs, the reform actually increased them"
 },
 {
-"id": "C1-258",
+"id": "C1_041-050-27",
+"group": "C1_041-050",
 "level": "C1",
+"num": 27,
 "text": "He far from being grateful, he complained about everything"
 },
 {
-"id": "C1-259",
+"id": "C1_041-050-28",
+"group": "C1_041-050",
 "level": "C1",
+"num": 28,
 "text": "Far from being grateful, he complained about everything"
 },
 {
-"id": "C1-260",
+"id": "C1_041-050-29",
+"group": "C1_041-050",
 "level": "C1",
+"num": 29,
 "text": "This decision, far from settling the dispute, the ruling deepened the division"
 },
 {
-"id": "C1-261",
+"id": "C1_041-050-30",
+"group": "C1_041-050",
 "level": "C1",
+"num": 30,
 "text": "Far from settling the dispute, the ruling deepened the division"
 },
 {
-"id": "C1-262",
+"id": "C1_041-050-31",
+"group": "C1_041-050",
 "level": "C1",
-"text": "This theory, by linguist Noam Chomsky, in the 1950s, completely changed the fieldThe theory developed by linguist Noam Chomsky in the 1950s revolutionized the field"
+"num": 31,
+"text": "This theory, by linguist Noam Chomsky, in the 1950s, completely changed the field"
 },
 {
-"id": "C1-263",
+"id": "C1_041-050-32",
+"group": "C1_041-050",
 "level": "C1",
+"num": 32,
+"text": "The theory developed by linguist Noam Chomsky in the 1950s revolutionized the field"
+},
+{
+"id": "C1_041-050-33",
+"group": "C1_041-050",
+"level": "C1",
+"num": 33,
 "text": "The book written by a Nobel laureate became an instant bestseller"
 },
 {
-"id": "C1-264",
+"id": "C1_041-050-34",
+"group": "C1_041-050",
 "level": "C1",
+"num": 34,
 "text": "This painting, completed shortly before the artist's death, sold for a record sum"
 },
 {
-"id": "C1-265",
+"id": "C1_041-050-35",
+"group": "C1_041-050",
 "level": "C1",
+"num": 35,
 "text": "This bridge, by a renowned engineer, withstood the earthquake"
 },
 {
-"id": "C1-266",
+"id": "C1_041-050-36",
+"group": "C1_041-050",
 "level": "C1",
-"text": "This vaccine,"
+"num": 36,
+"text": "This vaccine"
 },
 {
-"id": "C1-267",
+"id": "C1_041-050-37",
+"group": "C1_041-050",
 "level": "C1",
+"num": 37,
 "text": "The vaccine developed over a decade of research saved countless lives"
 },
 {
-"id": "C1-268",
+"id": "C1_041-050-38",
+"group": "C1_041-050",
 "level": "C1",
+"num": 38,
 "text": "The results, surprisingly positive, exceeded all expectations"
 },
 {
-"id": "C1-269",
+"id": "C1_041-050-39",
+"group": "C1_041-050",
 "level": "C1",
-"text": "The proposal, though controversial, gained significant supportThe proposal, though controversial, gained significant support"
+"num": 39,
+"text": "The proposal, though controversial, gained significant support"
 },
 {
-"id": "C1-270",
+"id": "C1_041-050-40",
+"group": "C1_041-050",
 "level": "C1",
+"num": 40,
 "text": "The outcome, against all odds, favored the underdogs"
 },
 {
-"id": "C1-271",
+"id": "C1_041-050-41",
+"group": "C1_041-050",
 "level": "C1",
+"num": 41,
 "text": "This speech, without notes, impressed the entire audience"
 },
 {
-"id": "C1-272",
+"id": "C1_041-050-42",
+"group": "C1_041-050",
 "level": "C1",
+"num": 42,
 "text": "The speech delivered without notes impressed the entire audience"
 },
 {
-"id": "C1-273",
+"id": "C1_041-050-43",
+"group": "C1_041-050",
 "level": "C1",
+"num": 43,
 "text": "The decision, though unpopular, was ultimately the right one"
 },
 {
-"id": "C1-274",
+"id": "C1_041-050-44",
+"group": "C1_041-050",
 "level": "C1",
+"num": 44,
 "text": "He, he's not so much a musician as a composer"
 },
 {
-"id": "C1-275",
+"id": "C1_041-050-45",
+"group": "C1_041-050",
 "level": "C1",
+"num": 45,
 "text": "He's not so much a musician as a composer"
 },
 {
-"id": "C1-276",
+"id": "C1_041-050-46",
+"group": "C1_041-050",
 "level": "C1",
+"num": 46,
 "text": "This problem, rather than being a technical problem, is a cultural one"
 },
 {
-"id": "C1-277",
+"id": "C1_041-050-47",
+"group": "C1_041-050",
 "level": "C1",
+"num": 47,
 "text": "The issue is not so much a technical problem as a cultural one"
 },
 {
-"id": "C1-278",
+"id": "C1_041-050-48",
+"group": "C1_041-050",
 "level": "C1",
+"num": 48,
 "text": "Her success is not so much a matter of luck as of perseverance"
 },
 {
-"id": "C1-279",
+"id": "C1_041-050-49",
+"group": "C1_041-050",
 "level": "C1",
+"num": 49,
 "text": "This novel, rather than a love story, is a social commentary"
 },
 {
-"id": "C1-280",
+"id": "C1_041-050-50",
+"group": "C1_041-050",
 "level": "C1",
+"num": 50,
 "text": "The novel is not so much a romance as a social commentary"
 },
 {
-"id": "C1-281",
+"id": "C1_041-050-51",
+"group": "C1_041-050",
 "level": "C1",
-"text": "Offend her,"
+"num": 51,
+"text": "Offend her"
 },
 {
-"id": "C1-282",
+"id": "C1_041-050-52",
+"group": "C1_041-050",
 "level": "C1",
-"text": "It was not so much what he said as how he said it that offended herIt was not so much what he said as how he said it that offended her"
+"num": 52,
+"text": "It was not so much what he said as how he said it that offended her"
 },
 {
-"id": "C1-283",
+"id": "C1_041-050-53",
+"group": "C1_041-050",
 "level": "C1",
+"num": 53,
 "text": "We should focus on solving the root cause rather than addressing the symptoms"
 },
 {
-"id": "C1-284",
+"id": "C1_041-050-54",
+"group": "C1_041-050",
 "level": "C1",
+"num": 54,
 "text": "The government should invest in prevention rather than treating diseases"
 },
 {
-"id": "C1-285",
+"id": "C1_041-050-55",
+"group": "C1_041-050",
 "level": "C1",
+"num": 55,
 "text": "Leaders should inspire their teams rather than issuing orders"
 },
 {
-"id": "C1-286",
+"id": "C1_041-050-56",
+"group": "C1_041-050",
 "level": "C1",
+"num": 56,
 "text": "We should reward innovation rather than punishing failure"
 },
 {
-"id": "C1-287",
+"id": "C1_041-050-57",
+"group": "C1_041-050",
 "level": "C1",
+"num": 57,
 "text": "The company chose to expand gradually rather than taking on huge debts"
 },
 {
-"id": "C1-288",
+"id": "C1_041-050-58",
+"group": "C1_041-050",
 "level": "C1",
+"num": 58,
 "text": "With the noise and the cramped space, I couldn't concentrate"
 },
 {
-"id": "C1-289",
+"id": "C1_041-050-59",
+"group": "C1_041-050",
 "level": "C1",
+"num": 59,
 "text": "What with the noise and the cramped space, I couldn't concentrate"
 },
 {
-"id": "C1-290",
+"id": "C1_041-050-60",
+"group": "C1_041-050",
 "level": "C1",
+"num": 60,
 "text": "What with the rain and the cold wind, the event was poorly attended"
 },
 {
-"id": "C1-291",
+"id": "C1_041-050-61",
+"group": "C1_041-050",
 "level": "C1",
+"num": 61,
 "text": "What with the fog and the icy roads, driving was extremely dangerous"
 },
 {
-"id": "C1-292",
+"id": "C1_041-050-62",
+"group": "C1_041-050",
 "level": "C1",
+"num": 62,
 "text": "What with the flu and the heavy workload, he was completely exhausted"
 },
 {
-"id": "C1-293",
+"id": "C1_041-050-63",
+"group": "C1_041-050",
 "level": "C1",
+"num": 63,
 "text": "What with the delays and the cancellations, the journey took twice as long"
 },
 {
-"id": "C1-294",
+"id": "C1_051-060-1",
+"group": "C1_051-060",
 "level": "C1",
+"num": 1,
 "text": "Who is always complaining about the weather but never does anything about it?"
 },
 {
-"id": "C1-295",
+"id": "C1_051-060-2",
+"group": "C1_051-060",
 "level": "C1",
+"num": 2,
 "text": "Who is always talking about success but never works for it?"
 },
 {
-"id": "C1-296",
+"id": "C1_051-060-3",
+"group": "C1_051-060",
 "level": "C1",
+"num": 3,
 "text": "Who is always criticizing others but never examines himself?"
 },
 {
-"id": "C1-297",
+"id": "C1_051-060-4",
+"group": "C1_051-060",
 "level": "C1",
+"num": 4,
 "text": "Who is always spending money but never saving any?"
 },
 {
-"id": "C1-298",
+"id": "C1_051-060-5",
+"group": "C1_051-060",
 "level": "C1",
+"num": 5,
 "text": "Who is always promising change but never delivering it?"
 },
 {
-"id": "C1-299",
+"id": "C1_051-060-6",
+"group": "C1_051-060",
 "level": "C1",
+"num": 6,
 "text": "Why on earth would anyone agree to such terms?"
 },
 {
-"id": "C1-300",
+"id": "C1_051-060-7",
+"group": "C1_051-060",
 "level": "C1",
+"num": 7,
 "text": "Why in the world would she leave such a good job?"
 },
 {
-"id": "C1-301",
+"id": "C1_051-060-8",
+"group": "C1_051-060",
 "level": "C1",
+"num": 8,
 "text": "They finally why on earth did they cancel the event at the last minute?"
 },
 {
-"id": "C1-302",
+"id": "C1_051-060-9",
+"group": "C1_051-060",
 "level": "C1",
+"num": 9,
 "text": "Why in the world would he lie about something so trivial?"
 },
 {
-"id": "C1-303",
+"id": "C1_051-060-10",
+"group": "C1_051-060",
 "level": "C1",
+"num": 10,
 "text": "Why on earth did you not tell me earlier?"
 },
 {
-"id": "C1-304",
+"id": "C1_051-060-11",
+"group": "C1_051-060",
 "level": "C1",
+"num": 11,
 "text": "We how always time"
 },
 {
-"id": "C1-305",
+"id": "C1_051-060-12",
+"group": "C1_051-060",
 "level": "C1",
+"num": 12,
 "text": "How is it that we always seem to run out of time?"
 },
 {
-"id": "C1-306",
+"id": "C1_051-060-13",
+"group": "C1_051-060",
 "level": "C1",
-"text": "How is it that he never seems to get tiredHow is it that he never seems to get tired?"
+"num": 13,
+"text": "How is it that he never seems to get tired"
 },
 {
-"id": "C1-307",
+"id": "C1_051-060-14",
+"group": "C1_051-060",
 "level": "C1",
+"num": 14,
+"text": "How is it that he never seems to get tired?"
+},
+{
+"id": "C1_051-060-15",
+"group": "C1_051-060",
+"level": "C1",
+"num": 15,
 "text": "How is it that such obvious errors were never noticed?"
 },
 {
-"id": "C1-308",
+"id": "C1_051-060-16",
+"group": "C1_051-060",
 "level": "C1",
-"text": "Most wealthy countries still have so much povertyHow is it that nobody questioned the decision at the time?"
+"num": 16,
+"text": "Most wealthy countries still have so much poverty"
 },
 {
-"id": "C1-309",
+"id": "C1_051-060-17",
+"group": "C1_051-060",
 "level": "C1",
+"num": 17,
+"text": "How is it that nobody questioned the decision at the time?"
+},
+{
+"id": "C1_051-060-18",
+"group": "C1_051-060",
+"level": "C1",
+"num": 18,
 "text": "Little did we know that the decision would change everything"
 },
 {
-"id": "C1-310",
+"id": "C1_051-060-19",
+"group": "C1_051-060",
 "level": "C1",
+"num": 19,
 "text": "Little did she know that he was watching her the whole time"
 },
 {
-"id": "C1-311",
+"id": "C1_051-060-20",
+"group": "C1_051-060",
 "level": "C1",
+"num": 20,
 "text": "Little did they realize that their lives were about to change forever"
 },
 {
-"id": "C1-312",
+"id": "C1_051-060-21",
+"group": "C1_051-060",
 "level": "C1",
-"text": "He completely didn't suspect that his closest friend had betrayed himLittle did he suspect that his closest friend had betrayed him"
+"num": 21,
+"text": "He completely didn't suspect that his closest friend had betrayed him"
 },
 {
-"id": "C1-313",
+"id": "C1_051-060-22",
+"group": "C1_051-060",
 "level": "C1",
+"num": 22,
+"text": "Little did he suspect that his closest friend had betrayed him"
+},
+{
+"id": "C1_051-060-23",
+"group": "C1_051-060",
+"level": "C1",
+"num": 23,
 "text": "We completely didn't expect this storm to last for days"
 },
 {
-"id": "C1-314",
+"id": "C1_051-060-24",
+"group": "C1_051-060",
 "level": "C1",
+"num": 24,
 "text": "Little did we imagine that the storm would last for days"
 },
 {
-"id": "C1-315",
+"id": "C1_051-060-25",
+"group": "C1_051-060",
 "level": "C1",
+"num": 25,
 "text": "Only when we reached the summit did we realize how ill prepared we were"
 },
 {
-"id": "C1-316",
+"id": "C1_051-060-26",
+"group": "C1_051-060",
 "level": "C1",
+"num": 26,
 "text": "Only after the experiment did the scientists understand the phenomenon"
 },
 {
-"id": "C1-317",
+"id": "C1_051-060-27",
+"group": "C1_051-060",
 "level": "C1",
+"num": 27,
 "text": "Only when she lost everything did she appreciate what truly mattered"
 },
 {
-"id": "C1-318",
+"id": "C1_051-060-28",
+"group": "C1_051-060",
 "level": "C1",
-"text": "Only when she lost everything did she appreciate what truly mattered"
-},
-{
-"id": "C1-319",
-"level": "C1",
+"num": 28,
 "text": "Only after the war ended did the full horror become known"
 },
 {
-"id": "C1-320",
+"id": "C1_051-060-29",
+"group": "C1_051-060",
 "level": "C1",
+"num": 29,
 "text": "Only when the deadline had passed did they begin to take it seriously"
 },
 {
-"id": "C1-321",
+"id": "C1_051-060-30",
+"group": "C1_051-060",
 "level": "C1",
+"num": 30,
 "text": "The only thing that kept me going was my family"
 },
 {
-"id": "C1-322",
+"id": "C1_051-060-31",
+"group": "C1_051-060",
 "level": "C1",
+"num": 31,
 "text": "The only person that can solve this is the manager"
 },
 {
-"id": "C1-323",
+"id": "C1_051-060-32",
+"group": "C1_051-060",
 "level": "C1",
+"num": 32,
 "text": "The only way to master a language is to use it every day"
 },
 {
-"id": "C1-324",
+"id": "C1_051-060-33",
+"group": "C1_051-060",
 "level": "C1",
+"num": 33,
 "text": "The only thing that matters now is finding a solution"
 },
 {
-"id": "C1-325",
+"id": "C1_051-060-34",
+"group": "C1_051-060",
 "level": "C1",
+"num": 34,
 "text": "The only reason she agreed was to keep the peace"
 },
 {
-"id": "C1-326",
+"id": "C1_051-060-35",
+"group": "C1_051-060",
 "level": "C1",
+"num": 35,
 "text": "Every student who took the exam received their results by email"
 },
 {
-"id": "C1-327",
+"id": "C1_051-060-36",
+"group": "C1_051-060",
 "level": "C1",
+"num": 36,
 "text": "Every person who applied was given a fair chance"
 },
 {
-"id": "C1-328",
+"id": "C1_051-060-37",
+"group": "C1_051-060",
 "level": "C1",
+"num": 37,
 "text": "Every proposal that was submitted was carefully reviewed"
 },
 {
-"id": "C1-329",
+"id": "C1_051-060-38",
+"group": "C1_051-060",
 "level": "C1",
+"num": 38,
 "text": "Every employee who worked overtime was compensated"
 },
 {
-"id": "C1-330",
+"id": "C1_051-060-39",
+"group": "C1_051-060",
 "level": "C1",
+"num": 39,
 "text": "Every book that she wrote became a bestseller"
 },
 {
-"id": "C1-331",
+"id": "C1_051-060-40",
+"group": "C1_051-060",
 "level": "C1",
+"num": 40,
 "text": "This is the best film that I've seen this year"
 },
 {
-"id": "C1-332",
+"id": "C1_051-060-41",
+"group": "C1_051-060",
 "level": "C1",
+"num": 41,
 "text": "That was the most challenging decision that I have ever made"
 },
 {
-"id": "C1-333",
+"id": "C1_051-060-42",
+"group": "C1_051-060",
 "level": "C1",
+"num": 42,
 "text": "He is the most inspiring teacher that I have ever had"
 },
 {
-"id": "C1-334",
+"id": "C1_051-060-43",
+"group": "C1_051-060",
 "level": "C1",
+"num": 43,
 "text": "This is the worst mistake that the company has ever made"
 },
 {
-"id": "C1-335",
+"id": "C1_051-060-44",
+"group": "C1_051-060",
 "level": "C1",
+"num": 44,
 "text": "That was the strangest coincidence that we had ever experienced"
 },
 {
-"id": "C1-336",
+"id": "C1_051-060-45",
+"group": "C1_051-060",
 "level": "C1",
+"num": 45,
 "text": "Those who work hard and those who rely on shortcuts will ultimately diverge in outcomes"
 },
 {
-"id": "C1-337",
+"id": "C1_051-060-46",
+"group": "C1_051-060",
 "level": "C1",
+"num": 46,
 "text": "Those who embrace change and those who resist it will have different futures"
 },
 {
-"id": "C1-338",
+"id": "C1_051-060-47",
+"group": "C1_051-060",
 "level": "C1",
+"num": 47,
 "text": "Those who save early and those who spend freely will end up in very different positions"
 },
 {
-"id": "C1-339",
+"id": "C1_051-060-48",
+"group": "C1_051-060",
 "level": "C1",
+"num": 48,
 "text": "Those who read widely and those who read nothing will think very differently"
 },
 {
-"id": "C1-340",
+"id": "C1_051-060-49",
+"group": "C1_051-060",
 "level": "C1",
+"num": 49,
 "text": "Listening"
 },
 {
-"id": "C1-341",
+"id": "C1_051-060-50",
+"group": "C1_051-060",
 "level": "C1",
+"num": 50,
 "text": "Those who listen and those who merely wait to speak will build very different relationships"
 },
 {
-"id": "C1-342",
+"id": "C1_051-060-51",
+"group": "C1_051-060",
 "level": "C1",
-"text": "Such arguments as have been presented fail to address the core issueSuch arguments as have been presented fail to address the core issue"
+"num": 51,
+"text": "Such arguments as have been presented fail to address the core issue"
 },
 {
-"id": "C1-343",
+"id": "C1_051-060-52",
+"group": "C1_051-060",
 "level": "C1",
+"num": 52,
 "text": "Such concerns as have been raised by the committee deserve serious attention"
 },
 {
-"id": "C1-344",
+"id": "C1_051-060-53",
+"group": "C1_051-060",
 "level": "C1",
-"text": "Such evidence as has emerged points to a single conclusionSuch evidence as has emerged points to a single conclusion"
+"num": 53,
+"text": "Such evidence as has emerged points to a single conclusion"
 },
 {
-"id": "C1-345",
+"id": "C1_051-060-54",
+"group": "C1_051-060",
 "level": "C1",
+"num": 54,
 "text": "Such measures as were introduced proved largely ineffective"
 },
 {
-"id": "C1-346",
+"id": "C1_051-060-55",
+"group": "C1_051-060",
 "level": "C1",
+"num": 55,
 "text": "Such information as is available must be treated with caution"
 },
 {
-"id": "C1-347",
+"id": "C1_061-070-1",
+"group": "C1_061-070",
 "level": "C1",
+"num": 1,
 "text": "The moment she walked in, everyone fell silent"
 },
 {
-"id": "C1-348",
+"id": "C1_061-070-2",
+"group": "C1_061-070",
 "level": "C1",
+"num": 2,
 "text": "The instant the alarm went off, everyone evacuated the building"
 },
 {
-"id": "C1-349",
+"id": "C1_061-070-3",
+"group": "C1_061-070",
 "level": "C1",
+"num": 3,
 "text": "The moment the results were announced, cheers erupted in the hall"
 },
 {
-"id": "C1-350",
+"id": "C1_061-070-4",
+"group": "C1_061-070",
 "level": "C1",
+"num": 4,
 "text": "The instant he saw the bill, he knew he had been overcharged"
 },
 {
-"id": "C1-351",
+"id": "C1_061-070-5",
+"group": "C1_061-070",
 "level": "C1",
+"num": 5,
 "text": "The moment the sun set, the temperature dropped sharply"
 },
 {
-"id": "C1-352",
+"id": "C1_061-070-6",
+"group": "C1_061-070",
 "level": "C1",
+"num": 6,
 "text": "Hardly had I sat down when the phone rang"
 },
 {
-"id": "C1-353",
+"id": "C1_061-070-7",
+"group": "C1_061-070",
 "level": "C1",
+"num": 7,
 "text": "Scarcely had the game started when it began to rain"
 },
 {
-"id": "C1-354",
+"id": "C1_061-070-8",
+"group": "C1_061-070",
 "level": "C1",
+"num": 8,
 "text": "Hardly had she finished speaking when the audience erupted in applause"
 },
 {
-"id": "C1-355",
+"id": "C1_061-070-9",
+"group": "C1_061-070",
 "level": "C1",
+"num": 9,
 "text": "We had just left home when the storm broke"
 },
 {
-"id": "C1-356",
+"id": "C1_061-070-10",
+"group": "C1_061-070",
 "level": "C1",
+"num": 10,
 "text": "Scarcely had we left the house when the storm broke"
 },
 {
-"id": "C1-357",
+"id": "C1_061-070-11",
+"group": "C1_061-070",
 "level": "C1",
+"num": 11,
 "text": "Hardly had the plane taken off when the engine failed"
 },
 {
-"id": "C1-358",
+"id": "C1_061-070-12",
+"group": "C1_061-070",
 "level": "C1",
+"num": 12,
 "text": "No sooner had the bill passed than protests erupted across the city"
 },
 {
-"id": "C1-359",
+"id": "C1_061-070-13",
+"group": "C1_061-070",
 "level": "C1",
+"num": 13,
 "text": "No sooner had she left than the guests arrived"
 },
 {
-"id": "C1-360",
+"id": "C1_061-070-14",
+"group": "C1_061-070",
 "level": "C1",
+"num": 14,
 "text": "No sooner had he spoken than he regretted his words"
 },
 {
-"id": "C1-361",
+"id": "C1_061-070-15",
+"group": "C1_061-070",
 "level": "C1",
-"text": "No sooner had he spoken than he regretted his words"
+"num": 15,
+"text": "No sooner had the store opened than the shelves were emptied"
 },
 {
-"id": "C1-362",
+"id": "C1_061-070-16",
+"group": "C1_061-070",
 "level": "C1",
-"text": "No sooner had the store opened than the shelves were emptiedNo sooner had the store opened than the shelves were emptied"
+"num": 16,
+"text": "No sooner had the treaty been signed than it was violated"
 },
 {
-"id": "C1-363",
+"id": "C1_061-070-17",
+"group": "C1_061-070",
 "level": "C1",
-"text": "No sooner had the treaty been signed than it was violatedEvery time I think about it, I feel frustrated"
+"num": 17,
+"text": "Every time I think about it, I feel frustrated"
 },
 {
-"id": "C1-364",
+"id": "C1_061-070-18",
+"group": "C1_061-070",
 "level": "C1",
+"num": 18,
 "text": "Every time he visits, he brings a gift"
 },
 {
-"id": "C1-365",
+"id": "C1_061-070-19",
+"group": "C1_061-070",
 "level": "C1",
+"num": 19,
 "text": "Every time it rains, the basement floods"
 },
 {
-"id": "C1-366",
+"id": "C1_061-070-20",
+"group": "C1_061-070",
 "level": "C1",
+"num": 20,
 "text": "Every time she speaks, the room goes quiet"
 },
 {
-"id": "C1-367",
+"id": "C1_061-070-21",
+"group": "C1_061-070",
 "level": "C1",
+"num": 21,
 "text": "Every time we meet, we argue about the same thing"
 },
 {
-"id": "C1-368",
+"id": "C1_061-070-22",
+"group": "C1_061-070",
 "level": "C1",
+"num": 22,
 "text": "The full impact of the policy is yet to be determined"
 },
 {
-"id": "C1-369",
+"id": "C1_061-070-23",
+"group": "C1_061-070",
 "level": "C1",
+"num": 23,
 "text": "The decision is yet to be made by the committee"
 },
 {
-"id": "C1-370",
+"id": "C1_061-070-24",
+"group": "C1_061-070",
 "level": "C1",
+"num": 24,
 "text": "The cause of the fire is yet to be established"
 },
 {
-"id": "C1-371",
+"id": "C1_061-070-25",
+"group": "C1_061-070",
 "level": "C1",
+"num": 25,
 "text": "The benefits of the new system are yet to be seen"
 },
 {
-"id": "C1-372",
+"id": "C1_061-070-26",
+"group": "C1_061-070",
 "level": "C1",
+"num": 26,
 "text": "The final report is yet to be published"
 },
 {
-"id": "C1-373",
+"id": "C1_061-070-27",
+"group": "C1_061-070",
 "level": "C1",
+"num": 27,
 "text": "He was dismissed on the grounds that he had breached company policy"
 },
 {
-"id": "C1-374",
+"id": "C1_061-070-28",
+"group": "C1_061-070",
 "level": "C1",
+"num": 28,
 "text": "The proposal was rejected on the grounds that it was too costly"
 },
 {
-"id": "C1-375",
+"id": "C1_061-070-29",
+"group": "C1_061-070",
 "level": "C1",
+"num": 29,
 "text": "The application was refused on the grounds that it was incomplete"
 },
 {
-"id": "C1-376",
+"id": "C1_061-070-30",
+"group": "C1_061-070",
 "level": "C1",
+"num": 30,
 "text": "She objected on the grounds that the procedure was unfair"
 },
 {
-"id": "C1-377",
+"id": "C1_061-070-31",
+"group": "C1_061-070",
 "level": "C1",
+"num": 31,
 "text": "The court ruled in their favor on the grounds that the evidence was insufficient"
 },
 {
-"id": "C1-378",
+"id": "C1_061-070-32",
+"group": "C1_061-070",
 "level": "C1",
+"num": 32,
 "text": "The study is valid in so far as the sample size is concerned"
 },
 {
-"id": "C1-379",
+"id": "C1_061-070-33",
+"group": "C1_061-070",
 "level": "C1",
+"num": 33,
 "text": "The argument is valid in as far as it goes, but it ignores key factors"
 },
 {
-"id": "C1-380",
+"id": "C1_061-070-34",
+"group": "C1_061-070",
 "level": "C1",
+"num": 34,
 "text": "The plan is feasible in so far as the budget allows"
 },
 {
-"id": "C1-381",
+"id": "C1_061-070-35",
+"group": "C1_061-070",
 "level": "C1",
+"num": 35,
 "text": "The criticism is fair in so far as it highlights real weaknesses"
 },
 {
-"id": "C1-382",
+"id": "C1_061-070-36",
+"group": "C1_061-070",
 "level": "C1",
+"num": 36,
 "text": "The claim holds in so far as the data is reliable"
 },
 {
-"id": "C1-383",
+"id": "C1_061-070-37",
+"group": "C1_061-070",
 "level": "C1",
+"num": 37,
 "text": "The project failed for the simple reason that communication broke down"
 },
 {
-"id": "C1-384",
+"id": "C1_061-070-38",
+"group": "C1_061-070",
 "level": "C1",
+"num": 38,
 "text": "She succeeded for the simple reason that she never gave up"
 },
 {
-"id": "C1-385",
+"id": "C1_061-070-39",
+"group": "C1_061-070",
 "level": "C1",
+"num": 39,
 "text": "He was hired for the simple reason that he was the best candidate"
 },
 {
-"id": "C1-386",
+"id": "C1_061-070-40",
+"group": "C1_061-070",
 "level": "C1",
+"num": 40,
 "text": "The deal collapsed for the simple reason that neither side would compromise"
 },
 {
-"id": "C1-387",
+"id": "C1_061-070-41",
+"group": "C1_061-070",
 "level": "C1",
+"num": 41,
 "text": "Activity cancelled"
 },
 {
-"id": "C1-388",
+"id": "C1_061-070-42",
+"group": "C1_061-070",
 "level": "C1",
+"num": 42,
 "text": "The event was cancelled for the simple reason that too few people signed up"
 },
 {
-"id": "C1-389",
+"id": "C1_061-070-43",
+"group": "C1_061-070",
 "level": "C1",
+"num": 43,
 "text": "The experiment was flawed in that the control group was too small"
 },
 {
-"id": "C1-390",
+"id": "C1_061-070-44",
+"group": "C1_061-070",
 "level": "C1",
+"num": 44,
 "text": "The policy is effective in that it addresses the root cause"
 },
 {
-"id": "C1-391",
+"id": "C1_061-070-45",
+"group": "C1_061-070",
 "level": "C1",
+"num": 45,
 "text": "His argument is weak in that it relies on unproven assumptions"
 },
 {
-"id": "C1-392",
+"id": "C1_061-070-46",
+"group": "C1_061-070",
 "level": "C1",
+"num": 46,
 "text": "This plan is attractive in that it requires minimal investment"
 },
 {
-"id": "C1-393",
+"id": "C1_061-070-47",
+"group": "C1_061-070",
 "level": "C1",
+"num": 47,
 "text": "This theory is valuable in that it explains previously puzzling data"
 },
 {
-"id": "C1-394",
+"id": "C1_061-070-48",
+"group": "C1_061-070",
 "level": "C1",
+"num": 48,
 "text": "The contract states to the effect that no refunds will be issued after 30 days"
 },
 {
-"id": "C1-395",
+"id": "C1_061-070-49",
+"group": "C1_061-070",
 "level": "C1",
+"num": 49,
 "text": "The law provides to the effect that all citizens have equal rights"
 },
 {
-"id": "C1-396",
+"id": "C1_061-070-50",
+"group": "C1_061-070",
 "level": "C1",
+"num": 50,
 "text": "The notice's content is that midnight after parking is prohibited"
 },
 {
-"id": "C1-397",
+"id": "C1_061-070-51",
+"group": "C1_061-070",
 "level": "C1",
+"num": 51,
 "text": "The notice reads to the effect that parking is prohibited after midnight"
 },
 {
-"id": "C1-398",
+"id": "C1_061-070-52",
+"group": "C1_061-070",
 "level": "C1",
+"num": 52,
 "text": "He made a statement to the effect that he would resign if the vote failed"
 },
 {
-"id": "C1-399",
+"id": "C1_061-070-53",
+"group": "C1_061-070",
 "level": "C1",
+"num": 53,
 "text": "The agreement, large, is any one party may terminate with notice"
 },
 {
-"id": "C1-400",
+"id": "C1_061-070-54",
+"group": "C1_061-070",
 "level": "C1",
+"num": 54,
 "text": "The agreement specifies to the effect that either party may terminate with notice"
 },
 {
-"id": "C1-401",
+"id": "C1_071-080-1",
+"group": "C1_071-080",
 "level": "C1",
+"num": 1,
 "text": "Data seems to have some discrepancies, though this needs verification"
 },
 {
-"id": "C1-402",
+"id": "C1_071-080-2",
+"group": "C1_071-080",
 "level": "C1",
+"num": 2,
 "text": "There would appear to be a misunderstanding, though further investigation is needed"
 },
 {
-"id": "C1-403",
+"id": "C1_071-080-3",
+"group": "C1_071-080",
 "level": "C1",
+"num": 3,
 "text": "There would appear to be a problem with the engine, though a full inspection is required"
 },
 {
-"id": "C1-404",
+"id": "C1_071-080-4",
+"group": "C1_071-080",
 "level": "C1",
+"num": 4,
 "text": "This proposal appears to have little support, though the poll was small"
 },
 {
-"id": "C1-405",
+"id": "C1_071-080-5",
+"group": "C1_071-080",
 "level": "C1",
+"num": 5,
 "text": "There would appear to be several possible explanations, though none has been confirmed"
 },
 {
-"id": "C1-406",
+"id": "C1_071-080-6",
+"group": "C1_071-080",
 "level": "C1",
+"num": 6,
 "text": "Given the situation, the proposal may well be accepted"
 },
 {
-"id": "C1-407",
+"id": "C1_071-080-7",
+"group": "C1_071-080",
 "level": "C1",
+"num": 7,
 "text": "The proposal may well be accepted given the circumstances"
 },
 {
-"id": "C1-408",
+"id": "C1_071-080-8",
+"group": "C1_071-080",
 "level": "C1",
+"num": 8,
 "text": "His explanation may well be the correct one"
 },
 {
-"id": "C1-409",
+"id": "C1_071-080-9",
+"group": "C1_071-080",
 "level": "C1",
+"num": 9,
 "text": "Delay is likely to be caused by bad weather"
 },
 {
-"id": "C1-410",
+"id": "C1_071-080-10",
+"group": "C1_071-080",
 "level": "C1",
+"num": 10,
 "text": "The delay may well have been caused by the bad weather"
 },
 {
-"id": "C1-411",
+"id": "C1_071-080-11",
+"group": "C1_071-080",
 "level": "C1",
+"num": 11,
 "text": "Her prediction may well come true sooner than expected"
 },
 {
-"id": "C1-412",
+"id": "C1_071-080-12",
+"group": "C1_071-080",
 "level": "C1",
+"num": 12,
 "text": "This new drug may well revolutionize the treatment of the disease"
 },
 {
-"id": "C1-413",
+"id": "C1_071-080-13",
+"group": "C1_071-080",
 "level": "C1",
+"num": 13,
 "text": "The new drug may well revolutionize the treatment of the disease"
 },
 {
-"id": "C1-414",
+"id": "C1_071-080-14",
+"group": "C1_071-080",
 "level": "C1",
+"num": 14,
 "text": "If circumstances had been different, he might well have succeeded"
 },
 {
-"id": "C1-415",
+"id": "C1_071-080-15",
+"group": "C1_071-080",
 "level": "C1",
+"num": 15,
 "text": "He might well have succeeded if circumstances had been different"
 },
 {
-"id": "C1-416",
+"id": "C1_071-080-16",
+"group": "C1_071-080",
 "level": "C1",
+"num": 16,
 "text": "If he had prepared more"
 },
 {
-"id": "C1-417",
+"id": "C1_071-080-17",
+"group": "C1_071-080",
 "level": "C1",
+"num": 17,
 "text": "She might well have won if she had prepared more thoroughly"
 },
 {
-"id": "C1-418",
+"id": "C1_071-080-18",
+"group": "C1_071-080",
 "level": "C1",
+"num": 18,
 "text": "If the referee had not intervened, the team might well have won the match"
 },
 {
-"id": "C1-419",
+"id": "C1_071-080-19",
+"group": "C1_071-080",
 "level": "C1",
+"num": 19,
 "text": "The team might well have won the match had the referee not intervened"
 },
 {
-"id": "C1-420",
+"id": "C1_071-080-20",
+"group": "C1_071-080",
 "level": "C1",
+"num": 20,
 "text": "If he didn't wear a helmet, he might well have been injured had he not been wearing a helmet"
 },
 {
-"id": "C1-421",
+"id": "C1_071-080-21",
+"group": "C1_071-080",
 "level": "C1",
+"num": 21,
 "text": "He might well have been injured had he not been wearing a helmet"
 },
 {
-"id": "C1-422",
+"id": "C1_071-080-22",
+"group": "C1_071-080",
 "level": "C1",
+"num": 22,
 "text": "If there was better management, the company might well have avoided bankruptcy with better management"
 },
 {
-"id": "C1-423",
+"id": "C1_071-080-23",
+"group": "C1_071-080",
 "level": "C1",
+"num": 23,
 "text": "The company might well have avoided bankruptcy with better management"
 },
 {
-"id": "C1-424",
+"id": "C1_071-080-24",
+"group": "C1_071-080",
 "level": "C1",
+"num": 24,
 "text": "Data is incomplete, but this is not saying the conclusion is wrong"
 },
 {
-"id": "C1-425",
+"id": "C1_071-080-25",
+"group": "C1_071-080",
 "level": "C1",
-"text": "The data is incompleteThat is not to say the conclusion is wrong"
+"num": 25,
+"text": "The data is incomplete"
 },
 {
-"id": "C1-426",
+"id": "C1_071-080-26",
+"group": "C1_071-080",
 "level": "C1",
+"num": 26,
 "text": "That is not to say the conclusion is wrong"
 },
 {
-"id": "C1-427",
+"id": "C1_071-080-27",
+"group": "C1_071-080",
 "level": "C1",
+"num": 27,
 "text": "The study is small"
 },
 {
-"id": "C1-428",
+"id": "C1_071-080-28",
+"group": "C1_071-080",
 "level": "C1",
+"num": 28,
 "text": "That is not to say the findings are invalid"
 },
 {
-"id": "C1-429",
+"id": "C1_071-080-29",
+"group": "C1_071-080",
 "level": "C1",
-"text": "The study is small"
+"num": 29,
+"text": "This plan is expensive, but that doesn't mean it's too expensive"
 },
 {
-"id": "C1-430",
+"id": "C1_071-080-30",
+"group": "C1_071-080",
 "level": "C1",
-"text": "This plan is expensive, but that doesn't mean it's too expensiveThe plan is expensive"
+"num": 30,
+"text": "The plan is expensive"
 },
 {
-"id": "C1-431",
+"id": "C1_071-080-31",
+"group": "C1_071-080",
 "level": "C1",
+"num": 31,
 "text": "That is not to say it is unaffordable"
 },
 {
-"id": "C1-432",
+"id": "C1_071-080-32",
+"group": "C1_071-080",
 "level": "C1",
-"text": "He has insufficient experience, but that is not to say he has noHe is inexperienced"
+"num": 32,
+"text": "He has insufficient experience, but that is not to say he has no"
 },
 {
-"id": "C1-433",
+"id": "C1_071-080-33",
+"group": "C1_071-080",
 "level": "C1",
+"num": 33,
+"text": "He is inexperienced"
+},
+{
+"id": "C1_071-080-34",
+"group": "C1_071-080",
+"level": "C1",
+"num": 34,
 "text": "That is not to say he is incapable"
 },
 {
-"id": "C1-434",
+"id": "C1_071-080-35",
+"group": "C1_071-080",
 "level": "C1",
+"num": 35,
 "text": "This theory is controversial, but that doesn't mean it's wrong"
 },
 {
-"id": "C1-435",
+"id": "C1_071-080-36",
+"group": "C1_071-080",
 "level": "C1",
+"num": 36,
 "text": "The theory is controversial"
 },
 {
-"id": "C1-436",
+"id": "C1_071-080-37",
+"group": "C1_071-080",
 "level": "C1",
+"num": 37,
 "text": "That is not to say it is false"
 },
 {
-"id": "C1-437",
+"id": "C1_071-080-38",
+"group": "C1_071-080",
 "level": "C1",
+"num": 38,
 "text": "Not that we lack resources, it is that we lack coordination"
 },
 {
-"id": "C1-438",
+"id": "C1_071-080-39",
+"group": "C1_071-080",
 "level": "C1",
+"num": 39,
 "text": "Not students lazy, it is that they lack proper guidance"
 },
 {
-"id": "C1-439",
+"id": "C1_071-080-40",
+"group": "C1_071-080",
 "level": "C1",
+"num": 40,
 "text": "Not that the plan is flawed, it is that it was poorly executed"
 },
 {
-"id": "C1-440",
+"id": "C1_071-080-41",
+"group": "C1_071-080",
 "level": "C1",
+"num": 41,
 "text": "Not that she dislikes the job, it is that the hours are impossible"
 },
 {
-"id": "C1-441",
+"id": "C1_071-080-42",
+"group": "C1_071-080",
 "level": "C1",
+"num": 42,
 "text": "It is not that she dislikes the job, it is that the hours are impossible"
 },
 {
-"id": "C1-442",
+"id": "C1_071-080-43",
+"group": "C1_071-080",
 "level": "C1",
+"num": 43,
 "text": "Not that the market is saturated, it is that we have failed to innovate"
 },
 {
-"id": "C1-443",
+"id": "C1_071-080-44",
+"group": "C1_071-080",
 "level": "C1",
+"num": 44,
 "text": "It is not that the market is saturated, it is that we have failed to innovate"
 },
 {
-"id": "C1-444",
+"id": "C1_071-080-45",
+"group": "C1_071-080",
 "level": "C1",
+"num": 45,
 "text": "As the saying goes, prevention is better than cure"
 },
 {
-"id": "C1-445",
+"id": "C1_071-080-46",
+"group": "C1_071-080",
 "level": "C1",
+"num": 46,
 "text": "As the saying goes, where there's a will, there's a way"
 },
 {
-"id": "C1-446",
+"id": "C1_071-080-47",
+"group": "C1_071-080",
 "level": "C1",
+"num": 47,
 "text": "As the saying goes, practice makes perfect"
 },
 {
-"id": "C1-447",
+"id": "C1_071-080-48",
+"group": "C1_071-080",
 "level": "C1",
+"num": 48,
 "text": "As the old proverb puts it, a journey of a thousand miles begins with a single step"
 },
 {
-"id": "C1-448",
+"id": "C1_071-080-49",
+"group": "C1_071-080",
 "level": "C1",
+"num": 49,
 "text": "As the saying goes, honesty is the best policy"
 },
 {
-"id": "C1-449",
+"id": "C1_071-080-50",
+"group": "C1_071-080",
 "level": "C1",
+"num": 50,
 "text": "The author contends that technology has fundamentally reshaped human relationships"
 },
 {
-"id": "C1-450",
+"id": "C1_071-080-51",
+"group": "C1_071-080",
 "level": "C1",
-"text": "This scientist argues that the theory needs further testingThe scientist contends that the theory needs further testing"
+"num": 51,
+"text": "This scientist argues that the theory needs further testing"
 },
 {
-"id": "C1-451",
+"id": "C1_071-080-52",
+"group": "C1_071-080",
 "level": "C1",
-"text": "This historian argues that the war could have been avoidedThe historian contends that the war was avoidable"
+"num": 52,
+"text": "The scientist contends that the theory needs further testing"
 },
 {
-"id": "C1-452",
+"id": "C1_071-080-53",
+"group": "C1_071-080",
 "level": "C1",
+"num": 53,
+"text": "This historian argues that the war could have been avoided"
+},
+{
+"id": "C1_071-080-54",
+"group": "C1_071-080",
+"level": "C1",
+"num": 54,
+"text": "The historian contends that the war was avoidable"
+},
+{
+"id": "C1_071-080-55",
+"group": "C1_071-080",
+"level": "C1",
+"num": 55,
 "text": "Critics argue that these reforms expanded social inequality"
 },
 {
-"id": "C1-453",
+"id": "C1_071-080-56",
+"group": "C1_071-080",
 "level": "C1",
+"num": 56,
 "text": "Critics contend that the reforms have widened social inequality"
 },
 {
-"id": "C1-454",
+"id": "C1_071-080-57",
+"group": "C1_071-080",
 "level": "C1",
-"text": "This economist argues that inflation will slow down next yearThe Economist contends that inflation will ease by next year"
+"num": 57,
+"text": "This economist argues that inflation will slow down next year"
 },
 {
-"id": "C1-455",
+"id": "C1_071-080-58",
+"group": "C1_071-080",
 "level": "C1",
+"num": 58,
+"text": "The Economist contends that inflation will ease by next year"
+},
+{
+"id": "C1_071-080-59",
+"group": "C1_071-080",
+"level": "C1",
+"num": 59,
 "text": "This scientist argues that further research is needed before drawing conclusions"
 },
 {
-"id": "C1-456",
+"id": "C1_071-080-60",
+"group": "C1_071-080",
 "level": "C1",
+"num": 60,
 "text": "The scientist maintains that further research is needed before drawing conclusions"
 },
 {
-"id": "C1-457",
+"id": "C1_071-080-61",
+"group": "C1_071-080",
 "level": "C1",
+"num": 61,
 "text": "The expert maintains that early intervention is crucial"
 },
 {
-"id": "C1-458",
+"id": "C1_071-080-62",
+"group": "C1_071-080",
 "level": "C1",
+"num": 62,
 "text": "The company insists its product is completely safe"
 },
 {
-"id": "C1-459",
+"id": "C1_071-080-63",
+"group": "C1_071-080",
 "level": "C1",
+"num": 63,
 "text": "The company maintains that its products are entirely safe"
 },
 {
-"id": "C1-460",
+"id": "C1_071-080-64",
+"group": "C1_071-080",
 "level": "C1",
-"text": "She maintains that she was unfairly dismissedShe maintains that she was unfairly dismissed"
+"num": 64,
+"text": "She maintains that she was unfairly dismissed"
 },
 {
-"id": "C1-461",
+"id": "C1_071-080-65",
+"group": "C1_071-080",
 "level": "C1",
-"text": "The professor maintains that the evidence has been misreadMany scholars subscribe to the view that language shapes thought"
+"num": 65,
+"text": "The professor maintains that the evidence has been misread"
 },
 {
-"id": "C1-462",
+"id": "C1_071-080-66",
+"group": "C1_071-080",
 "level": "C1",
+"num": 66,
+"text": "Many scholars subscribe to the view that language shapes thought"
+},
+{
+"id": "C1_071-080-67",
+"group": "C1_071-080",
+"level": "C1",
+"num": 67,
 "text": "Increasing number of economists subscribe to the view that AI will transform labor markets"
 },
 {
-"id": "C1-463",
+"id": "C1_071-080-68",
+"group": "C1_071-080",
 "level": "C1",
+"num": 68,
 "text": "Few scientists now subscribe to the view that the Earth is the center of the universe"
 },
 {
-"id": "C1-464",
+"id": "C1_071-080-69",
+"group": "C1_071-080",
 "level": "C1",
+"num": 69,
 "text": "She supports education for all"
 },
 {
-"id": "C1-465",
+"id": "C1_071-080-70",
+"group": "C1_071-080",
 "level": "C1",
+"num": 70,
 "text": "Some historians subscribe to the view that geography determines destiny"
 },
 {
-"id": "C1-466",
+"id": "C1_071-080-71",
+"group": "C1_071-080",
 "level": "C1",
+"num": 71,
 "text": "It is imperative that immediate action be taken to address the crisis"
 },
 {
-"id": "C1-467",
+"id": "C1_071-080-72",
+"group": "C1_071-080",
 "level": "C1",
+"num": 72,
 "text": "It is imperative that we protect the privacy of all users"
 },
 {
-"id": "C1-468",
+"id": "C1_071-080-73",
+"group": "C1_071-080",
 "level": "C1",
+"num": 73,
 "text": "Every member must attend the meeting"
 },
 {
-"id": "C1-469",
+"id": "C1_071-080-74",
+"group": "C1_071-080",
 "level": "C1",
+"num": 74,
 "text": "It is imperative that every member attend the meeting"
 },
 {
-"id": "C1-470",
+"id": "C1_071-080-75",
+"group": "C1_071-080",
 "level": "C1",
+"num": 75,
 "text": "Report must be submitted before Friday"
 },
 {
-"id": "C1-471",
+"id": "C1_071-080-76",
+"group": "C1_071-080",
 "level": "C1",
+"num": 76,
 "text": "It is imperative that governments act now to curb emissions"
 },
 {
-"id": "C1-472",
+"id": "C1_081-090-1",
+"group": "C1_081-090",
 "level": "C1",
-"text": "a scholar of considerable standing in the field, a scholar of considerable standing in the field,"
+"num": 1,
+"text": "a scholar of considerable standing in the field, a scholar of considerable standing in the field"
 },
 {
-"id": "C1-473",
+"id": "C1_081-090-2",
+"group": "C1_081-090",
 "level": "C1",
+"num": 2,
 "text": "An expert of international standing in climate science"
 },
 {
-"id": "C1-474",
+"id": "C1_081-090-3",
+"group": "C1_081-090",
 "level": "C1",
+"num": 3,
 "text": "In the communityA lawyer of high standing in the community, in the academic world, a professor of great standing in the academic world"
 },
 {
-"id": "C1-475",
+"id": "C1_081-090-4",
+"group": "C1_081-090",
 "level": "C1",
+"num": 4,
 "text": "In *The Chimera*, a critic of growing standing among his peers"
 },
 {
-"id": "C1-476",
+"id": "C1_081-090-5",
+"group": "C1_081-090",
 "level": "C1",
-"text": "a company with a history of over 100 years, a company with a history of over 100 years,"
+"num": 5,
+"text": "a company with a history of over 100 years, a company with a history of over 100 years"
 },
 {
-"id": "C1-477",
+"id": "C1_081-090-6",
+"group": "C1_081-090",
 "level": "C1",
+"num": 6,
 "text": "An institution with a tradition of excellence"
 },
 {
-"id": "C1-478",
+"id": "C1_081-090-7",
+"group": "C1_081-090",
 "level": "C1",
+"num": 7,
 "text": "A city with a reputation for hospitality"
 },
 {
-"id": "C1-479",
+"id": "C1_081-090-8",
+"group": "C1_081-090",
 "level": "C1",
+"num": 8,
 "text": "A writer with a gift for storytelling"
 },
 {
-"id": "C1-480",
+"id": "C1_081-090-9",
+"group": "C1_081-090",
 "level": "C1",
+"num": 9,
 "text": "A hospital with a record of outstanding care"
 },
 {
-"id": "C1-481",
+"id": "C1_081-090-10",
+"group": "C1_081-090",
 "level": "C1",
+"num": 10,
 "text": "The documents involved have been sealed by the court"
 },
 {
-"id": "C1-482",
+"id": "C1_081-090-11",
+"group": "C1_081-090",
 "level": "C1",
+"num": 11,
 "text": "The people involved have agreed to cooperate"
 },
 {
-"id": "C1-483",
+"id": "C1_081-090-12",
+"group": "C1_081-090",
 "level": "C1",
+"num": 12,
 "text": "The costs involved have risen beyond our estimate"
 },
 {
-"id": "C1-484",
+"id": "C1_081-090-13",
+"group": "C1_081-090",
 "level": "C1",
+"num": 13,
 "text": "The risks involved should not be underestimated"
 },
 {
-"id": "C1-485",
+"id": "C1_081-090-14",
+"group": "C1_081-090",
 "level": "C1",
+"num": 14,
 "text": "The parties involved are still negotiating the terms"
 },
 {
-"id": "C1-486",
+"id": "C1_081-090-15",
+"group": "C1_081-090",
 "level": "C1",
+"num": 15,
 "text": "This is a phenomenon worth studying in greater depth"
 },
 {
-"id": "C1-487",
+"id": "C1_081-090-16",
+"group": "C1_081-090",
 "level": "C1",
+"num": 16,
 "text": "That is a proposal worth considering seriously"
 },
 {
-"id": "C1-488",
+"id": "C1_081-090-17",
+"group": "C1_081-090",
 "level": "C1",
-"text": "This is aThis is a discovery worth celebrating"
-},
-{
-"id": "C1-489",
-"level": "C1",
+"num": 17,
 "text": "This is a discovery worth celebrating"
 },
 {
-"id": "C1-490",
+"id": "C1_081-090-18",
+"group": "C1_081-090",
 "level": "C1",
+"num": 18,
 "text": "This is a skill worth mastering early in life"
 },
 {
-"id": "C1-491",
+"id": "C1_081-090-19",
+"group": "C1_081-090",
 "level": "C1",
+"num": 19,
 "text": "It is a skill worth mastering early in life"
 },
 {
-"id": "C1-492",
+"id": "C1_081-090-20",
+"group": "C1_081-090",
 "level": "C1",
+"num": 20,
 "text": "This is a question worth pondering at length"
 },
 {
-"id": "C1-493",
+"id": "C1_081-090-21",
+"group": "C1_081-090",
 "level": "C1",
+"num": 21,
 "text": "The recent recession is a case in point"
 },
 {
-"id": "C1-494",
+"id": "C1_081-090-22",
+"group": "C1_081-090",
 "level": "C1",
-"text": "The recent recession is a case in pointGlobal"
+"num": 22,
+"text": "Global"
 },
 {
-"id": "C1-495",
+"id": "C1_081-090-23",
+"group": "C1_081-090",
 "level": "C1",
+"num": 23,
 "text": "The global pandemic is a case in point"
 },
 {
-"id": "C1-496",
+"id": "C1_081-090-24",
+"group": "C1_081-090",
 "level": "C1",
+"num": 24,
 "text": "The collapse of the housing market is a striking case in point"
 },
 {
-"id": "C1-497",
+"id": "C1_081-090-25",
+"group": "C1_081-090",
 "level": "C1",
+"num": 25,
 "text": "The success of the local startup is an instructive case in point"
 },
 {
-"id": "C1-498",
+"id": "C1_081-090-26",
+"group": "C1_081-090",
 "level": "C1",
+"num": 26,
 "text": "Dodo bird's extinction is a classic example"
 },
 {
-"id": "C1-499",
+"id": "C1_081-090-27",
+"group": "C1_081-090",
 "level": "C1",
+"num": 27,
 "text": "The extinction of the dodo is a classic case in point"
 },
 {
-"id": "C1-500",
+"id": "C1_081-090-28",
+"group": "C1_081-090",
 "level": "C1",
+"num": 28,
 "text": "Production costs rise sharply, so price increases are inevitable"
 },
 {
-"id": "C1-501",
+"id": "C1_081-090-29",
+"group": "C1_081-090",
 "level": "C1",
+"num": 29,
 "text": "Production costs rose sharply; hence, the price increase was unavoidable"
 },
 {
-"id": "C1-502",
+"id": "C1_081-090-30",
+"group": "C1_081-090",
 "level": "C1",
+"num": 30,
 "text": "The data was conclusive, hence we changed our strategy"
 },
 {
-"id": "C1-503",
+"id": "C1_081-090-31",
+"group": "C1_081-090",
 "level": "C1",
+"num": 31,
 "text": "The evidence was insufficient, hence the charges were dropped"
 },
 {
-"id": "C1-504",
+"id": "C1_081-090-32",
+"group": "C1_081-090",
 "level": "C1",
+"num": 32,
 "text": "Sales doubled within a year, hence the need for more staff"
 },
 {
-"id": "C1-505",
+"id": "C1_081-090-33",
+"group": "C1_081-090",
 "level": "C1",
-"text": "Sales doubled within a yearHence, the need for more staff"
+"num": 33,
+"text": "Sales doubled within a year"
 },
 {
-"id": "C1-506",
+"id": "C1_081-090-34",
+"group": "C1_081-090",
 "level": "C1",
+"num": 34,
+"text": "Hence, the need for more staff"
+},
+{
+"id": "C1_081-090-35",
+"group": "C1_081-090",
+"level": "C1",
+"num": 35,
 "text": "This bridge was unsafe, hence it was closed immediately"
 },
 {
-"id": "C1-507",
+"id": "C1_081-090-36",
+"group": "C1_081-090",
 "level": "C1",
+"num": 36,
 "text": "The bridge was unsafe"
 },
 {
-"id": "C1-508",
+"id": "C1_081-090-37",
+"group": "C1_081-090",
 "level": "C1",
+"num": 37,
 "text": "Hence, it was closed immediately"
 },
 {
-"id": "C1-509",
+"id": "C1_081-090-38",
+"group": "C1_081-090",
 "level": "C1",
+"num": 38,
 "text": "The weather forecast predicted heavy rain, therefore, the outdoor event was cancelled"
 },
 {
-"id": "C1-510",
+"id": "C1_081-090-39",
+"group": "C1_081-090",
 "level": "C1",
+"num": 39,
 "text": "Accordingly, the outdoor event was cancelled"
 },
 {
-"id": "C1-511",
+"id": "C1_081-090-40",
+"group": "C1_081-090",
 "level": "C1",
+"num": 40,
 "text": "The demand increased, accordingly, production was scaled up"
 },
 {
-"id": "C1-512",
+"id": "C1_081-090-41",
+"group": "C1_081-090",
 "level": "C1",
+"num": 41,
 "text": "The law was amended, accordingly, the contract had to be revised"
 },
 {
-"id": "C1-513",
+"id": "C1_081-090-42",
+"group": "C1_081-090",
 "level": "C1",
+"num": 42,
 "text": "Accordingly, the contract had to be revised"
 },
 {
-"id": "C1-514",
+"id": "C1_081-090-43",
+"group": "C1_081-090",
 "level": "C1",
+"num": 43,
 "text": "Costs had to be cut"
 },
 {
-"id": "C1-515",
+"id": "C1_081-090-44",
+"group": "C1_081-090",
 "level": "C1",
+"num": 44,
 "text": "Accordingly, several departments were streamlined"
 },
 {
-"id": "C1-516",
+"id": "C1_081-090-45",
+"group": "C1_081-090",
 "level": "C1",
+"num": 45,
 "text": "The situation had deteriorated"
 },
 {
-"id": "C1-517",
+"id": "C1_081-090-46",
+"group": "C1_081-090",
 "level": "C1",
+"num": 46,
 "text": "Accordingly, additional troops were deployed"
 },
 {
-"id": "C1-518",
+"id": "C1_081-090-47",
+"group": "C1_081-090",
 "level": "C1",
+"num": 47,
 "text": "If that is the case, we should revise our timeline immediately"
 },
 {
-"id": "C1-519",
+"id": "C1_081-090-48",
+"group": "C1_081-090",
 "level": "C1",
+"num": 48,
 "text": "In that case, we should revise our timeline immediately"
 },
 {
-"id": "C1-520",
+"id": "C1_081-090-49",
+"group": "C1_081-090",
 "level": "C1",
+"num": 49,
 "text": "In either case, we need to make a decision today"
 },
 {
-"id": "C1-521",
+"id": "C1_081-090-50",
+"group": "C1_081-090",
 "level": "C1",
+"num": 50,
 "text": "In no case should the safety of passengers be compromised"
 },
 {
-"id": "C1-522",
+"id": "C1_081-090-51",
+"group": "C1_081-090",
 "level": "C1",
+"num": 51,
 "text": "In that case, we had better consult a lawyer first"
 },
 {
-"id": "C1-523",
+"id": "C1_081-090-52",
+"group": "C1_081-090",
 "level": "C1",
+"num": 52,
 "text": "In either case, the outcome will be costly"
 },
 {
-"id": "C1-524",
+"id": "C1_081-090-53",
+"group": "C1_081-090",
 "level": "C1",
+"num": 53,
 "text": "This building not only is structurally unsafe, but it is also historically significant"
 },
 {
-"id": "C1-525",
+"id": "C1_081-090-54",
+"group": "C1_081-090",
 "level": "C1",
+"num": 54,
 "text": "Not only is the book informative, but it is also beautifully written"
 },
 {
-"id": "C1-526",
+"id": "C1_081-090-55",
+"group": "C1_081-090",
 "level": "C1",
-"text": "This plan is not only expensive, but it is also impracticalShe not only is brilliant, but she is also remarkably humble"
+"num": 55,
+"text": "This plan is not only expensive, but it is also impractical"
 },
 {
-"id": "C1-527",
+"id": "C1_081-090-56",
+"group": "C1_081-090",
 "level": "C1",
+"num": 56,
+"text": "She not only is brilliant, but she is also remarkably humble"
+},
+{
+"id": "C1_081-090-57",
+"group": "C1_081-090",
+"level": "C1",
+"num": 57,
 "text": "This problem not only is the problem urgent, but it is also deeply divisive"
 },
 {
-"id": "C1-528",
+"id": "C1_081-090-58",
+"group": "C1_081-090",
 "level": "C1",
+"num": 58,
 "text": "Were it not for his dedication, the project would have collapsed months ago"
 },
 {
-"id": "C1-529",
+"id": "C1_081-090-59",
+"group": "C1_081-090",
 "level": "C1",
+"num": 59,
 "text": "If there were no medical advances, many diseases would still be fatal"
 },
 {
-"id": "C1-530",
+"id": "C1_081-090-60",
+"group": "C1_081-090",
 "level": "C1",
+"num": 60,
 "text": "Were it not for advances in medicine, many diseases would still be fatal"
 },
 {
-"id": "C1-531",
+"id": "C1_081-090-61",
+"group": "C1_081-090",
 "level": "C1",
+"num": 61,
 "text": "Were it not for her support, I would never have finished my studies"
 },
 {
-"id": "C1-532",
+"id": "C1_081-090-62",
+"group": "C1_081-090",
 "level": "C1",
+"num": 62,
 "text": "Were it not for the internet, information would be far less accessible"
 },
 {
-"id": "C1-533",
+"id": "C1_081-090-63",
+"group": "C1_081-090",
 "level": "C1",
+"num": 63,
 "text": "Were it not for the safety net, countless families would fall into poverty"
 },
 {
-"id": "C1-534",
+"id": "C1_091-100-1",
+"group": "C1_091-100",
 "level": "C1",
+"num": 1,
 "text": "This experience was more exhausting than you could have imagined"
 },
 {
-"id": "C1-535",
+"id": "C1_091-100-2",
+"group": "C1_091-100",
 "level": "C1",
+"num": 2,
 "text": "The experience was more exhausting than you could have imagined"
 },
 {
-"id": "C1-536",
+"id": "C1_091-100-3",
+"group": "C1_091-100",
 "level": "C1",
+"num": 3,
 "text": "The view was more breathtaking than anyone could have expected"
 },
 {
-"id": "C1-537",
+"id": "C1_091-100-4",
+"group": "C1_091-100",
 "level": "C1",
+"num": 4,
 "text": "This task proved more difficult than we could have anticipated"
 },
 {
-"id": "C1-538",
+"id": "C1_091-100-5",
+"group": "C1_091-100",
 "level": "C1",
+"num": 5,
 "text": "The response was more enthusiastic than the organizers could have hoped"
 },
 {
-"id": "C1-539",
+"id": "C1_091-100-6",
+"group": "C1_091-100",
 "level": "C1",
+"num": 6,
 "text": "Damage was more extensive than anyone could have foreseen"
 },
 {
-"id": "C1-540",
+"id": "C1_091-100-7",
+"group": "C1_091-100",
 "level": "C1",
+"num": 7,
 "text": "If ever there was a case that illustrated the need for reform, this is it"
 },
 {
-"id": "C1-541",
+"id": "C1_091-100-8",
+"group": "C1_091-100",
 "level": "C1",
+"num": 8,
 "text": "If ever there was a moment that defined the era, this is it"
 },
 {
-"id": "C1-542",
+"id": "C1_091-100-9",
+"group": "C1_091-100",
 "level": "C1",
+"num": 9,
 "text": "If ever there was a decision that changed the course of history, this was it"
 },
 {
-"id": "C1-543",
+"id": "C1_091-100-10",
+"group": "C1_091-100",
 "level": "C1",
+"num": 10,
 "text": "If ever there was a book that captured the human condition, this is it"
 },
 {
-"id": "C1-544",
+"id": "C1_091-100-11",
+"group": "C1_091-100",
 "level": "C1",
+"num": 11,
 "text": "If ever there was a leader that inspired a generation, she was it"
 },
 {
-"id": "C1-545",
+"id": "C1_091-100-12",
+"group": "C1_091-100",
 "level": "C1",
+"num": 12,
 "text": "This city itself is a masterpiece of urban design"
 },
 {
-"id": "C1-546",
+"id": "C1_091-100-13",
+"group": "C1_091-100",
 "level": "C1",
+"num": 13,
 "text": "Architecture itself tells the story of the culture"
 },
 {
-"id": "C1-547",
+"id": "C1_091-100-14",
+"group": "C1_091-100",
 "level": "C1",
+"num": 14,
 "text": "The architecture itself tells the story of the culture"
 },
 {
-"id": "C1-548",
+"id": "C1_091-100-15",
+"group": "C1_091-100",
 "level": "C1",
+"num": 15,
 "text": "The journey itself was more rewarding than the destination"
 },
 {
-"id": "C1-549",
+"id": "C1_091-100-16",
+"group": "C1_091-100",
 "level": "C1",
-"text": "This idea itself is not new, new is the executionThe idea itself is not new, only the execution is"
+"num": 16,
+"text": "This idea itself is not new, new is the execution"
 },
 {
-"id": "C1-550",
+"id": "C1_091-100-17",
+"group": "C1_091-100",
 "level": "C1",
-"text": "This building itself is worth a visitThe building itself is worth a visit"
+"num": 17,
+"text": "The idea itself is not new, only the execution is"
 },
 {
-"id": "C1-551",
+"id": "C1_091-100-18",
+"group": "C1_091-100",
 "level": "C1",
+"num": 18,
+"text": "This building itself is worth a visit"
+},
+{
+"id": "C1_091-100-19",
+"group": "C1_091-100",
+"level": "C1",
+"num": 19,
+"text": "The building itself is worth a visit"
+},
+{
+"id": "C1_091-100-20",
+"group": "C1_091-100",
+"level": "C1",
+"num": 20,
 "text": "This country"
 },
 {
-"id": "C1-552",
+"id": "C1_091-100-21",
+"group": "C1_091-100",
 "level": "C1",
+"num": 21,
 "text": "The country can ill afford to ignore the warnings of scientists"
 },
 {
-"id": "C1-553",
+"id": "C1_091-100-22",
+"group": "C1_091-100",
 "level": "C1",
+"num": 22,
 "text": "We can ill afford to delay the project any further"
 },
 {
-"id": "C1-554",
+"id": "C1_091-100-23",
+"group": "C1_091-100",
 "level": "C1",
+"num": 23,
 "text": "Small businesses can ill afford to absorb such heavy losses"
 },
 {
-"id": "C1-555",
+"id": "C1_091-100-24",
+"group": "C1_091-100",
 "level": "C1",
+"num": 24,
 "text": "The government can ill afford to alienate its core supporters"
 },
 {
-"id": "C1-556",
+"id": "C1_091-100-25",
+"group": "C1_091-100",
 "level": "C1",
+"num": 25,
 "text": "You can ill afford to miss this opportunity"
 },
 {
-"id": "C1-557",
+"id": "C1_091-100-26",
+"group": "C1_091-100",
 "level": "C1",
+"num": 26,
 "text": "Little by little, the tension between the two nations began to ease"
 },
 {
-"id": "C1-558",
+"id": "C1_091-100-27",
+"group": "C1_091-100",
 "level": "C1",
+"num": 27,
 "text": "Day by day, the city recovered from the disaster"
 },
 {
-"id": "C1-559",
+"id": "C1_091-100-28",
+"group": "C1_091-100",
 "level": "C1",
+"num": 28,
 "text": "Little by little, she regained her confidence after the setback"
 },
 {
-"id": "C1-560",
+"id": "C1_091-100-29",
+"group": "C1_091-100",
 "level": "C1",
+"num": 29,
 "text": "Day by day, the project moved closer to completion"
 },
 {
-"id": "C1-561",
+"id": "C1_091-100-30",
+"group": "C1_091-100",
 "level": "C1",
+"num": 30,
 "text": "Little by little, the truth began to emerge"
 },
 {
-"id": "C1-562",
+"id": "C1_091-100-31",
+"group": "C1_091-100",
 "level": "C1",
+"num": 31,
 "text": "I want to ask you to pay attention to the data in the fifth projection"
 },
 {
-"id": "C1-563",
+"id": "C1_091-100-32",
+"group": "C1_091-100",
 "level": "C1",
+"num": 32,
 "text": "I'd like to draw your attention to the figures on slide five"
 },
 {
-"id": "C1-564",
+"id": "C1_091-100-33",
+"group": "C1_091-100",
 "level": "C1",
+"num": 33,
 "text": "I'd like to draw your attention to the key findings in section three"
 },
 {
-"id": "C1-565",
+"id": "C1_091-100-34",
+"group": "C1_091-100",
 "level": "C1",
+"num": 34,
 "text": "I'd like to draw your attention to the rising costs in the third quarter"
 },
 {
-"id": "C1-566",
+"id": "C1_091-100-35",
+"group": "C1_091-100",
 "level": "C1",
+"num": 35,
 "text": "I'd like to draw your attention to a potential risk we have overlooked"
 },
 {
-"id": "C1-567",
+"id": "C1_091-100-36",
+"group": "C1_091-100",
 "level": "C1",
+"num": 36,
 "text": "I'd like to draw your attention to the deadline mentioned on page two"
 },
 {
-"id": "C1-568",
+"id": "C1_091-100-37",
+"group": "C1_091-100",
 "level": "C1",
-"text": "Now let me talk about this quarter's financial performanceLet me now turn to the quarterly financial performance"
+"num": 37,
+"text": "Now let me talk about this quarter's financial performance"
 },
 {
-"id": "C1-569",
+"id": "C1_091-100-38",
+"group": "C1_091-100",
 "level": "C1",
-"text": "Let me now turn to the marketing strategy for next yearLet me now turn to the marketing strategy for next year"
+"num": 38,
+"text": "Let me now turn to the quarterly financial performance"
 },
 {
-"id": "C1-570",
+"id": "C1_091-100-39",
+"group": "C1_091-100",
 "level": "C1",
+"num": 39,
+"text": "Let me now turn to the marketing strategy for next year"
+},
+{
+"id": "C1_091-100-40",
+"group": "C1_091-100",
+"level": "C1",
+"num": 40,
 "text": "Now let me now turn to the challenges facing our industry"
 },
 {
-"id": "C1-571",
+"id": "C1_091-100-41",
+"group": "C1_091-100",
 "level": "C1",
+"num": 41,
 "text": "Let me now turn to the challenges facing our industry"
 },
 {
-"id": "C1-572",
+"id": "C1_091-100-42",
+"group": "C1_091-100",
 "level": "C1",
+"num": 42,
 "text": "Now let me talk about the feedback we received from customers"
 },
 {
-"id": "C1-573",
+"id": "C1_091-100-43",
+"group": "C1_091-100",
 "level": "C1",
+"num": 43,
 "text": "Now let me turn to the question of sustainability"
 },
 {
-"id": "C1-574",
+"id": "C1_091-100-44",
+"group": "C1_091-100",
 "level": "C1",
+"num": 44,
 "text": "Overall, our strategy is focused on three key areas"
 },
 {
-"id": "C1-575",
+"id": "C1_091-100-45",
+"group": "C1_091-100",
 "level": "C1",
+"num": 45,
 "text": "To summarize, the project has exceeded all expectations"
 },
 {
-"id": "C1-576",
+"id": "C1_091-100-46",
+"group": "C1_091-100",
 "level": "C1",
+"num": 46,
 "text": "In summary, the evidence supports our original hypothesis"
 },
 {
-"id": "C1-577",
+"id": "C1_091-100-47",
+"group": "C1_091-100",
 "level": "C1",
+"num": 47,
 "text": "In summary, we have made substantial progress this year"
 },
 {
-"id": "C1-578",
+"id": "C1_091-100-48",
+"group": "C1_091-100",
 "level": "C1",
+"num": 48,
 "text": "To sum up, the risks outweigh the potential benefits"
 },
 {
-"id": "C1-579",
+"id": "C1_091-100-49",
+"group": "C1_091-100",
 "level": "C1",
+"num": 49,
 "text": "My report ends here"
 },
 {
-"id": "C1-580",
+"id": "C1_091-100-50",
+"group": "C1_091-100",
 "level": "C1",
+"num": 50,
 "text": "Now, I'm open for questions"
 },
 {
-"id": "C1-581",
+"id": "C1_091-100-51",
+"group": "C1_091-100",
 "level": "C1",
+"num": 51,
 "text": "That concludes my presentation"
 },
 {
-"id": "C1-582",
+"id": "C1_091-100-52",
+"group": "C1_091-100",
 "level": "C1",
+"num": 52,
 "text": "The floor is now open for questions"
 },
 {
-"id": "C1-583",
+"id": "C1_091-100-53",
+"group": "C1_091-100",
 "level": "C1",
+"num": 53,
 "text": "Please hold your questions until the end"
 },
 {
-"id": "C1-584",
+"id": "C1_091-100-54",
+"group": "C1_091-100",
 "level": "C1",
+"num": 54,
 "text": "Then the floor will be open for questions"
 },
 {
-"id": "C1-585",
+"id": "C1_091-100-55",
+"group": "C1_091-100",
 "level": "C1",
+"num": 55,
 "text": "Thank you all for listening"
 },
 {
-"id": "C1-586",
+"id": "C1_091-100-56",
+"group": "C1_091-100",
 "level": "C1",
-"text": "Briefing to this endThe floor is now open for questions"
+"num": 56,
+"text": "Briefing to this end"
 },
 {
-"id": "C1-587",
+"id": "C1_091-100-57",
+"group": "C1_091-100",
 "level": "C1",
+"num": 57,
 "text": "That brings us to the end of the briefing"
 },
 {
-"id": "C1-588",
+"id": "C1_091-100-58",
+"group": "C1_091-100",
 "level": "C1",
+"num": 58,
 "text": "We have covered the main points"
 },
 {
-"id": "C1-589",
+"id": "C1_091-100-59",
+"group": "C1_091-100",
 "level": "C1",
+"num": 59,
 "text": "Based on the findings we discussed earlier, we can now propose a framework"
 },
 {
-"id": "C1-590",
+"id": "C1_091-100-60",
+"group": "C1_091-100",
 "level": "C1",
+"num": 60,
 "text": "Based on the research conducted last year, the team developed a new model"
 },
 {
-"id": "C1-591",
+"id": "C1_091-100-61",
+"group": "C1_091-100",
 "level": "C1",
+"num": 61,
 "text": "Based on the success of our first product, we plan to launch a second"
 },
 {
-"id": "C1-592",
+"id": "C1_091-100-62",
+"group": "C1_091-100",
 "level": "C1",
+"num": 62,
 "text": "Based on the momentum gained this quarter, we aim to expand overseas"
 },
 {
-"id": "C1-593",
+"id": "C1_091-100-63",
+"group": "C1_091-100",
 "level": "C1",
+"num": 63,
 "text": "Based on the lessons learned from the failure, the team redesigned the system"
 },
 {
-"id": "C2-1",
+"id": "C2_001-010-1",
+"group": "C2_001-010",
 "level": "C2",
+"num": 1,
 "text": "The parties hereby agree to the following terms"
 },
 {
-"id": "C2-2",
+"id": "C2_001-010-2",
+"group": "C2_001-010",
 "level": "C2",
+"num": 2,
 "text": "The company thereby acknowledges its obligations under the contract"
 },
 {
-"id": "C2-3",
+"id": "C2_001-010-3",
+"group": "C2_001-010",
 "level": "C2",
+"num": 3,
 "text": "The tenant hereby surrenders possession of the premises"
 },
 {
-"id": "C2-4",
+"id": "C2_001-010-4",
+"group": "C2_001-010",
 "level": "C2",
+"num": 4,
 "text": "The witness thereby confirms the accuracy of the statement"
 },
 {
-"id": "C2-5",
+"id": "C2_001-010-5",
+"group": "C2_001-010",
 "level": "C2",
+"num": 5,
 "text": "The employer hereby terminates the employment with immediate effect"
 },
 {
-"id": "C2-6",
+"id": "C2_001-010-6",
+"group": "C2_001-010",
 "level": "C2",
-"text": "According to Article 12 of the Constitution, the election will be held as scheduledIn accordance with Article 12 of the Constitution, the election shall be held"
+"num": 6,
+"text": "According to Article 12 of the Constitution, the election will be held as scheduled"
 },
 {
-"id": "C2-7",
+"id": "C2_001-010-7",
+"group": "C2_001-010",
 "level": "C2",
-"text": "According to company policy, all employees must sign the agreementIn accordance with company policy, all employees must sign the agreement"
+"num": 7,
+"text": "In accordance with Article 12 of the Constitution, the election shall be held"
 },
 {
-"id": "C2-8",
+"id": "C2_001-010-8",
+"group": "C2_001-010",
 "level": "C2",
+"num": 8,
+"text": "According to company policy, all employees must sign the agreement"
+},
+{
+"id": "C2_001-010-9",
+"group": "C2_001-010",
+"level": "C2",
+"num": 9,
+"text": "In accordance with company policy, all employees must sign the agreement"
+},
+{
+"id": "C2_001-010-10",
+"group": "C2_001-010",
+"level": "C2",
+"num": 10,
 "text": "In accordance with the terms of the lease, rent is payable in advance"
 },
 {
-"id": "C2-9",
+"id": "C2_001-010-11",
+"group": "C2_001-010",
 "level": "C2",
-"text": "In accordance with the terms of the lease, rent is payable in advance"
+"num": 11,
+"text": "According to international law, the ship is allowed to dock"
 },
 {
-"id": "C2-10",
+"id": "C2_001-010-12",
+"group": "C2_001-010",
 "level": "C2",
-"text": "According to international law, the ship is allowed to dockIn accordance with international law, the vessel was permitted to dock"
+"num": 12,
+"text": "In accordance with international law, the vessel was permitted to dock"
 },
 {
-"id": "C2-11",
+"id": "C2_001-010-13",
+"group": "C2_001-010",
 "level": "C2",
+"num": 13,
 "text": "In accordance with the court order, the assets were frozen pending review"
 },
 {
-"id": "C2-12",
+"id": "C2_001-010-14",
+"group": "C2_001-010",
 "level": "C2",
+"num": 14,
 "text": "Subject to the approval of the board, the merger will proceed next month"
 },
 {
-"id": "C2-13",
+"id": "C2_001-010-15",
+"group": "C2_001-010",
 "level": "C2",
+"num": 15,
 "text": "Subject to the completion of due diligence, we can proceed with the transaction"
 },
 {
-"id": "C2-14",
+"id": "C2_001-010-16",
+"group": "C2_001-010",
 "level": "C2",
+"num": 16,
 "text": "Subject to final inspection, the goods will be released for delivery"
 },
 {
-"id": "C2-15",
+"id": "C2_001-010-17",
+"group": "C2_001-010",
 "level": "C2",
+"num": 17,
 "text": "Subject to availability of funding, the program will be expanded next year"
 },
 {
-"id": "C2-16",
+"id": "C2_001-010-18",
+"group": "C2_001-010",
 "level": "C2",
+"num": 18,
 "text": "Subject to the consent of the data subject, the records may be shared"
 },
 {
-"id": "C2-17",
+"id": "C2_001-010-19",
+"group": "C2_001-010",
 "level": "C2",
-"text": "Without prejudice to any other rights, the company reserves the right to terminateWithout prejudice to any other rights, the company reserves the right to terminate"
+"num": 19,
+"text": "Without prejudice to any other rights, the company reserves the right to terminate"
 },
 {
-"id": "C2-18",
+"id": "C2_001-010-20",
+"group": "C2_001-010",
 "level": "C2",
+"num": 20,
 "text": "In no way does this agreement limit the right of the company to terminate"
 },
 {
-"id": "C2-19",
+"id": "C2_001-010-21",
+"group": "C2_001-010",
 "level": "C2",
+"num": 21,
 "text": "Without prejudice to any claims, the parties agreed to settle out of court"
 },
 {
-"id": "C2-20",
+"id": "C2_001-010-22",
+"group": "C2_001-010",
 "level": "C2",
-"text": "InWithout prejudice to the statutory provisions, the clause remains enforceable"
+"num": 22,
+"text": "Without prejudice to the statutory provisions, the clause remains enforceable"
 },
 {
-"id": "C2-21",
+"id": "C2_001-010-23",
+"group": "C2_001-010",
 "level": "C2",
-"text": "InWithout prejudice to the findings of the inquiry, no further action will be taken"
+"num": 23,
+"text": "Without prejudice to the findings of the inquiry, no further action will be taken"
 },
 {
-"id": "C2-22",
+"id": "C2_001-010-24",
+"group": "C2_001-010",
 "level": "C2",
+"num": 24,
 "text": "In no further action will be taken"
 },
 {
-"id": "C2-23",
+"id": "C2_001-010-25",
+"group": "C2_001-010",
 "level": "C2",
-"text": "InWithout prejudice to the interests of the minority shareholders, the proposal was approved"
+"num": 25,
+"text": "Without prejudice to the interests of the minority shareholders, the proposal was approved"
 },
 {
-"id": "C2-24",
+"id": "C2_001-010-26",
+"group": "C2_001-010",
 "level": "C2",
+"num": 26,
 "text": "Thus, it is hereby declared that the contract is null and void"
 },
 {
-"id": "C2-25",
+"id": "C2_001-010-27",
+"group": "C2_001-010",
 "level": "C2",
+"num": 27,
 "text": "It is hereby declared that the contract is null and void"
 },
 {
-"id": "C2-26",
+"id": "C2_001-010-28",
+"group": "C2_001-010",
 "level": "C2",
+"num": 28,
 "text": "It is hereby declared that the election results are official"
 },
 {
-"id": "C2-27",
+"id": "C2_001-010-29",
+"group": "C2_001-010",
 "level": "C2",
+"num": 29,
 "text": "It is hereby declared that the state of emergency has been lifted"
 },
 {
-"id": "C2-28",
+"id": "C2_001-010-30",
+"group": "C2_001-010",
 "level": "C2",
+"num": 30,
 "text": "It is hereby declared that the dividend will be paid to all registered shareholders"
 },
 {
-"id": "C2-29",
+"id": "C2_001-010-31",
+"group": "C2_001-010",
 "level": "C2",
+"num": 31,
 "text": "It is hereby declared that the treaty enters into force on the first of January"
 },
 {
-"id": "C2-30",
+"id": "C2_001-010-32",
+"group": "C2_001-010",
 "level": "C2",
+"num": 32,
 "text": "It is hereby declared that the treaty enters into force on the 1st of January"
 },
 {
-"id": "C2-31",
+"id": "C2_001-010-33",
+"group": "C2_001-010",
 "level": "C2",
+"num": 33,
 "text": "In the spirit of cooperation, both nations agreed to open borders temporarily"
 },
 {
-"id": "C2-32",
+"id": "C2_001-010-34",
+"group": "C2_001-010",
 "level": "C2",
+"num": 34,
 "text": "In the spirit of transparency, all documents were shared with the public"
 },
 {
-"id": "C2-33",
+"id": "C2_001-010-35",
+"group": "C2_001-010",
 "level": "C2",
+"num": 35,
 "text": "In the spirit of reconciliation, the two communities held a joint memorial"
 },
 {
-"id": "C2-34",
+"id": "C2_001-010-36",
+"group": "C2_001-010",
 "level": "C2",
+"num": 36,
 "text": "In the spirit of innovation, the university launched an open research fund"
 },
 {
-"id": "C2-35",
+"id": "C2_001-010-37",
+"group": "C2_001-010",
 "level": "C2",
+"num": 37,
 "text": "In the spirit of fair play, the champion conceded the disputed point"
 },
 {
-"id": "C2-36",
+"id": "C2_001-010-38",
+"group": "C2_001-010",
 "level": "C2",
+"num": 38,
 "text": "The penalty shall be imposed at the discretion of the presiding judge"
 },
 {
-"id": "C2-37",
+"id": "C2_001-010-39",
+"group": "C2_001-010",
 "level": "C2",
+"num": 39,
 "text": "The timing of the announcement is at the discretion of the spokesperson"
 },
 {
-"id": "C2-38",
+"id": "C2_001-010-40",
+"group": "C2_001-010",
 "level": "C2",
+"num": 40,
 "text": "The allocation of funds remains at the discretion of the board of trustees"
 },
 {
-"id": "C2-39",
+"id": "C2_001-010-41",
+"group": "C2_001-010",
 "level": "C2",
+"num": 41,
 "text": "Bonus payments are made at the discretion of the chief executive"
 },
 {
-"id": "C2-40",
+"id": "C2_001-010-42",
+"group": "C2_001-010",
 "level": "C2",
+"num": 42,
 "text": "Access to the archives is granted at the discretion of the curator"
 },
 {
-"id": "C2-41",
+"id": "C2_001-010-43",
+"group": "C2_001-010",
 "level": "C2",
+"num": 43,
 "text": "None of the terms of this agreement shall be construed as a waiver of sovereign immunity"
 },
 {
-"id": "C2-42",
+"id": "C2_001-010-44",
+"group": "C2_001-010",
 "level": "C2",
+"num": 44,
 "text": "Nothing in this agreement shall be construed as a waiver of sovereign immunity"
 },
 {
-"id": "C2-43",
+"id": "C2_001-010-45",
+"group": "C2_001-010",
 "level": "C2",
+"num": 45,
 "text": "Nothing in this clause shall be construed as granting any ownership rights"
 },
 {
-"id": "C2-44",
+"id": "C2_001-010-46",
+"group": "C2_001-010",
 "level": "C2",
-"text": "Nothing in this memorandum shall be construed as creating a binding obligationNothing in this memorandum shall be construed as creating a binding obligation"
+"num": 46,
+"text": "Nothing in this memorandum shall be construed as creating a binding obligation"
 },
 {
-"id": "C2-45",
+"id": "C2_001-010-47",
+"group": "C2_001-010",
 "level": "C2",
+"num": 47,
 "text": "Nothing in this resolution shall be construed as endorsing the proposed merger"
 },
 {
-"id": "C2-46",
+"id": "C2_001-010-48",
+"group": "C2_001-010",
 "level": "C2",
+"num": 48,
 "text": "Nothing in this notice shall be construed as waiving any applicable remedy"
 },
 {
-"id": "C2-47",
+"id": "C2_001-010-49",
+"group": "C2_001-010",
 "level": "C2",
+"num": 49,
 "text": "If negotiations fail, we reserve the right to seek arbitration"
 },
 {
-"id": "C2-48",
+"id": "C2_001-010-50",
+"group": "C2_001-010",
 "level": "C2",
+"num": 50,
 "text": "In the event that negotiations fail, we reserve the right to seek arbitration"
 },
 {
-"id": "C2-49",
+"id": "C2_001-010-51",
+"group": "C2_001-010",
 "level": "C2",
+"num": 51,
 "text": "If the project is delayed, additional resources will be allocated"
 },
 {
-"id": "C2-50",
+"id": "C2_001-010-52",
+"group": "C2_001-010",
 "level": "C2",
+"num": 52,
 "text": "In the event that the project is delayed, additional resources will be allocated"
 },
 {
-"id": "C2-51",
+"id": "C2_001-010-53",
+"group": "C2_001-010",
 "level": "C2",
+"num": 53,
 "text": "If the supplier defaults, an alternative source will be engaged"
 },
 {
-"id": "C2-52",
+"id": "C2_001-010-54",
+"group": "C2_001-010",
 "level": "C2",
+"num": 54,
 "text": "In the event that the supplier defaults, an alternative source will be engaged"
 },
 {
-"id": "C2-53",
+"id": "C2_001-010-55",
+"group": "C2_001-010",
 "level": "C2",
+"num": 55,
 "text": "If the tenant fails to pay, eviction proceedings may commence"
 },
 {
-"id": "C2-54",
+"id": "C2_001-010-56",
+"group": "C2_001-010",
 "level": "C2",
+"num": 56,
 "text": "In the event that the tenant fails to pay, eviction proceedings may commence"
 },
 {
-"id": "C2-55",
+"id": "C2_001-010-57",
+"group": "C2_001-010",
 "level": "C2",
+"num": 57,
 "text": "If demand exceeds supply, rationing will be introduced"
 },
 {
-"id": "C2-56",
+"id": "C2_001-010-58",
+"group": "C2_001-010",
 "level": "C2",
+"num": 58,
 "text": "In the event that demand exceeds supply, rationing will be introduced"
 },
 {
-"id": "C2-57",
+"id": "C2_001-010-59",
+"group": "C2_001-010",
 "level": "C2",
+"num": 59,
 "text": "The contract is, to all intents and purposes, binding on both parties"
 },
 {
-"id": "C2-58",
+"id": "C2_001-010-60",
+"group": "C2_001-010",
 "level": "C2",
+"num": 60,
 "text": "The agreement is, to all intents and purposes, equivalent to a formal treaty"
 },
 {
-"id": "C2-59",
+"id": "C2_001-010-61",
+"group": "C2_001-010",
 "level": "C2",
+"num": 61,
 "text": "The subsidiary is, to all intents and purposes, an independent company"
 },
 {
-"id": "C2-60",
+"id": "C2_001-010-62",
+"group": "C2_001-010",
 "level": "C2",
+"num": 62,
 "text": "The partnership is, to all intents and purposes, dissolved as of today"
 },
 {
-"id": "C2-61",
+"id": "C2_001-010-63",
+"group": "C2_001-010",
 "level": "C2",
+"num": 63,
 "text": "The regional office is, to all intents and purposes, the headquarters in practice"
 },
 {
-"id": "C2-62",
+"id": "C2_011-020-1",
+"group": "C2_011-020",
 "level": "C2",
+"num": 1,
 "text": "Upon closer examination, it reveals that the initial assumptions were flawed"
 },
 {
-"id": "C2-63",
+"id": "C2_011-020-2",
+"group": "C2_011-020",
 "level": "C2",
+"num": 2,
 "text": "A closer examination reveals that the market has significant growth potential"
 },
 {
-"id": "C2-64",
+"id": "C2_011-020-3",
+"group": "C2_011-020",
 "level": "C2",
-"text": "A closer examination reveals that the data had been selectively reportedUpon closer examination, reveals that the symptoms indicated different diagnosis"
+"num": 3,
+"text": "A closer examination reveals that the data had been selectively reported"
 },
 {
-"id": "C2-65",
+"id": "C2_011-020-4",
+"group": "C2_011-020",
 "level": "C2",
+"num": 4,
+"text": "Upon closer examination, reveals that the symptoms indicated different diagnosis"
+},
+{
+"id": "C2_011-020-5",
+"group": "C2_011-020",
+"level": "C2",
+"num": 5,
 "text": "A closer examination reveals that the foundation was laid on unstable ground"
 },
 {
-"id": "C2-66",
+"id": "C2_011-020-6",
+"group": "C2_011-020",
 "level": "C2",
-"text": "The evidence points to the conclusion that the treatment is effectiveThe evidence points to the conclusion that climate change is accelerating"
+"num": 6,
+"text": "The evidence points to the conclusion that the treatment is effective"
 },
 {
-"id": "C2-67",
+"id": "C2_011-020-7",
+"group": "C2_011-020",
 "level": "C2",
-"text": "The evidence points to the conclusion that climate change is acceleratingThe evidence points to the conclusion that the witnesses colluded before testifying"
+"num": 7,
+"text": "The evidence points to the conclusion that climate change is accelerating"
 },
 {
-"id": "C2-68",
+"id": "C2_011-020-8",
+"group": "C2_011-020",
 "level": "C2",
-"text": "The evidence points to the conclusion that the witnesses colluded before testifyingThe evidence points to the conclusion that the species is on the verge of extinction"
+"num": 8,
+"text": "The evidence points to the conclusion that the witnesses colluded before testifying"
 },
 {
-"id": "C2-69",
+"id": "C2_011-020-9",
+"group": "C2_011-020",
 "level": "C2",
+"num": 9,
+"text": "The evidence points to the conclusion that the species is on the verge of extinction"
+},
+{
+"id": "C2_011-020-10",
+"group": "C2_011-020",
+"level": "C2",
+"num": 10,
 "text": "The evidence points to the conclusion that the policy reduced inequality"
 },
 {
-"id": "C2-70",
+"id": "C2_011-020-11",
+"group": "C2_011-020",
 "level": "C2",
+"num": 11,
 "text": "This line of reasoning has much to commend it, though practical implementation remains challenging"
 },
 {
-"id": "C2-71",
+"id": "C2_011-020-12",
+"group": "C2_011-020",
 "level": "C2",
+"num": 12,
 "text": "This approach has much to commend it in terms of cost effectiveness"
 },
 {
-"id": "C2-72",
+"id": "C2_011-020-13",
+"group": "C2_011-020",
 "level": "C2",
+"num": 13,
 "text": "This line of reasoning has much to commend it, particularly in light of recent findings"
 },
 {
-"id": "C2-73",
+"id": "C2_011-020-14",
+"group": "C2_011-020",
 "level": "C2",
+"num": 14,
 "text": "This line of reasoning has much to commend it when applied to historical cases"
 },
 {
-"id": "C2-74",
+"id": "C2_011-020-15",
+"group": "C2_011-020",
 "level": "C2",
+"num": 15,
 "text": "This line of reasoning has much to commend it, even if it lacks popular appeal"
 },
 {
-"id": "C2-75",
+"id": "C2_011-020-16",
+"group": "C2_011-020",
 "level": "C2",
+"num": 16,
 "text": "Be that as it may, the historical significance of the event cannot be denied"
 },
 {
-"id": "C2-76",
+"id": "C2_011-020-17",
+"group": "C2_011-020",
 "level": "C2",
-"text": "Even so, also must be consideredBe that as it may, the economic impact must also be considered"
+"num": 17,
+"text": "Even so, also must be considered"
 },
 {
-"id": "C2-77",
+"id": "C2_011-020-18",
+"group": "C2_011-020",
 "level": "C2",
+"num": 18,
+"text": "Be that as it may, the economic impact must also be considered"
+},
+{
+"id": "C2_011-020-19",
+"group": "C2_011-020",
+"level": "C2",
+"num": 19,
 "text": "Even so, the committee remains opposed to the proposal"
 },
 {
-"id": "C2-78",
+"id": "C2_011-020-20",
+"group": "C2_011-020",
 "level": "C2",
+"num": 20,
 "text": "Be that as it may, the committee remains opposed to the proposal"
 },
 {
-"id": "C2-79",
+"id": "C2_011-020-21",
+"group": "C2_011-020",
 "level": "C2",
+"num": 21,
 "text": "Even so, the deadline will not be extended under any circumstances"
 },
 {
-"id": "C2-80",
+"id": "C2_011-020-22",
+"group": "C2_011-020",
 "level": "C2",
+"num": 22,
 "text": "Be that as it may, the deadline will not be extended under any circumstances"
 },
 {
-"id": "C2-81",
+"id": "C2_011-020-23",
+"group": "C2_011-020",
 "level": "C2",
+"num": 23,
 "text": "Even so, the personnel"
 },
 {
-"id": "C2-82",
+"id": "C2_011-020-24",
+"group": "C2_011-020",
 "level": "C2",
+"num": 24,
 "text": "Be that as it may, the personal cost to those involved should not be underestimated"
 },
 {
-"id": "C2-83",
+"id": "C2_011-020-25",
+"group": "C2_011-020",
 "level": "C2",
+"num": 25,
 "text": "To take a contrary view, one might argue that intervention has done more harm than good"
 },
 {
-"id": "C2-84",
+"id": "C2_011-020-26",
+"group": "C2_011-020",
 "level": "C2",
-"text": "To take a contrary view, the restrictions may have been necessaryTo take a contrary view, the restrictions may have been necessary"
+"num": 26,
+"text": "To take a contrary view, the restrictions may have been necessary"
 },
 {
-"id": "C2-85",
+"id": "C2_011-020-27",
+"group": "C2_011-020",
 "level": "C2",
+"num": 27,
 "text": "To take a contrary view, the policy could be seen as a prudent safeguard"
 },
 {
-"id": "C2-86",
+"id": "C2_011-020-28",
+"group": "C2_011-020",
 "level": "C2",
+"num": 28,
 "text": "To take a contrary view, the decline reflects a natural market correction"
 },
 {
-"id": "C2-87",
+"id": "C2_011-020-29",
+"group": "C2_011-020",
 "level": "C2",
+"num": 29,
 "text": "To take a contrary view, the merger may ultimately benefit consumers"
 },
 {
-"id": "C2-88",
+"id": "C2_011-020-30",
+"group": "C2_011-020",
 "level": "C2",
+"num": 30,
 "text": "This argument has the following implications"
 },
 {
-"id": "C2-89",
+"id": "C2_011-020-31",
+"group": "C2_011-020",
 "level": "C2",
+"num": 31,
 "text": "First, it ignores that this argument has the following implications"
 },
 {
-"id": "C2-90",
+"id": "C2_011-020-32",
+"group": "C2_011-020",
 "level": "C2",
-"text": "It lacks empirical supportThis line of argument is open to the following objections"
+"num": 32,
+"text": "It lacks empirical support"
 },
 {
-"id": "C2-91",
+"id": "C2_011-020-33",
+"group": "C2_011-020",
 "level": "C2",
+"num": 33,
+"text": "This line of argument is open to the following objections"
+},
+{
+"id": "C2_011-020-34",
+"group": "C2_011-020",
+"level": "C2",
+"num": 34,
 "text": "Example three"
 },
 {
-"id": "C2-92",
+"id": "C2_011-020-35",
+"group": "C2_011-020",
 "level": "C2",
-"text": "It rests on a false premiseThis line of argument is open to the following objections: it lacks empirical support"
+"num": 35,
+"text": "It rests on a false premise"
 },
 {
-"id": "C2-93",
+"id": "C2_011-020-36",
+"group": "C2_011-020",
 "level": "C2",
+"num": 36,
 "text": "This line of argument is open to the following objections: it lacks empirical support"
 },
 {
-"id": "C2-94",
+"id": "C2_011-020-37",
+"group": "C2_011-020",
 "level": "C2",
+"num": 37,
 "text": "This line of argument is open to the following objections: the sample was unrepresentative"
 },
 {
-"id": "C2-95",
+"id": "C2_011-020-38",
+"group": "C2_011-020",
 "level": "C2",
+"num": 38,
 "text": "This line of argument is open to the following objections: it confuses correlation with causation"
 },
 {
-"id": "C2-96",
+"id": "C2_011-020-39",
+"group": "C2_011-020",
 "level": "C2",
+"num": 39,
 "text": "I take your point about cost, but one must also consider long-term benefits"
 },
 {
-"id": "C2-97",
+"id": "C2_011-020-40",
+"group": "C2_011-020",
 "level": "C2",
+"num": 40,
 "text": "I take your point about the risks, but one must also consider the potential rewardsI take your point about the risks, but one must also consider the potential rewards"
 },
 {
-"id": "C2-98",
+"id": "C2_011-020-41",
+"group": "C2_011-020",
 "level": "C2",
+"num": 41,
 "text": "I take your point about efficiency, but one must also consider employee well-being"
 },
 {
-"id": "C2-99",
+"id": "C2_011-020-42",
+"group": "C2_011-020",
 "level": "C2",
+"num": 42,
 "text": "I take your point about tradition, but one must also consider changing social norms"
 },
 {
-"id": "C2-100",
+"id": "C2_011-020-43",
+"group": "C2_011-020",
 "level": "C2",
+"num": 43,
 "text": "I take your point about speed, but one must also consider the margin for error"
 },
 {
-"id": "C2-101",
+"id": "C2_011-020-44",
+"group": "C2_011-020",
 "level": "C2",
-"text": "The claim that technology eliminates jobs simply will not hold waterThe claim that technology eliminates jobs simply will not hold water"
+"num": 44,
+"text": "The claim that technology eliminates jobs simply will not hold water"
 },
 {
-"id": "C2-102",
+"id": "C2_011-020-45",
+"group": "C2_011-020",
 "level": "C2",
-"text": "The assertion that growth is always beneficial simply will not hold waterThe assertion that growth is always beneficial simply will not hold water"
+"num": 45,
+"text": "The assertion that growth is always beneficial simply will not hold water"
 },
 {
-"id": "C2-103",
+"id": "C2_011-020-46",
+"group": "C2_011-020",
 "level": "C2",
+"num": 46,
 "text": "The suggestion that the two events were unrelated simply will not hold water"
 },
 {
-"id": "C2-104",
+"id": "C2_011-020-47",
+"group": "C2_011-020",
 "level": "C2",
+"num": 47,
 "text": "The theory that the market is perfectly rational simply will not hold water"
 },
 {
-"id": "C2-105",
+"id": "C2_011-020-48",
+"group": "C2_011-020",
 "level": "C2",
+"num": 48,
 "text": "The defense that the defendant acted in ignorance simply will not hold water"
 },
 {
-"id": "C2-106",
+"id": "C2_011-020-49",
+"group": "C2_011-020",
 "level": "C2",
+"num": 49,
 "text": "The logical extension of this view is that all regulation is inherently harmful"
 },
 {
-"id": "C2-107",
+"id": "C2_011-020-50",
+"group": "C2_011-020",
 "level": "C2",
+"num": 50,
 "text": "The logical extension of this view is that individual freedom has no limits"
 },
 {
-"id": "C2-108",
+"id": "C2_011-020-51",
+"group": "C2_011-020",
 "level": "C2",
+"num": 51,
 "text": "The logical extension of this view is that taxation amounts to coercion"
 },
 {
-"id": "C2-109",
+"id": "C2_011-020-52",
+"group": "C2_011-020",
 "level": "C2",
-"text": "The logical extension of this view is that art has no objective valueThe logical extension of this view is that art has no objective value"
+"num": 52,
+"text": "The logical extension of this view is that art has no objective value"
 },
 {
-"id": "C2-110",
+"id": "C2_011-020-53",
+"group": "C2_011-020",
 "level": "C2",
-"text": "The logical extension of this view is that personal responsibility overrides all lawThe logical extension of this view is that personal responsibility overrides all law"
+"num": 53,
+"text": "The logical extension of this view is that personal responsibility overrides all law"
 },
 {
-"id": "C2-111",
+"id": "C2_011-020-54",
+"group": "C2_011-020",
 "level": "C2",
+"num": 54,
 "text": "To argue otherwise would be to ignore the overwhelming empirical evidence"
 },
 {
-"id": "C2-112",
+"id": "C2_011-020-55",
+"group": "C2_011-020",
 "level": "C2",
+"num": 55,
 "text": "To argue otherwise would be to deny the obvious facts"
 },
 {
-"id": "C2-113",
+"id": "C2_011-020-56",
+"group": "C2_011-020",
 "level": "C2",
+"num": 56,
 "text": "To argue otherwise would be to contradict the founding principles of the institution"
 },
 {
-"id": "C2-114",
+"id": "C2_011-020-57",
+"group": "C2_011-020",
 "level": "C2",
+"num": 57,
 "text": "To argue otherwise would be to dismiss centuries of accumulated wisdom"
 },
 {
-"id": "C2-115",
+"id": "C2_011-020-58",
+"group": "C2_011-020",
 "level": "C2",
-"text": "To argue otherwise would be to dismiss centuries of accumulated wisdom"
-},
-{
-"id": "C2-116",
-"level": "C2",
+"num": 58,
 "text": "To argue otherwise would be to condemn future generations to repeat our errors"
 },
 {
-"id": "C2-117",
+"id": "C2_021-030-1",
+"group": "C2_021-030",
 "level": "C2",
+"num": 1,
 "text": "Perhaps can consider revising the methodology to address the identified limitations"
 },
 {
-"id": "C2-118",
+"id": "C2_021-030-2",
+"group": "C2_021-030",
 "level": "C2",
+"num": 2,
 "text": "One might consider revising the methodology to address the identified limitations"
 },
 {
-"id": "C2-119",
+"id": "C2_021-030-3",
+"group": "C2_021-030",
 "level": "C2",
+"num": 3,
 "text": "Perhaps can consider in future"
 },
 {
-"id": "C2-120",
+"id": "C2_021-030-4",
+"group": "C2_021-030",
 "level": "C2",
-"text": "One might consider adopting a more cautious approach in futureOne might consider adopting a more cautious approach in future"
+"num": 4,
+"text": "One might consider adopting a more cautious approach in future"
 },
 {
-"id": "C2-121",
+"id": "C2_021-030-5",
+"group": "C2_021-030",
 "level": "C2",
+"num": 5,
 "text": "One might consider relocating the facility to reduce logistical costs"
 },
 {
-"id": "C2-122",
+"id": "C2_021-030-6",
+"group": "C2_021-030",
 "level": "C2",
+"num": 6,
 "text": "One might consider commissioning an independent audit of the accounts"
 },
 {
-"id": "C2-123",
+"id": "C2_021-030-7",
+"group": "C2_021-030",
 "level": "C2",
+"num": 7,
 "text": "Perhaps can consider in the vote"
 },
 {
-"id": "C2-124",
+"id": "C2_021-030-8",
+"group": "C2_021-030",
 "level": "C2",
+"num": 8,
 "text": "One might consider extending the consultation period before the vote"
 },
 {
-"id": "C2-125",
+"id": "C2_021-030-9",
+"group": "C2_021-030",
 "level": "C2",
+"num": 9,
 "text": "In this case, taking preventive measures has some merit"
 },
 {
-"id": "C2-126",
+"id": "C2_021-030-10",
+"group": "C2_021-030",
 "level": "C2",
+"num": 10,
 "text": "There is much to be said for adopting a precautionary approach in this situation"
 },
 {
-"id": "C2-127",
+"id": "C2_021-030-11",
+"group": "C2_021-030",
 "level": "C2",
+"num": 11,
 "text": "If one can afford it, there is much to be said for early retirement"
 },
 {
-"id": "C2-128",
+"id": "C2_021-030-12",
+"group": "C2_021-030",
 "level": "C2",
+"num": 12,
 "text": "There is much to be said for early retirement if one can afford it"
 },
 {
-"id": "C2-129",
+"id": "C2_021-030-13",
+"group": "C2_021-030",
 "level": "C2",
+"num": 13,
 "text": "Long-term investment in education has"
 },
 {
-"id": "C2-130",
+"id": "C2_021-030-14",
+"group": "C2_021-030",
 "level": "C2",
+"num": 14,
 "text": "There is much to be said for investing in education over the long term"
 },
 {
-"id": "C2-131",
+"id": "C2_021-030-15",
+"group": "C2_021-030",
 "level": "C2",
-"text": "In modern economies,"
+"num": 15,
+"text": "In modern economies"
 },
 {
-"id": "C2-132",
+"id": "C2_021-030-16",
+"group": "C2_021-030",
 "level": "C2",
+"num": 16,
 "text": "There is much to be said for a four-day working week in modern economies"
 },
 {
-"id": "C2-133",
+"id": "C2_021-030-17",
+"group": "C2_021-030",
 "level": "C2",
+"num": 17,
 "text": "There is much to be said for preserving the original architecture of the building"
 },
 {
-"id": "C2-134",
+"id": "C2_021-030-18",
+"group": "C2_021-030",
 "level": "C2",
-"text": "Sign the document before signing the documentIt would be as well to seek legal advice before signing the document"
+"num": 18,
+"text": "Sign the document before signing the document"
 },
 {
-"id": "C2-135",
+"id": "C2_021-030-19",
+"group": "C2_021-030",
 "level": "C2",
+"num": 19,
+"text": "It would be as well to seek legal advice before signing the document"
+},
+{
+"id": "C2_021-030-20",
+"group": "C2_021-030",
+"level": "C2",
+"num": 20,
 "text": "Continue before, best to confirm the details before proceeding"
 },
 {
-"id": "C2-136",
+"id": "C2_021-030-21",
+"group": "C2_021-030",
 "level": "C2",
+"num": 21,
 "text": "It would be as well to confirm the details before proceeding"
 },
 {
-"id": "C2-137",
+"id": "C2_021-030-22",
+"group": "C2_021-030",
 "level": "C2",
+"num": 22,
 "text": "Execute the update"
 },
 {
-"id": "C2-138",
+"id": "C2_021-030-23",
+"group": "C2_021-030",
 "level": "C2",
+"num": 23,
 "text": "It would be as well to verify the source before circulating the report"
 },
 {
-"id": "C2-139",
+"id": "C2_021-030-24",
+"group": "C2_021-030",
 "level": "C2",
+"num": 24,
 "text": "It would be as well to inform the stakeholders before the announcement"
 },
 {
-"id": "C2-140",
+"id": "C2_021-030-25",
+"group": "C2_021-030",
 "level": "C2",
+"num": 25,
 "text": "It would be idle to pretend that the problem does not exist"
 },
 {
-"id": "C2-141",
+"id": "C2_021-030-26",
+"group": "C2_021-030",
 "level": "C2",
+"num": 26,
 "text": "Deny the obvious connection between the two events"
 },
 {
-"id": "C2-142",
+"id": "C2_021-030-27",
+"group": "C2_021-030",
 "level": "C2",
+"num": 27,
 "text": "It would be idle to hope that the conflict will resolve itself"
 },
 {
-"id": "C2-143",
+"id": "C2_021-030-28",
+"group": "C2_021-030",
 "level": "C2",
+"num": 28,
 "text": "Assume technology is always benign"
 },
 {
-"id": "C2-144",
+"id": "C2_021-030-29",
+"group": "C2_021-030",
 "level": "C2",
+"num": 29,
 "text": "It would be idle to claim that the crisis caught everyone by surprise"
 },
 {
-"id": "C2-145",
+"id": "C2_021-030-30",
+"group": "C2_021-030",
 "level": "C2",
+"num": 30,
 "text": "May the best team win and may the competition be fair"
 },
 {
-"id": "C2-146",
+"id": "C2_021-030-31",
+"group": "C2_021-030",
 "level": "C2",
+"num": 31,
 "text": "May your efforts be rewarded with success"
 },
 {
-"id": "C2-147",
+"id": "C2_021-030-32",
+"group": "C2_021-030",
 "level": "C2",
+"num": 32,
 "text": "May the memory of those we lost never fade from our hearts"
 },
 {
-"id": "C2-148",
+"id": "C2_021-030-33",
+"group": "C2_021-030",
 "level": "C2",
+"num": 33,
 "text": "May peace prevail in every corner of the troubled region"
 },
 {
-"id": "C2-149",
+"id": "C2_021-030-34",
+"group": "C2_021-030",
 "level": "C2",
+"num": 34,
 "text": "May future generations inherit a planet worth preserving"
 },
 {
-"id": "C2-150",
+"id": "C2_021-030-35",
+"group": "C2_021-030",
 "level": "C2",
+"num": 35,
 "text": "If the world is a stage, then we are all merely players"
 },
 {
-"id": "C2-151",
+"id": "C2_021-030-36",
+"group": "C2_021-030",
 "level": "C2",
+"num": 36,
 "text": "If life is a journey, then every step counts"
 },
 {
-"id": "C2-152",
+"id": "C2_021-030-37",
+"group": "C2_021-030",
 "level": "C2",
+"num": 37,
 "text": "If knowledge is power, then ignorance is the gravest vulnerability"
 },
 {
-"id": "C2-153",
+"id": "C2_021-030-38",
+"group": "C2_021-030",
 "level": "C2",
+"num": 38,
 "text": "If history is a teacher, then memory is its indispensable textbook"
 },
 {
-"id": "C2-154",
+"id": "C2_021-030-39",
+"group": "C2_021-030",
 "level": "C2",
+"num": 39,
 "text": "If trust is the currency of cooperation, then deception is its bankruptcy"
 },
 {
-"id": "C2-155",
+"id": "C2_021-030-40",
+"group": "C2_021-030",
 "level": "C2",
+"num": 40,
 "text": "Since the Great Depression, the economy has faced such uncertainty"
 },
 {
-"id": "C2-156",
+"id": "C2_021-030-41",
+"group": "C2_021-030",
 "level": "C2",
+"num": 41,
 "text": "Not since the Great Depression has the economy faced such uncertainty"
 },
 {
-"id": "C2-157",
+"id": "C2_021-030-42",
+"group": "C2_021-030",
 "level": "C2",
+"num": 42,
 "text": "Since the invention of the internet, has communication changed so dramatically?"
 },
 {
-"id": "C2-158",
+"id": "C2_021-030-43",
+"group": "C2_021-030",
 "level": "C2",
+"num": 43,
 "text": "Not since the invention of the internet has communication changed so dramatically"
 },
 {
-"id": "C2-159",
+"id": "C2_021-030-44",
+"group": "C2_021-030",
 "level": "C2",
+"num": 44,
 "text": "Since the end of the Cold War, Europe has witnessed such geopolitical tension"
 },
 {
-"id": "C2-160",
+"id": "C2_021-030-45",
+"group": "C2_021-030",
 "level": "C2",
+"num": 45,
 "text": "Not since the end of the Cold War has Europe witnessed such geopolitical tension"
 },
 {
-"id": "C2-161",
+"id": "C2_021-030-46",
+"group": "C2_021-030",
 "level": "C2",
+"num": 46,
 "text": "Not since the fall of the Berlin Wall has the city seen such jubilant crowds"
 },
 {
-"id": "C2-162",
+"id": "C2_021-030-47",
+"group": "C2_021-030",
 "level": "C2",
+"num": 47,
 "text": "Since the outbreak of the pandemic, has hospital capacity been so severely tested?"
 },
 {
-"id": "C2-163",
+"id": "C2_021-030-48",
+"group": "C2_021-030",
 "level": "C2",
+"num": 48,
 "text": "Not since the outbreak of the pandemic has hospital capacity been so severely tested"
 },
 {
-"id": "C2-164",
+"id": "C2_021-030-49",
+"group": "C2_021-030",
 "level": "C2",
-"text": "Pangfeng,"
+"num": 49,
+"text": "Pangfeng"
 },
 {
-"id": "C2-165",
+"id": "C2_021-030-50",
+"group": "C2_021-030",
 "level": "C2",
+"num": 50,
 "text": "It is as if the city had been frozen in time overnight"
 },
 {
-"id": "C2-166",
+"id": "C2_021-030-51",
+"group": "C2_021-030",
 "level": "C2",
-"text": "Pangfu, here,"
+"num": 51,
+"text": "Pangfu, here"
 },
 {
-"id": "C2-167",
+"id": "C2_021-030-52",
+"group": "C2_021-030",
 "level": "C2",
+"num": 52,
 "text": "It is as if nothing had ever happened here"
 },
 {
-"id": "C2-168",
+"id": "C2_021-030-53",
+"group": "C2_021-030",
 "level": "C2",
-"text": "Pang Fu,"
+"num": 53,
+"text": "Pang Fu"
 },
 {
-"id": "C2-169",
+"id": "C2_021-030-54",
+"group": "C2_021-030",
 "level": "C2",
+"num": 54,
 "text": "It is as if the entire audience had been holding its breath"
 },
 {
-"id": "C2-170",
+"id": "C2_021-030-55",
+"group": "C2_021-030",
 "level": "C2",
-"text": "It is as if the entire audience had been holding its breathPangfufu negotiations never happened"
+"num": 55,
+"text": "Pangfufu negotiations never happened"
 },
 {
-"id": "C2-171",
+"id": "C2_021-030-56",
+"group": "C2_021-030",
 "level": "C2",
+"num": 56,
 "text": "It is as if the negotiations had never taken place at all"
 },
 {
-"id": "C2-172",
+"id": "C2_021-030-57",
+"group": "C2_021-030",
 "level": "C2",
+"num": 57,
 "text": "Pangfufu, the order just vanished"
 },
 {
-"id": "C2-173",
+"id": "C2_021-030-58",
+"group": "C2_021-030",
 "level": "C2",
+"num": 58,
 "text": "It is as if the old order had simply dissolved into thin air"
 },
 {
-"id": "C2-174",
+"id": "C2_021-030-59",
+"group": "C2_021-030",
 "level": "C2",
+"num": 59,
 "text": "Little did she suspect that her decision would alter the course of history"
 },
 {
-"id": "C2-175",
+"id": "C2_021-030-60",
+"group": "C2_021-030",
 "level": "C2",
+"num": 60,
 "text": "Little did he dream that his small invention would change the world"
 },
 {
-"id": "C2-176",
+"id": "C2_021-030-61",
+"group": "C2_021-030",
 "level": "C2",
+"num": 61,
 "text": "Little did they suspect that the stranger was a government agent"
 },
 {
-"id": "C2-177",
+"id": "C2_021-030-62",
+"group": "C2_021-030",
 "level": "C2",
+"num": 62,
 "text": "Little did the villagers dream that the mountain hid such wealth"
 },
 {
-"id": "C2-178",
+"id": "C2_021-030-63",
+"group": "C2_021-030",
 "level": "C2",
+"num": 63,
 "text": "That young"
 },
 {
-"id": "C2-179",
+"id": "C2_021-030-64",
+"group": "C2_021-030",
 "level": "C2",
+"num": 64,
 "text": "Little did the young clerk suspect that the letter would end his career"
 },
 {
-"id": "C2-180",
+"id": "C2_021-030-65",
+"group": "C2_021-030",
 "level": "C2",
+"num": 65,
 "text": "There is no telling when the conflict will finally end"
 },
 {
-"id": "C2-181",
+"id": "C2_021-030-66",
+"group": "C2_021-030",
 "level": "C2",
+"num": 66,
 "text": "There is no knowing what the future holds"
 },
 {
-"id": "C2-182",
+"id": "C2_021-030-67",
+"group": "C2_021-030",
 "level": "C2",
+"num": 67,
 "text": "There is no denying that the reforms have transformed the economy"
 },
 {
-"id": "C2-183",
+"id": "C2_021-030-68",
+"group": "C2_021-030",
 "level": "C2",
-"text": "There is no escaping the conclusion that costs will riseCannot predict how the electorate will respond"
+"num": 68,
+"text": "There is no escaping the conclusion that costs will rise"
 },
 {
-"id": "C2-184",
+"id": "C2_021-030-69",
+"group": "C2_021-030",
 "level": "C2",
+"num": 69,
+"text": "Cannot predict how the electorate will respond"
+},
+{
+"id": "C2_031-040-1",
+"group": "C2_031-040",
+"level": "C2",
+"num": 1,
 "text": "As Keats once wrote, a thing of beauty is a joy forever"
 },
 {
-"id": "C2-185",
+"id": "C2_031-040-2",
+"group": "C2_031-040",
 "level": "C2",
+"num": 2,
 "text": "As Shakespeare once wrote, \"To be or not to be, that is the question"
 },
 {
-"id": "C2-186",
+"id": "C2_031-040-3",
+"group": "C2_031-040",
 "level": "C2",
+"num": 3,
 "text": "As Auden once wrote, poetry makes nothing happen"
 },
 {
-"id": "C2-187",
+"id": "C2_031-040-4",
+"group": "C2_031-040",
 "level": "C2",
+"num": 4,
 "text": "As Dickinson once wrote, hope is the thing with feathers"
 },
 {
-"id": "C2-188",
+"id": "C2_031-040-5",
+"group": "C2_031-040",
 "level": "C2",
+"num": 5,
 "text": "As Frost once wrote, two roads diverged in a yellow wood"
 },
 {
-"id": "C2-189",
+"id": "C2_031-040-6",
+"group": "C2_031-040",
 "level": "C2",
-"text": "As Frost once wrote, two roads diverged in a yellow wood"
-},
-{
-"id": "C2-190",
-"level": "C2",
+"num": 6,
 "text": "History has a way of repeating itself, and this crisis is a case in point"
 },
 {
-"id": "C2-191",
+"id": "C2_031-040-7",
+"group": "C2_031-040",
 "level": "C2",
+"num": 7,
 "text": "History has a way of repeating itself, and we should learn from the past"
 },
 {
-"id": "C2-192",
+"id": "C2_031-040-8",
+"group": "C2_031-040",
 "level": "C2",
+"num": 8,
 "text": "History has a way of repeating itself, and the current dispute echoes one from a century ago"
 },
 {
-"id": "C2-193",
+"id": "C2_031-040-9",
+"group": "C2_031-040",
 "level": "C2",
-"text": "History has a way of repeating itself, and the current dispute echoes one from a century ago"
-},
-{
-"id": "C2-194",
-"level": "C2",
+"num": 9,
 "text": "History has a way of repeating itself, and each generation believes it is the first to discover this"
 },
 {
-"id": "C2-195",
+"id": "C2_031-040-10",
+"group": "C2_031-040",
 "level": "C2",
-"text": "History has a way of repeating itself, as the renewed tariffs plainly demonstrateHistory has a way of repeating itself, as the renewed tariffs plainly demonstrate"
+"num": 10,
+"text": "History has a way of repeating itself, as the renewed tariffs plainly demonstrate"
 },
 {
-"id": "C2-196",
+"id": "C2_031-040-11",
+"group": "C2_031-040",
 "level": "C2",
-"text": "There is many a slip between cup and lipThere is many a slip between cup and lip"
+"num": 11,
+"text": "There is many a slip between cup and lip"
 },
 {
-"id": "C2-197",
+"id": "C2_031-040-12",
+"group": "C2_031-040",
 "level": "C2",
+"num": 12,
 "text": "Example three: There is many a hurdle between promise and performance"
 },
 {
-"id": "C2-198",
+"id": "C2_031-040-13",
+"group": "C2_031-040",
 "level": "C2",
+"num": 13,
 "text": "There is many a step between intention and achievement"
 },
 {
-"id": "C2-199",
+"id": "C2_031-040-14",
+"group": "C2_031-040",
 "level": "C2",
-"text": "In the capital and the furthest villageThere is many a mile between the capital and the furthest village"
+"num": 14,
+"text": "In the capital and the furthest village"
 },
 {
-"id": "C2-200",
+"id": "C2_031-040-15",
+"group": "C2_031-040",
 "level": "C2",
-"text": "There is many a misunderstanding between what is said and what is heardThere is many a misunderstanding between what is said and what is heard"
+"num": 15,
+"text": "There is many a mile between the capital and the furthest village"
 },
 {
-"id": "C2-201",
+"id": "C2_031-040-16",
+"group": "C2_031-040",
 "level": "C2",
+"num": 16,
+"text": "There is many a misunderstanding between what is said and what is heard"
+},
+{
+"id": "C2_031-040-17",
+"group": "C2_031-040",
+"level": "C2",
+"num": 17,
 "text": "He spoke as though he had witnessed the event himself"
 },
 {
-"id": "C2-202",
+"id": "C2_031-040-18",
+"group": "C2_031-040",
 "level": "C2",
+"num": 18,
 "text": "His behavior"
 },
 {
-"id": "C2-203",
+"id": "C2_031-040-19",
+"group": "C2_031-040",
 "level": "C2",
-"text": "She behaved as if nothing had happened at allThe old man smiled as though he had known the secret all along"
+"num": 19,
+"text": "She behaved as if nothing had happened at all"
 },
 {
-"id": "C2-204",
+"id": "C2_031-040-20",
+"group": "C2_031-040",
 "level": "C2",
+"num": 20,
+"text": "The old man smiled as though he had known the secret all along"
+},
+{
+"id": "C2_031-040-21",
+"group": "C2_031-040",
+"level": "C2",
+"num": 21,
 "text": "The machine hummed as if it were alive and breathing"
 },
 {
-"id": "C2-205",
+"id": "C2_031-040-22",
+"group": "C2_031-040",
 "level": "C2",
+"num": 22,
 "text": "He accepted this news"
 },
 {
-"id": "C2-206",
+"id": "C2_031-040-23",
+"group": "C2_031-040",
 "level": "C2",
-"text": "Pang Fu had already anticipatedShe accepted the news as though she had expected it for years"
+"num": 23,
+"text": "Pang Fu had already anticipated"
 },
 {
-"id": "C2-207",
+"id": "C2_031-040-24",
+"group": "C2_031-040",
 "level": "C2",
+"num": 24,
 "text": "She accepted the news as though she had expected it for years"
 },
 {
-"id": "C2-208",
+"id": "C2_031-040-25",
+"group": "C2_031-040",
 "level": "C2",
+"num": 25,
 "text": "This is"
 },
 {
-"id": "C2-209",
+"id": "C2_031-040-26",
+"group": "C2_031-040",
 "level": "C2",
+"num": 26,
 "text": "It is a truth universally acknowledged that a single man must be in want of a wife"
 },
 {
-"id": "C2-210",
+"id": "C2_031-040-27",
+"group": "C2_031-040",
 "level": "C2",
+"num": 27,
 "text": "Example three, it is a truth universally acknowledged that a vacant room invites ambition"
 },
 {
-"id": "C2-211",
+"id": "C2_031-040-28",
+"group": "C2_031-040",
 "level": "C2",
+"num": 28,
 "text": "It is a truth universally acknowledged that knowledge is power"
 },
 {
-"id": "C2-212",
+"id": "C2_031-040-29",
+"group": "C2_031-040",
 "level": "C2",
+"num": 29,
 "text": "It is a truth universally acknowledged that prosperity breeds complacency"
 },
 {
-"id": "C2-213",
+"id": "C2_031-040-30",
+"group": "C2_031-040",
 "level": "C2",
+"num": 30,
 "text": "It is a truth universally acknowledged that time heals no wound left untended"
 },
 {
-"id": "C2-214",
+"id": "C2_031-040-31",
+"group": "C2_031-040",
 "level": "C2",
+"num": 31,
 "text": "He shrugged and walked away, as much as to say that the discussion was over"
 },
 {
-"id": "C2-215",
+"id": "C2_031-040-32",
+"group": "C2_031-040",
 "level": "C2",
+"num": 32,
 "text": "She smiled and nodded, as much as to say that she agreed"
 },
 {
-"id": "C2-216",
+"id": "C2_031-040-33",
+"group": "C2_031-040",
 "level": "C2",
+"num": 33,
 "text": "The witness fell silent, as much as to say that further questions were futile"
 },
 {
-"id": "C2-217",
+"id": "C2_031-040-34",
+"group": "C2_031-040",
 "level": "C2",
+"num": 34,
 "text": "He slammed the door as much as to say that the meeting was finished"
 },
 {
-"id": "C2-218",
+"id": "C2_031-040-35",
+"group": "C2_031-040",
 "level": "C2",
+"num": 35,
 "text": "Manager sighed and looked away, as much as to say that the fault was mine"
 },
 {
-"id": "C2-219",
+"id": "C2_031-040-36",
+"group": "C2_031-040",
 "level": "C2",
+"num": 36,
 "text": "Need I say more about the consequences of inaction?"
 },
 {
-"id": "C2-220",
+"id": "C2_031-040-37",
+"group": "C2_031-040",
 "level": "C2",
+"num": 37,
 "text": "Need I remind you of the agreement we signed?"
 },
 {
-"id": "C2-221",
+"id": "C2_031-040-38",
+"group": "C2_031-040",
 "level": "C2",
+"num": 38,
 "text": "Need I mention the cost to our international reputation?"
 },
 {
-"id": "C2-222",
+"id": "C2_031-040-39",
+"group": "C2_031-040",
 "level": "C2",
-"text": "Need I point out the inconsistency in your argumentNeed I point out the inconsistency in your argument?"
+"num": 39,
+"text": "Need I point out the inconsistency in your argument"
 },
 {
-"id": "C2-223",
+"id": "C2_031-040-40",
+"group": "C2_031-040",
 "level": "C2",
+"num": 40,
+"text": "Need I point out the inconsistency in your argument?"
+},
+{
+"id": "C2_031-040-41",
+"group": "C2_031-040",
+"level": "C2",
+"num": 41,
 "text": "Need anyone spell out the risks of such a gamble?"
 },
 {
-"id": "C2-224",
+"id": "C2_031-040-42",
+"group": "C2_031-040",
 "level": "C2",
+"num": 42,
 "text": "I've no intention of questioning your judgment, but have you considered all the facts?"
 },
 {
-"id": "C2-225",
+"id": "C2_031-040-43",
+"group": "C2_031-040",
 "level": "C2",
+"num": 43,
 "text": "Far be it from me to question your judgment, but have you considered all the facts?"
 },
 {
-"id": "C2-226",
+"id": "C2_031-040-44",
+"group": "C2_031-040",
 "level": "C2",
+"num": 44,
 "text": "I have no intention to criticize your work, but there are some issues"
 },
 {
-"id": "C2-227",
+"id": "C2_031-040-45",
+"group": "C2_031-040",
 "level": "C2",
+"num": 45,
 "text": "Far be it from me to criticize your work, but there are some issues"
 },
 {
-"id": "C2-228",
+"id": "C2_031-040-46",
+"group": "C2_031-040",
 "level": "C2",
+"num": 46,
 "text": "I am far from me to dampen your enthusiasm, but the figures do not support the plan"
 },
 {
-"id": "C2-229",
+"id": "C2_031-040-47",
+"group": "C2_031-040",
 "level": "C2",
+"num": 47,
 "text": "Far be it from me to dampen your enthusiasm, but the figures do not support the plan"
 },
 {
-"id": "C2-230",
+"id": "C2_031-040-48",
+"group": "C2_031-040",
 "level": "C2",
+"num": 48,
 "text": "I've no intention of giving you advice, but prudence would counsel patience"
 },
 {
-"id": "C2-231",
+"id": "C2_031-040-49",
+"group": "C2_031-040",
 "level": "C2",
+"num": 49,
 "text": "Far be it from me to dictate your choices, yet prudence would counsel patience"
 },
 {
-"id": "C2-232",
+"id": "C2_031-040-50",
+"group": "C2_031-040",
 "level": "C2",
+"num": 50,
 "text": "Far be it from me to diminish your achievement, but the context matters too"
 },
 {
-"id": "C2-233",
+"id": "C2_031-040-51",
+"group": "C2_031-040",
 "level": "C2",
+"num": 51,
 "text": "When they announced my name as the winner, you could have knocked me down with a feather"
 },
 {
-"id": "C2-234",
+"id": "C2_031-040-52",
+"group": "C2_031-040",
 "level": "C2",
+"num": 52,
 "text": "When I heard the news, you could have knocked me down with a feather"
 },
 {
-"id": "C2-235",
+"id": "C2_031-040-53",
+"group": "C2_031-040",
 "level": "C2",
+"num": 53,
 "text": "When the professor praised my thesis, you could have knocked me down with a feather"
 },
 {
-"id": "C2-236",
+"id": "C2_031-040-54",
+"group": "C2_031-040",
 "level": "C2",
+"num": 54,
 "text": "When my estranged brother called to apologize, you could have knocked me down with a feather"
 },
 {
-"id": "C2-237",
+"id": "C2_031-040-55",
+"group": "C2_031-040",
 "level": "C2",
+"num": 55,
 "text": "When the company offered me the partnership, you could have knocked me down with a feather"
 },
 {
-"id": "C2-238",
+"id": "C2_031-040-56",
+"group": "C2_031-040",
 "level": "C2",
+"num": 56,
 "text": "She sang her songs and danced her dances throughout the evening"
 },
 {
-"id": "C2-239",
+"id": "C2_031-040-57",
+"group": "C2_031-040",
 "level": "C2",
+"num": 57,
 "text": "He wrote his letters and read his books by the fireplace"
 },
 {
-"id": "C2-240",
+"id": "C2_031-040-58",
+"group": "C2_031-040",
 "level": "C2",
+"num": 58,
 "text": "He painted his pictures and carved his statues in the quiet of the studio"
 },
 {
-"id": "C2-241",
+"id": "C2_031-040-59",
+"group": "C2_031-040",
 "level": "C2",
-"text": "She poured her tea and wiped her counter as the morning light crept inOld sailor rolled his cigarette and lit his pipe before speaking"
+"num": 59,
+"text": "She poured her tea and wiped her counter as the morning light crept in"
 },
 {
-"id": "C2-242",
+"id": "C2_031-040-60",
+"group": "C2_031-040",
 "level": "C2",
+"num": 60,
+"text": "Old sailor rolled his cigarette and lit his pipe before speaking"
+},
+{
+"id": "C2_031-040-61",
+"group": "C2_031-040",
+"level": "C2",
+"num": 61,
 "text": "The old sailor rolled his cigarette and lit his pipe before speaking"
 },
 {
-"id": "C2-243",
+"id": "C2_041-050-1",
+"group": "C2_041-050",
 "level": "C2",
+"num": 1,
 "text": "It is not immediately obvious why this factor should have such a significant impact"
 },
 {
-"id": "C2-244",
+"id": "C2_041-050-2",
+"group": "C2_041-050",
 "level": "C2",
+"num": 2,
 "text": "It is not immediately obvious why the approach failed"
 },
 {
-"id": "C2-245",
+"id": "C2_041-050-3",
+"group": "C2_041-050",
 "level": "C2",
+"num": 3,
 "text": "It is not immediately obvious why the remedy should take so long to work"
 },
 {
-"id": "C2-246",
+"id": "C2_041-050-4",
+"group": "C2_041-050",
 "level": "C2",
-"text": "The ombudsman should reject a qualified candidate, it is not immediately obvious why the committee should reject a qualified candidateIt is not immediately obvious why the committee should reject a qualified candidate"
+"num": 4,
+"text": "The ombudsman should reject a qualified candidate, it is not immediately obvious why the committee should reject a qualified candidate"
 },
 {
-"id": "C2-247",
+"id": "C2_041-050-5",
+"group": "C2_041-050",
 "level": "C2",
-"text": "Why the market should react so violently to the newsIt is not immediately obvious why the market should react so violently to the news"
+"num": 5,
+"text": "It is not immediately obvious why the committee should reject a qualified candidate"
 },
 {
-"id": "C2-248",
+"id": "C2_041-050-6",
+"group": "C2_041-050",
 "level": "C2",
-"text": "Readers will notice that the data in Table 3 is different from the previous reportThe reader will note that the data in Table 3 differs from earlier reports"
+"num": 6,
+"text": "Why the market should react so violently to the news"
 },
 {
-"id": "C2-249",
+"id": "C2_041-050-7",
+"group": "C2_041-050",
 "level": "C2",
-"text": "Readers will note that these findings are consistent with previousThe reader will note that these findings are consistent with prior research"
+"num": 7,
+"text": "It is not immediately obvious why the market should react so violently to the news"
 },
 {
-"id": "C2-250",
+"id": "C2_041-050-8",
+"group": "C2_041-050",
 "level": "C2",
+"num": 8,
+"text": "Readers will notice that the data in Table 3 is different from the previous report"
+},
+{
+"id": "C2_041-050-9",
+"group": "C2_041-050",
+"level": "C2",
+"num": 9,
+"text": "The reader will note that the data in Table 3 differs from earlier reports"
+},
+{
+"id": "C2_041-050-10",
+"group": "C2_041-050",
+"level": "C2",
+"num": 10,
+"text": "Readers will note that these findings are consistent with previous"
+},
+{
+"id": "C2_041-050-11",
+"group": "C2_041-050",
+"level": "C2",
+"num": 11,
+"text": "The reader will note that these findings are consistent with prior research"
+},
+{
+"id": "C2_041-050-12",
+"group": "C2_041-050",
+"level": "C2",
+"num": 12,
 "text": "The reader will note that the tone shifts markedly in the final chapter"
 },
 {
-"id": "C2-251",
+"id": "C2_041-050-13",
+"group": "C2_041-050",
 "level": "C2",
+"num": 13,
 "text": "The reader will note that the cited precedent predates the statute in question"
 },
 {
-"id": "C2-252",
+"id": "C2_041-050-14",
+"group": "C2_041-050",
 "level": "C2",
+"num": 14,
 "text": "The reader will note that the author avoids assigning explicit blame"
 },
 {
-"id": "C2-253",
+"id": "C2_041-050-15",
+"group": "C2_041-050",
 "level": "C2",
+"num": 15,
 "text": "It goes without saying that the project was challenging, but it is worth adding that the team's morale never wavered"
 },
 {
-"id": "C2-254",
+"id": "C2_041-050-16",
+"group": "C2_041-050",
 "level": "C2",
+"num": 16,
 "text": "It goes without saying that the results were positive, but it is worth adding that the process was equally important"
 },
 {
-"id": "C2-255",
+"id": "C2_041-050-17",
+"group": "C2_041-050",
 "level": "C2",
+"num": 17,
 "text": "It goes without saying that safety is paramount, but it is worth adding that efficiency must not be sacrificed"
 },
 {
-"id": "C2-256",
+"id": "C2_041-050-18",
+"group": "C2_041-050",
 "level": "C2",
+"num": 18,
 "text": "It goes without saying that the deadline is fixed, but it is worth adding that quality cannot be rushed"
 },
 {
-"id": "C2-257",
+"id": "C2_041-050-19",
+"group": "C2_041-050",
 "level": "C2",
+"num": 19,
 "text": "It goes without saying that profits declined, but it is worth adding that the core business remains sound"
 },
 {
-"id": "C2-258",
+"id": "C2_041-050-20",
+"group": "C2_041-050",
 "level": "C2",
+"num": 20,
 "text": "To all appearances, the building was in perfect condition"
 },
 {
-"id": "C2-259",
+"id": "C2_041-050-21",
+"group": "C2_041-050",
 "level": "C2",
+"num": 21,
 "text": "To all appearances, the company was thriving, but internally it was struggling"
 },
 {
-"id": "C2-260",
+"id": "C2_041-050-22",
+"group": "C2_041-050",
 "level": "C2",
+"num": 22,
 "text": "To all appearances, the marriage was happy, yet it ended in sudden divorce"
 },
 {
-"id": "C2-261",
+"id": "C2_041-050-23",
+"group": "C2_041-050",
 "level": "C2",
+"num": 23,
 "text": "To all appearances, the summit was a success, though no binding deal emerged"
 },
 {
-"id": "C2-262",
+"id": "C2_041-050-24",
+"group": "C2_041-050",
 "level": "C2",
+"num": 24,
 "text": "To all appearances, the patient had made a full recovery, but the scans told another story"
 },
 {
-"id": "C2-263",
+"id": "C2_041-050-25",
+"group": "C2_041-050",
 "level": "C2",
+"num": 25,
 "text": "The project is over budget"
 },
 {
-"id": "C2-264",
+"id": "C2_041-050-26",
+"group": "C2_041-050",
 "level": "C2",
+"num": 26,
 "text": "What is more, it is behind schedule"
 },
 {
-"id": "C2-265",
+"id": "C2_041-050-27",
+"group": "C2_041-050",
 "level": "C2",
-"text": "The deadline is approachingTo make matters worse, key team members have resigned"
+"num": 27,
+"text": "The deadline is approaching"
 },
 {
-"id": "C2-266",
+"id": "C2_041-050-28",
+"group": "C2_041-050",
 "level": "C2",
+"num": 28,
 "text": "To make matters worse, key team members have resigned"
 },
 {
-"id": "C2-267",
+"id": "C2_041-050-29",
+"group": "C2_041-050",
 "level": "C2",
+"num": 29,
 "text": "The shipment was delayed"
 },
 {
-"id": "C2-268",
+"id": "C2_041-050-30",
+"group": "C2_041-050",
 "level": "C2",
+"num": 30,
 "text": "What is more, it arrived incomplete"
 },
 {
-"id": "C2-269",
+"id": "C2_041-050-31",
+"group": "C2_041-050",
 "level": "C2",
+"num": 31,
 "text": "The funding was cut"
 },
 {
-"id": "C2-270",
+"id": "C2_041-050-32",
+"group": "C2_041-050",
 "level": "C2",
+"num": 32,
 "text": "To make matters worse, two senior researchers resigned"
 },
 {
-"id": "C2-271",
+"id": "C2_041-050-33",
+"group": "C2_041-050",
 "level": "C2",
+"num": 33,
 "text": "What is more, it misstated the central figures"
 },
 {
-"id": "C2-272",
+"id": "C2_041-050-34",
+"group": "C2_041-050",
 "level": "C2",
-"text": "The report contained errorsWhat is more, it misstated the central figures"
+"num": 34,
+"text": "The report contained errors"
 },
 {
-"id": "C2-273",
+"id": "C2_041-050-35",
+"group": "C2_041-050",
 "level": "C2",
+"num": 35,
 "text": "Zijin, please note the documents attached to the letter"
 },
 {
-"id": "C2-274",
+"id": "C2_041-050-36",
+"group": "C2_041-050",
 "level": "C2",
+"num": 36,
 "text": "We hereby respectfully draw your attention to the enclosed documents"
 },
 {
-"id": "C2-275",
+"id": "C2_041-050-37",
+"group": "C2_041-050",
 "level": "C2",
+"num": 37,
 "text": "We hereby respectfully draw your attention to the changes in the new policy"
 },
 {
-"id": "C2-276",
+"id": "C2_041-050-38",
+"group": "C2_041-050",
 "level": "C2",
+"num": 38,
 "text": "We hereby respectfully draw your attention to the discrepancy in the accounts"
 },
 {
-"id": "C2-277",
+"id": "C2_041-050-39",
+"group": "C2_041-050",
 "level": "C2",
-"text": "We hereby respectfully draw your attention to the deadline of the thirtieth instantWe hereby respectfully draw your attention to the deadline of the 30th instant"
+"num": 39,
+"text": "We hereby respectfully draw your attention to the deadline of the thirtieth instant"
 },
 {
-"id": "C2-278",
+"id": "C2_041-050-40",
+"group": "C2_041-050",
 "level": "C2",
+"num": 40,
+"text": "We hereby respectfully draw your attention to the deadline of the 30th instant"
+},
+{
+"id": "C2_041-050-41",
+"group": "C2_041-050",
+"level": "C2",
+"num": 41,
 "text": "Funds, please note the revised terms of the license"
 },
 {
-"id": "C2-279",
+"id": "C2_041-050-42",
+"group": "C2_041-050",
 "level": "C2",
+"num": 42,
 "text": "We hereby respectfully draw your attention to the revised terms of the license"
 },
 {
-"id": "C2-280",
+"id": "C2_041-050-43",
+"group": "C2_041-050",
 "level": "C2",
+"num": 43,
 "text": "In response to your inquiry of September 1st, we are pleased to confirm your reservation"
 },
 {
-"id": "C2-281",
+"id": "C2_041-050-44",
+"group": "C2_041-050",
 "level": "C2",
+"num": 44,
 "text": "In response to your inquiry of October 15th, please find the requested information below"
 },
 {
-"id": "C2-282",
+"id": "C2_041-050-45",
+"group": "C2_041-050",
 "level": "C2",
+"num": 45,
 "text": "In response to your inquiry of March 3rd, we enclose the certificate of origin"
 },
 {
-"id": "C2-283",
+"id": "C2_041-050-46",
+"group": "C2_041-050",
 "level": "C2",
+"num": 46,
 "text": "In response to your inquiry of July 12th, the shipment has been dispatched this morning"
 },
 {
-"id": "C2-284",
+"id": "C2_041-050-47",
+"group": "C2_041-050",
 "level": "C2",
+"num": 47,
 "text": "In response to your inquiry of November 8th, we confirm that the position remains open"
 },
 {
-"id": "C2-285",
+"id": "C2_041-050-48",
+"group": "C2_041-050",
 "level": "C2",
+"num": 48,
 "text": "In response to your inquiry of November 8, we confirm that the position remains open"
 },
 {
-"id": "C2-286",
+"id": "C2_041-050-49",
+"group": "C2_041-050",
 "level": "C2",
+"num": 49,
 "text": "We regret to inform you that your application has not been successful on this occasion"
 },
 {
-"id": "C2-287",
+"id": "C2_041-050-50",
+"group": "C2_041-050",
 "level": "C2",
+"num": 50,
 "text": "We regret to inform you that the event has been cancelled"
 },
 {
-"id": "C2-288",
+"id": "C2_041-050-51",
+"group": "C2_041-050",
 "level": "C2",
+"num": 51,
 "text": "We regret to inform you that the flight has been cancelled due to adverse weather"
 },
 {
-"id": "C2-289",
+"id": "C2_041-050-52",
+"group": "C2_041-050",
 "level": "C2",
+"num": 52,
 "text": "We regret to inform you that your submission did not meet the shortlist criteria"
 },
 {
-"id": "C2-290",
+"id": "C2_041-050-53",
+"group": "C2_041-050",
 "level": "C2",
+"num": 53,
 "text": "We regret to inform you that the item you ordered is no longer in stock"
 },
 {
-"id": "C2-291",
+"id": "C2_041-050-54",
+"group": "C2_041-050",
 "level": "C2",
+"num": 54,
 "text": "Please note, the office"
 },
 {
-"id": "C2-292",
+"id": "C2_041-050-55",
+"group": "C2_041-050",
 "level": "C2",
-"text": "Please be advised that the office will be closed from December twenty fourth to twenty sixthPlease be advised that the office will be closed from December 24th to 26th"
+"num": 55,
+"text": "Please be advised that the office will be closed from December twenty fourth to twenty sixth"
 },
 {
-"id": "C2-293",
+"id": "C2_041-050-56",
+"group": "C2_041-050",
 "level": "C2",
+"num": 56,
+"text": "Please be advised that the office will be closed from December 24th to 26th"
+},
+{
+"id": "C2_041-050-57",
+"group": "C2_041-050",
+"level": "C2",
+"num": 57,
 "text": "Please be advised that new regulations will take effect next month"
 },
 {
-"id": "C2-294",
+"id": "C2_041-050-58",
+"group": "C2_041-050",
 "level": "C2",
+"num": 58,
 "text": "Please be advised that the scheduled maintenance will interrupt service tonight"
 },
 {
-"id": "C2-295",
+"id": "C2_041-050-59",
+"group": "C2_041-050",
 "level": "C2",
+"num": 59,
 "text": "Please be advised that late submissions will not be accepted under any circumstances"
 },
 {
-"id": "C2-296",
+"id": "C2_041-050-60",
+"group": "C2_041-050",
 "level": "C2",
+"num": 60,
 "text": "Please be advised that the venue has been changed to the central hall"
 },
 {
-"id": "C2-297",
+"id": "C2_041-050-61",
+"group": "C2_041-050",
 "level": "C2",
+"num": 61,
 "text": "We remain your obedient servants in this matter"
 },
 {
-"id": "C2-298",
+"id": "C2_041-050-62",
+"group": "C2_041-050",
 "level": "C2",
+"num": 62,
 "text": "I remain your faithful correspondent"
 },
 {
-"id": "C2-299",
+"id": "C2_041-050-63",
+"group": "C2_041-050",
 "level": "C2",
+"num": 63,
 "text": "We remain your most devoted advocates in the forthcoming proceedings"
 },
 {
-"id": "C2-300",
+"id": "C2_041-050-64",
+"group": "C2_041-050",
 "level": "C2",
+"num": 64,
 "text": "I remain your humble and obedient servant"
 },
 {
-"id": "C2-301",
+"id": "C2_041-050-65",
+"group": "C2_041-050",
 "level": "C2",
+"num": 65,
 "text": "We remain as ever your loyal and constant friends"
 },
 {
-"id": "C2-302",
+"id": "C2_051-060-1",
+"group": "C2_051-060",
 "level": "C2",
+"num": 1,
 "text": "With all due regard for your concerns, we are unable to comply at this time"
 },
 {
-"id": "C2-303",
+"id": "C2_051-060-2",
+"group": "C2_051-060",
 "level": "C2",
-"text": "With all due regard for the committee's recommendations, we must prioritize safetyFor academic freedom, the university must still uphold standards"
+"num": 2,
+"text": "With all due regard for the committee's recommendations, we must prioritize safety"
 },
 {
-"id": "C2-304",
+"id": "C2_051-060-3",
+"group": "C2_051-060",
 "level": "C2",
+"num": 3,
+"text": "For academic freedom, the university must still uphold standards"
+},
+{
+"id": "C2_051-060-4",
+"group": "C2_051-060",
+"level": "C2",
+"num": 4,
 "text": "With all due regard for local custom, the law applies to everyone equally"
 },
 {
-"id": "C2-305",
+"id": "C2_051-060-5",
+"group": "C2_051-060",
 "level": "C2",
+"num": 5,
 "text": "For budget, we"
 },
 {
-"id": "C2-306",
+"id": "C2_051-060-6",
+"group": "C2_051-060",
 "level": "C2",
+"num": 6,
 "text": "With all due regard for the budget, the project cannot be delivered on time"
 },
 {
-"id": "C2-307",
+"id": "C2_051-060-7",
+"group": "C2_051-060",
 "level": "C2",
+"num": 7,
 "text": "The company's commitment to sustainability is there for all to see"
 },
 {
-"id": "C2-308",
+"id": "C2_051-060-8",
+"group": "C2_051-060",
 "level": "C2",
+"num": 8,
 "text": "The improvement in quality is there for all to see"
 },
 {
-"id": "C2-309",
+"id": "C2_051-060-9",
+"group": "C2_051-060",
 "level": "C2",
+"num": 9,
 "text": "The damage caused by the storm is there for all to see"
 },
 {
-"id": "C2-310",
+"id": "C2_051-060-10",
+"group": "C2_051-060",
 "level": "C2",
+"num": 10,
 "text": "Her dedication to the cause is there for all to see"
 },
 {
-"id": "C2-311",
+"id": "C2_051-060-11",
+"group": "C2_051-060",
 "level": "C2",
+"num": 11,
 "text": "The decline of the once great institution is there for all to see"
 },
 {
-"id": "C2-312",
+"id": "C2_051-060-12",
+"group": "C2_051-060",
 "level": "C2",
+"num": 12,
 "text": "There is no gainsaying the fact that education is the foundation of a democratic society"
 },
 {
-"id": "C2-313",
+"id": "C2_051-060-13",
+"group": "C2_051-060",
 "level": "C2",
+"num": 13,
 "text": "There is no gainsaying the fact that hard work leads to success"
 },
 {
-"id": "C2-314",
+"id": "C2_051-060-14",
+"group": "C2_051-060",
 "level": "C2",
+"num": 14,
 "text": "There is no gainsaying the fact that the climate is changing faster than predicted"
 },
 {
-"id": "C2-315",
+"id": "C2_051-060-15",
+"group": "C2_051-060",
 "level": "C2",
+"num": 15,
 "text": "There is no gainsaying the fact that trust, once broken, is hard to restore"
 },
 {
-"id": "C2-316",
+"id": "C2_051-060-16",
+"group": "C2_051-060",
 "level": "C2",
+"num": 16,
 "text": "There is no gainsaying the fact that the nation's debt has reached alarming levels"
 },
 {
-"id": "C2-317",
+"id": "C2_051-060-17",
+"group": "C2_051-060",
 "level": "C2",
+"num": 17,
 "text": "Even so, we must find a way forward"
 },
 {
-"id": "C2-318",
+"id": "C2_051-060-18",
+"group": "C2_051-060",
 "level": "C2",
+"num": 18,
 "text": "Be that as it may, we must find a way forward"
 },
 {
-"id": "C2-319",
+"id": "C2_051-060-19",
+"group": "C2_051-060",
 "level": "C2",
+"num": 19,
 "text": "Even so, the evidence cannot be ignored"
 },
 {
-"id": "C2-320",
+"id": "C2_051-060-20",
+"group": "C2_051-060",
 "level": "C2",
+"num": 20,
 "text": "Be that as it may, the evidence cannot be ignored"
 },
 {
-"id": "C2-321",
+"id": "C2_051-060-21",
+"group": "C2_051-060",
 "level": "C2",
+"num": 21,
 "text": "Even so, the responsibility ultimately rests with the board"
 },
 {
-"id": "C2-322",
+"id": "C2_051-060-22",
+"group": "C2_051-060",
 "level": "C2",
+"num": 22,
 "text": "Even so, we cannot ignore the human cost"
 },
 {
-"id": "C2-323",
+"id": "C2_051-060-23",
+"group": "C2_051-060",
 "level": "C2",
+"num": 23,
 "text": "Be that as it may, we cannot ignore the human cost"
 },
 {
-"id": "C2-324",
+"id": "C2_051-060-24",
+"group": "C2_051-060",
 "level": "C2",
+"num": 24,
 "text": "Even so, the contract remains legally binding"
 },
 {
-"id": "C2-325",
+"id": "C2_051-060-25",
+"group": "C2_051-060",
 "level": "C2",
+"num": 25,
 "text": "It is a matter of some urgency that immediate steps be taken"
 },
 {
-"id": "C2-326",
+"id": "C2_051-060-26",
+"group": "C2_051-060",
 "level": "C2",
+"num": 26,
 "text": "The committee must immediately hold a meeting"
 },
 {
-"id": "C2-327",
+"id": "C2_051-060-27",
+"group": "C2_051-060",
 "level": "C2",
+"num": 27,
 "text": "This matter is of urgency"
 },
 {
-"id": "C2-328",
+"id": "C2_051-060-28",
+"group": "C2_051-060",
 "level": "C2",
+"num": 28,
 "text": "It is a matter of urgency that the board convene without delay"
 },
 {
-"id": "C2-329",
+"id": "C2_051-060-29",
+"group": "C2_051-060",
 "level": "C2",
+"num": 29,
 "text": "Must immediately recover defective products"
 },
 {
-"id": "C2-330",
+"id": "C2_051-060-30",
+"group": "C2_051-060",
 "level": "C2",
+"num": 30,
 "text": "This is a matter of submergency that the defective units be recalled at once"
 },
 {
-"id": "C2-331",
+"id": "C2_051-060-31",
+"group": "C2_051-060",
 "level": "C2",
+"num": 31,
 "text": "It is a matter of submergency that the defective units be recalled at once"
 },
 {
-"id": "C2-332",
+"id": "C2_051-060-32",
+"group": "C2_051-060",
 "level": "C2",
+"num": 32,
 "text": "Refugees must receive medical aid"
 },
 {
-"id": "C2-333",
+"id": "C2_051-060-33",
+"group": "C2_051-060",
 "level": "C2",
+"num": 33,
 "text": "Must be in control of the leak before nightfall"
 },
 {
-"id": "C2-334",
+"id": "C2_051-060-34",
+"group": "C2_051-060",
 "level": "C2",
+"num": 34,
 "text": "Technology is enhancing or diminishing human experience is a thorny one"
 },
 {
-"id": "C2-335",
+"id": "C2_051-060-35",
+"group": "C2_051-060",
 "level": "C2",
+"num": 35,
 "text": "The question whether technology enhances or diminishes human experience is a thorny one"
 },
 {
-"id": "C2-336",
+"id": "C2_051-060-36",
+"group": "C2_051-060",
 "level": "C2",
-"text": "The question whether AI should replace human judgment is a complex oneThe question whether AI should replace human judgment is a complex one"
+"num": 36,
+"text": "The question whether AI should replace human judgment is a complex one"
 },
 {
-"id": "C2-337",
+"id": "C2_051-060-37",
+"group": "C2_051-060",
 "level": "C2",
+"num": 37,
 "text": "The question whether the state should fund the arts is a perennial one"
 },
 {
-"id": "C2-338",
+"id": "C2_051-060-38",
+"group": "C2_051-060",
 "level": "C2",
+"num": 38,
 "text": "The question whether sacrifice today buys security tomorrow is a troubling one"
 },
 {
-"id": "C2-339",
+"id": "C2_051-060-39",
+"group": "C2_051-060",
 "level": "C2",
+"num": 39,
 "text": "The question whether the witness was telling the truth is a decisive one"
 },
 {
-"id": "C2-340",
+"id": "C2_051-060-40",
+"group": "C2_051-060",
 "level": "C2",
+"num": 40,
 "text": "It is a genuinely open question whether AI will ever achieve consciousness"
 },
 {
-"id": "C2-341",
+"id": "C2_051-060-41",
+"group": "C2_051-060",
 "level": "C2",
-"text": "Whether the policy will achieve its intended goalsIt is a genuinely open question whether the policy will achieve its intended goals"
+"num": 41,
+"text": "Whether the policy will achieve its intended goals"
 },
 {
-"id": "C2-342",
+"id": "C2_051-060-42",
+"group": "C2_051-060",
 "level": "C2",
-"text": "It is a moot question whether the treaty can survive a change of governmentIt is a moot question whether the treaty can survive a change of government"
+"num": 42,
+"text": "It is a genuinely open question whether the policy will achieve its intended goals"
 },
 {
-"id": "C2-343",
+"id": "C2_051-060-43",
+"group": "C2_051-060",
 "level": "C2",
+"num": 43,
+"text": "It is a moot question whether the treaty can survive a change of government"
+},
+{
+"id": "C2_051-060-44",
+"group": "C2_051-060",
+"level": "C2",
+"num": 44,
 "text": "It is a pressing question whether the grid can absorb so much renewable power"
 },
 {
-"id": "C2-344",
+"id": "C2_051-060-45",
+"group": "C2_051-060",
 "level": "C2",
-"text": "It is a delicate question whether intervention would do more harm than goodIt is a delicate question whether intervention would do more harm than good"
+"num": 45,
+"text": "It is a delicate question whether intervention would do more harm than good"
 },
 {
-"id": "C2-345",
+"id": "C2_051-060-46",
+"group": "C2_051-060",
 "level": "C2",
+"num": 46,
 "text": "This question is philosophical rather than empirical in nature"
 },
 {
-"id": "C2-346",
+"id": "C2_051-060-47",
+"group": "C2_051-060",
 "level": "C2",
+"num": 47,
 "text": "The issue is philosophical rather than empirical in nature"
 },
 {
-"id": "C2-347",
+"id": "C2_051-060-48",
+"group": "C2_051-060",
 "level": "C2",
+"num": 48,
 "text": "This problem is systemic rather than individual in origin"
 },
 {
-"id": "C2-348",
+"id": "C2_051-060-49",
+"group": "C2_051-060",
 "level": "C2",
+"num": 49,
 "text": "The problem is systemic rather than individual in origin"
 },
 {
-"id": "C2-349",
+"id": "C2_051-060-50",
+"group": "C2_051-060",
 "level": "C2",
+"num": 50,
 "text": "This dispute is political rather than legal in character"
 },
 {
-"id": "C2-350",
+"id": "C2_051-060-51",
+"group": "C2_051-060",
 "level": "C2",
+"num": 51,
 "text": "The dispute is political rather than legal in character"
 },
 {
-"id": "C2-351",
+"id": "C2_051-060-52",
+"group": "C2_051-060",
 "level": "C2",
+"num": 52,
 "text": "This weakness is structural rather than incidental in cause"
 },
 {
-"id": "C2-352",
+"id": "C2_051-060-53",
+"group": "C2_051-060",
 "level": "C2",
+"num": 53,
 "text": "The weakness is structural rather than incidental in cause"
 },
 {
-"id": "C2-353",
+"id": "C2_051-060-54",
+"group": "C2_051-060",
 "level": "C2",
+"num": 54,
 "text": "This advantage is strategic rather than tactical in significance"
 },
 {
-"id": "C2-354",
+"id": "C2_051-060-55",
+"group": "C2_051-060",
 "level": "C2",
+"num": 55,
 "text": "The advantage is strategic rather than tactical in significance"
 },
 {
-"id": "C2-355",
+"id": "C2_051-060-56",
+"group": "C2_051-060",
 "level": "C2",
+"num": 56,
 "text": "The theory in question has been widely debated since the 1990s"
 },
 {
-"id": "C2-356",
+"id": "C2_051-060-57",
+"group": "C2_051-060",
 "level": "C2",
+"num": 57,
 "text": "The policy in question was introduced last year"
 },
 {
-"id": "C2-357",
+"id": "C2_051-060-58",
+"group": "C2_051-060",
 "level": "C2",
+"num": 58,
 "text": "The documents in question were seized during the raid"
 },
 {
-"id": "C2-358",
+"id": "C2_051-060-59",
+"group": "C2_051-060",
 "level": "C2",
+"num": 59,
 "text": "The defendant in question has no previous convictions"
 },
 {
-"id": "C2-359",
+"id": "C2_051-060-60",
+"group": "C2_051-060",
 "level": "C2",
+"num": 60,
 "text": "The methodology in question has since been discredited"
 },
 {
-"id": "C2-360",
+"id": "C2_051-060-61",
+"group": "C2_051-060",
 "level": "C2",
-"text": "The methodology in question has since been discredited"
-},
-{
-"id": "C2-361",
-"level": "C2",
+"num": 61,
 "text": "People"
 },
 {
-"id": "C2-362",
+"id": "C2_051-060-62",
+"group": "C2_051-060",
 "level": "C2",
+"num": 62,
 "text": "There is a growing sense that the current system is no longer fit for purpose"
 },
 {
-"id": "C2-363",
+"id": "C2_051-060-63",
+"group": "C2_051-060",
 "level": "C2",
+"num": 63,
 "text": "There is a growing sense that reform is inevitable"
 },
 {
-"id": "C2-364",
+"id": "C2_051-060-64",
+"group": "C2_051-060",
 "level": "C2",
+"num": 64,
 "text": "There is a growing sense that the alliance is fraying at the edges"
 },
 {
-"id": "C2-365",
+"id": "C2_051-060-65",
+"group": "C2_051-060",
 "level": "C2",
+"num": 65,
 "text": "There is a growing sense that the public has lost faith in experts"
 },
 {
-"id": "C2-366",
+"id": "C2_051-060-66",
+"group": "C2_051-060",
 "level": "C2",
+"num": 66,
 "text": "There is a growing sense that automation will reshape the labor market"
 },
 {
-"id": "C2-367",
+"id": "C2_061-070-1",
+"group": "C2_061-070",
 "level": "C2",
+"num": 1,
 "text": "In this point, there is considerable scope for further negotiation"
 },
 {
-"id": "C2-368",
+"id": "C2_061-070-2",
+"group": "C2_061-070",
 "level": "C2",
+"num": 2,
 "text": "We have scope for improvement in our current processes"
 },
 {
-"id": "C2-369",
+"id": "C2_061-070-3",
+"group": "C2_061-070",
 "level": "C2",
+"num": 3,
 "text": "There is scope for improvement in our current processes"
 },
 {
-"id": "C2-370",
+"id": "C2_061-070-4",
+"group": "C2_061-070",
 "level": "C2",
-"text": "In the current framework, there is still plenty of room for innovationThere is ample scope for creativity within the established framework"
+"num": 4,
+"text": "In the current framework, there is still plenty of room for innovation"
 },
 {
-"id": "C2-371",
+"id": "C2_061-070-5",
+"group": "C2_061-070",
 "level": "C2",
-"text": "In this high-risk procedure, there is almost no room for errorThere is little scope for error in such a high stakes procedure"
+"num": 5,
+"text": "There is ample scope for creativity within the established framework"
 },
 {
-"id": "C2-372",
+"id": "C2_061-070-6",
+"group": "C2_061-070",
 "level": "C2",
+"num": 6,
+"text": "In this high-risk procedure, there is almost no room for error"
+},
+{
+"id": "C2_061-070-7",
+"group": "C2_061-070",
+"level": "C2",
+"num": 7,
+"text": "There is little scope for error in such a high stakes procedure"
+},
+{
+"id": "C2_061-070-8",
+"group": "C2_061-070",
+"level": "C2",
+"num": 8,
 "text": "There is scope for expanding the scheme to other regions"
 },
 {
-"id": "C2-373",
+"id": "C2_061-070-9",
+"group": "C2_061-070",
 "level": "C2",
+"num": 9,
 "text": "One possible compromise is for the two parties to each take a step backA workable compromise might be to split the difference on the price"
 },
 {
-"id": "C2-374",
+"id": "C2_061-070-10",
+"group": "C2_061-070",
 "level": "C2",
+"num": 10,
 "text": "A workable compromise might be to delay the implementation by a few months"
 },
 {
-"id": "C2-375",
+"id": "C2_061-070-11",
+"group": "C2_061-070",
 "level": "C2",
+"num": 11,
 "text": "A workable compromise might be to alternate custody of the asset"
 },
 {
-"id": "C2-376",
+"id": "C2_061-070-12",
+"group": "C2_061-070",
 "level": "C2",
+"num": 12,
 "text": "A workable compromise might be to phase in the new standards gradually"
 },
 {
-"id": "C2-377",
+"id": "C2_061-070-13",
+"group": "C2_061-070",
 "level": "C2",
+"num": 13,
 "text": "A workable compromise might be to cap the fee while preserving the service"
 },
 {
-"id": "C2-378",
+"id": "C2_061-070-14",
+"group": "C2_061-070",
 "level": "C2",
+"num": 14,
 "text": "We are prepared to extend the deadline on the understanding that quality will not be compromised"
 },
 {
-"id": "C2-379",
+"id": "C2_061-070-15",
+"group": "C2_061-070",
 "level": "C2",
-"text": "We are prepared to revise the terms on the understanding that both parties agreeWe are prepared to waive the penalty on the understanding that payment is made promptly"
+"num": 15,
+"text": "We are prepared to revise the terms on the understanding that both parties agree"
 },
 {
-"id": "C2-380",
+"id": "C2_061-070-16",
+"group": "C2_061-070",
 "level": "C2",
-"text": "We are prepared to waive the penalty on the understanding that payment is made promptlyWe are prepared to share the data on the understanding that confidentiality is maintained"
+"num": 16,
+"text": "We are prepared to waive the penalty on the understanding that payment is made promptly"
 },
 {
-"id": "C2-381",
+"id": "C2_061-070-17",
+"group": "C2_061-070",
 "level": "C2",
-"text": "We are prepared to reduce the rent on the understanding that the lease is renewedAt this stage, it would be premature to draw firm conclusions"
+"num": 17,
+"text": "We are prepared to share the data on the understanding that confidentiality is maintained"
 },
 {
-"id": "C2-382",
+"id": "C2_061-070-18",
+"group": "C2_061-070",
 "level": "C2",
+"num": 18,
+"text": "We are prepared to reduce the rent on the understanding that the lease is renewed"
+},
+{
+"id": "C2_061-070-19",
+"group": "C2_061-070",
+"level": "C2",
+"num": 19,
+"text": "At this stage, it would be premature to draw firm conclusions"
+},
+{
+"id": "C2_061-070-20",
+"group": "C2_061-070",
+"level": "C2",
+"num": 20,
 "text": "It would be premature to make a final decision before all data is available"
 },
 {
-"id": "C2-383",
+"id": "C2_061-070-21",
+"group": "C2_061-070",
 "level": "C2",
+"num": 21,
 "text": "It would be premature to celebrate victory while the verdict is pending"
 },
 {
-"id": "C2-384",
+"id": "C2_061-070-22",
+"group": "C2_061-070",
 "level": "C2",
+"num": 22,
 "text": "It would be premature to abandon the strategy after a single setback"
 },
 {
-"id": "C2-385",
+"id": "C2_061-070-23",
+"group": "C2_061-070",
 "level": "C2",
+"num": 23,
 "text": "It would be premature to forecast recovery before the underlying causes are addressed"
 },
 {
-"id": "C2-386",
+"id": "C2_061-070-24",
+"group": "C2_061-070",
 "level": "C2",
+"num": 24,
 "text": "Let us reach a consensus"
 },
 {
-"id": "C2-387",
+"id": "C2_061-070-25",
+"group": "C2_061-070",
 "level": "C2",
+"num": 25,
 "text": "Our common goal is the success of the project"
 },
 {
-"id": "C2-388",
+"id": "C2_061-070-26",
+"group": "C2_061-070",
 "level": "C2",
+"num": 26,
 "text": "Let us both agree that our shared goal is the success of the project"
 },
 {
-"id": "C2-389",
+"id": "C2_061-070-27",
+"group": "C2_061-070",
 "level": "C2",
+"num": 27,
 "text": "Let us both agree that transparency is essential to our partnership"
 },
 {
-"id": "C2-390",
+"id": "C2_061-070-28",
+"group": "C2_061-070",
 "level": "C2",
+"num": 28,
 "text": "Let us both agree that the welfare of the child must come first"
 },
 {
-"id": "C2-391",
+"id": "C2_061-070-29",
+"group": "C2_061-070",
 "level": "C2",
+"num": 29,
 "text": "Let us both agree that the facts, not our fears, should guide us"
 },
 {
-"id": "C2-392",
+"id": "C2_061-070-30",
+"group": "C2_061-070",
 "level": "C2",
+"num": 30,
 "text": "Let us both agree that no settlement is better than a bad one"
 },
 {
-"id": "C2-393",
+"id": "C2_061-070-31",
+"group": "C2_061-070",
 "level": "C2",
+"num": 31,
 "text": "It is confirmed that the prime minister will address the nation at 8 p"
 },
 {
-"id": "C2-394",
+"id": "C2_061-070-32",
+"group": "C2_061-070",
 "level": "C2",
+"num": 32,
 "text": "tonight"
 },
 {
-"id": "C2-395",
+"id": "C2_061-070-33",
+"group": "C2_061-070",
 "level": "C2",
+"num": 33,
 "text": "It is confirmed that the summit will take place next month"
 },
 {
-"id": "C2-396",
+"id": "C2_061-070-34",
+"group": "C2_061-070",
 "level": "C2",
+"num": 34,
 "text": "It is confirmed that the suspect was in the country at the time"
 },
 {
-"id": "C2-397",
+"id": "C2_061-070-35",
+"group": "C2_061-070",
 "level": "C2",
+"num": 35,
 "text": "It is confirmed that the bridge will reopen to traffic on Monday"
 },
 {
-"id": "C2-398",
+"id": "C2_061-070-36",
+"group": "C2_061-070",
 "level": "C2",
+"num": 36,
 "text": "It is confirmed that the witnesses' accounts corroborate one another"
 },
 {
-"id": "C2-399",
+"id": "C2_061-070-37",
+"group": "C2_061-070",
 "level": "C2",
+"num": 37,
 "text": "The public is hereby notified that the road will be closed for maintenance from Monday"
 },
 {
-"id": "C2-400",
+"id": "C2_061-070-38",
+"group": "C2_061-070",
 "level": "C2",
+"num": 38,
 "text": "The public is hereby notified that the road will be closed for maintenance for Monday"
 },
 {
-"id": "C2-401",
+"id": "C2_061-070-39",
+"group": "C2_061-070",
 "level": "C2",
+"num": 39,
 "text": "The public is hereby notified that new regulations will take effect immediately"
 },
 {
-"id": "C2-402",
+"id": "C2_061-070-40",
+"group": "C2_061-070",
 "level": "C2",
+"num": 40,
 "text": "The public is hereby notified that the reservoir level has fallen to a critical low"
 },
 {
-"id": "C2-403",
+"id": "C2_061-070-41",
+"group": "C2_061-070",
 "level": "C2",
+"num": 41,
 "text": "The public is hereby notified that the bylaw on noise will be strictly enforced"
 },
 {
-"id": "C2-404",
+"id": "C2_061-070-42",
+"group": "C2_061-070",
 "level": "C2",
-"text": "The public is hereby notified that the vaccination program commences on the firstThe public is hereby notified that the vaccination program commences on the first"
+"num": 42,
+"text": "The public is hereby notified that the vaccination program commences on the first"
 },
 {
-"id": "C2-405",
+"id": "C2_061-070-43",
+"group": "C2_061-070",
 "level": "C2",
+"num": 43,
 "text": "We hope to record in the file that we have previously raised these concerns"
 },
 {
-"id": "C2-406",
+"id": "C2_061-070-44",
+"group": "C2_061-070",
 "level": "C2",
+"num": 44,
 "text": "We wish to place on record that we had raised these concerns previously"
 },
 {
-"id": "C2-407",
+"id": "C2_061-070-45",
+"group": "C2_061-070",
 "level": "C2",
+"num": 45,
 "text": "We wish to place on record that we objected to the decision at the time"
 },
 {
-"id": "C2-408",
+"id": "C2_061-070-46",
+"group": "C2_061-070",
 "level": "C2",
+"num": 46,
 "text": "We wish to place on record that the funds were disbursed in accordance with the mandate"
 },
 {
-"id": "C2-409",
+"id": "C2_061-070-47",
+"group": "C2_061-070",
 "level": "C2",
+"num": 47,
 "text": "We wish to place on record that no such undertaking was ever given"
 },
 {
-"id": "C2-410",
+"id": "C2_061-070-48",
+"group": "C2_061-070",
 "level": "C2",
+"num": 48,
 "text": "We wish to place on record that the warning was issued well in advance"
 },
 {
-"id": "C2-411",
+"id": "C2_061-070-49",
+"group": "C2_061-070",
 "level": "C2",
-"text": "This announcement does not preclude any future legal proceedingsThis announcement is made without prejudice to any future legal proceedings"
+"num": 49,
+"text": "This announcement does not preclude any future legal proceedings"
 },
 {
-"id": "C2-412",
+"id": "C2_061-070-50",
+"group": "C2_061-070",
 "level": "C2",
-"text": "This statement does not preclude the company from pursuing further actionThis statement is made without prejudice to the company's right to pursue further action"
+"num": 50,
+"text": "This announcement is made without prejudice to any future legal proceedings"
 },
 {
-"id": "C2-413",
+"id": "C2_061-070-51",
+"group": "C2_061-070",
 "level": "C2",
+"num": 51,
+"text": "This statement does not preclude the company from pursuing further action"
+},
+{
+"id": "C2_061-070-52",
+"group": "C2_061-070",
+"level": "C2",
+"num": 52,
+"text": "This statement is made without prejudice to the company's right to pursue further action"
+},
+{
+"id": "C2_061-070-53",
+"group": "C2_061-070",
+"level": "C2",
+"num": 53,
 "text": "This clarification is made without prejudice to the rights of the parties"
 },
 {
-"id": "C2-414",
+"id": "C2_061-070-54",
+"group": "C2_061-070",
 "level": "C2",
-"text": "This notice does not preclude any appealThis notice is made without prejudice to any pending appeal"
+"num": 54,
+"text": "This notice does not preclude any appeal"
 },
 {
-"id": "C2-415",
+"id": "C2_061-070-55",
+"group": "C2_061-070",
 "level": "C2",
-"text": "This statement does not preclude any other assistanceThis declaration is made without prejudice to the claimant's other remedies"
+"num": 55,
+"text": "This notice is made without prejudice to any pending appeal"
 },
 {
-"id": "C2-416",
+"id": "C2_061-070-56",
+"group": "C2_061-070",
 "level": "C2",
+"num": 56,
+"text": "This statement does not preclude any other assistance"
+},
+{
+"id": "C2_061-070-57",
+"group": "C2_061-070",
+"level": "C2",
+"num": 57,
+"text": "This declaration is made without prejudice to the claimant's other remedies"
+},
+{
+"id": "C2_061-070-58",
+"group": "C2_061-070",
+"level": "C2",
+"num": 58,
 "text": "In this issue, ignoring the scientific consensus is impossible"
 },
 {
-"id": "C2-417",
+"id": "C2_061-070-59",
+"group": "C2_061-070",
 "level": "C2",
+"num": 59,
 "text": "There can be no question of ignoring the scientific consensus on this matter"
 },
 {
-"id": "C2-418",
+"id": "C2_061-070-60",
+"group": "C2_061-070",
 "level": "C2",
+"num": 60,
 "text": "In safety standards, there can be no question of compromising on safety standards"
 },
 {
-"id": "C2-419",
+"id": "C2_061-070-61",
+"group": "C2_061-070",
 "level": "C2",
+"num": 61,
 "text": "There can be no question of reinstating the official after the verdict"
 },
 {
-"id": "C2-420",
+"id": "C2_061-070-62",
+"group": "C2_061-070",
 "level": "C2",
+"num": 62,
 "text": "Reveal the source's identity is impossible"
 },
 {
-"id": "C2-421",
+"id": "C2_061-070-63",
+"group": "C2_061-070",
 "level": "C2",
+"num": 63,
 "text": "There can be no question of disclosing the identity of the source"
 },
 {
-"id": "C2-422",
+"id": "C2_061-070-64",
+"group": "C2_061-070",
 "level": "C2",
+"num": 64,
 "text": "Considering the current"
 },
 {
-"id": "C2-423",
+"id": "C2_061-070-65",
+"group": "C2_061-070",
 "level": "C2",
+"num": 65,
 "text": "There can be no question of meeting the deadline given the current shortfall"
 },
 {
-"id": "C2-424",
+"id": "C2_071-080-1",
+"group": "C2_071-080",
 "level": "C2",
-"text": "The extent to which the policy has impacted rural communities is difficult to quantifySocial media's influence on political views is hard to quantify"
+"num": 1,
+"text": "The extent to which the policy has impacted rural communities is difficult to quantify"
 },
 {
-"id": "C2-425",
+"id": "C2_071-080-2",
+"group": "C2_071-080",
 "level": "C2",
+"num": 2,
+"text": "Social media's influence on political views is hard to quantify"
+},
+{
+"id": "C2_071-080-3",
+"group": "C2_071-080",
+"level": "C2",
+"num": 3,
 "text": "Drought, the extent to which the drought has damaged the harvest, is impossible to quantify"
 },
 {
-"id": "C2-426",
+"id": "C2_071-080-4",
+"group": "C2_071-080",
 "level": "C2",
+"num": 4,
 "text": "The extent to which the rumor undermined confidence is difficult to quantify"
 },
 {
-"id": "C2-427",
+"id": "C2_071-080-5",
+"group": "C2_071-080",
 "level": "C2",
+"num": 5,
 "text": "The extent to which automation displaces workers is challenging to quantify"
 },
 {
-"id": "C2-428",
+"id": "C2_071-080-6",
+"group": "C2_071-080",
 "level": "C2",
+"num": 6,
 "text": "We are at a loss to explain why the results diverged so dramatically from the predictions"
 },
 {
-"id": "C2-429",
+"id": "C2_071-080-7",
+"group": "C2_071-080",
 "level": "C2",
+"num": 7,
 "text": "We are at a loss to explain how the system was breached"
 },
 {
-"id": "C2-430",
+"id": "C2_071-080-8",
+"group": "C2_071-080",
 "level": "C2",
+"num": 8,
 "text": "We are at a loss to explain how the documents left the secure facility"
 },
 {
-"id": "C2-431",
+"id": "C2_071-080-9",
+"group": "C2_071-080",
 "level": "C2",
+"num": 9,
 "text": "I am at a loss to explain why the patient failed to respond to treatment"
 },
 {
-"id": "C2-432",
+"id": "C2_071-080-10",
+"group": "C2_071-080",
 "level": "C2",
+"num": 10,
 "text": "They are at a loss to explain why the market ignored the warning signs"
 },
 {
-"id": "C2-433",
+"id": "C2_071-080-11",
+"group": "C2_071-080",
 "level": "C2",
+"num": 11,
 "text": "The author is at pains to emphasize that the study is exploratory in nature"
 },
 {
-"id": "C2-434",
+"id": "C2_071-080-12",
+"group": "C2_071-080",
 "level": "C2",
+"num": 12,
 "text": "The minister is at pains to stress that no decision has been made yet"
 },
 {
-"id": "C2-435",
+"id": "C2_071-080-13",
+"group": "C2_071-080",
 "level": "C2",
-"text": "The committee is at pains to clarify that the rules have not changedThe committee is at pains to clarify that the rules have not changed"
+"num": 13,
+"text": "The committee is at pains to clarify that the rules have not changed"
 },
 {
-"id": "C2-436",
+"id": "C2_071-080-14",
+"group": "C2_071-080",
 "level": "C2",
+"num": 14,
 "text": "The spokesperson is at pains to reassure the public that supplies are adequate"
 },
 {
-"id": "C2-437",
+"id": "C2_071-080-15",
+"group": "C2_071-080",
 "level": "C2",
+"num": 15,
 "text": "The director is at pains to point out the limitations of the preliminary data"
 },
 {
-"id": "C2-438",
+"id": "C2_071-080-16",
+"group": "C2_071-080",
 "level": "C2",
+"num": 16,
 "text": "We never thought the situation would escalate so rapidly"
 },
 {
-"id": "C2-439",
+"id": "C2_071-080-17",
+"group": "C2_071-080",
 "level": "C2",
+"num": 17,
 "text": "Not for a moment did we imagine the situation would escalate so rapidly"
 },
 {
-"id": "C2-440",
+"id": "C2_071-080-18",
+"group": "C2_071-080",
 "level": "C2",
+"num": 18,
 "text": "He never doubted the team's ability to succeed"
 },
 {
-"id": "C2-441",
+"id": "C2_071-080-19",
+"group": "C2_071-080",
 "level": "C2",
+"num": 19,
 "text": "Not for a moment did she doubt her team's ability to succeed"
 },
 {
-"id": "C2-442",
+"id": "C2_071-080-20",
+"group": "C2_071-080",
 "level": "C2",
+"num": 20,
 "text": "This diplomat never believed the ceasefire would hold"
 },
 {
-"id": "C2-443",
+"id": "C2_071-080-21",
+"group": "C2_071-080",
 "level": "C2",
+"num": 21,
 "text": "Not for a moment did the diplomat believe the ceasefire would hold"
 },
 {
-"id": "C2-444",
+"id": "C2_071-080-22",
+"group": "C2_071-080",
 "level": "C2",
+"num": 22,
 "text": "Not for a moment did the villagers abandon hope of rescue"
 },
 {
-"id": "C2-445",
+"id": "C2_071-080-23",
+"group": "C2_071-080",
 "level": "C2",
+"num": 23,
 "text": "This critic's evaluation of the work"
 },
 {
-"id": "C2-446",
+"id": "C2_071-080-24",
+"group": "C2_071-080",
 "level": "C2",
+"num": 24,
 "text": "Not for a moment did the critic waver in his assessment of the work"
 },
 {
-"id": "C2-447",
+"id": "C2_071-080-25",
+"group": "C2_071-080",
 "level": "C2",
+"num": 25,
 "text": "I shall not venture to predict the outcome with any degree of certainty"
 },
 {
-"id": "C2-448",
+"id": "C2_071-080-26",
+"group": "C2_071-080",
 "level": "C2",
+"num": 26,
 "text": "I shall not venture to comment on political developments at this time"
 },
 {
-"id": "C2-449",
+"id": "C2_071-080-27",
+"group": "C2_071-080",
 "level": "C2",
+"num": 27,
 "text": "I shall not venture to speculate on the board's eventual decision"
 },
 {
-"id": "C2-450",
+"id": "C2_071-080-28",
+"group": "C2_071-080",
 "level": "C2",
+"num": 28,
 "text": "I shall not venture to estimate the full cost of the remediation"
 },
 {
-"id": "C2-451",
+"id": "C2_071-080-29",
+"group": "C2_071-080",
 "level": "C2",
+"num": 29,
 "text": "I shall not venture to judge the merits of a case I have not studied"
 },
 {
-"id": "C2-452",
+"id": "C2_071-080-30",
+"group": "C2_071-080",
 "level": "C2",
+"num": 30,
 "text": "This charge is a gross mistake"
 },
 {
-"id": "C2-453",
+"id": "C2_071-080-31",
+"group": "C2_071-080",
 "level": "C2",
+"num": 31,
 "text": "Nothing could be further from the truth than this allegation"
 },
 {
-"id": "C2-454",
+"id": "C2_071-080-32",
+"group": "C2_071-080",
 "level": "C2",
+"num": 32,
 "text": "Nothing could be more important than protecting public health"
 },
 {
-"id": "C2-455",
+"id": "C2_071-080-33",
+"group": "C2_071-080",
 "level": "C2",
+"num": 33,
 "text": "Nothing could be more misguided than to cut funding for basic research"
 },
 {
-"id": "C2-456",
+"id": "C2_071-080-34",
+"group": "C2_071-080",
 "level": "C2",
-"text": "In crisis,"
+"num": 34,
+"text": "In crisis"
 },
 {
-"id": "C2-457",
+"id": "C2_071-080-35",
+"group": "C2_071-080",
 "level": "C2",
+"num": 35,
 "text": "Nothing could be less helpful than assigning blame in the midst of a crisis"
 },
 {
-"id": "C2-458",
+"id": "C2_071-080-36",
+"group": "C2_071-080",
 "level": "C2",
-"text": "In this ceremony,"
+"num": 36,
+"text": "In this ceremony"
 },
 {
-"id": "C2-459",
+"id": "C2_071-080-37",
+"group": "C2_071-080",
 "level": "C2",
-"text": "Nothing could be more fitting than to honor the pioneers at this ceremonyNothing could be more fitting than to honor the pioneers at this ceremony"
+"num": 37,
+"text": "Nothing could be more fitting than to honor the pioneers at this ceremony"
 },
 {
-"id": "C2-460",
+"id": "C2_071-080-38",
+"group": "C2_071-080",
 "level": "C2",
+"num": 38,
 "text": "The results speak for themselves"
 },
 {
-"id": "C2-461",
+"id": "C2_071-080-39",
+"group": "C2_071-080",
 "level": "C2",
+"num": 39,
 "text": "Our method is clearly superior"
 },
 {
-"id": "C2-462",
+"id": "C2_071-080-40",
+"group": "C2_071-080",
 "level": "C2",
+"num": 40,
 "text": "The product's quality speaks for itself"
 },
 {
-"id": "C2-463",
+"id": "C2_071-080-41",
+"group": "C2_071-080",
 "level": "C2",
+"num": 41,
 "text": "The attendance speaks for itself"
 },
 {
-"id": "C2-464",
+"id": "C2_071-080-42",
+"group": "C2_071-080",
 "level": "C2",
+"num": 42,
 "text": "The cause has captured the public imagination"
 },
 {
-"id": "C2-465",
+"id": "C2_071-080-43",
+"group": "C2_071-080",
 "level": "C2",
+"num": 43,
 "text": "The ruins speak for themselves, bearing silent witness to a lost civilization"
 },
 {
-"id": "C2-466",
+"id": "C2_071-080-44",
+"group": "C2_071-080",
 "level": "C2",
+"num": 44,
 "text": "Data speaks for themselves, revealing a decade of steady decline"
 },
 {
-"id": "C2-467",
+"id": "C2_071-080-45",
+"group": "C2_071-080",
 "level": "C2",
+"num": 45,
 "text": "Early childhood education's importance how much it is emphasized is difficult to overestimate"
 },
 {
-"id": "C2-468",
+"id": "C2_071-080-46",
+"group": "C2_071-080",
 "level": "C2",
+"num": 46,
 "text": "It would be difficult to overestimate the importance of early childhood education"
 },
 {
-"id": "C2-469",
+"id": "C2_071-080-47",
+"group": "C2_071-080",
 "level": "C2",
-"text": "The scale of the crisisIt would be difficult to overestimate the scale of the crisis"
+"num": 47,
+"text": "The scale of the crisis"
 },
 {
-"id": "C2-470",
+"id": "C2_071-080-48",
+"group": "C2_071-080",
 "level": "C2",
-"text": "Central bank's influence on marketsIt would be difficult to overestimate the influence of the central bank on markets"
+"num": 48,
+"text": "It would be difficult to overestimate the scale of the crisis"
 },
 {
-"id": "C2-471",
+"id": "C2_071-080-49",
+"group": "C2_071-080",
 "level": "C2",
+"num": 49,
+"text": "Central bank's influence on markets"
+},
+{
+"id": "C2_071-080-50",
+"group": "C2_071-080",
+"level": "C2",
+"num": 50,
+"text": "It would be difficult to overestimate the influence of the central bank on markets"
+},
+{
+"id": "C2_071-080-51",
+"group": "C2_071-080",
+"level": "C2",
+"num": 51,
 "text": "It would be difficult to overestimate the human cost of the conflict"
 },
 {
-"id": "C2-472",
+"id": "C2_071-080-52",
+"group": "C2_071-080",
 "level": "C2",
-"text": "A trusted advisorIt would be difficult to overestimate the value of a trusted advisor"
+"num": 52,
+"text": "A trusted advisor"
 },
 {
-"id": "C2-473",
+"id": "C2_071-080-53",
+"group": "C2_071-080",
 "level": "C2",
+"num": 53,
+"text": "It would be difficult to overestimate the value of a trusted advisor"
+},
+{
+"id": "C2_071-080-54",
+"group": "C2_071-080",
+"level": "C2",
+"num": 54,
 "text": "He forgave those who had hurt him, which shows his character"
 },
 {
-"id": "C2-474",
+"id": "C2_071-080-55",
+"group": "C2_071-080",
 "level": "C2",
-"text": "It speaks volumes for her character that she forgave those who wronged herIt speaks volumes for her character that she forgave those who wronged her"
+"num": 55,
+"text": "It speaks volumes for her character that she forgave those who wronged her"
 },
 {
-"id": "C2-475",
+"id": "C2_071-080-56",
+"group": "C2_071-080",
 "level": "C2",
+"num": 56,
 "text": "It speaks volumes for the company that it admitted its mistake publicly"
 },
 {
-"id": "C2-476",
+"id": "C2_071-080-57",
+"group": "C2_071-080",
 "level": "C2",
+"num": 57,
 "text": "The alumni of the school returning to teach, this fully demonstrates the value of the school"
 },
 {
-"id": "C2-477",
+"id": "C2_071-080-58",
+"group": "C2_071-080",
 "level": "C2",
+"num": 58,
 "text": "It speaks volumes for the school that its graduates return to teach"
 },
 {
-"id": "C2-478",
+"id": "C2_071-080-59",
+"group": "C2_071-080",
 "level": "C2",
+"num": 59,
 "text": "The regime has spoken volumes for the regime that dissent is met with silence"
 },
 {
-"id": "C2-479",
+"id": "C2_071-080-60",
+"group": "C2_071-080",
 "level": "C2",
+"num": 60,
 "text": "It speaks volumes for the regime that dissent is met with silence"
 },
 {
-"id": "C2-480",
+"id": "C2_071-080-61",
+"group": "C2_071-080",
 "level": "C2",
-"text": "It speaks volumes for the community that strangers rallied to helpIt speaks volumes for the community that strangers rally to help"
+"num": 61,
+"text": "It speaks volumes for the community that strangers rallied to help"
 },
 {
-"id": "C2-481",
+"id": "C2_071-080-62",
+"group": "C2_071-080",
 "level": "C2",
+"num": 62,
+"text": "It speaks volumes for the community that strangers rally to help"
+},
+{
+"id": "C2_071-080-63",
+"group": "C2_071-080",
+"level": "C2",
+"num": 63,
 "text": "Deciders"
 },
 {
-"id": "C2-482",
+"id": "C2_071-080-64",
+"group": "C2_071-080",
 "level": "C2",
+"num": 64,
 "text": "This is a trend that policymakers would do well to take seriously"
 },
 {
-"id": "C2-483",
+"id": "C2_071-080-65",
+"group": "C2_071-080",
 "level": "C2",
+"num": 65,
 "text": "This is an issue that investors would do well to pay attention to"
 },
 {
-"id": "C2-484",
+"id": "C2_071-080-66",
+"group": "C2_071-080",
 "level": "C2",
+"num": 66,
 "text": "This is a precedent that lower courts would do well to heed"
 },
 {
-"id": "C2-485",
+"id": "C2_071-080-67",
+"group": "C2_071-080",
 "level": "C2",
+"num": 67,
 "text": "This is a warning that the industry would do well to heed"
 },
 {
-"id": "C2-486",
+"id": "C2_071-080-68",
+"group": "C2_071-080",
 "level": "C2",
+"num": 68,
 "text": "This is an opportunity that young people would do well to seize"
 },
 {
-"id": "C2-487",
+"id": "C2_081-090-1",
+"group": "C2_081-090",
 "level": "C2",
+"num": 1,
 "text": "It is estimated that the market will grow by 15% next year"
 },
 {
-"id": "C2-488",
+"id": "C2_081-090-2",
+"group": "C2_081-090",
 "level": "C2",
+"num": 2,
 "text": "It is estimated that the population will reach 10 million by 2035"
 },
 {
-"id": "C2-489",
+"id": "C2_081-090-3",
+"group": "C2_081-090",
 "level": "C2",
+"num": 3,
 "text": "It is estimated that the restructuring will affect some 3,000 jobs"
 },
 {
-"id": "C2-490",
+"id": "C2_081-090-4",
+"group": "C2_081-090",
 "level": "C2",
-"text": "Estimate: This volcano could erupt within the decadeAccording to estimates, the fund has recovered only half its losses"
+"num": 4,
+"text": "Estimate: This volcano could erupt within the decade"
 },
 {
-"id": "C2-491",
+"id": "C2_081-090-5",
+"group": "C2_081-090",
 "level": "C2",
+"num": 5,
+"text": "According to estimates, the fund has recovered only half its losses"
+},
+{
+"id": "C2_081-090-6",
+"group": "C2_081-090",
+"level": "C2",
+"num": 6,
 "text": "The company has yet to announce its official position on the merger"
 },
 {
-"id": "C2-492",
+"id": "C2_081-090-7",
+"group": "C2_081-090",
 "level": "C2",
+"num": 7,
 "text": "Government has yet to release the official report"
 },
 {
-"id": "C2-493",
+"id": "C2_081-090-8",
+"group": "C2_081-090",
 "level": "C2",
+"num": 8,
 "text": "The government has yet to release the official report"
 },
 {
-"id": "C2-494",
+"id": "C2_081-090-9",
+"group": "C2_081-090",
 "level": "C2",
+"num": 9,
 "text": "Committee has yet to release the official report"
 },
 {
-"id": "C2-495",
+"id": "C2_081-090-10",
+"group": "C2_081-090",
 "level": "C2",
+"num": 10,
 "text": "The committee has yet to reach a verdict on the appeal"
 },
 {
-"id": "C2-496",
+"id": "C2_081-090-11",
+"group": "C2_081-090",
 "level": "C2",
+"num": 11,
 "text": "The plaintiff has yet to serve the writ on the defendant"
 },
 {
-"id": "C2-497",
+"id": "C2_081-090-12",
+"group": "C2_081-090",
 "level": "C2",
+"num": 12,
 "text": "The municipality has yet to restore power to the affected districts"
 },
 {
-"id": "C2-498",
+"id": "C2_081-090-13",
+"group": "C2_081-090",
 "level": "C2",
+"num": 13,
 "text": "Benefited by strong consumer"
 },
 {
-"id": "C2-499",
+"id": "C2_081-090-14",
+"group": "C2_081-090",
 "level": "C2",
+"num": 14,
 "text": "On the back of strong consumer spending, the economy showed modest growth"
 },
 {
-"id": "C2-500",
+"id": "C2_081-090-15",
+"group": "C2_081-090",
 "level": "C2",
+"num": 15,
 "text": "Benefited by new investment, the industry saw rapid expansion"
 },
 {
-"id": "C2-501",
+"id": "C2_081-090-16",
+"group": "C2_081-090",
 "level": "C2",
+"num": 16,
 "text": "On the back of new investment, the sector saw rapid expansion"
 },
 {
-"id": "C2-502",
+"id": "C2_081-090-17",
+"group": "C2_081-090",
 "level": "C2",
+"num": 17,
 "text": "On the back of a bumper harvest, the region reported a trade surplus"
 },
 {
-"id": "C2-503",
+"id": "C2_081-090-18",
+"group": "C2_081-090",
 "level": "C2",
+"num": 18,
 "text": "Benefited by favorable exchange rates, exports climbed to a record"
 },
 {
-"id": "C2-504",
+"id": "C2_081-090-19",
+"group": "C2_081-090",
 "level": "C2",
+"num": 19,
 "text": "On the back of favorable exchange rates, exports climbed to a record"
 },
 {
-"id": "C2-505",
+"id": "C2_081-090-20",
+"group": "C2_081-090",
 "level": "C2",
+"num": 20,
 "text": "Benefiting from the successful listing, this new company secured a second round of funding"
 },
 {
-"id": "C2-506",
+"id": "C2_081-090-21",
+"group": "C2_081-090",
 "level": "C2",
+"num": 21,
 "text": "On the back of a successful launch, the startup secured a second round of funding"
 },
 {
-"id": "C2-507",
+"id": "C2_081-090-22",
+"group": "C2_081-090",
 "level": "C2",
+"num": 22,
 "text": "In the unlikely event that the deal falls through, we have contingency plans in place"
 },
 {
-"id": "C2-508",
+"id": "C2_081-090-23",
+"group": "C2_081-090",
 "level": "C2",
+"num": 23,
 "text": "In the unlikely event that the system fails, we will use the backup immediately"
 },
 {
-"id": "C2-509",
+"id": "C2_081-090-24",
+"group": "C2_081-090",
 "level": "C2",
+"num": 24,
 "text": "In the unlikely event that the witness withdraws, the case will proceed regardless"
 },
 {
-"id": "C2-510",
+"id": "C2_081-090-25",
+"group": "C2_081-090",
 "level": "C2",
+"num": 25,
 "text": "In the unlikely event that the supplier defaults, an escrow arrangement will apply"
 },
 {
-"id": "C2-511",
+"id": "C2_081-090-26",
+"group": "C2_081-090",
 "level": "C2",
+"num": 26,
 "text": "In the unlikely event that the dam breaches, evacuation routes are already mapped"
 },
 {
-"id": "C2-512",
+"id": "C2_081-090-27",
+"group": "C2_081-090",
 "level": "C2",
+"num": 27,
 "text": "The market is expected to remain volatile for the foreseeable future"
 },
 {
-"id": "C2-513",
+"id": "C2_081-090-28",
+"group": "C2_081-090",
 "level": "C2",
+"num": 28,
 "text": "The situation is likely to remain tense in the coming weeks"
 },
 {
-"id": "C2-514",
+"id": "C2_081-090-29",
+"group": "C2_081-090",
 "level": "C2",
+"num": 29,
 "text": "Once interest rates stabilize, the market is poised to rebound"
 },
 {
-"id": "C2-515",
+"id": "C2_081-090-30",
+"group": "C2_081-090",
 "level": "C2",
+"num": 30,
 "text": "The market is poised to rebound once interest rates stabilize"
 },
 {
-"id": "C2-516",
+"id": "C2_081-090-31",
+"group": "C2_081-090",
 "level": "C2",
+"num": 31,
 "text": "The market is projected to contract by a further 2%"
 },
 {
-"id": "C2-517",
+"id": "C2_081-090-32",
+"group": "C2_081-090",
 "level": "C2",
+"num": 32,
 "text": "The market is unlikely to recover before the election"
 },
 {
-"id": "C2-518",
+"id": "C2_081-090-33",
+"group": "C2_081-090",
 "level": "C2",
+"num": 33,
 "text": "If groups bear the greatest burden, it is morally indefensible that vulnerable communities bear the greatest burden"
 },
 {
-"id": "C2-519",
+"id": "C2_081-090-34",
+"group": "C2_081-090",
 "level": "C2",
+"num": 34,
 "text": "It is morally indefensible that vulnerable communities bear the greatest burden"
 },
 {
-"id": "C2-520",
+"id": "C2_081-090-35",
+"group": "C2_081-090",
 "level": "C2",
-"text": "It is morally indefensible that children are exploited for profitIt is morally indefensible that children are exploited for profit"
+"num": 35,
+"text": "It is morally indefensible that children are exploited for profit"
 },
 {
-"id": "C2-521",
+"id": "C2_081-090-36",
+"group": "C2_081-090",
 "level": "C2",
+"num": 36,
 "text": "It is morally indefensible that the wounded are denied access to care"
 },
 {
-"id": "C2-522",
+"id": "C2_081-090-37",
+"group": "C2_081-090",
 "level": "C2",
-"text": "It is morally indefensible that the rich should evade the taxes the poor must payIt is morally indefensible that the rich should evade the taxes the poor must pay"
+"num": 37,
+"text": "It is morally indefensible that the rich should evade the taxes the poor must pay"
 },
 {
-"id": "C2-523",
+"id": "C2_081-090-38",
+"group": "C2_081-090",
 "level": "C2",
-"text": "It is morally indefensible that prisoners should languish without trialIt is morally indefensible that prisoners should languish without trial"
+"num": 38,
+"text": "It is morally indefensible that prisoners should languish without trial"
 },
 {
-"id": "C2-524",
+"id": "C2_081-090-39",
+"group": "C2_081-090",
 "level": "C2",
+"num": 39,
 "text": "The organization is to be commended for its transparency in reporting"
 },
 {
-"id": "C2-525",
+"id": "C2_081-090-40",
+"group": "C2_081-090",
 "level": "C2",
+"num": 40,
 "text": "The team is to be commended for its rapid response to the crisis"
 },
 {
-"id": "C2-526",
+"id": "C2_081-090-41",
+"group": "C2_081-090",
 "level": "C2",
+"num": 41,
 "text": "This judge in"
 },
 {
-"id": "C2-527",
+"id": "C2_081-090-42",
+"group": "C2_081-090",
 "level": "C2",
+"num": 42,
 "text": "The judge is to be commended for her restraint in the face of provocation"
 },
 {
-"id": "C2-528",
+"id": "C2_081-090-43",
+"group": "C2_081-090",
 "level": "C2",
+"num": 43,
 "text": "These"
 },
 {
-"id": "C2-529",
+"id": "C2_081-090-44",
+"group": "C2_081-090",
 "level": "C2",
+"num": 44,
 "text": "The volunteers are to be commended for their tireless work through the night"
 },
 {
-"id": "C2-530",
+"id": "C2_081-090-45",
+"group": "C2_081-090",
 "level": "C2",
-"text": "The regulator in the harm became widespreadThe regulator is to be commended for acting before the harm became widespread"
+"num": 45,
+"text": "The regulator in the harm became widespread"
 },
 {
-"id": "C2-531",
+"id": "C2_081-090-46",
+"group": "C2_081-090",
 "level": "C2",
+"num": 46,
+"text": "The regulator is to be commended for acting before the harm became widespread"
+},
+{
+"id": "C2_081-090-47",
+"group": "C2_081-090",
+"level": "C2",
+"num": 47,
 "text": "In the digital age, protecting personal privacy has an ethical imperative"
 },
 {
-"id": "C2-532",
+"id": "C2_081-090-48",
+"group": "C2_081-090",
 "level": "C2",
+"num": 48,
 "text": "There is an ethical imperative to protect the privacy of individuals in the digital age"
 },
 {
-"id": "C2-533",
+"id": "C2_081-090-49",
+"group": "C2_081-090",
 "level": "C2",
+"num": 49,
 "text": "There is an ethical imperative to ensure equitable access to healthcare"
 },
 {
-"id": "C2-534",
+"id": "C2_081-090-50",
+"group": "C2_081-090",
 "level": "C2",
+"num": 50,
 "text": "Facing the legacy of historical injustice, there is an ethical imperative to confront the legacy of historical injustice"
 },
 {
-"id": "C2-535",
+"id": "C2_081-090-51",
+"group": "C2_081-090",
 "level": "C2",
+"num": 51,
 "text": "There is an ethical imperative to confront the legacy of historical injustice"
 },
 {
-"id": "C2-536",
+"id": "C2_081-090-52",
+"group": "C2_081-090",
 "level": "C2",
+"num": 52,
 "text": "Protecting the autonomy of the vulnerable"
 },
 {
-"id": "C2-537",
+"id": "C2_081-090-53",
+"group": "C2_081-090",
 "level": "C2",
+"num": 53,
 "text": "There is an ethical imperative to safeguard the autonomy of the vulnerable"
 },
 {
-"id": "C2-538",
+"id": "C2_081-090-54",
+"group": "C2_081-090",
 "level": "C2",
+"num": 54,
 "text": "There is an ethical imperative to reduce the suffering we inflict on animals"
 },
 {
-"id": "C2-539",
+"id": "C2_081-090-55",
+"group": "C2_081-090",
 "level": "C2",
+"num": 55,
 "text": "Government has a responsibility to protect the public interest"
 },
 {
-"id": "C2-540",
+"id": "C2_081-090-56",
+"group": "C2_081-090",
 "level": "C2",
+"num": 56,
 "text": "It is incumbent upon governments to safeguard the public interest"
 },
 {
-"id": "C2-541",
+"id": "C2_081-090-57",
+"group": "C2_081-090",
 "level": "C2",
+"num": 57,
 "text": "It is incumbent upon corporations to act responsibly toward the environment"
 },
 {
-"id": "C2-542",
+"id": "C2_081-090-58",
+"group": "C2_081-090",
 "level": "C2",
+"num": 58,
 "text": "It is incumbent upon educators to cultivate independent thought"
 },
 {
-"id": "C2-543",
+"id": "C2_081-090-59",
+"group": "C2_081-090",
 "level": "C2",
+"num": 59,
 "text": "Media has a responsibility to distinguish fact from fabrication"
 },
 {
-"id": "C2-544",
+"id": "C2_081-090-60",
+"group": "C2_081-090",
 "level": "C2",
+"num": 60,
 "text": "It is incumbent upon the media to distinguish fact from fabrication"
 },
 {
-"id": "C2-545",
+"id": "C2_081-090-61",
+"group": "C2_081-090",
 "level": "C2",
-"text": "It is incumbent upon each generation to preserve the heritage it inheritsIt is incumbent upon each generation to preserve the heritage it inherits"
+"num": 61,
+"text": "It is incumbent upon each generation to preserve the heritage it inherits"
 },
 {
-"id": "C2-546",
+"id": "C2_081-090-62",
+"group": "C2_081-090",
 "level": "C2",
+"num": 62,
 "text": "Few would quarrel with the view that access to clean water is a fundamental human right"
 },
 {
-"id": "C2-547",
+"id": "C2_081-090-63",
+"group": "C2_081-090",
 "level": "C2",
+"num": 63,
 "text": "Few would quarrel with the view that education is a basic right for all children"
 },
 {
-"id": "C2-548",
+"id": "C2_081-090-64",
+"group": "C2_081-090",
 "level": "C2",
-"text": "Few would quarrel with the view that a free press is essential to libertyFew would quarrel with the view that a free press is essential to liberty"
+"num": 64,
+"text": "Few would quarrel with the view that a free press is essential to liberty"
 },
 {
-"id": "C2-549",
+"id": "C2_081-090-65",
+"group": "C2_081-090",
 "level": "C2",
-"text": "Few would quarrel with the view that prevention is better than cureFew would quarrel with the view that prevention is better than cure"
+"num": 65,
+"text": "Few would quarrel with the view that prevention is better than cure"
 },
 {
-"id": "C2-550",
+"id": "C2_081-090-66",
+"group": "C2_081-090",
 "level": "C2",
+"num": 66,
 "text": "Few would quarrel with the view that the Earth's climate is changing"
 },
 {
-"id": "C2-551",
+"id": "C2_091-100-1",
+"group": "C2_091-100",
 "level": "C2",
+"num": 1,
 "text": "We must not only identify the problem, not only analyze it, but solve it"
 },
 {
-"id": "C2-552",
+"id": "C2_091-100-2",
+"group": "C2_091-100",
 "level": "C2",
+"num": 2,
 "text": "Leaders"
 },
 {
-"id": "C2-553",
+"id": "C2_091-100-3",
+"group": "C2_091-100",
 "level": "C2",
-"text": "The leader should not only inspire, not only delegate, but also participateThe leader should not only inspire, not only delegate, but also participate"
+"num": 3,
+"text": "The leader should not only inspire, not only delegate, but also participate"
 },
 {
-"id": "C2-554",
+"id": "C2_091-100-4",
+"group": "C2_091-100",
 "level": "C2",
+"num": 4,
 "text": "Reform not only change the law, not only change the rules, but change the culture"
 },
 {
-"id": "C2-555",
+"id": "C2_091-100-5",
+"group": "C2_091-100",
 "level": "C2",
+"num": 5,
 "text": "The reform must not only change the law, not only change the rules, but change the culture"
 },
 {
-"id": "C2-556",
+"id": "C2_091-100-6",
+"group": "C2_091-100",
 "level": "C2",
+"num": 6,
 "text": "The diplomat must not only listen, not only negotiate, but also build trust"
 },
 {
-"id": "C2-557",
+"id": "C2_091-100-7",
+"group": "C2_091-100",
 "level": "C2",
+"num": 7,
 "text": "A good teacher must not only instruct, not only correct, but also inspire"
 },
 {
-"id": "C2-558",
+"id": "C2_091-100-8",
+"group": "C2_091-100",
 "level": "C2",
+"num": 8,
 "text": "The study of language and the study of culture are inseparable disciplines"
 },
 {
-"id": "C2-559",
+"id": "C2_091-100-9",
+"group": "C2_091-100",
 "level": "C2",
+"num": 9,
 "text": "The rights of individuals and the needs of society are both important considerations"
 },
 {
-"id": "C2-560",
+"id": "C2_091-100-10",
+"group": "C2_091-100",
 "level": "C2",
+"num": 10,
 "text": "Pursuing truth and defending freedom are the duties of the press"
 },
 {
-"id": "C2-561",
+"id": "C2_091-100-11",
+"group": "C2_091-100",
 "level": "C2",
+"num": 11,
 "text": "The pursuit of truth and the defense of liberty are the duties of the press"
 },
 {
-"id": "C2-562",
+"id": "C2_091-100-12",
+"group": "C2_091-100",
 "level": "C2",
+"num": 12,
 "text": "The preservation of memory and the promotion of justice are the aims of the tribunal"
 },
 {
-"id": "C2-563",
+"id": "C2_091-100-13",
+"group": "C2_091-100",
 "level": "C2",
+"num": 13,
 "text": "The fluctuation of prices and the movement of capital are the subjects of the report"
 },
 {
-"id": "C2-564",
+"id": "C2_091-100-14",
+"group": "C2_091-100",
 "level": "C2",
+"num": 14,
 "text": "This tradition is so deeply entrenched that no one dared challenge it"
 },
 {
-"id": "C2-565",
+"id": "C2_091-100-15",
+"group": "C2_091-100",
 "level": "C2",
+"num": 15,
 "text": "So deeply entrenched was the tradition that no one dared challenge it"
 },
 {
-"id": "C2-566",
+"id": "C2_091-100-16",
+"group": "C2_091-100",
 "level": "C2",
-"text": "This argument too persuasive, even the skepticsSo powerful was the argument that it swayed even the skeptics"
+"num": 16,
+"text": "This argument too persuasive, even the skeptics"
 },
 {
-"id": "C2-567",
+"id": "C2_091-100-17",
+"group": "C2_091-100",
 "level": "C2",
-"text": "Silence so complete that not a single cough disturbed itSo complete was the silence that not a single cough disturbed it"
+"num": 17,
+"text": "So powerful was the argument that it swayed even the skeptics"
 },
 {
-"id": "C2-568",
+"id": "C2_091-100-18",
+"group": "C2_091-100",
 "level": "C2",
+"num": 18,
+"text": "Silence so complete that not a single cough disturbed it"
+},
+{
+"id": "C2_091-100-19",
+"group": "C2_091-100",
+"level": "C2",
+"num": 19,
+"text": "So complete was the silence that not a single cough disturbed it"
+},
+{
+"id": "C2_091-100-20",
+"group": "C2_091-100",
+"level": "C2",
+"num": 20,
 "text": "So sudden was the storm that the fleet barely reached harbor"
 },
 {
-"id": "C2-569",
+"id": "C2_091-100-21",
+"group": "C2_091-100",
 "level": "C2",
-"text": "So relentless was the pressure that the talks collapsed overnightSo relentless was the pressure that the talks collapsed overnight"
+"num": 21,
+"text": "So relentless was the pressure that the talks collapsed overnight"
 },
 {
-"id": "C2-570",
+"id": "C2_091-100-22",
+"group": "C2_091-100",
 "level": "C2",
+"num": 22,
 "text": "No vision, no strategy, no execution, therefore, no success"
 },
 {
-"id": "C2-571",
+"id": "C2_091-100-23",
+"group": "C2_091-100",
 "level": "C2",
+"num": 23,
 "text": "No vision, no strategy, no execution, and thus no success"
 },
 {
-"id": "C2-572",
+"id": "C2_091-100-24",
+"group": "C2_091-100",
 "level": "C2",
+"num": 24,
 "text": "No planning, no resources, no support, and thus the project failed"
 },
 {
-"id": "C2-573",
+"id": "C2_091-100-25",
+"group": "C2_091-100",
 "level": "C2",
+"num": 25,
 "text": "No rain, no harvest, no food, and thus the village faced starvation"
 },
 {
-"id": "C2-574",
+"id": "C2_091-100-26",
+"group": "C2_091-100",
 "level": "C2",
+"num": 26,
 "text": "No trust, no cooperation, no progress, and thus the partnership dissolved"
 },
 {
-"id": "C2-575",
+"id": "C2_091-100-27",
+"group": "C2_091-100",
 "level": "C2",
+"num": 27,
 "text": "No warning, no escape, no mercy, and thus the city fell within a day"
 },
 {
-"id": "C2-576",
+"id": "C2_091-100-28",
+"group": "C2_091-100",
 "level": "C2",
-"text": "No warning, no escape, no mercy, and thus the city fell within a day"
-},
-{
-"id": "C2-577",
-"level": "C2",
+"num": 28,
 "text": "The demand for skilled workers is as high as ever, if not higher"
 },
 {
-"id": "C2-578",
+"id": "C2_091-100-29",
+"group": "C2_091-100",
 "level": "C2",
+"num": 29,
 "text": "The competition is as fierce as ever, if not fiercer"
 },
 {
-"id": "C2-579",
+"id": "C2_091-100-30",
+"group": "C2_091-100",
 "level": "C2",
+"num": 30,
 "text": "The temptation to intervene is as strong as ever, if not stronger"
 },
 {
-"id": "C2-580",
+"id": "C2_091-100-31",
+"group": "C2_091-100",
 "level": "C2",
-"text": "The gap between rich and poor is as wide as ever, if not widerPublic skepticism of experts is as pronounced as ever, if not more so"
+"num": 31,
+"text": "The gap between rich and poor is as wide as ever, if not wider"
 },
 {
-"id": "C2-581",
+"id": "C2_091-100-32",
+"group": "C2_091-100",
 "level": "C2",
+"num": 32,
+"text": "Public skepticism of experts is as pronounced as ever, if not more so"
+},
+{
+"id": "C2_091-100-33",
+"group": "C2_091-100",
+"level": "C2",
+"num": 33,
 "text": "In the final analysis, what matters most is not wealth but well-being"
 },
 {
-"id": "C2-582",
+"id": "C2_091-100-34",
+"group": "C2_091-100",
 "level": "C2",
-"text": "In the final analysis, the evidence must guide our decisionsIn the final analysis, the evidence must guide our decisions"
+"num": 34,
+"text": "In the final analysis, the evidence must guide our decisions"
 },
 {
-"id": "C2-583",
+"id": "C2_091-100-35",
+"group": "C2_091-100",
 "level": "C2",
+"num": 35,
 "text": "In the final analysis, the success of the union depends on mutual trust"
 },
 {
-"id": "C2-584",
+"id": "C2_091-100-36",
+"group": "C2_091-100",
 "level": "C2",
+"num": 36,
 "text": "In the final analysis, no treaty can substitute for genuine political will"
 },
 {
-"id": "C2-585",
+"id": "C2_091-100-37",
+"group": "C2_091-100",
 "level": "C2",
+"num": 37,
 "text": "In the final analysis, the patient's own resilience proved decisive"
 },
 {
-"id": "C2-586",
+"id": "C2_091-100-38",
+"group": "C2_091-100",
 "level": "C2",
+"num": 38,
 "text": "When all is said and done, integrity is the only currency that truly matters"
 },
 {
-"id": "C2-587",
+"id": "C2_091-100-39",
+"group": "C2_091-100",
 "level": "C2",
+"num": 39,
 "text": "When all is said and done, what matters most is the impact we have on others"
 },
 {
-"id": "C2-588",
+"id": "C2_091-100-40",
+"group": "C2_091-100",
 "level": "C2",
+"num": 40,
 "text": "When all is said and done, the responsibility lies with those who governed"
 },
 {
-"id": "C2-589",
+"id": "C2_091-100-41",
+"group": "C2_091-100",
 "level": "C2",
+"num": 41,
 "text": "When all is said and done, the friendship outlasted every trial"
 },
 {
-"id": "C2-590",
+"id": "C2_091-100-42",
+"group": "C2_091-100",
 "level": "C2",
+"num": 42,
 "text": "When all is said and done, the experiment changed how we see the brain"
 },
 {
-"id": "C2-591",
+"id": "C2_091-100-43",
+"group": "C2_091-100",
 "level": "C2",
-"text": "It is imperative that all parties adhere to the highest standards of professional conductIt is imperative that all parties adhere to the highest standards of professional conduct"
+"num": 43,
+"text": "It is imperative that all parties adhere to the highest standards of professional conduct"
 },
 {
-"id": "C2-592",
+"id": "C2_091-100-44",
+"group": "C2_091-100",
 "level": "C2",
-"text": "It is essential that all stakeholders remain committed to the agreementIt is essential that all stakeholders remain committed to the agreement"
+"num": 44,
+"text": "It is essential that all stakeholders remain committed to the agreement"
 },
 {
-"id": "C2-593",
+"id": "C2_091-100-45",
+"group": "C2_091-100",
 "level": "C2",
+"num": 45,
 "text": "Key in the witness must be able to testify without intimidation"
 },
 {
-"id": "C2-594",
+"id": "C2_091-100-46",
+"group": "C2_091-100",
 "level": "C2",
+"num": 46,
 "text": "It is vital that the witness be permitted to testify without intimidation"
 },
 {
-"id": "C2-595",
+"id": "C2_091-100-47",
+"group": "C2_091-100",
 "level": "C2",
+"num": 47,
 "text": "The committee publicly acknowledging the error is appropriate"
 },
 {
-"id": "C2-596",
+"id": "C2_091-100-48",
+"group": "C2_091-100",
 "level": "C2",
+"num": 48,
 "text": "It is appropriate that the committee acknowledged the error publicly"
 },
 {
-"id": "C2-597",
+"id": "C2_091-100-49",
+"group": "C2_091-100",
 "level": "C2",
+"num": 49,
 "text": "In such a critical moment, withdrawing funds is regrettable"
 },
 {
-"id": "C2-598",
+"id": "C2_091-100-50",
+"group": "C2_091-100",
 "level": "C2",
+"num": 50,
 "text": "It is regrettable that the funding should be withdrawn at such a critical juncture"
 },
 {
-"id": "C2-599",
+"id": "C2_091-100-51",
+"group": "C2_091-100",
 "level": "C2",
+"num": 51,
 "text": "As surely as the sun rises, so too will justice prevail in the end"
 },
 {
-"id": "C2-600",
+"id": "C2_091-100-52",
+"group": "C2_091-100",
 "level": "C2",
+"num": 52,
 "text": "As surely as seasons change, so too will new opportunities arise"
 },
 {
-"id": "C2-601",
+"id": "C2_091-100-53",
+"group": "C2_091-100",
 "level": "C2",
-"text": "As surely as the tide turns, so too will the fortunes of the house reverseAs surely as the tide turns, so too will the fortunes of the house reverse"
+"num": 53,
+"text": "As surely as the tide turns, so too will the fortunes of the house reverse"
 },
 {
-"id": "C2-602",
+"id": "C2_091-100-54",
+"group": "C2_091-100",
 "level": "C2",
-"text": "As surely as night follows day, so too will the truth emergeAs surely as night follows day, so too will the truth emerge"
+"num": 54,
+"text": "As surely as night follows day, so too will the truth emerge"
 },
 {
-"id": "C2-603",
+"id": "C2_091-100-55",
+"group": "C2_091-100",
 "level": "C2",
-"text": "As surely as the seed breaks soil, so too will hope return in springAs surely as the seed breaks soil, so too will hope return in spring"
+"num": 55,
+"text": "As surely as the seed breaks soil, so too will hope return in spring"
 },
 {
-"id": "C2-604",
+"id": "C2_091-100-56",
+"group": "C2_091-100",
 "level": "C2",
+"num": 56,
 "text": "This is the challenge that defines our generation to build a sustainable future"
 },
 {
-"id": "C2-605",
+"id": "C2_091-100-57",
+"group": "C2_091-100",
 "level": "C2",
+"num": 57,
 "text": "This, then, is the challenge that defines our generation to build a sustainable future"
 },
 {
-"id": "C2-606",
+"id": "C2_091-100-58",
+"group": "C2_091-100",
 "level": "C2",
+"num": 58,
 "text": "This then is the challenge that defines our generation to build a sustainable future"
 },
 {
-"id": "C2-607",
+"id": "C2_091-100-59",
+"group": "C2_091-100",
 "level": "C2",
+"num": 59,
 "text": "This then is the responsibility that lies before us to protect our planet"
 },
 {
-"id": "C2-608",
+"id": "C2_091-100-60",
+"group": "C2_091-100",
 "level": "C2",
+"num": 60,
 "text": "This then is the lesson that history teaches us, the fragility of liberty"
 },
 {
-"id": "C2-609",
+"id": "C2_091-100-61",
+"group": "C2_091-100",
 "level": "C2",
+"num": 61,
 "text": "This then is the lesson that history teaches us: the fragility of liberty"
 },
 {
-"id": "C2-610",
+"id": "C2_091-100-62",
+"group": "C2_091-100",
 "level": "C2",
+"num": 62,
 "text": "This then is the question that haunts every ruler: the measure of a legacy"
 },
 {
-"id": "C2-611",
+"id": "C2_091-100-63",
+"group": "C2_091-100",
 "level": "C2",
+"num": 63,
 "text": "This then is the bargain that we have struck: prosperity in exchange for risk"
 }
 ];

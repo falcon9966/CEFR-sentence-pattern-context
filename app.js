@@ -1,9 +1,9 @@
-// 英文句型快速選 — 搜尋 + 分級篩選
+// 英文句型快速選 — 搜尋 + 分級篩選 + 檔名分組
 (function () {
   "use strict";
 
   const PAGE = 200;
-  const state = { query: "", levels: new Set(), rendered: 0, list: [] };
+  const state = { query: "", levels: new Set(), rendered: 0, list: [], curGroup: null };
 
   const els = {
     levels: document.getElementById("levels"),
@@ -37,7 +37,7 @@
     els.levels.appendChild(b);
   });
 
-  // ---- Filtering ----
+  // ---- Filtering (data is already ordered by group then num) ----
   function getFiltered() {
     const q = state.query.trim().toLowerCase();
     return SENTENCES.filter((s) => {
@@ -69,14 +69,25 @@
     state.list = data;
     if (reset) {
       state.rendered = 0;
+      state.curGroup = null;
       els.list.innerHTML = "";
     }
     const slice = data.slice(state.rendered, state.rendered + PAGE);
     const frag = document.createDocumentFragment();
     slice.forEach((s) => {
+      if (s.group !== state.curGroup) {
+        state.curGroup = s.group;
+        const h = document.createElement("div");
+        h.className = "grp";
+        h.innerHTML =
+          `<span class="grp-name">${escapeHtml(s.group)}</span>` +
+          `<span class="grp-lvl" style="background:${levelColor[s.level] || "#888"}">${s.level}</span>`;
+        frag.appendChild(h);
+      }
       const row = document.createElement("div");
       row.className = "item";
       row.innerHTML =
+        `<span class="num">#${s.num}</span>` +
         `<span class="badge" style="background:${levelColor[s.level] || "#888"}">${s.level}</span>` +
         `<span class="txt">${highlight(s.text, state.query.trim())}</span>` +
         `<span class="cpy">複製 ⧉</span>`;

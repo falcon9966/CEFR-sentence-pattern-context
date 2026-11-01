@@ -6,8 +6,8 @@
 <title>英文句型快速選 · A1–C2</title>
 <style>
   :root{
-    --bg:#f4f5f7; --panel:#ffffff; --ink:#1f2530; --muted:#6b7280;
-    --line:#e6e8ec; --accent:#2bb6a3; --shadow:0 1px 3px rgba(16,24,40,.08),0 8px 24px rgba(16,24,40,.06);
+    --bg:#14171c; --panel:#1c2128; --panel-2:#232a33; --ink:#e4e8ed; --muted:#8b95a1;
+    --line:#2b323c; --accent:#3fae9f; --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
     --radius:14px;
   }
   *{box-sizing:border-box}
@@ -20,59 +20,65 @@
   .wrap{max-width:1080px;margin:0 auto;padding:28px 20px 80px}
   header h1{font-size:26px;margin:0 0 4px;letter-spacing:.5px}
   header p{margin:0;color:var(--muted);font-size:14px}
-  .hint{color:var(--muted);font-size:13px;margin-top:6px}
 
   /* Level selector */
   .levels{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:22px 0 18px}
   @media(max-width:760px){.levels{grid-template-columns:repeat(3,1fr)}}
   .lvl{
-    position:relative;border:none;padding:0;cursor:pointer;border-radius:var(--radius);
-    overflow:hidden;background:#e9ecef;aspect-ratio:3/4;box-shadow:var(--shadow);
-    transition:transform .15s ease, box-shadow .15s ease, outline .15s ease;outline:3px solid transparent;
+    position:relative;border:1px solid var(--line);padding:0;cursor:pointer;border-radius:var(--radius);
+    overflow:hidden;background:#0f1216;aspect-ratio:3/4;box-shadow:var(--shadow);
+    transition:transform .15s ease, box-shadow .15s ease, outline .15s ease, border-color .15s ease;outline:3px solid transparent;
   }
   .lvl img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
-  .lvl:hover{transform:translateY(-3px)}
-  .lvl.active{outline:3px solid var(--accent);outline-offset:2px}
+  .lvl:hover{transform:translateY(-3px);border-color:#3a4350}
+  .lvl.active{border-color:var(--accent);outline:3px solid var(--accent);outline-offset:2px}
   .lvl .check{
     position:absolute;top:8px;right:8px;width:24px;height:24px;border-radius:50%;
-    background:var(--accent);color:#fff;font-size:15px;display:none;align-items:center;justify-content:center;
-    box-shadow:0 2px 6px rgba(0,0,0,.25)
+    background:var(--accent);color:#06231f;font-size:15px;display:none;align-items:center;justify-content:center;
+    box-shadow:0 2px 6px rgba(0,0,0,.4)
   }
   .lvl.active .check{display:flex}
   .lvl .cnt{
-    position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.55);color:#fff;
+    position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.6);color:#fff;
     font-size:12px;padding:2px 8px;border-radius:20px;backdrop-filter:blur(2px)
   }
 
   /* Toolbar */
   .toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
   .search{flex:1;min-width:220px;display:flex;align-items:center;gap:8px;
-    background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px 14px;box-shadow:var(--shadow)}
+    background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:11px 14px;box-shadow:var(--shadow)}
   .search input{flex:1;border:none;outline:none;font-size:16px;background:transparent;color:var(--ink)}
-  .search svg{flex:none;opacity:.5}
+  .search input::placeholder{color:#67707c}
+  .search svg{flex:none;opacity:.5;color:var(--ink)}
   .btn{border:1px solid var(--line);background:var(--panel);color:var(--ink);
     border-radius:12px;padding:11px 16px;font-size:14px;cursor:pointer;box-shadow:var(--shadow);white-space:nowrap}
-  .btn:hover{border-color:#cdd2d9}
+  .btn:hover{border-color:var(--accent)}
   .count{color:var(--muted);font-size:14px;margin:4px 2px 14px}
 
+  /* Group header */
+  .grp{display:flex;align-items:center;gap:10px;margin:18px 2px 8px;padding-left:10px;
+    border-left:3px solid var(--accent)}
+  .grp-name{font-size:15px;font-weight:700;color:var(--ink);letter-spacing:.3px}
+  .grp-lvl{font-size:11px;font-weight:700;color:#06231f;padding:2px 8px;border-radius:7px}
+
   /* Results */
-  .list{display:flex;flex-direction:column;gap:8px}
+  .list{display:flex;flex-direction:column;gap:6px}
   .item{
     display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);
-    border-radius:12px;padding:12px 14px;cursor:pointer;box-shadow:var(--shadow);transition:border-color .12s}
-  .item:hover{border-color:var(--accent)}
-  .badge{flex:none;font-size:12px;font-weight:700;color:#fff;padding:4px 9px;border-radius:8px;min-width:42px;text-align:center}
+    border-radius:12px;padding:11px 14px;cursor:pointer;box-shadow:var(--shadow);transition:border-color .12s,background .12s}
+  .item:hover{border-color:var(--accent);background:#20262e}
+  .num{flex:none;color:var(--muted);font-size:12px;width:34px;text-align:right;font-variant-numeric:tabular-nums}
+  .badge{flex:none;font-size:12px;font-weight:700;color:#06231f;padding:4px 9px;border-radius:8px;min-width:42px;text-align:center}
   .item .txt{flex:1;font-size:16px;word-break:break-word}
   .item .cpy{flex:none;color:var(--muted);font-size:12px;opacity:0;transition:opacity .12s}
   .item:hover .cpy{opacity:1}
-  mark{background:#fff3a3;border-radius:3px;padding:0 1px}
+  mark{background:rgba(255,210,80,.30);color:#ffe9a8;border-radius:3px;padding:0 1px}
   .empty{text-align:center;color:var(--muted);padding:40px 0}
   .more{display:block;margin:18px auto 0;padding:12px 28px}
   .toast{
     position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
-    background:#1f2530;color:#fff;padding:11px 20px;border-radius:30px;font-size:14px;
-    opacity:0;pointer-events:none;transition:.25s;box-shadow:0 6px 20px rgba(0,0,0,.25)
-  }
+    background:#2a3038;color:var(--ink);padding:11px 20px;border-radius:30px;font-size:14px;
+    opacity:0;pointer-events:none;transition:.25s;box-shadow:0 6px 20px rgba(0,0,0,.5);border:1px solid var(--line)}
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
   footer{margin-top:36px;color:var(--muted);font-size:12px;text-align:center}
 </style>
@@ -81,7 +87,7 @@
 <div class="wrap">
   <header>
     <h1>英文句型快速選</h1>
-    <p>由 A1 到 C2 · 共 <span id="total">0</span> 句 · 點選級別卡片篩選，輸入英文即時搜尋，點句子可複製</p>
+    <p>由 A1 到 C2 · 共 <span id="total">0</span> 句 · 點選級別卡片篩選，輸入英文即時搜尋，按檔名分組，點句子可複製</p>
   </header>
 
   <div class="levels" id="levels"></div>
