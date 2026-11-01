@@ -75,6 +75,24 @@
   mark{background:rgba(255,210,80,.30);color:#ffe9a8;border-radius:3px;padding:0 1px}
   .empty{text-align:center;color:var(--muted);padding:40px 0}
   .more{display:block;margin:18px auto 0;padding:12px 28px}
+
+  /* Mode toggle */
+  .modes{display:inline-flex;background:var(--panel-2);border:1px solid var(--line);border-radius:12px;padding:3px;gap:3px;flex:none}
+  .mode{border:none;background:transparent;color:var(--muted);font-size:14px;padding:9px 14px;border-radius:9px;cursor:pointer;transition:.15s;white-space:nowrap}
+  .mode:hover{color:var(--ink)}
+  .mode.active{background:var(--accent);color:#06231f;font-weight:700}
+
+  /* File browser */
+  .filecard{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--panel);box-shadow:var(--shadow)}
+  .filecard + .filecard{margin-top:8px}
+  .filehead{display:flex;align-items:center;gap:10px;padding:13px 14px;cursor:pointer;user-select:none;transition:background .12s}
+  .filehead:hover{background:#20262e}
+  .chev{flex:none;color:var(--muted);font-size:13px;width:16px;text-align:center}
+  .filehead .fname{flex:1;font-size:15px;font-weight:700;letter-spacing:.3px}
+  .filehead .fcount{flex:none;color:var(--muted);font-size:13px}
+  .filebody{padding:2px 8px 10px;border-top:1px solid var(--line)}
+  .filebody .item{border:none;box-shadow:none;background:transparent;padding:9px 14px}
+  .filebody .item:hover{background:#20262e}
   .toast{
     position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(20px);
     background:#2a3038;color:var(--ink);padding:11px 20px;border-radius:30px;font-size:14px;
@@ -87,17 +105,22 @@
 <div class="wrap">
   <header>
     <h1>英文句型快速選</h1>
-    <p>由 A1 到 C2 · 共 <span id="total">0</span> 句 · 點選級別卡片篩選，輸入英文即時搜尋，按檔名分組，點句子可複製</p>
+    <p>由 A1 到 C2 · 共 <span id="total">0</span> 句 · 可「搜尋」關鍵字，或切到「📁 檔案」直接展開某個檔案的全部句型；點句子可複製</p>
   </header>
 
   <div class="levels" id="levels"></div>
 
   <div class="toolbar">
+    <div class="modes">
+      <button class="mode active" data-mode="search">🔍 搜尋</button>
+      <button class="mode" data-mode="file">📁 檔案</button>
+    </div>
     <label class="search">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       <input id="q" type="text" placeholder="搜尋英文句型，例如 not, would, condition…" autocomplete="off" />
     </label>
-    <button class="btn" id="clear">清除篩選</button>
+    <button class="btn" id="expandAll" style="display:none">展開全部</button>
+    <button class="btn" id="clear">清除</button>
   </div>
   <div class="count" id="count"></div>
 
