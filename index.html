@@ -105,19 +105,19 @@
 <div class="wrap">
   <header>
     <h1>英文句型快速選</h1>
-    <p>由 A1 到 C2 · 共 <span id="total">0</span> 句 · 可「搜尋」關鍵字，或切到「📁 檔案」直接展開某個檔案的全部句型；點句子可複製</p>
+    <p>由 A1 到 C2 · 共 <span id="total">0</span> 句 · 開啟即列出全部檔案，點檔名展開句型；也可切到「🔍 搜尋」用關鍵字找；點句子可複製</p>
   </header>
 
   <div class="levels" id="levels"></div>
 
   <div class="toolbar">
     <div class="modes">
-      <button class="mode active" data-mode="search">🔍 搜尋</button>
-      <button class="mode" data-mode="file">📁 檔案</button>
+      <button class="mode" data-mode="search">🔍 搜尋</button>
+      <button class="mode active" data-mode="file">📁 檔案</button>
     </div>
     <label class="search">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input id="q" type="text" placeholder="搜尋英文句型，例如 not, would, condition…" autocomplete="off" />
+      <input id="q" type="text" placeholder="輸入檔名篩選，例如 A1、B2_041…" autocomplete="off" />
     </label>
     <button class="btn" id="expandAll" style="display:none">展開全部</button>
     <button class="btn" id="clear">清除</button>

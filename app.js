@@ -4,7 +4,7 @@
 
   const PAGE = 200;
   const state = {
-    mode: "search",        // "search" | "file"
+    mode: "file",          // "search" | "file" （預設只列檔名，點開才看內容）
     query: "",             // 搜尋模式：句型內文關鍵字
     fileQuery: "",         // 檔案模式：檔名篩選
     levels: new Set(),
@@ -101,6 +101,13 @@
       state.rendered = 0;
       state.curGroup = null;
       els.list.innerHTML = "";
+    }
+    // 沒輸入關鍵字也沒選級別時，不傾倒全部句子，只給提示
+    if (state.query.trim() === "" && state.levels.size === 0) {
+      els.list.innerHTML = `<div class="empty">輸入英文關鍵字搜尋句型，或點上方「📁 檔案」直接瀏覽各檔內容。</div>`;
+      els.count.textContent = "";
+      els.more.style.display = "none";
+      return;
     }
     const slice = data.slice(state.rendered, state.rendered + PAGE);
     const frag = document.createDocumentFragment();
@@ -264,5 +271,5 @@
   });
 
   // init
-  update();
+  switchMode("file");
 })();
